@@ -67,7 +67,7 @@ var PROJECTS = [
             { label: 'Live Link', color: 'blue' }, { label: 'UE5', color: 'blue' }, { label: 'OpenCV' },
         ],
         media: [
-            { type: 'youtube', id: 'd_W5RiS6OBg', label: 'Project demo', caption: '' },
+            { type: 'youtube', id: '4ksSJwS8dG4', label: 'Project demo', caption: '' },
             { type: 'image', src: 'AImation/NodeGraph.png', label: 'UI', caption: 'Node graph post-processing created in ImGui' },
             { type: 'youtube', id: 'mvOikMLtX3w', label: 'Post Processing', caption: 'Entire application at runtime' },
         ],
