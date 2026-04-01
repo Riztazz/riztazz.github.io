@@ -88,7 +88,7 @@ var PROJECTS = [
         stack: [
             { label: 'Rust' }, { label: 'TypeScript' },
             { label: 'Tauri', color: 'blue' }, { label: 'React', color: 'blue' },
-            { label: 'C#' }, { label: 'MySQL' },
+            { label: 'C#' },
         ],
         media: [
             { type: 'image', src: 'Launcher/Home.png', label: 'Built with Rust Tauri and React', caption: '' },
