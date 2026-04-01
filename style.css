@@ -10,9 +10,9 @@
   --accent4:   #ff9a3c;
   --text:      #d4dff5;
   --muted:     #5a6a8a;
-  --font-mono: 'Share Tech Mono', monospace;
-  --font-disp: 'Syne', sans-serif;
-  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-disp: 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
 }
 
 *,
