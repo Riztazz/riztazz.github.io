@@ -69,7 +69,7 @@ var PROJECTS = [
         media: [
             { type: 'youtube', id: '4ksSJwS8dG4', label: 'Project demo', caption: '' },
             { type: 'image', src: 'AImation/NodeGraph.png', label: 'UI', caption: 'Node graph post-processing created in ImGui' },
-            { type: 'youtube', id: 'mvOikMLtX3w', label: 'Post Processing', caption: 'Entire application at runtime' },
+            { type: 'youtube', id: 'LnCjvmgwyRE', label: 'Post Processing', caption: 'Entire application at runtime' },
         ],
     },
     {
