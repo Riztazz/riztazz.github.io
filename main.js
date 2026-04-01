@@ -32,7 +32,7 @@ var PROJECTS = [
     {
         id: 'mysql-editor',
         category: 'Developer Tool / Database',
-        title: 'MySQL Version Control Editor',
+        title: 'Database (MySQL) Editor with VCS support',
         subtitle: 'C++ / ImGui / MySQL',
         wip: false,
         desc: 'Reflection based MySQL Database editor for a game project. Includes built-in version control for data, making it easier to track changes and collaborate across a team.',
