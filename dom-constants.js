@@ -30,26 +30,6 @@ var PROJECTS = [
         },
     },
     {
-        id: 'mysql-editor',
-        category: 'Developer Tool / Database',
-        title: 'Database (MySQL) Editor with VCS support',
-        subtitle: 'C++ / ImGui / MySQL',
-        wip: false,
-        desc: 'Reflection based MySQL Database editor for a game project. Includes built-in version control for data, making it easier to track changes and collaborate across a team.',
-        bullets: [
-            'Integrated version control specifically for SQL databases',
-            'Built with C++ and ImGui for a lightweight, performant UI',
-            'Provides direct MySQL connection for real-time visual editing',
-        ],
-        stack: [
-            { label: 'C++' }, { label: 'ImGui' },
-            { label: 'MySQL', color: 'blue' }, { label: 'Reflection' }, { label: 'Version Control', color: 'orange' }
-        ],
-        media: [
-            { type: 'youtube', id: 'UWprXahu9HY', label: 'At work', caption: 'The editor in action' },
-        ]
-    },
-    {
         id: 'almation-studio',
         category: 'Developer Tool / Motion Capture',
         title: 'Almation Studio',
@@ -71,6 +51,49 @@ var PROJECTS = [
             { type: 'image', src: 'AImation/NodeGraph.png', label: 'UI', caption: 'Node graph post-processing created in ImGui' },
             { type: 'youtube', id: 'LnCjvmgwyRE', label: 'Post Processing', caption: 'Entire application at runtime' },
         ],
+    },
+    {
+        id: 'vertex',
+        category: 'Multiplayer Action / MOBA Prototype',
+        title: 'Vertex - Very Early WIP',
+        subtitle: 'C++ / Unreal Engine 5 / Networking / Chaos Destruction',
+        wip: true,
+        desc: 'Early MOBA prototype focused on fast multiplayer gameplay with replicated Chaos destruction using modern UE features',
+        bullets: [
+            'Replicated Chaos destruction',
+            'Gameplay systems implemented using GAS Framework',
+            'Mover 2.0 for easily extendable movement and prediction',
+            'Using Steam UDP sockets through Unreal abstractions',
+            'Built with future dedicated server support in mind from the start',
+        ],
+        stack: [
+            { label: 'C++' }, { label: 'Unreal Engine 5' }, { label: 'Mover 2.0' },
+            { label: 'Chaos Destruction', color: 'blue' }, { label: 'UDP Networking', color: 'blue' },
+            { label: 'Steam', color: 'orange' }, { label: 'Dedicated Server', color: 'orange' },
+        ],
+        media: [
+            { type: 'youtube', id: 'SMkVrw1T04g', label: 'Prototype', caption: 'Vertex early multiplayer prototype' },
+        ],
+    },
+    {
+        id: 'mysql-editor',
+        category: 'Developer Tool / Database',
+        title: 'Database (MySQL) Editor with VCS support',
+        subtitle: 'C++ / ImGui / MySQL',
+        wip: false,
+        desc: 'Reflection based MySQL Database editor for a game project. Includes built-in version control for data, making it easier to track changes and collaborate across a team.',
+        bullets: [
+            'Integrated version control specifically for SQL databases',
+            'Built with C++ and ImGui for a lightweight, performant UI',
+            'Provides direct MySQL connection for real-time visual editing',
+        ],
+        stack: [
+            { label: 'C++' }, { label: 'ImGui' },
+            { label: 'MySQL', color: 'blue' }, { label: 'Reflection' }, { label: 'Version Control', color: 'orange' }
+        ],
+        media: [
+            { type: 'youtube', id: 'UWprXahu9HY', label: 'At work', caption: 'The editor in action' },
+        ]
     },
     {
         id: 'game-launcher',
