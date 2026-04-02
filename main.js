@@ -81,7 +81,10 @@ function renderProjects() {
     if (!el) {
         return;
     }
-    el.innerHTML = PROJECTS.map(function (p, i) { return buildCard(p, i); }).join('');
+    el.innerHTML = PROJECTS.map(function (p, i)
+    {
+        return buildCard(p, i);
+    }).join('');
 }
 
 renderProjects();
@@ -304,7 +307,10 @@ document.addEventListener('keydown', function (e) {
     }, { threshold: 0.1 });
 
     setTimeout(function () {
-        document.querySelectorAll('.' + DOM_CLASSES.FADE_IN).forEach(function (el) { obs.observe(el); });
+        document.querySelectorAll('.' + DOM_CLASSES.FADE_IN).forEach(function (el)
+        {
+            obs.observe(el);
+        });
     }, 50);
 }());
 

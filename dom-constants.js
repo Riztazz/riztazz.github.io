@@ -63,8 +63,7 @@ var PROJECTS = [
             'Replicated Chaos destruction',
             'Gameplay systems implemented using GAS Framework',
             'Mover 2.0 for easily extendable movement and prediction',
-            'Using Steam UDP sockets through Unreal abstractions',
-            'Built with future dedicated server support in mind from the start',
+            'Currently built using Steam UDP sockets for prototype. Moving towards dedicated server architecture after prototyping.',
         ],
         stack: [
             { label: 'C++' }, { label: 'Unreal Engine 5' }, { label: 'Mover 2.0' },
