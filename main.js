@@ -1,106 +1,16 @@
 ﻿
-var PROJECTS = [
-    {
-        id: 'orbital-drift',
-        category: 'Single-Player Space Game',
-        title: 'Orbital Drift',
-        subtitle: 'Unreal Engine 5 / Mover 2.0 / Team of 8',
-        wip: true,
-        desc: 'Space game with an advanced movement system -- zero gravity, magnetic boots, dynamic gravity wells. Digital Dragons GoGlobal3 finalist.',
-        bullets: [
-            'Custom ZeroG and MagBoots movement on Mover 2.0',
-            'Dynamic gravity wells via Custom Gravity well system',
-            'Helmet visor curvature shader (Brown-Conrady distortion)',
-            'MVVM UI, async save system, data-driven gameplay',
-            'Based movement (dynamic transprots) + resolving UE tick order issues',
-            'Digital Dragons Finalist!',
-        ],
-        stack: [
-            { label: 'C++' }, { label: 'Unreal Engine 5' }, { label: 'Mover 2.0' },
-            { label: 'Gameplay Tags', color: 'blue' }, { label: 'MVVM', color: 'blue' },
-        ],
-        media: [
-            { type: 'youtube', id: '1aQFQzFnGWk', label: 'Gameplay', caption: 'Orbital Drift Floating' },
-            { type: 'image', src: 'OD/UnderstandableAbstractions.png', label: 'Abstractions', caption: 'Designer-ready abstractions, automatically discovered' },
-            { type: 'youtube', id: 'lJbMBvuwJXM', label: 'Trailer', caption: 'Game Teaser' },
-        ],
-        gist: {
-            header: { url: 'https://gist.github.com/Riztazz/5c7236a445078d211a31f24d23ce2f30.js', label: 'Some code by me(header)' },
-            implementation: { url: 'https://gist.github.com/Riztazz/c020d60a77f0906c079bf4756be6caa4.js', label: 'and implementation' },
-        },
-    },
-    {
-        id: 'mysql-editor',
-        category: 'Developer Tool / Database',
-        title: 'Database (MySQL) Editor with VCS support',
-        subtitle: 'C++ / ImGui / MySQL',
-        wip: false,
-        desc: 'Reflection based MySQL Database editor for a game project. Includes built-in version control for data, making it easier to track changes and collaborate across a team.',
-        bullets: [
-            'Integrated version control specifically for SQL databases',
-            'Built with C++ and ImGui for a lightweight, performant UI',
-            'Provides direct MySQL connection for real-time visual editing',
-        ],
-        stack: [
-            { label: 'C++' }, { label: 'ImGui' },
-            { label: 'MySQL', color: 'blue' }, { label: 'Reflection' }, { label: 'Version Control', color: 'orange' }
-        ],
-        media: [
-            { type: 'youtube', id: 'UWprXahu9HY', label: 'At work', caption: 'The editor in action' },
-        ]
-    },
-    {
-        id: 'almation-studio',
-        category: 'Developer Tool / Motion Capture',
-        title: 'Almation Studio',
-        subtitle: 'C++ / ImGui / Live Link UE5',
-        wip: false,
-        desc: "Motion capture engine from a phone and webcams. Real-time processing, UE5 integration via Live Link. I wrote most of the UI system, camera systems, and the processing pipeline.",
-        bullets: [
-            'Real-time motion capture from phone and webcam',
-            'Full UI architecture in ImGui',
-            'Camera systems: calibration, tracking, synchronization',
-            'UE5 integration via Live Link Protocol',
-        ],
-        stack: [
-            { label: 'C++' }, { label: 'ImGui' },
-            { label: 'Live Link', color: 'blue' }, { label: 'UE5', color: 'blue' }, { label: 'OpenCV' },
-        ],
-        media: [
-            { type: 'youtube', id: '4ksSJwS8dG4', label: 'Project demo', caption: '' },
-            { type: 'image', src: 'AImation/NodeGraph.png', label: 'UI', caption: 'Node graph post-processing created in ImGui' },
-            { type: 'youtube', id: 'LnCjvmgwyRE', label: 'Post Processing', caption: 'Entire application at runtime' },
-        ],
-    },
-    {
-        id: 'game-launcher',
-        category: 'Desktop Application / Tools',
-        title: 'Game Launcher',
-        subtitle: 'Rust / TypeScript / Tauri',
-        wip: false,
-        desc: 'Game launcher built from scratch, full support for the installer, updates, and content streaming. Backend API (C#) for multiple game servers.',
-        bullets: [
-            'Built from scratch in Rust + Tauri + React / TypeScript',
-            'Game installer, auto-updates, content streaming',
-            'Backend API in C# - auth and data management',
-            'MySQL editor dev tool with SQL versioning'
-        ],
-        stack: [
-            { label: 'Rust' }, { label: 'TypeScript' },
-            { label: 'Tauri', color: 'blue' }, { label: 'React', color: 'blue' },
-            { label: 'C#' },
-        ],
-        media: [
-            { type: 'image', src: 'Launcher/Home.png', label: 'Built with Rust Tauri and React', caption: '' },
-        ],
-    },
-];
-
-var CHIP_CLASS = { green: 'chip chip--green', blue: 'chip chip--blue', red: 'chip chip--red', orange: 'chip chip--orange' };
-
-function chipClass(c) { return CHIP_CLASS[c] || CHIP_CLASS.green; }
-function ytThumb(id) { return 'https://img.youtube.com/vi/' + id + '/hqdefault.jpg'; }
-function coverSrc(item) { return item.type === 'youtube' ? ytThumb(item.id) : item.src; }
+function chipClass(c)
+{
+    return CHIP_CLASS[c] || CHIP_CLASS.green;
+}
+function ytThumb(id)
+{
+    return 'https://img.youtube.com/vi/' + id + '/hqdefault.jpg';
+}
+function coverSrc(item)
+{
+    return item.type === 'youtube' ? ytThumb(item.id) : item.src;
+}
 
 function normaliseGist(entry, fallbackLabel) {
     if (!entry) {
@@ -131,9 +41,9 @@ function buildCard(project, index) {
     var items = buildItemList(project);
     var first = items[0];
     var count = items.length;
-    var reverse = index % 2 === 1 ? ' project-card--reverse' : '';
-    var wip = project.wip ? '<div class="wip-badge">IN DEVELOPMENT</div>' : '';
-    var badge = count > 1 ? '<div class="project-cover__count">' + count + ' MEDIA</div>' : '';
+    var reverse = index % 2 === 1 ? ' ' + DOM_CLASSES.PROJECT_CARD_REVERSE : '';
+    var wip = project.wip ? '<div class="' + DOM_CLASSES.WIP_BADGE + '">IN DEVELOPMENT</div>' : '';
+    var badge = count > 1 ? '<div class="' + DOM_CLASSES.PROJECT_COVER_COUNT + '">' + count + ' MEDIA</div>' : '';
     var imgSrc = first && first.type !== 'gist' ? coverSrc(first) : null;
     var lbl = count > 1
         ? 'VIEW GALLERY'
@@ -142,32 +52,32 @@ function buildCard(project, index) {
             : (first && first.type === 'gist' ? 'READ MORE' : 'VIEW IMAGE'));
 
     var cover = first
-        ? '<div class="project-cover" data-project="' + project.id + '">'
-        + (imgSrc ? '<img class="project-cover__img" src="' + imgSrc + '" alt="' + project.title + '" loading="lazy">' : '')
-        + '<div class="project-cover__overlay">'
-        + '<div class="project-cover__play"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>'
-        + '<div class="project-cover__label">' + lbl + '</div>'
+        ? '<div class="' + DOM_CLASSES.PROJECT_COVER + '" data-project="' + project.id + '">'
+        + (imgSrc ? '<img class="' + DOM_CLASSES.PROJECT_COVER_IMG + '" src="' + imgSrc + '" alt="' + project.title + '" loading="lazy">' : '')
+        + '<div class="' + DOM_CLASSES.PROJECT_COVER_OVERLAY + '">'
+        + '<div class="' + DOM_CLASSES.PROJECT_COVER_PLAY + '"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>'
+        + '<div class="' + DOM_CLASSES.PROJECT_COVER_LABEL + '">' + lbl + '</div>'
         + '</div>' + badge + '</div>'
-        : '<div class="project-cover project-cover--empty">NO MEDIA</div>';
+        : '<div class="' + DOM_CLASSES.PROJECT_COVER + ' ' + DOM_CLASSES.PROJECT_COVER_EMPTY + '">NO MEDIA</div>';
 
     var stack = project.stack.map(function (s) { return '<span class="' + chipClass(s.color) + '">' + s.label + '</span>'; }).join('');
     var bullets = project.bullets.map(function (b) { return '<li>' + b + '</li>'; }).join('');
 
-    return '<div class="project-card' + reverse + ' fade-in" id="project-' + project.id + '">'
+    return '<div class="' + DOM_CLASSES.PROJECT_CARD + reverse + ' ' + DOM_CLASSES.FADE_IN + '" id="project-' + project.id + '">'
         + cover
-        + '<div class="project-info">'
+        + '<div class="' + DOM_CLASSES.PROJECT_INFO + '">'
         + wip
-        + '<div class="project-category">' + project.category + '</div>'
-        + '<div class="project-title">' + project.title + '</div>'
-        + '<div class="project-subtitle">' + project.subtitle + '</div>'
-        + '<p class="project-desc">' + project.desc + '</p>'
-        + '<ul class="project-bullets">' + bullets + '</ul>'
-        + '<div class="project-stack">' + stack + '</div>'
+        + '<div class="' + DOM_CLASSES.PROJECT_CATEGORY + '">' + project.category + '</div>'
+        + '<div class="' + DOM_CLASSES.PROJECT_TITLE + '">' + project.title + '</div>'
+        + '<div class="' + DOM_CLASSES.PROJECT_SUBTITLE + '">' + project.subtitle + '</div>'
+        + '<p class="' + DOM_CLASSES.PROJECT_DESC + '">' + project.desc + '</p>'
+        + '<ul class="' + DOM_CLASSES.PROJECT_BULLETS + '">' + bullets + '</ul>'
+        + '<div class="' + DOM_CLASSES.PROJECT_STACK + '">' + stack + '</div>'
         + '</div></div>';
 }
 
 function renderProjects() {
-    var el = document.getElementById('projects-container');
+    var el = document.getElementById(DOM_IDS.PROJECTS_CONTAINER);
     if (!el) {
         return;
     }
@@ -176,23 +86,23 @@ function renderProjects() {
 
 renderProjects();
 
-var lb = document.getElementById('lightbox');
-var lbViewer = document.getElementById('lb-viewer');
-var lbThumbs = document.getElementById('lb-thumbs');
-var lbTitle = document.getElementById('lb-title');
-var lbCounter = document.getElementById('lb-counter');
-var lbCaption = document.getElementById('lb-caption');
-var lbPrev = document.getElementById('lb-prev');
-var lbNext = document.getElementById('lb-next');
+var lb = document.getElementById(DOM_IDS.LIGHTBOX);
+var lbViewer = document.getElementById(DOM_IDS.LB_VIEWER);
+var lbThumbs = document.getElementById(DOM_IDS.LB_THUMBS);
+var lbTitle = document.getElementById(DOM_IDS.LB_TITLE);
+var lbCounter = document.getElementById(DOM_IDS.LB_COUNTER);
+var lbCaption = document.getElementById(DOM_IDS.LB_CAPTION);
+var lbPrev = document.getElementById(DOM_IDS.LB_PREV);
+var lbNext = document.getElementById(DOM_IDS.LB_NEXT);
 var lbItems = [];
 var lbIndex = 0;
 var lbActive = null;
 
 function lbThumbHtml(item, i) {
     if (item.type === 'gist') {
-        return '<div class="lightbox__thumb lightbox__thumb--gist" data-index="' + i + '"><span>' + item.label + '</span></div>';
+        return '<div class="' + DOM_CLASSES.LB_THUMB + ' ' + DOM_CLASSES.LB_THUMB_GIST + '" data-index="' + i + '"><span>' + item.label + '</span></div>';
     }
-    var cls = 'lightbox__thumb' + (item.type === 'youtube' ? ' lightbox__thumb--video' : '');
+    var cls = DOM_CLASSES.LB_THUMB + (item.type === 'youtube' ? ' ' + DOM_CLASSES.LB_THUMB_VIDEO : '');
     return '<div class="' + cls + '" data-index="' + i + '"><img src="' + coverSrc(item) + '" alt="' + item.label + '" loading="lazy"></div>';
 }
 
@@ -203,7 +113,7 @@ function makeGistFrame(scriptUrl) {
         + '<scr' + 'ipt src="' + scriptUrl + '"></scr' + 'ipt>'
         + '</body></html>';
     var f = document.createElement('iframe');
-    f.className = 'lb-gist-frame';
+    f.className = DOM_CLASSES.LB_GIST_FRAME;
     f.srcdoc = srcdoc;
     return f;
 }
@@ -218,20 +128,20 @@ function lbShowItem(index) {
         lbActive = null;
     }
 
-    lbViewer.classList.toggle('lightbox__viewer--gist', isGist);
-    lb.classList.toggle('lightbox--gist', isGist);
+    lbViewer.classList.toggle(DOM_CLASSES.LB_VIEWER_GIST, isGist);
+    lb.classList.toggle(DOM_CLASSES.LB_GIST, isGist);
 
     lbPrev.hidden = index === 0 || isGist;
     lbNext.hidden = index === lbItems.length - 1 || isGist;
 
     if (isGist) {
         lbViewer.appendChild(makeGistFrame(item.src));
-        lbActive = lbViewer.querySelector('.lb-gist-frame');
+        lbActive = lbViewer.querySelector('.' + DOM_CLASSES.LB_GIST_FRAME);
         lbCaption.textContent = '';
     }
     else if (item.type === 'youtube') {
         var iframe = document.createElement('iframe');
-        iframe.className = 'lb-media-frame';
+        iframe.className = DOM_CLASSES.LB_MEDIA_FRAME;
         iframe.src = 'https://www.youtube.com/embed/' + item.id + '?autoplay=1&rel=0';
         iframe.allow = 'autoplay; fullscreen; encrypted-media; picture-in-picture';
         iframe.allowFullscreen = true;
@@ -248,11 +158,11 @@ function lbShowItem(index) {
         lbCaption.textContent = item.caption || item.label || '';
     }
 
-    lbThumbs.querySelectorAll('.lightbox__thumb').forEach(function (el, i) {
-        el.classList.toggle('active', i === index);
+    lbThumbs.querySelectorAll('.' + DOM_CLASSES.LB_THUMB).forEach(function (el, i) {
+        el.classList.toggle(DOM_CLASSES.ACTIVE, i === index);
     });
 
-    var at = lbThumbs.querySelector('.lightbox__thumb.active');
+    var at = lbThumbs.querySelector('.' + DOM_CLASSES.LB_THUMB + '.' + DOM_CLASSES.ACTIVE);
     if (at) {
         at.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
     }
@@ -271,25 +181,25 @@ function lbOpen(projectId, startIndex) {
     }
     lbTitle.textContent = project.title;
     lbThumbs.innerHTML = lbItems.map(lbThumbHtml).join('');
-    lb.classList.add('open');
+    lb.classList.add(DOM_CLASSES.LB_OPEN);
     document.body.style.overflow = 'hidden';
     lbShowItem(startIndex || 0);
 }
 
 function lbClose() {
-    lb.classList.remove('open');
-    lb.classList.remove('lightbox--gist');
+    lb.classList.remove(DOM_CLASSES.LB_OPEN);
+    lb.classList.remove(DOM_CLASSES.LB_GIST);
     document.body.style.overflow = '';
     if (lbActive) {
         lbActive.remove();
         lbActive = null;
     }
-    lbViewer.classList.remove('lightbox__viewer--gist');
+    lbViewer.classList.remove(DOM_CLASSES.LB_VIEWER_GIST);
     lbItems = [];
     lbIndex = 0;
 }
 
-document.getElementById('lb-close').addEventListener('click', lbClose);
+document.getElementById(DOM_IDS.LB_CLOSE).addEventListener('click', lbClose);
 
 lb.addEventListener('click', function (e) {
     if (e.target === lb) {
@@ -310,21 +220,21 @@ lbNext.addEventListener('click', function () {
 });
 
 lbThumbs.addEventListener('click', function (e) {
-    var t = e.target.closest('.lightbox__thumb');
+    var t = e.target.closest('.' + DOM_CLASSES.LB_THUMB);
     if (t) {
         lbShowItem(parseInt(t.dataset.index, 10));
     }
 });
 
-document.getElementById('projects-container').addEventListener('click', function (e) {
-    var cover = e.target.closest('.project-cover[data-project]');
+document.getElementById(DOM_IDS.PROJECTS_CONTAINER).addEventListener('click', function (e) {
+    var cover = e.target.closest(DOM_CLASSES.PROJECT_COVER_DATA);
     if (cover) {
         lbOpen(cover.dataset.project, 0);
     }
 });
 
 document.addEventListener('keydown', function (e) {
-    if (!lb.classList.contains('open')) {
+    if (!lb.classList.contains(DOM_CLASSES.LB_OPEN)) {
         return;
     }
     if (e.key === 'Escape') {
@@ -343,7 +253,7 @@ document.addEventListener('keydown', function (e) {
 });
 
 (function () {
-    var canvas = document.getElementById('stars-canvas');
+    var canvas = document.getElementById(DOM_IDS.STARS_CANVAS);
     var ctx = canvas.getContext('2d');
     var stars = [];
 
@@ -388,27 +298,27 @@ document.addEventListener('keydown', function (e) {
     var obs = new IntersectionObserver(function (entries) {
         entries.forEach(function (e) {
             if (e.isIntersecting) {
-                e.target.classList.add('visible');
+                e.target.classList.add(DOM_CLASSES.VISIBLE);
             }
         });
     }, { threshold: 0.1 });
 
     setTimeout(function () {
-        document.querySelectorAll('.fade-in').forEach(function (el) { obs.observe(el); });
+        document.querySelectorAll('.' + DOM_CLASSES.FADE_IN).forEach(function (el) { obs.observe(el); });
     }, 50);
 }());
 
 (function () {
-    var links = document.querySelectorAll('.nav-links a');
+    var links = document.querySelectorAll(DOM_CLASSES.NAV_LINKS);
     window.addEventListener('scroll', function () {
         var cur = '';
-        document.querySelectorAll('section[id]').forEach(function (s) {
+        document.querySelectorAll(DOM_CLASSES.SECTION_ID).forEach(function (s) {
             if (window.scrollY >= s.offsetTop - 120) {
                 cur = s.id;
             }
         });
         links.forEach(function (a) {
-            a.classList.toggle('active', a.getAttribute('href') === '#' + cur);
+            a.classList.toggle(DOM_CLASSES.ACTIVE, a.getAttribute('href') === '#' + cur);
         });
     }, { passive: true });
 }());
