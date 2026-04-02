@@ -914,43 +914,43 @@ footer a.footer-link:focus {
   display:    block;
 }
 
-.lightbox__thumb--video::after {
-  content:    '';
-  position:   absolute;
-  inset:      0;
-  background: rgba(6,8,16,0.4) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%233af0c8'%3E%3Cpolygon points='8,5 19,12 8,19'/%3E%3C/svg%3E") center/20px no-repeat;
+.lightbox--thumb--video::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(6,8,16,0.4) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%233af0c8'%3E%3Cpolygon points='8,5 19,12 8,19'/%3E%3C/svg%3E") center/20px no-repeat;
 }
 
-.lightbox__thumb--gist {
-  display:         flex;
-  align-items:     center;
-  justify-content: center;
-  background:      var(--bg2);
-  border:          2px solid rgba(74,143,255,0.2);
-  width:           auto;
-  min-width:       80px;
-  padding:         0 12px;
+.lightbox--thumb--gist {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg2);
+    border: 2px solid rgba(74,143,255,0.2);
+    width: auto;
+    min-width: 80px;
+    padding: 0 12px;
 }
 
-.lightbox__thumb--gist span {
-  font-family:    var(--font-mono);
-  font-size:      9px;
-  color:          var(--muted);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  text-align:     center;
-  white-space:    nowrap;
+.lightbox--thumb--gist span {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    color: var(--muted);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-align: center;
+    white-space: nowrap;
 }
 
-.lightbox__thumb--gist.active {
+.lightbox--thumb--gist.active {
   border-color: var(--accent2);
 }
 
-.lightbox__thumb--gist.active span {
+.lightbox--thumb--gist.active span {
   color: var(--accent2);
 }
 
-.lightbox__thumb--gist:hover:not(.active) {
+.lightbox--thumb--gist:hover:not(.active) {
   border-color: rgba(74,143,255,0.4);
 }
 
@@ -1012,7 +1012,7 @@ footer a.footer-link:focus {
     height: 46px;
   }
 
-  .lightbox--gist {
+  .lightbox-gist {
     padding: 20px 0;
   }
 }
