@@ -30,25 +30,6 @@ var PROJECTS = [
         },
     },
     {
-        id: 'shimmer',
-        category: 'Game Server',
-        title: 'Game Server (WIP)',
-        subtitle: 'Native C++ / CMake / vcpkg / Clang',
-        wip: true,
-        desc: 'Early stages of a game server built in C++. Contains some of my code, the tools i use, and the practices i follow. Most of the code currently lives in src/shared. On hold for now, but planned for Vertex and other future projects.',
-        bullets: [
-            'CMake build tools with vcpkg as the package manager(manifest mode)',
-            'CMake presets for different build configurations and platforms',
-            'Targets Clang and C++26 standard. I\'m planning on heavily using the latest reflection features',
-        ],
-        stack: [
-            { label: 'C++' }, { label: 'CMake' }, { label: 'vcpkg' },
-            { label: 'Clang', color: 'blue' }, { label: 'Modern C++', color: 'blue' },
-        ],
-        repo: { url: 'https://github.com/TheShimmerGame/ShimmerWorld', label: 'ShimmerWorld on GitHub' },
-        media: [],
-    },
-    {
         id: 'almation-studio',
         category: 'Developer Tool / Motion Capture',
         title: 'Almation Studio',
@@ -71,6 +52,25 @@ var PROJECTS = [
             { type: 'image', src: 'AImation/NodeGraph.png', label: 'UI', caption: 'Node graph post-processing created in ImGui' },
             { type: 'youtube', id: 'LnCjvmgwyRE', label: 'Post Processing', caption: 'Entire application at runtime' },
         ],
+    },
+    {
+        id: 'shimmer',
+        category: 'Game Server',
+        title: 'Game Server (WIP)',
+        subtitle: 'Native C++ / CMake / vcpkg / Clang',
+        wip: true,
+        desc: 'Early stages of a game server built in C++. Contains some of my code, the tools i use, and the practices i follow. Most of the code currently lives in src/shared. On hold for now, but planned for Vertex and other future projects.',
+        bullets: [
+            'CMake build tools with vcpkg as the package manager(manifest mode)',
+            'CMake presets for different build configurations and platforms',
+            'Targets Clang and C++26 standard. I\'m planning on heavily using the latest reflection features',
+        ],
+        stack: [
+            { label: 'C++' }, { label: 'CMake' }, { label: 'vcpkg' },
+            { label: 'Clang', color: 'blue' }, { label: 'Modern C++', color: 'blue' },
+        ],
+        repo: { url: 'https://github.com/TheShimmerGame/ShimmerWorld', label: 'ShimmerWorld on GitHub' },
+        media: [],
     },
     {
         id: 'vertex',
