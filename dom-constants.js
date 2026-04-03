@@ -6,7 +6,7 @@ var PROJECTS = [
         title: 'Orbital Drift',
         subtitle: 'Unreal Engine 5 / Mover 2.0 / Team of 8',
         wip: true,
-        desc: 'Space game with an advanced movement system -- zero gravity, magnetic boots, dynamic gravity wells. Digital Dragons GoGlobal3 finalist.',
+        desc: 'Space game with an advanced movement system - zero gravity, magnetic boots, dynamic gravity wells. Digital Dragons GoGlobal3 finalist.',
         bullets: [
             'Custom ZeroG and MagBoots movement on Mover 2.0',
             'Dynamic gravity wells via Custom Gravity well system',
@@ -28,6 +28,25 @@ var PROJECTS = [
             header: { url: 'https://gist.github.com/Riztazz/5c7236a445078d211a31f24d23ce2f30.js', label: 'Some code by me(header)' },
             implementation: { url: 'https://gist.github.com/Riztazz/c020d60a77f0906c079bf4756be6caa4.js', label: 'and implementation' },
         },
+    },
+    {
+        id: 'shimmer',
+        category: 'Game Server Foundation / Native C++',
+        title: 'Game Server (WIP)',
+        subtitle: 'Native C++ / CMake / vcpkg / Clang',
+        wip: true,
+        desc: 'A personal project to explore clean C++ architecture and design from scratch.',
+        bullets: [
+            'Demonstrates my personal code style and practices',
+            'CMake + vcpkg (manifest mode)',
+            'Clang toolchain with strict clang-format code style'
+        ],
+        stack: [
+            { label: 'C++' }, { label: 'CMake' }, { label: 'vcpkg' },
+            { label: 'Clang', color: 'blue' }, { label: 'Modern C++', color: 'blue' },
+        ],
+        repo: { url: 'https://github.com/TheShimmerGame/ShimmerWorld', label: 'ShimmerWorld on GitHub' },
+        media: [],
     },
     {
         id: 'almation-studio',
@@ -55,7 +74,7 @@ var PROJECTS = [
     {
         id: 'vertex',
         category: 'Multiplayer Action / MOBA Prototype',
-        title: 'Vertex - Very Early WIP',
+        title: 'Vertex - WIP',
         subtitle: 'C++ / Unreal Engine 5 / Networking / Chaos Destruction',
         wip: true,
         desc: 'Early MOBA prototype focused on fast multiplayer gameplay with replicated Chaos destruction using modern UE features',
@@ -172,5 +191,7 @@ var DOM_CLASSES = {
     PROJECT_SUBTITLE: 'project-subtitle',
     PROJECT_DESC: 'project-desc',
     PROJECT_BULLETS: 'project-bullets',
-    PROJECT_STACK: 'project-stack'
+    PROJECT_STACK: 'project-stack',
+    PROJECT_COVER_EMPTY: 'project-cover--empty',
+    PROJECT_COVER_REPO: 'project-cover--repo',
 };

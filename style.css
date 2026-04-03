@@ -729,6 +729,29 @@ footer a.footer-link:focus {
   gap:       6px;
 }
 
+.project-cover--repo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.25s, background 0.25s;
+}
+
+.project-cover--repo span {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.project-cover--repo:hover {
+  color: var(--accent);
+  background: rgba(58,240,200,0.04);
+}
+
 .lightbox {
   position:        fixed;
   inset:           0;
