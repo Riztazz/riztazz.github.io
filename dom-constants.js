@@ -57,7 +57,7 @@ var PROJECTS = [
         id: 'shimmer',
         category: 'Game Server',
         title: 'Game Server (WIP)',
-        subtitle: 'Native C++ / CMake / vcpkg / Clang',
+        subtitle: 'C++ / CMake / vcpkg / Clang',
         wip: true,
         desc: 'Early stages of a game server built in C++. Contains some of my code, the tools i use, and the practices i follow. Most of the code currently lives in src/shared. On hold for now, but planned for Vertex and other future projects.',
         bullets: [

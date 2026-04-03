@@ -396,16 +396,26 @@ document.addEventListener('keydown', function (e) {
                 prevEl.style.setProperty('--flash-dur', SNAKE_HL.poppinMs + 'ms');
                 prevEl.classList.remove('snake-active');
                 prevEl.classList.add('snake-flash-out');
-                setTimeout(function () { prevEl.classList.remove('snake-flash-out'); removeLive(prevEl); }, SNAKE_HL.poppinMs);
+                setTimeout(function ()
+                {
+                    prevEl.classList.remove('snake-flash-out');
+                    removeLive(prevEl);
+                }, SNAKE_HL.poppinMs);
             }
             if (nextEl) {
                 nextEl.style.setProperty('--flash-dur', SNAKE_HL.poppinMs + 'ms');
                 nextEl.classList.add('snake-active', 'snake-flash-in');
-                setTimeout(function () { nextEl.classList.remove('snake-flash-in'); }, SNAKE_HL.poppinMs);
+                setTimeout(function ()
+                {
+                    nextEl.classList.remove('snake-flash-in');
+                }, SNAKE_HL.poppinMs);
             }
         }
         else {
-            if (nextEl) { nextEl.classList.add('snake-active'); }
+            if (nextEl)
+            {
+                nextEl.classList.add('snake-active');
+            }
             if (prevEl) {
                 prevEl.classList.remove('snake-active');
                 setTimeout(function () { removeLive(prevEl); }, SNAKE_HL.crossingMs + 50);
