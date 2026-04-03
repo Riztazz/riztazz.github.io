@@ -37,9 +37,9 @@ var PROJECTS = [
         wip: true,
         desc: 'Early stages of a game server built in C++. Contains some of my code, the tools i use, and the practices i follow. Most of the code currently lives in src/shared. On hold for now, but planned for Vertex and other future projects.',
         bullets: [
-            'Demonstrates my personal code style and practices',
-            'CMake + vcpkg (manifest mode)',
-            'Clang toolchain with strict clang-format code style'
+            'CMake build tools with vcpkg as the package manager(manifest mode)',
+            'CMake presets for different build configurations and platforms',
+            'Targets Clang and C++26 standard. I\'m planning on heavily using the latest reflection features',
         ],
         stack: [
             { label: 'C++' }, { label: 'CMake' }, { label: 'vcpkg' },
