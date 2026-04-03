@@ -31,11 +31,11 @@ var PROJECTS = [
     },
     {
         id: 'shimmer',
-        category: 'Game Server Foundation / Native C++',
+        category: 'Game Server',
         title: 'Game Server (WIP)',
         subtitle: 'Native C++ / CMake / vcpkg / Clang',
         wip: true,
-        desc: 'A personal project to explore clean C++ architecture and design from scratch. Meant to be used with Vertex and other future projects. Currently on hold.',
+        desc: 'Early stages of a game server built in C++ from scratch. Shows a bit how i write code, the tools i use and practices i follow. The src/shared folder currently holds most of the code. Currently on hold, but will be used for Vertex and other future projects.',
         bullets: [
             'Demonstrates my personal code style and practices',
             'CMake + vcpkg (manifest mode)',
