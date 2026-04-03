@@ -35,7 +35,7 @@ var PROJECTS = [
         title: 'Game Server (WIP)',
         subtitle: 'Native C++ / CMake / vcpkg / Clang',
         wip: true,
-        desc: 'A personal project to explore clean C++ architecture and design from scratch.',
+        desc: 'A personal project to explore clean C++ architecture and design from scratch. Meant to be used with Vertex and other future projects. Currently on hold.',
         bullets: [
             'Demonstrates my personal code style and practices',
             'CMake + vcpkg (manifest mode)',
@@ -77,7 +77,7 @@ var PROJECTS = [
         title: 'Vertex - WIP',
         subtitle: 'C++ / Unreal Engine 5 / Networking / Chaos Destruction',
         wip: true,
-        desc: 'Early MOBA prototype focused on fast multiplayer gameplay with replicated Chaos destruction using modern UE features',
+        desc: 'Early MOBA prototype focused on fast multiplayer gameplay with replicated Chaos destruction using modern UE features. Developed with couple of friends in spare time',
         bullets: [
             'Replicated Chaos destruction',
             'Gameplay systems implemented using GAS Framework',
@@ -133,6 +133,32 @@ var PROJECTS = [
         ],
         media: [
             { type: 'image', src: 'Launcher/Home.png', label: 'Built with Rust Tauri and React', caption: '' },
+        ],
+    },
+    {
+        id: 'other-experience',
+        category: 'Where It All Started',
+        title: 'Where It All Started',
+        subtitle: 'C++ / Lua / MySQL / Linux / Networking',
+        wip: false,
+        desc: 'I got into programming through TrinityCore / WoW private servers, and it taught me many aspects of programming and game development.',
+        bullets: [
+            'How MMORPGs work under the hood and how game servers are structured',
+            'Multiplayer networking, packets and TCP / UDP protocols',
+            'How to write performant C++ code where it matters',
+            'Different SQL database designs, structures and how to cleanly interact with them from code',
+            'Many different scripting systems (LUA, SQL based or C++ based)',
+            'A lot about threading, bottlenecks under high load, and hosting',
+            'A INVALUABLE experience with many debugging tools and profilers (ASan, TSan, Jemalloc(it does have debugging tools!) and many more',
+            'A bit about reverse engineering and ton how players exploit games and how to prevent it',
+        ],
+        stack: [
+            { label: 'C++' }, { label: 'Lua' }, { label: 'MySQL' },
+            { label: 'Linux', color: 'blue' }, { label: 'Networking', color: 'blue' },
+            { label: 'Threading', color: 'blue' },
+        ],
+        media: [
+            { type: 'image', src: 'Misc/book.png', label: 'Misc', caption: '' },
         ],
     },
 ];
