@@ -60,6 +60,7 @@ var PROJECTS = [
             'Full UI architecture in ImGui',
             'Camera systems: calibration, tracking, synchronization',
             'UE5 integration via Live Link Protocol',
+            'A bit about flutter and mobile development (the phone app is built with it)',
         ],
         stack: [
             { label: 'C++' }, { label: 'ImGui' },
@@ -137,7 +138,7 @@ var PROJECTS = [
     },
     {
         id: 'other-experience',
-        category: 'Where It All Started',
+        category: 'A little bit about',
         title: 'Where It All Started',
         subtitle: 'C++ / Lua / MySQL / Linux / Networking',
         wip: false,
@@ -160,6 +161,20 @@ var PROJECTS = [
         media: [
             { type: 'image', src: 'Misc/book.png', label: 'Misc', caption: '' },
         ],
+    },
+    {
+        id: 'this-website',
+        category: 'Portfolio',
+        title: 'This very simple website',
+        subtitle: 'HTML / CSS / JavaScript',
+        wip: false,
+        desc: 'that you\'re looking at right now was built by me from scratch. You can view the source code on github. It\'s a super simple, minimalistic, frameworkless page, but it was a fun little project to build and I\'m happy with how it turned out :)',
+        bullets: [],
+        stack: [
+            { label: 'HTML' }, { label: 'CSS' }, { label: 'JavaScript' },
+        ],
+        repo: { url: 'https://github.com/Riztazz/riztazz.github.io', label: 'Website on GitHub' },
+        media: [],
     },
 ];
 
