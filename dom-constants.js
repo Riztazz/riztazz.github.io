@@ -35,7 +35,7 @@ var PROJECTS = [
         title: 'Game Server (WIP)',
         subtitle: 'Native C++ / CMake / vcpkg / Clang',
         wip: true,
-        desc: 'Early stages of a game server built in C++ from scratch. Shows a bit how i write code, the tools i use and practices i follow. The src/shared folder currently holds most of the code. Currently on hold, but will be used for Vertex and other future projects.',
+        desc: 'Early stages of a game server built in C++. Contains some of my code, the tools i use, and the practices i follow. Most of the code currently lives in src/shared. On hold for now, but planned for Vertex and other future projects.',
         bullets: [
             'Demonstrates my personal code style and practices',
             'CMake + vcpkg (manifest mode)',
