@@ -236,3 +236,17 @@ var DOM_CLASSES = {
     PROJECT_COVER_EMPTY: 'project-cover--empty',
     PROJECT_COVER_REPO: 'project-cover--repo',
 };
+
+var SNAKE_HL = {
+    delayMs: 500,
+    snakingMs: 3000,
+    crossingMs: 600,
+    poppinMs: 100,
+    holdMs: 5500,
+    words: [
+        { id: 'hl-networking' },
+        { id: 'hl-lowlevel' },
+        { id: 'hl-gameplay' },
+        { id: 'hl-devtools' },
+    ],
+};

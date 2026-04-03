@@ -340,3 +340,82 @@ document.addEventListener('keydown', function (e) {
         });
     }, { passive: true });
 }());
+
+(function () {
+    var perimT = 0;
+    var lastTs = null;
+    var liveEls = [];
+    var curEl = null;
+    var idx = 0;
+
+    function removeLive(el) {
+        var i = liveEls.indexOf(el);
+        if (i !== -1) { liveEls.splice(i, 1); }
+    }
+
+    function perimToAngle(t, W, H) {
+        var P = 2 * (W + H);
+        var s = ((t % 1 + 1) % 1) * P;
+        var hw = W / 2, hh = H / 2;
+        var px, py;
+
+        if (s < hw) { px = s; py = -hh; }
+        else if (s < hw + H) { px = hw; py = -hh + (s - hw); }
+        else if (s < hw + H + W) { px = hw - (s - hw - H); py = hh; }
+        else if (s < hw + H + W + H) { px = -hw; py = hh - (s - hw - H - W); }
+        else { px = -hw + (s - (hw + H + W + H)); py = -hh; }
+
+        return Math.atan2(px, -py) * 180 / Math.PI;
+    }
+
+    function tick(ts) {
+        if (lastTs !== null) {
+            perimT = (perimT + (ts - lastTs) / SNAKE_HL.snakingMs) % 1;
+        }
+        lastTs = ts;
+        for (var i = 0; i < liveEls.length; i++) {
+            var el = liveEls[i];
+            var rect = el.getBoundingClientRect();
+            if (rect.width === 0) { continue; }
+            el.style.setProperty('--snake-angle', perimToAngle(perimT, rect.width + 4, rect.height + 4).toFixed(2) + 'deg');
+        }
+        requestAnimationFrame(tick);
+    }
+
+    function transition() {
+        var entry = SNAKE_HL.words[idx];
+        var isWrap = idx === 0 && curEl !== null;
+        var nextEl = document.getElementById(entry.id);
+        var prevEl = curEl;
+        idx = (idx + 1) % SNAKE_HL.words.length;
+        curEl = nextEl;
+        if (nextEl) { liveEls.push(nextEl); }
+
+        if (isWrap) {
+            if (prevEl) {
+                prevEl.style.setProperty('--flash-dur', SNAKE_HL.poppinMs + 'ms');
+                prevEl.classList.remove('snake-active');
+                prevEl.classList.add('snake-flash-out');
+                setTimeout(function () { prevEl.classList.remove('snake-flash-out'); removeLive(prevEl); }, SNAKE_HL.poppinMs);
+            }
+            if (nextEl) {
+                nextEl.style.setProperty('--flash-dur', SNAKE_HL.poppinMs + 'ms');
+                nextEl.classList.add('snake-active', 'snake-flash-in');
+                setTimeout(function () { nextEl.classList.remove('snake-flash-in'); }, SNAKE_HL.poppinMs);
+            }
+        }
+        else {
+            if (nextEl) { nextEl.classList.add('snake-active'); }
+            if (prevEl) {
+                prevEl.classList.remove('snake-active');
+                setTimeout(function () { removeLive(prevEl); }, SNAKE_HL.crossingMs + 50);
+            }
+        }
+
+        setTimeout(transition, SNAKE_HL.holdMs);
+    }
+
+    requestAnimationFrame(tick);
+    setTimeout(transition, SNAKE_HL.delayMs);
+}());
+

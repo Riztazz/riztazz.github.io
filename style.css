@@ -1039,3 +1039,113 @@ footer a.footer-link:focus {
     padding: 20px 0;
   }
 }
+
+/* Snake highlights for attention */
+.hl-word {
+  display:    inline;
+  position:   relative;
+  border-radius: 3px;
+  white-space: nowrap;
+  transition: color 0.35s linear, text-shadow 0.35s linear;
+}
+
+.hl-word::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  padding: 2px;
+  border-radius: 5px;
+  background: conic-gradient( from var(--snake-angle, 0deg), transparent 0%, transparent 55%, rgba(58,240,200,0.12) 67%, rgba(58,240,200,0.55) 80%, var(--accent) 92%, var(--accent) 100% );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.45s linear;
+}
+
+.hl-word.snake-active {
+  color: var(--accent);
+  text-shadow: 0 0 18px rgba(58,240,200,0.5);
+}
+
+.hl-word.snake-active::before {
+  opacity: 1;
+}
+
+@keyframes snake-pop-out {
+  0% {
+      opacity: 1;
+      filter: brightness(1);
+  }
+  
+  30% {
+      opacity: 1;
+      filter: brightness(5) saturate(0.2);
+  }
+  
+  100% {
+      opacity: 0;
+      filter: brightness(1);
+  }
+}
+
+@keyframes snake-pop-in {
+  0% {
+      filter: brightness(5) saturate(0.2);
+  }
+  
+  60% {
+      filter: brightness(2);
+  }
+  
+  100% {
+      filter: brightness(1);
+  }
+}
+
+@keyframes snake-word-pop-out {
+  0% {
+  }
+  
+  30% {
+      color: #fff;
+      text-shadow: 0 0 40px #fff, 0 0 70px rgba(58,240,200,0.9);
+  }
+  
+  100% {
+      color: var(--muted);
+      text-shadow: none;
+  }
+}
+
+@keyframes snake-word-pop-in {
+  0% {
+      color: #fff;
+      text-shadow: 0 0 50px #fff, 0 0 90px rgba(58,240,200,1);
+  }
+  
+  100% {
+      color: var(--accent);
+      text-shadow: 0 0 18px rgba(58,240,200,0.5);
+  }
+}
+
+.hl-word.snake-flash-out {
+  animation: snake-word-pop-out var(--flash-dur, 0.52s) linear forwards;
+}
+
+.hl-word.snake-flash-out::before {
+  animation: snake-pop-out var(--flash-dur, 0.52s) linear forwards;
+  transition: none;
+}
+
+.hl-word.snake-flash-in {
+  animation: snake-word-pop-in var(--flash-dur, 0.52s) linear forwards;
+}
+
+.hl-word.snake-flash-in::before {
+  animation: snake-pop-in var(--flash-dur, 0.52s) linear forwards;
+  opacity: 1;
+  transition: none;
+}
+
