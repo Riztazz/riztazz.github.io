@@ -59,11 +59,11 @@ var PROJECTS = [
         title: 'Game Server (WIP)',
         subtitle: 'C++ / CMake / vcpkg / Clang',
         wip: true,
-        desc: 'Early stages of a game server built in C++. Contains some of my code, the tools i use, and the practices i follow. Most of the code currently lives in src/shared. On hold for now, but planned for Vertex and other future projects.',
+        desc: 'Early stages of a game server built in C++. Contains some of my code, the tools i use, and the practices i follow. Most of the code currently lives in src/shared. On hold for now while client is developed',
         bullets: [
             'CMake build tools with vcpkg as the package manager(manifest mode)',
             'CMake presets for different build configurations and platforms',
-            'Targets Clang and C++26 standard. I\'m planning on heavily using the latest reflection features',
+            'Goals: C++26 standard, heavily utilize reflection features. World and systems using Flecs ECS',
         ],
         stack: [
             { label: 'C++' }, { label: 'CMake' }, { label: 'vcpkg' },
@@ -71,6 +71,26 @@ var PROJECTS = [
         ],
         repo: { url: 'https://github.com/TheShimmerGame/ShimmerWorld', label: 'ShimmerWorld on GitHub' },
         media: [],
+    },
+    {
+        id: 'mysql-editor',
+        category: 'Developer Tool / Database',
+        title: 'Database (MySQL) Editor with VCS support',
+        subtitle: 'C++ / ImGui / MySQL',
+        wip: false,
+        desc: 'Reflection based MySQL Database editor for a game project. Includes built-in version control for data, making it easier to track changes and collaborate across a team.',
+        bullets: [
+            'Integrated version control specifically for SQL databases',
+            'Built with C++ and ImGui for a lightweight, performant UI',
+            'Provides direct MySQL connection for real-time visual editing',
+        ],
+        stack: [
+            { label: 'C++' }, { label: 'ImGui' },
+            { label: 'MySQL', color: 'blue' }, { label: 'Reflection' }, { label: 'Version Control', color: 'orange' }
+        ],
+        media: [
+            { type: 'youtube', id: 'UWprXahu9HY', label: 'At work', caption: 'The editor in action' },
+        ]
     },
     {
         id: 'vertex',
@@ -93,26 +113,6 @@ var PROJECTS = [
         media: [
             { type: 'youtube', id: 'SMkVrw1T04g', label: 'Prototype', caption: 'Vertex early multiplayer prototype' },
         ],
-    },
-    {
-        id: 'mysql-editor',
-        category: 'Developer Tool / Database',
-        title: 'Database (MySQL) Editor with VCS support',
-        subtitle: 'C++ / ImGui / MySQL',
-        wip: false,
-        desc: 'Reflection based MySQL Database editor for a game project. Includes built-in version control for data, making it easier to track changes and collaborate across a team.',
-        bullets: [
-            'Integrated version control specifically for SQL databases',
-            'Built with C++ and ImGui for a lightweight, performant UI',
-            'Provides direct MySQL connection for real-time visual editing',
-        ],
-        stack: [
-            { label: 'C++' }, { label: 'ImGui' },
-            { label: 'MySQL', color: 'blue' }, { label: 'Reflection' }, { label: 'Version Control', color: 'orange' }
-        ],
-        media: [
-            { type: 'youtube', id: 'UWprXahu9HY', label: 'At work', caption: 'The editor in action' },
-        ]
     },
     {
         id: 'game-launcher',
@@ -239,10 +239,10 @@ var DOM_CLASSES = {
 
 var SNAKE_HL = {
     delayMs: 500,
-    snakingMs: 3000,
+    snakingMs: 2000,
     crossingMs: 600,
     poppinMs: 100,
-    holdMs: 5500,
+    holdMs: 4500,
     words: [
         { id: 'hl-networking' },
         { id: 'hl-lowlevel' },
