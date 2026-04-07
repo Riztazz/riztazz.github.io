@@ -142,7 +142,7 @@ var PROJECTS = [
         title: 'Where It All Started',
         subtitle: 'C++ / Lua / MySQL / Linux / Networking',
         wip: false,
-        desc: 'I got into programming through TrinityCore / WoW private servers, and it taught me many aspects of programming and game development.',
+        desc: 'I got into programming through TrinityCore, and it taught me many aspects of programming and game development.',
         bullets: [
             'How MMORPGs work under the hood and how game servers are structured',
             'Multiplayer networking, packets and TCP / UDP protocols',
