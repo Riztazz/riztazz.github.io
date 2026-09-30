@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="The same script with and without io-guard on Windows" font-family="Consolas, 'Cascadia Mono', Menlo, monospace">
+<rect width="1600" height="900" fill="#0d1117"/>
+<text x="800" y="84" fill="#e6edf3" font-size="34" text-anchor="middle" font-family="'Segoe UI', Helvetica, Arial, sans-serif">One script, run on Windows. It prints a small C program.</text>
+
+<rect x="60" y="124" width="1480" height="220" rx="14" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+<text x="100" y="172" fill="#8b949e" font-size="22" font-family="'Segoe UI', Helvetica, Arial, sans-serif">THE AGENT SENDS</text>
+<text fill="#e6edf3" font-size="24">
+<tspan x="100" y="214">python - &lt;&lt;'EOF'</tspan>
+<tspan x="100" y="248">lines = ['int main(void) {', '&#160;&#160;&#160;&#160;printf("rows: %d<tspan fill="#d29922">\\n</tspan>", 3);', '&#160;&#160;&#160;&#160;return 0;', '}']</tspan>
+<tspan x="100" y="282">print("\n".join(lines))</tspan>
+<tspan x="100" y="316">EOF</tspan>
+</text>
+
+<rect x="60" y="384" width="720" height="456" rx="14" fill="#161b22" stroke="#f85149" stroke-width="2"/>
+<text x="100" y="436" fill="#f85149" font-size="24" font-family="'Segoe UI', Helvetica, Arial, sans-serif">WITHOUT IO-GUARD</text>
+<text x="100" y="474" fill="#8b949e" font-size="20" font-family="'Segoe UI', Helvetica, Arial, sans-serif">Windows eats one backslash, so the line breaks in two.</text>
+<text fill="#e6edf3" font-size="26">
+<tspan x="100" y="540">int main(void) {</tspan>
+<tspan x="100" y="578" fill="#ffa198">&#160;&#160;&#160;&#160;printf("rows: %d</tspan>
+<tspan x="100" y="616" fill="#ffa198">", 3);</tspan>
+<tspan x="100" y="654">&#160;&#160;&#160;&#160;return 0;</tspan>
+<tspan x="100" y="692">}</tspan>
+</text>
+<text x="100" y="790" fill="#f85149" font-size="22" font-family="'Segoe UI', Helvetica, Arial, sans-serif">Broken C. It does not compile.</text>
+
+<rect x="820" y="384" width="720" height="456" rx="14" fill="#161b22" stroke="#3fb950" stroke-width="2"/>
+<text x="860" y="436" fill="#3fb950" font-size="24" font-family="'Segoe UI', Helvetica, Arial, sans-serif">WITH IO-GUARD</text>
+<text x="860" y="474" fill="#8b949e" font-size="20" font-family="'Segoe UI', Helvetica, Arial, sans-serif">The script moves to a file first, so nothing is lost.</text>
+<text fill="#e6edf3" font-size="26">
+<tspan x="860" y="540">int main(void) {</tspan>
+<tspan x="860" y="578" fill="#7ee787">&#160;&#160;&#160;&#160;printf("rows: %d\n", 3);</tspan>
+<tspan x="860" y="616">&#160;&#160;&#160;&#160;return 0;</tspan>
+<tspan x="860" y="654">}</tspan>
+</text>
+<text x="860" y="790" fill="#3fb950" font-size="22" font-family="'Segoe UI', Helvetica, Arial, sans-serif">The C the agent meant to write.</text>
+</svg>

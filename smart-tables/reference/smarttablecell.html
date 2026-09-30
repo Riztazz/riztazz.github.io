@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="en" data-theme="">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SmartTableCell.h - Smart Tables</title>
+<link rel="icon" href="../img/smarttables_favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css?v=94b6e99e">
+<script src="../theme.js?v=94b6e99e"></script>
+<script defer src="../search.js?v=94b6e99e"></script>
+</head>
+<body>
+
+<button id="t" type="button" aria-label="Switch between light and dark">THEME</button>
+
+<div class="wrap">
+
+<nav aria-label="Pages">
+<a class="home" href="../index.html" aria-label="Smart Tables"><svg xmlns="http://www.w3.org/2000/svg" class="logo" viewBox="0 0 222.2 48" width="222.2" height="48" aria-hidden="true">
+  <g fill="none" stroke="currentColor" stroke-width="3.5">
+    <rect x="4" y="8" width="40" height="34" rx="4.5"/>
+    <path d="M4 20 H44 M24 20 V42"/>
+  </g>
+  <rect x="26.5" y="22.5" width="15" height="17" rx="1.5" fill="#4a86ff"/>
+  <path d="M72.2 30Q72.2 28.3 71 27.2Q69.7 26.2 66.4 25.3Q63.1 24.3 61.6 23.2Q59.4 21.7 59.4 19.2Q59.4 16.7 61.4 15.2Q63.5 13.7 66.6 13.7Q68.7 13.7 70.4 14.5Q72.1 15.3 73 16.8Q73.9 18.2 73.9 20H72.1Q72.1 17.8 70.6 16.5Q69.1 15.2 66.6 15.2Q64.1 15.2 62.7 16.3Q61.2 17.4 61.2 19.1Q61.2 20.8 62.5 21.8Q63.8 22.8 66.7 23.6Q69.6 24.4 71.1 25.2Q72.5 26.1 73.3 27.2Q74 28.4 74 30Q74 32.5 72 34Q70 35.6 66.7 35.6Q64.5 35.6 62.6 34.8Q60.7 34 59.7 32.5Q58.8 31.1 58.8 29.2H60.6Q60.6 31.4 62.2 32.7Q63.9 34 66.7 34Q69.2 34 70.7 32.9Q72.2 31.8 72.2 30ZM78.5 19.4 78.6 22Q79.4 20.6 80.8 19.8Q82.1 19.1 83.7 19.1Q87.4 19.1 88.5 22.2Q89.3 20.7 90.7 19.9Q92.1 19.1 93.9 19.1Q99 19.1 99.1 24.7V35.3H97.3V24.8Q97.3 22.7 96.4 21.7Q95.5 20.7 93.5 20.7Q91.6 20.7 90.3 21.9Q89 23.1 88.8 24.8V35.3H87.1V24.7Q87 22.7 86.1 21.7Q85.1 20.7 83.2 20.7Q81.5 20.7 80.3 21.6Q79.2 22.5 78.6 24.4V35.3H76.8V19.4ZM112.9 35.3Q112.6 34.5 112.6 33.1Q111.6 34.3 110.2 34.9Q108.8 35.6 107.2 35.6Q104.9 35.6 103.5 34.3Q102.1 33 102.1 31.1Q102.1 28.8 104 27.4Q105.9 26.1 109.4 26.1H112.6V24.3Q112.6 22.6 111.5 21.6Q110.5 20.6 108.5 20.6Q106.6 20.6 105.4 21.5Q104.2 22.5 104.2 23.8L102.5 23.8Q102.5 21.9 104.2 20.5Q106 19.1 108.5 19.1Q111.2 19.1 112.7 20.5Q114.3 21.8 114.3 24.2V31.7Q114.3 34 114.8 35.1V35.3ZM107.4 34Q109.2 34 110.5 33.2Q111.9 32.3 112.6 30.9V27.4H109.4Q106.8 27.4 105.3 28.4Q103.8 29.3 103.8 30.9Q103.8 32.3 104.8 33.1Q105.8 34 107.4 34ZM125.7 20.9Q125.1 20.8 124.5 20.8Q122.9 20.8 121.7 21.7Q120.6 22.6 120.1 24.4V35.3H118.4V19.4H120.1L120.1 21.9Q121.5 19.1 124.6 19.1Q125.3 19.1 125.7 19.3ZM130.6 15.4V19.4H133.9V20.9H130.6V31.4Q130.6 32.7 131.1 33.4Q131.5 34 132.7 34Q133.1 34 134.1 33.9L134.1 35.3Q133.5 35.6 132.3 35.6Q130.5 35.6 129.7 34.5Q128.8 33.5 128.8 31.4V20.9H125.9V19.4H128.8V15.4ZM151.4 17.2H145.4V35.3H141.1V17.2H135.1V13.9H151.4ZM162.2 35.3Q162 34.7 161.8 34.1Q161.6 33.5 161.6 32.9Q160.9 34.1 159.8 34.8Q158.7 35.6 157.2 35.6Q154.8 35.6 153.4 34.3Q152.1 33 152.1 30.8Q152.1 28.5 153.9 27.2Q155.7 25.9 159.1 25.9H161.5V24.7Q161.5 23.5 160.9 22.9Q160.3 22.2 159.1 22.2Q158.1 22.2 157.5 22.8Q156.9 23.3 156.9 24.1H152.8L152.8 24.1Q152.7 22 154.5 20.6Q156.4 19.1 159.4 19.1Q162.2 19.1 164 20.6Q165.8 22 165.8 24.7V31.2Q165.8 32.3 165.9 33.3Q166.1 34.3 166.5 35.3ZM158.3 32.4Q159.4 32.4 160.3 31.9Q161.2 31.3 161.5 30.6V28.3H159.1Q157.7 28.3 157 29Q156.3 29.7 156.3 30.7Q156.3 31.5 156.9 31.9Q157.4 32.4 158.3 32.4ZM182.7 27.8Q182.7 31.3 181.1 33.5Q179.5 35.6 176.5 35.6Q175.1 35.6 174.1 35Q173.1 34.4 172.4 33.3L172 35.3H168.4V12.4H172.6V21.1Q173.3 20.2 174.3 19.6Q175.3 19.1 176.5 19.1Q179.5 19.1 181.1 21.4Q182.7 23.7 182.7 27.5ZM178.4 27.5Q178.4 25.2 177.7 23.8Q177.1 22.5 175.4 22.5Q174.4 22.5 173.7 22.9Q173 23.3 172.6 24.1V30.8Q173 31.5 173.7 31.9Q174.4 32.3 175.4 32.3Q177.1 32.3 177.8 31.1Q178.4 29.9 178.4 27.8ZM189.2 35.3H184.9V12.4H189.2ZM199 35.6Q195.5 35.6 193.5 33.4Q191.5 31.2 191.5 27.8V27.2Q191.5 23.7 193.4 21.4Q195.3 19.1 198.7 19.1Q201.9 19.1 203.6 21.1Q205.3 23 205.3 26.4V28.6H195.9L195.8 28.7Q195.9 30.3 196.8 31.3Q197.7 32.3 199.5 32.3Q200.9 32.3 201.9 32Q202.9 31.7 204 31.1L205.1 33.7Q204.2 34.5 202.5 35.1Q200.9 35.6 199 35.6ZM198.7 22.4Q197.4 22.4 196.7 23.3Q196 24.2 195.9 25.7L195.9 25.7H201.1V25.4Q201.1 24 200.6 23.2Q200 22.4 198.7 22.4ZM215.8 30.9Q215.8 30.2 215.1 29.7Q214.4 29.2 212.6 28.8Q209.8 28.2 208.4 27.1Q206.9 26 206.9 24Q206.9 22 208.6 20.6Q210.4 19.1 213.2 19.1Q216.2 19.1 218.1 20.6Q219.9 22 219.8 24.1L219.8 24.2H215.6Q215.6 23.3 215 22.7Q214.4 22.1 213.2 22.1Q212.2 22.1 211.6 22.6Q211 23.1 211 23.8Q211 24.6 211.6 25Q212.3 25.5 214.2 25.9Q217.1 26.5 218.5 27.6Q219.9 28.7 219.9 30.7Q219.9 32.9 218.1 34.2Q216.3 35.6 213.3 35.6Q210.1 35.6 208.3 34Q206.4 32.4 206.5 30.3L206.5 30.2H210.5Q210.5 31.5 211.3 32.1Q212.1 32.6 213.4 32.6Q214.5 32.6 215.2 32.2Q215.8 31.7 215.8 30.9Z" fill="currentColor"/>
+</svg></a>
+  <b>Home</b>
+    <a href="../index.html">Home</a>
+    <a href="../pages/00_features.html">Every feature</a>
+  <b>Start here</b>
+    <a href="../pages/01_first_table.html">Your first table</a>
+    <a href="../pages/02_rows.html">Rows</a>
+    <a href="../pages/03_columns.html">Columns</a>
+    <a href="../pages/04_cells.html">Cells</a>
+    <a href="../pages/05_events.html">Events</a>
+  <b>Going further</b>
+    <a href="../pages/06_sorting.html">Sorting and filtering</a>
+    <a href="../pages/07_input.html">Selection and input</a>
+    <a href="../pages/08_reorder.html">Reordering rows</a>
+    <a href="../pages/09_layout_skin.html">Layout and skin</a>
+    <a href="../pages/13_debugging.html">When it draws nothing</a>
+  <b>When you need more</b>
+    <a href="../pages/10_blueprint_model.html">A model in Blueprint</a>
+    <a href="../pages/11_row_spaces.html">The two row spaces</a>
+    <a href="../pages/12_cpp.html">Dropping to C++</a>
+  <b>Demos</b>
+    <a href="../pages/20_demo_items.html">1. Items</a>
+    <a href="../pages/21_demo_datatable.html">2. DataTable</a>
+    <a href="../pages/22_demo_csv.html">3. CSV file</a>
+    <a href="../pages/23_demo_json.html">4. JSON file</a>
+    <a href="../pages/24_demo_million.html">5. One million rows</a>
+    <a href="../pages/25_demo_server.html">6. Server browser</a>
+    <a href="../pages/26_demo_pairs.html">7. Pairs</a>
+    <a href="../pages/27_demo_keys.html">8. Keys, no EI</a>
+    <a href="../pages/28_demo_items_mvvm.html">9. Items with MVVM</a>
+  <b>Reference</b>
+  <div class="scroller">
+    <a href="smarttable.html">SmartTable.h</a>
+    <a href="smarttabletypes.html">SmartTableTypes.h</a>
+    <a href="smarttablesorting.html">SmartTableSorting.h</a>
+    <a href="smarttabledeadsecondaries.html">SmartTableDeadSecondaries.h</a>
+    <a href="smarttablecolumnlayout.html">SmartTableColumnLayout.h</a>
+    <a href="smarttablebinding.html">SmartTableBinding.h</a>
+    <a href="smarttablecolumnschema.html">SmartTableColumnSchema.h</a>
+    <a href="smarttabledispatcher.html">SmartTableDispatcher.h</a>
+    <a href="smarttablecolour.html">SmartTableColour.h</a>
+    <a href="smarttablemodel.html">SmartTableModel.h</a>
+    <a href="smarttableobjectmodel.html">SmartTableObjectModel.h</a>
+    <a href="smarttabledatatablemodel.html">SmartTableDataTableModel.h</a>
+    <a href="smarttablekeptrow.html">SmartTableKeptRow.h</a>
+    <a href="smarttablerowsetdiff.html">SmartTableRowSetDiff.h</a>
+    <a href="smarttablecell.html" aria-current="page">SmartTableCell.h</a>
+    <a href="smarttablerowwidget.html">SmartTableRowWidget.h</a>
+    <a href="smarttablestyle.html">SmartTableStyle.h</a>
+    <a href="smarttablesettings.html">SmartTableSettings.h</a>
+    <a href="smarttablelayoutstore.html">SmartTableLayoutStore.h</a>
+    <a href="smarttablesortkey.html">SmartTableSortKey.h</a>
+    <a href="smarttablecelldragdropop.html">SmartTableCellDragDropOp.h</a>
+    <a href="smarttablecelldrag.html">SmartTableCellDrag.h</a>
+    <a href="smarttablecolumnselection.html">SmartTableColumnSelection.h</a>
+    <a href="smarttableresizegesture.html">SmartTableResizeGesture.h</a>
+    <a href="smarttablescrollmove.html">SmartTableScrollMove.h</a>
+    <a href="smarttablearrivals.html">SmartTableArrivals.h</a>
+    <a href="smarttableopenmenu.html">SmartTableOpenMenu.h</a>
+    <a href="smarttablelog.html">SmartTableLog.h</a>
+  </div>
+</nav>
+
+<main>
+  <h1>SmartTableCell.h</h1>
+  <p class="lede">The class a cell Widget Blueprint sits on, and the two stock cells.</p>
+<div class="refhead">
+  <div class="path">Source/SmartTables/Public/SmartTableCell.h</div>
+<p>One cell, for a column that needs more than text.</p>
+<p>Recycled, never rebuilt. The table keeps a pool and hands cells to new rows as the list scrolls, so OnCellAssigned runs many times on one instance. Whatever it sets on one row it sets again on the next. Whatever the cell holds is dropped in OnCellReleased. An item kept past a release stays alive as long as the table, and a delegate handle left bound fires for a row this cell stopped drawing.</p>
+<p>OnItemSet has the shape of IUserObjectListEntry, so a UListView entry is already this class. A cell whose widgets bind to a viewmodel needs neither. It names an ItemSetter and holds no graph at all.</p>
+  <dl>
+  <dt>Class</dt><dd>USmartTableCell</dd>
+  <dt>Extends</dt><dd>UUserWidget</dd>
+  <dt>Members</dt><dd>62</dd>
+  <dt>Blueprint nodes</dt><dd>8</dd>
+  <dt>Panel fields</dt><dd>5</dd>
+  </dl>
+</div>
+<h2 id="public-function">Public functions <em>15</em></h2>
+<h3 class="cat" id="public-function-smart-tables-cell">Cell <em>7</em></h3>
+<div class="member" id="FindCellAnimation">
+  <div class="member-head"><b>Find Cell Animation</b><span>FindCellAnimation</span><em class="badge role">pure node</em></div>
+  <div class="member-decl"><span class="macro">UFUNCTION( BlueprintPure, Category = "Smart Tables|Cell" )</span>
+UWidgetAnimation * FindCellAnimation( FName AnimationName ) const</div>
+  <p>One animation of this Widget Blueprint, by name.</p>
+<p>See <code><a class="xref" href="smarttablerowwidget.html#FindRowAnimation">USmartTableRowWidget::FindRowAnimation</a></code> for why UMG has nothing of its own here.</p>
+</div>
+<div class="member" id="GetAssignReason">
+  <div class="member-head"><b>Get Assign Reason</b><span>GetAssignReason</span><em class="badge role">pure node</em></div>
+  <div class="member-decl"><span class="macro">UFUNCTION( BlueprintPure, Category = "Smart Tables|Cell" )</span>
+<a class="xref" href="smarttabletypes.html#ESmartTableAssignReason">ESmartTableAssignReason</a> GetAssignReason() const</div>
+  <p>Why this cell was last given a row.</p>
+<p>The same answer OnCellAssigned gets, kept here so a C++ cell can read it from NativeOnCellAssigned, which takes no arguments.</p>
+</div>
+<div class="member" id="GetTable">
+  <div class="member-head"><b>Get Table</b><span>GetTable</span><em class="badge role">pure node</em></div>
+  <div class="member-decl"><span class="macro">UFUNCTION( BlueprintPure, Category = "Smart Tables|Cell" )</span>
+<a class="xref" href="smarttable.html">USmartTable</a> * GetTable() const</div>
+  <p>The table this cell draws in, where the styles and the columns are named. Null between a release and the next row, the same as GetModel, and null inside a release that teardown caused.</p>
+</div>
+<div class="member" id="GetModel">
+  <div class="member-head"><b>Get Model</b><span>GetModel</span><em class="badge role">pure node</em></div>
+  <div class="member-decl"><span class="macro">UFUNCTION( BlueprintPure, Category = "Smart Tables|Cell" )</span>
+<a class="xref" href="smarttablemodel.html">USmartTableModel</a> * GetModel() const</div>
+  <p>The model this cell reads. Null between a release and the next row.</p>
+</div>
+<div class="member" id="GetRowIndex">
+  <div class="member-head"><b>Get Row Index</b><span>GetRowIndex</span><em class="badge role">pure node</em></div>
+  <div class="member-decl"><span class="macro">UFUNCTION( BlueprintPure, Category = "Smart Tables|Cell" )</span>
+int32 GetRowIndex() const</div>
+  <p>The row this cell draws right now, in natural space.</p>
+</div>
+<div class="member" id="GetColumnId">
+  <div class="member-head"><b>Get Column Id</b><span>GetColumnId</span><em class="badge role">pure node</em></div>
+  <div class="member-decl"><span class="macro">UFUNCTION( BlueprintPure, Category = "Smart Tables|Cell" )</span>
+FName GetColumnId() const</div>
+  <p>The column this cell draws. NAME_None while it sits in the pool.</p>
+</div>
+<div class="member" id="GetItem">
+  <div class="member-head"><b>Get Item</b><span>GetItem</span><em class="badge role">pure node</em></div>
+  <div class="member-decl"><span class="macro">UFUNCTION( BlueprintPure, Category = "Smart Tables|Cell" )</span>
+UObject * GetItem() const</div>
+  <p>Null when the source has no items at all: a DataTable row, or a model that says it has none.</p>
+</div>
+<h3 class="cat" id="public-function-smart-tables-drag-and-drop">Drag and Drop <em>4</em></h3>
+<div class="member" id="MakeCellDragPayload">
+  <div class="member-head"><b>Make Cell Drag Payload</b><span>MakeCellDragPayload</span><em class="badge role">override</em></div>
+  <div class="member-decl"><span class="macro">UFUNCTION( BlueprintNativeEvent, Category = "Smart Tables|Drag and Drop" )</span>
+class <a class="xref" href="smarttablecelldragdropop.html">USmartTableCellDragDropOp</a> * MakeCellDragPayload()</div>
+  <p>What this cell gives over when a drag starts on it.</p>
+<p>The default fills in the row, the column, the item and the table, then the drag visual and the grab point. An override carries more. With none, the drop reads <a class="xref" href="smarttablecelldragdropop.html">USmartTableCellDragDropOp</a>.</p>
+<p>Only called while the table has bAllowCellDragDrop on.</p>
+</div>
+<div class="member" id="MakeCellDragVisual">
+  <div class="member-head"><b>Make Cell Drag Visual</b><span>MakeCellDragVisual</span><em class="badge role">override</em></div>
+  <div class="member-decl"><span class="macro">UFUNCTION( BlueprintNativeEvent, Category = "Smart Tables|Drag and Drop" )</span>
+UWidget * MakeCellDragVisual()</div>
+  <p>What follows the cursor during the drag. This same cell again, by default.</p>
+<p>A second cell of the column's DragVisualClass is built, given the same row and column, and sized to what this one is drawing right now. Null carries no visual at all, which is all a drag that only moves data needs. A cell that was never laid out answers null too, since there is no size to copy.</p>
+<p>A Smart Table Cell anywhere inside what this gives back is RELEASED when the drag ends, at any depth, whether the plugin built it or an override did. No pool takes a drag visual's cell back, so nothing else reaches its OnCellReleased.</p>
+</div>
+<div class="member" id="GetCellDragRole">
+  <div class="member-head"><b>Get Cell Drag Role</b><span>GetCellDragRole</span><em class="badge role">pure node</em></div>
+  <div class="member-decl"><span class="macro">UFUNCTION( BlueprintPure, Category = "Smart Tables|Drag and Drop" )</span>
+<a class="xref" href="smarttabletypes.html#ESmartTableCellDragRole">ESmartTableCellDragRole</a> GetCellDragRole() const</div>
+  <p>What this cell is to the drag going on right now.</p>
+</div>
+<div class="member" id="OnCellDragRoleChanged">
+  <div class="member-head"><b>On Cell Drag Role Changed</b><span>OnCellDragRoleChanged</span><em class="badge role">override</em></div>
+  <div class="member-decl"><span class="macro">UFUNCTION( BlueprintNativeEvent, Category = "Smart Tables|Drag and Drop", meta = ( DisplayName = "On Cell Drag Role Changed" ) )</span>
+void OnCellDragRoleChanged( <a class="xref" href="smarttabletypes.html#ESmartTableCellDragRole">ESmartTableCellDragRole</a> NewRole )</div>
+  <p>This cell is now the source of a drag, the thing under the pointer, or neither.</p>
+<p>The table marks both already, as bMarkDragCells describes. This is for a cell doing something the marking can not: grow, change colour, play a sound, hide what it holds while that is on the move.</p>
+<p>With bMarkDragCells left on, a cell that marks itself here carries two markings at once.</p>
+</div>
+<h3 class="cat" id="public-function-cpp-only">C++ only <em>4</em></h3>
+<div class="member" id="AssignCell">
+  <div class="member-head"><b class="cpp">AssignCell</b></div>
+  <div class="member-decl">void AssignCell( <a class="xref" href="smarttable.html">USmartTable</a> * InTable, <a class="xref" href="smarttablemodel.html">USmartTableModel</a> * InModel, int32 InNaturalRow, FName InColumnId, <a class="xref" href="smarttabletypes.html#ESmartTableAssignReason">ESmartTableAssignReason</a> InReason )</div>
+</div>
+<div class="member" id="ReleaseCell">
+  <div class="member-head"><b class="cpp">ReleaseCell</b></div>
+  <div class="member-decl">void ReleaseCell()</div>
+  <p>Given back to the pool. The cell goes on existing and draws another row later. Its table may already be gone, since this also runs while the row it sits in is torn down.</p>
+</div>
+<div class="member" id="HasItemSetter">
+  <div class="member-head"><b class="cpp">HasItemSetter</b></div>
+  <div class="member-decl">bool HasItemSetter() const</div>
+  <p>Read off the class default by the table, where a model with no items is a mistake for this cell.</p>
+</div>
+<div class="member" id="SetCellDragRole">
+  <div class="member-head"><b class="cpp">SetCellDragRole</b></div>
+  <div class="member-decl">void SetCellDragRole( <a class="xref" href="smarttabletypes.html#ESmartTableCellDragRole">ESmartTableCellDragRole</a> NewRole )</div>
+  <p>Set by the row as a drag moves over its cells, and never called from outside the table.</p>
+</div>
+<h2 id="protected-function">Protected functions <em>11</em></h2>
+<h3 class="cat" id="protected-function-smart-tables-cell">Cell <em>3</em></h3>
+<div class="member" id="OnCellAssigned">
+  <div class="member-head"><b>On Cell Assigned</b><span>OnCellAssigned</span><em class="badge role">bp event</em></div>
+  <div class="member-decl"><span class="macro">UFUNCTION( BlueprintImplementableEvent, Category = "Smart Tables|Cell", meta = ( DisplayName = "On Cell Assigned" ) )</span>
+void OnCellAssigned( <a class="xref" href="smarttabletypes.html#ESmartTableAssignReason">ESmartTableAssignReason</a> Reason )</div>
+  <p>Fires every time this cell is given a row, one it has drawn before too.</p>
+<p>Reason is what sets the cases apart. A cell that plays an entrance whatever the reason says plays it on every scroll, since scrolling is what hands a pooled cell its next row.</p>
+</div>
+<div class="member" id="OnCellReleased">
+  <div class="member-head"><b>On Cell Released</b><span>OnCellReleased</span><em class="badge role">bp event</em></div>
+  <div class="member-decl"><span class="macro">UFUNCTION( BlueprintImplementableEvent, Category = "Smart Tables|Cell", meta = ( DisplayName = "On Cell Released" ) )</span>
+void OnCellReleased()</div>
+  <p>Fires as the cell goes back to the pool, while the row it drew can still be read. Anything held is dropped here.</p>
+<p>GetTable answers null when teardown caused the release, so nothing here may read a default back off the table. A cell takes its look when it is GIVEN a row, where the table is there by contract.</p>
+</div>
+<div class="member" id="OnItemSet">
+  <div class="member-head"><b>On Item Set</b><span>OnItemSet</span><em class="badge role">bp event</em></div>
+  <div class="member-decl"><span class="macro">UFUNCTION( BlueprintImplementableEvent, Category = "Smart Tables|Cell", meta = ( DisplayName = "On Item Set" ) )</span>
+void OnItemSet( UObject * Item )</div>
+  <p>The short form of the one above, for a cell that only needs the item.</p>
+</div>
+<h3 class="cat" id="protected-function-cpp-only">C++ only <em>8</em></h3>
+<div class="member" id="GetItemSetterOptions">
+  <div class="member-head"><b>Get Item Setter Options</b><span>GetItemSetterOptions</span></div>
+  <div class="member-decl"><span class="macro">UFUNCTION()</span>
+TArray&lt; FName &gt; GetItemSetterOptions() const</div>
+  <p>The functions of the classes below <a class="xref" href="smarttablecell.html">USmartTableCell</a> that CanBeItemSetter allows, for the list in the Details panel. A Set function of a viewmodel context is there once the Widget Blueprint compiles.</p>
+</div>
+<div class="member" id="NativeOnCellAssigned">
+  <div class="member-head"><b class="cpp">NativeOnCellAssigned</b><em class="badge mod">virtual</em></div>
+  <div class="member-decl">virtual void NativeOnCellAssigned()</div>
+</div>
+<div class="member" id="NativeOnCellReleased">
+  <div class="member-head"><b class="cpp">NativeOnCellReleased</b><em class="badge mod">virtual</em></div>
+  <div class="member-decl">virtual void NativeOnCellReleased()</div>
+</div>
+<div class="member" id="NativeOnMouseButtonDown">
+  <div class="member-head"><b class="cpp">NativeOnMouseButtonDown</b><em class="badge mod">override</em></div>
+  <div class="member-decl">virtual FReply NativeOnMouseButtonDown( const FGeometry &amp; Geometry, const FPointerEvent &amp; MouseEvent ) override</div>
+  <p>Drag and drop, which a cell only joins in while its table lets it.</p>
+<p>This base starts drags and says when a drop happened. It moves nothing. The drop goes out on the table as OnCellDropped, which is where a game changes its own data.</p>
+</div>
+<div class="member" id="NativeOnDragDetected">
+  <div class="member-head"><b class="cpp">NativeOnDragDetected</b><em class="badge mod">override</em></div>
+  <div class="member-decl">virtual void NativeOnDragDetected( const FGeometry &amp; Geometry, const FPointerEvent &amp; MouseEvent, UDragDropOperation *&amp; OutOperation ) override</div>
+</div>
+<div class="member" id="NativeOnDragOver">
+  <div class="member-head"><b class="cpp">NativeOnDragOver</b><em class="badge mod">override</em></div>
+  <div class="member-decl">virtual bool NativeOnDragOver( const FGeometry &amp; Geometry, const FDragDropEvent &amp; DragDropEvent, UDragDropOperation * InOperation ) override</div>
+</div>
+<div class="member" id="NativeOnDragLeave">
+  <div class="member-head"><b class="cpp">NativeOnDragLeave</b><em class="badge mod">override</em></div>
+  <div class="member-decl">virtual void NativeOnDragLeave( const FDragDropEvent &amp; DragDropEvent, UDragDropOperation * InOperation ) override</div>
+</div>
+<div class="member" id="NativeOnDrop">
+  <div class="member-head"><b class="cpp">NativeOnDrop</b><em class="badge mod">override</em></div>
+  <div class="member-decl">virtual bool NativeOnDrop( const FGeometry &amp; Geometry, const FDragDropEvent &amp; DragDropEvent, UDragDropOperation * InOperation ) override</div>
+</div>
+<h2 id="private-function">Private functions <em>5</em></h2>
+<div class="member" id="PlayValueChanged">
+  <div class="member-head"><b class="cpp">PlayValueChanged</b></div>
+  <div class="member-decl">void PlayValueChanged( <a class="xref" href="smarttabletypes.html#ESmartTableAssignReason">ESmartTableAssignReason</a> Reason )</div>
+  <p>Plays ValueChangedAnimation, when the reason is one that should.</p>
+</div>
+<div class="member" id="HandOverItem">
+  <div class="member-head"><b class="cpp">HandOverItem</b></div>
+  <div class="member-decl">void HandOverItem( UObject * Item )</div>
+  <p>Hands Item to the ItemSetter, unless it is the item handed last.</p>
+</div>
+<div class="member" id="FindItemSetter">
+  <div class="member-head"><b class="cpp">FindItemSetter</b></div>
+  <div class="member-decl">UFunction * FindItemSetter()</div>
+  <p>The ItemSetter, found on first use and held. Null when the class names none, and null when the one it names can not take an item.</p>
+</div>
+<div class="member" id="IsFirstItemSetterWarning">
+  <div class="member-head"><b class="cpp">IsFirstItemSetterWarning</b></div>
+  <div class="member-decl">bool IsFirstItemSetterWarning()</div>
+  <p>True the first time an ItemSetter mistake of this class comes up in this table. A cell with no table says every one.</p>
+</div>
+<div class="member" id="ResolveFlash">
+  <div class="member-head"><b class="cpp">ResolveFlash</b></div>
+  <div class="member-decl">UWidgetAnimation * ResolveFlash()</div>
+  <p>The held pair above, brought up to date. Not const, because it writes them.</p>
+</div>
+<h2 id="public-variable">Public variables <em>1</em></h2>
+<div class="member" id="ValueChangedAnimation">
+  <div class="member-head"><b>Value Changed Animation</b><span>ValueChangedAnimation</span><em class="badge role">panel</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( EditAnywhere, BlueprintReadWrite, Category = "Smart Tables|Cell", meta = ( ToolTip = "A Sequencer animation played when this row's values move, named Pulse by default. A refresh of everything never fires it." ) )</span>
+FName ValueChangedAnimation = TEXT( "     " )</div>
+  <p>An animation played when the values of this row move, and at no other time.</p>
+<p>A flash, or a quick change of colour. It starts from where the cell already sits, and nothing pins frame zero in front of it, so an animation whose first key is somewhere else jumps for one frame.</p>
+<p>A refresh of everything arrives as Refreshed and plays nothing. Empty for a cell that holds still.</p>
+</div>
+<h2 id="protected-variable">Protected variables <em>1</em></h2>
+<div class="member" id="ItemSetter">
+  <div class="member-head"><b>Item Setter</b><span>ItemSetter</span><em class="badge role">panel</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( EditDefaultsOnly, Category = "Smart Tables|Cell", meta = ( GetOptions = "GetItemSetterOptions", ToolTip = "The function this cell hands its row's object to, each time it draws a row with a new one. Pick the Set function of a Manual viewmodel context, and the bindings of that context draw the cell." ) )</span>
+FName ItemSetter</div>
+  <dl class="facts">
+    <dt>Options from</dt><dd>GetItemSetterOptions</dd>
+  </dl>
+  <p>A function of this cell that takes the row's object, found by name.</p>
+<p>Called with the item each time the cell is given a row whose item is a different object, before On Cell Assigned. Called with null as the cell goes back to the pool, after On Cell Released. A row whose item is the one handed last calls nothing, since the bindings a viewmodel feeds draw its changes.</p>
+<p>A Manual viewmodel context adds a Set function for itself to the Widget Blueprint, and that function is what this names. It is found by name, so the plugin links no MVVM module.</p>
+<p>An item of a class the setter does not take is handed over as null, and warned about once per class.</p>
+</div>
+<h2 id="private-variable">Private variables <em>11</em></h2>
+<div class="member" id="Table">
+  <div class="member-head"><b class="cpp">Table</b></div>
+  <div class="member-decl">TWeakObjectPtr&lt; <a class="xref" href="smarttable.html">USmartTable</a> &gt; Table</div>
+  <p>Weak. The table owns the pool that owns this cell, so a strong pointer back would be a ring.</p>
+</div>
+<div class="member" id="Model">
+  <div class="member-head"><b>Model</b><span>Model</span></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( Transient )</span>
+TObjectPtr&lt; <a class="xref" href="smarttablemodel.html">USmartTableModel</a> &gt; Model</div>
+  <dl class="facts">
+    <dt>Transient</dt><dd>Never saved.</dd>
+  </dl>
+  <p>Strong, because a cell outliving its model would read freed rows.</p>
+</div>
+<div class="member" id="NaturalRow">
+  <div class="member-head"><b class="cpp">NaturalRow</b></div>
+  <div class="member-decl">int32 NaturalRow = INDEX_NONE</div>
+</div>
+<div class="member" id="ColumnId">
+  <div class="member-head"><b class="cpp">ColumnId</b></div>
+  <div class="member-decl">FName ColumnId</div>
+</div>
+<div class="member" id="DragRole">
+  <div class="member-head"><b class="cpp">DragRole</b></div>
+  <div class="member-decl"><a class="xref" href="smarttabletypes.html#ESmartTableCellDragRole">ESmartTableCellDragRole</a> DragRole = <a class="xref" href="smarttabletypes.html#ESmartTableCellDragRole-None">ESmartTableCellDragRole::None</a></div>
+  <p>Cleared on release with everything else, or a pooled cell would draw the marking of the last drag on a row that had nothing to do with it.</p>
+</div>
+<div class="member" id="AssignReason">
+  <div class="member-head"><b class="cpp">AssignReason</b></div>
+  <div class="member-decl"><a class="xref" href="smarttabletypes.html#ESmartTableAssignReason">ESmartTableAssignReason</a> AssignReason = <a class="xref" href="smarttabletypes.html#ESmartTableAssignReason-Scrolled">ESmartTableAssignReason::Scrolled</a></div>
+  <p>Starts at the case that has to stay quiet, so a cell read before it ever drew can not be taken for one that just arrived.</p>
+</div>
+<div class="member" id="bWantsItem">
+  <div class="member-head"><b class="cpp">bWantsItem</b></div>
+  <div class="member-decl">TOptional&lt; bool &gt; bWantsItem</div>
+  <p>Whether a graph on this class answers On Item Set, worked out the first time a row arrives. Unset until then, since the answer belongs to the class and a cell keeps the class it was built as.</p>
+</div>
+<div class="member" id="ResolvedItemSetter">
+  <div class="member-head"><b class="cpp">ResolvedItemSetter</b></div>
+  <div class="member-decl">TOptional&lt; TWeakObjectPtr&lt; UFunction &gt; &gt; ResolvedItemSetter</div>
+  <p>Unset until FindItemSetter first runs, for the reason bWantsItem is.</p>
+</div>
+<div class="member" id="HandedItem">
+  <div class="member-head"><b>Handed Item</b><span>HandedItem</span></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( Transient )</span>
+TObjectPtr&lt; UObject &gt; HandedItem</div>
+  <dl class="facts">
+    <dt>Transient</dt><dd>Never saved.</dd>
+  </dl>
+  <p>What the ItemSetter was last handed. Strong, like Model, and dropped on release.</p>
+</div>
+<div class="member" id="ResolvedFlash">
+  <div class="member-head"><b>Resolved Flash</b><span>ResolvedFlash</span></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( Transient )</span>
+TObjectPtr&lt; UWidgetAnimation &gt; ResolvedFlash</div>
+  <dl class="facts">
+    <dt>Transient</dt><dd>Never saved.</dd>
+  </dl>
+  <p>The animation named above, found once and held.</p>
+<p>FindWidgetAnimation walks the class's property chain. A live feed asks for this one on every cell whose value moves, so that walk is what a table that flashes pays per change.</p>
+<p>The name is the whole key. A widget's class never changes under it, and a graph built again in the editor gives new widgets instead of changing these.</p>
+<p>NAME_None in the pair here means the name has never been asked. That is also the answer for a widget naming no animation, and both want the same nothing back.</p>
+</div>
+<div class="member" id="ResolvedFlashFor">
+  <div class="member-head"><b class="cpp">ResolvedFlashFor</b></div>
+  <div class="member-decl">FName ResolvedFlashFor</div>
+</div>
+<h2 class="type" id="USmartTableEditableCell">USmartTableEditableCell <em>class</em></h2>
+<p>The cell a column gets when its values are typed and not just read.</p>
+<p>The model answers GetCellEditor and nothing here guesses: a text box, the same box aligned right for a number, or a checkbox. None draws the value as plain text, so a column of enums in an editable table stays readable instead of turning into a box that should not be typed into.</p>
+<p>A value is written on Enter or on losing focus, never per character. A model that sorted again on every key would move the row out from under the cursor mid word. A refused value goes back to what the model still holds, with a Verbose line and no other mark. A redraw of its own row keeps the typing, and rows arriving or leaving above it end the edit with nothing written.</p>
+<h2 id="USmartTableEditableCell-protected-function">Protected functions <em>3</em></h2>
+<div class="member" id="USmartTableEditableCell-NativeOnCellAssigned">
+  <div class="member-head"><b class="cpp">NativeOnCellAssigned</b><em class="badge mod">override</em></div>
+  <div class="member-decl">virtual void NativeOnCellAssigned() override</div>
+</div>
+<div class="member" id="USmartTableEditableCell-NativeOnCellReleased">
+  <div class="member-head"><b class="cpp">NativeOnCellReleased</b><em class="badge mod">override</em></div>
+  <div class="member-decl">virtual void NativeOnCellReleased() override</div>
+</div>
+<div class="member" id="USmartTableEditableCell-RebuildWidget">
+  <div class="member-head"><b class="cpp">RebuildWidget</b><em class="badge mod">override</em></div>
+  <div class="member-decl">virtual TSharedRef&lt; SWidget &gt; RebuildWidget() override</div>
+</div>
+<h2 id="USmartTableEditableCell-private-function">Private functions <em>7</em></h2>
+<div class="member" id="USmartTableEditableCell-ShowModelValue">
+  <div class="member-head"><b class="cpp">ShowModelValue</b></div>
+  <div class="member-decl">void ShowModelValue()</div>
+  <p>Puts what the model holds into the editor this cell names, and shows that one. It never asks which is on screen already.</p>
+</div>
+<div class="member" id="USmartTableEditableCell-ShowNothing">
+  <div class="member-head"><b class="cpp">ShowNothing</b></div>
+  <div class="member-decl">void ShowNothing()</div>
+  <p>Clears all three editors and shows the read-only one.</p>
+<p>Two cases reach it. A cell going back to the pool clears what it drew. A cell already in the pool can still be asked for a value, since Slate commits an edit on a focus change that can arrive long after the row scrolled away.</p>
+</div>
+<div class="member" id="USmartTableEditableCell-IsEditOpen">
+  <div class="member-head"><b class="cpp">IsEditOpen</b></div>
+  <div class="member-decl">bool IsEditOpen() const</div>
+  <p>Whether any FSlateUser holds the focus in the text box, which is an edit being typed.</p>
+</div>
+<div class="member" id="USmartTableEditableCell-EndOpenEdit">
+  <div class="member-head"><b class="cpp">EndOpenEdit</b></div>
+  <div class="member-decl">void EndOpenEdit( const TCHAR * Why )</div>
+  <p>Takes the focus off the text box, for whichever FSlateUser holds it, and the typing goes with it. Nothing is written.</p>
+<p>For a cell given a different row, where a commit would write the typing into the wrong row, and for a row the model offers no box on now. Why goes into the log line.</p>
+</div>
+<div class="member" id="USmartTableEditableCell-CommitText">
+  <div class="member-head"><b class="cpp">CommitText</b></div>
+  <div class="member-decl">void CommitText( const FText &amp; Value, ETextCommit::Type Cause )</div>
+</div>
+<div class="member" id="USmartTableEditableCell-IsCellChecked">
+  <div class="member-head"><b class="cpp">IsCellChecked</b></div>
+  <div class="member-decl">bool IsCellChecked( const FText &amp; Drawn ) const</div>
+  <p>Whether the toggle draws checked. A numeric sort key answers it whatever words draw the row, and the drawn word is the fallback for a model with no numeric key here.</p>
+</div>
+<div class="member" id="USmartTableEditableCell-CommitToggle">
+  <div class="member-head"><b class="cpp">CommitToggle</b></div>
+  <div class="member-decl">void CommitToggle( ECheckBoxState State )</div>
+</div>
+<h2 id="USmartTableEditableCell-private-variable">Private variables <em>5</em></h2>
+<div class="member" id="USmartTableEditableCell-Switcher">
+  <div class="member-head"><b class="cpp">Switcher</b></div>
+  <div class="member-decl">TSharedPtr&lt; class SWidgetSwitcher &gt; Switcher</div>
+  <p>All three editors are built once and swapped by index. Building the Slate again per row would throw away the pooling, and a cell rebuilt while focused would lose the edit in it.</p>
+</div>
+<div class="member" id="USmartTableEditableCell-TextBox">
+  <div class="member-head"><b class="cpp">TextBox</b></div>
+  <div class="member-decl">TSharedPtr&lt; class SEditableTextBox &gt; TextBox</div>
+</div>
+<div class="member" id="USmartTableEditableCell-CheckBox">
+  <div class="member-head"><b class="cpp">CheckBox</b></div>
+  <div class="member-decl">TSharedPtr&lt; class SCheckBox &gt; CheckBox</div>
+</div>
+<div class="member" id="USmartTableEditableCell-ReadOnlyText">
+  <div class="member-head"><b class="cpp">ReadOnlyText</b></div>
+  <div class="member-decl">TSharedPtr&lt; class STextBlock &gt; ReadOnlyText</div>
+</div>
+<div class="member" id="USmartTableEditableCell-Editor">
+  <div class="member-head"><b class="cpp">Editor</b></div>
+  <div class="member-decl"><a class="xref" href="smarttabletypes.html#ESmartTableCellEditor">ESmartTableCellEditor</a> Editor = <a class="xref" href="smarttabletypes.html#ESmartTableCellEditor-None">ESmartTableCellEditor::None</a></div>
+</div>
+<h2 class="type" id="USmartTableTextCell">USmartTableTextCell <em>class</em></h2>
+<p>The cell every column gets when it names none.</p>
+<p>It draws the model text in the table's cell text style, and takes the per cell colour from the model where the model gives one. A text column needs no asset and no Widget Blueprint.</p>
+<h2 id="USmartTableTextCell-protected-function">Protected functions <em>2</em></h2>
+<div class="member" id="USmartTableTextCell-NativeOnCellAssigned">
+  <div class="member-head"><b class="cpp">NativeOnCellAssigned</b><em class="badge mod">override</em></div>
+  <div class="member-decl">virtual void NativeOnCellAssigned() override</div>
+</div>
+<div class="member" id="USmartTableTextCell-RebuildWidget">
+  <div class="member-head"><b class="cpp">RebuildWidget</b><em class="badge mod">override</em></div>
+  <div class="member-decl">virtual TSharedRef&lt; SWidget &gt; RebuildWidget() override</div>
+</div>
+<h2 id="USmartTableTextCell-private-variable">Private variables <em>1</em></h2>
+<div class="member" id="USmartTableTextCell-TextBlock">
+  <div class="member-head"><b class="cpp">TextBlock</b></div>
+  <div class="member-decl">TSharedPtr&lt; class STextBlock &gt; TextBlock</div>
+</div>
+  <p class="next">Next: <a href="smarttablerowwidget.html">SmartTableRowWidget.h</a></p>
+</main>
+
+<aside aria-label="On this page">
+<div id="s" data-root="../" data-here="reference/smarttablecell.html">
+  <input id="q" type="search" autocomplete="off" spellcheck="false" placeholder="Search"
+         aria-label="Search the documentation">
+  <kbd aria-hidden="true">/</kbd>
+  <div id="r" hidden></div>
+</div>
+  <b>On this page</b>
+  <details class="t" open>
+    <summary>USmartTableCell</summary>
+    <details class="s">
+      <summary><a href="#public-function">Public functions</a><em>15</em></summary>
+      <details class="c">
+        <summary><a href="#public-function-smart-tables-cell">Cell</a><em>7</em></summary>
+        <a href="#FindCellAnimation">Find Cell Animation</a>
+        <a href="#GetAssignReason">Get Assign Reason</a>
+        <a href="#GetTable">Get Table</a>
+        <a href="#GetModel">Get Model</a>
+        <a href="#GetRowIndex">Get Row Index</a>
+        <a href="#GetColumnId">Get Column Id</a>
+        <a href="#GetItem">Get Item</a>
+      </details>
+      <details class="c">
+        <summary><a href="#public-function-smart-tables-drag-and-drop">Drag and Drop</a><em>4</em></summary>
+        <a href="#MakeCellDragPayload">Make Cell Drag Payload</a>
+        <a href="#MakeCellDragVisual">Make Cell Drag Visual</a>
+        <a href="#GetCellDragRole">Get Cell Drag Role</a>
+        <a href="#OnCellDragRoleChanged">On Cell Drag Role Changed</a>
+      </details>
+      <details class="c">
+        <summary><a href="#public-function-cpp-only">C++ only</a><em>4</em></summary>
+        <a href="#AssignCell">AssignCell</a>
+        <a href="#ReleaseCell">ReleaseCell</a>
+        <a href="#HasItemSetter">HasItemSetter</a>
+        <a href="#SetCellDragRole">SetCellDragRole</a>
+      </details>
+    </details>
+    <details class="s">
+      <summary><a href="#protected-function">Protected functions</a><em>11</em></summary>
+      <details class="c">
+        <summary><a href="#protected-function-smart-tables-cell">Cell</a><em>3</em></summary>
+        <a href="#OnCellAssigned">On Cell Assigned</a>
+        <a href="#OnCellReleased">On Cell Released</a>
+        <a href="#OnItemSet">On Item Set</a>
+      </details>
+      <details class="c">
+        <summary><a href="#protected-function-cpp-only">C++ only</a><em>8</em></summary>
+        <a href="#GetItemSetterOptions">Get Item Setter Options</a>
+        <a href="#NativeOnCellAssigned">NativeOnCellAssigned</a>
+        <a href="#NativeOnCellReleased">NativeOnCellReleased</a>
+        <a href="#NativeOnMouseButtonDown">NativeOnMouseButtonDown</a>
+        <a href="#NativeOnDragDetected">NativeOnDragDetected</a>
+        <a href="#NativeOnDragOver">NativeOnDragOver</a>
+        <a href="#NativeOnDragLeave">NativeOnDragLeave</a>
+        <a href="#NativeOnDrop">NativeOnDrop</a>
+      </details>
+    </details>
+    <details class="s">
+      <summary><a href="#private-function">Private functions</a><em>5</em></summary>
+      <a href="#PlayValueChanged">PlayValueChanged</a>
+      <a href="#HandOverItem">HandOverItem</a>
+      <a href="#FindItemSetter">FindItemSetter</a>
+      <a href="#IsFirstItemSetterWarning">IsFirstItemSetterWarning</a>
+      <a href="#ResolveFlash">ResolveFlash</a>
+    </details>
+    <details class="s">
+      <summary><a href="#public-variable">Public variables</a><em>1</em></summary>
+      <a href="#ValueChangedAnimation">Value Changed Animation</a>
+    </details>
+    <details class="s">
+      <summary><a href="#protected-variable">Protected variables</a><em>1</em></summary>
+      <a href="#ItemSetter">Item Setter</a>
+    </details>
+    <details class="s">
+      <summary><a href="#private-variable">Private variables</a><em>11</em></summary>
+      <a href="#Table">Table</a>
+      <a href="#Model">Model</a>
+      <a href="#NaturalRow">NaturalRow</a>
+      <a href="#ColumnId">ColumnId</a>
+      <a href="#DragRole">DragRole</a>
+      <a href="#AssignReason">AssignReason</a>
+      <a href="#bWantsItem">bWantsItem</a>
+      <a href="#ResolvedItemSetter">ResolvedItemSetter</a>
+      <a href="#HandedItem">Handed Item</a>
+      <a href="#ResolvedFlash">Resolved Flash</a>
+      <a href="#ResolvedFlashFor">ResolvedFlashFor</a>
+    </details>
+  </details>
+  <details class="t" open>
+    <summary>USmartTableEditableCell</summary>
+    <details class="s">
+      <summary><a href="#USmartTableEditableCell-protected-function">Protected functions</a><em>3</em></summary>
+      <a href="#USmartTableEditableCell-NativeOnCellAssigned">NativeOnCellAssigned</a>
+      <a href="#USmartTableEditableCell-NativeOnCellReleased">NativeOnCellReleased</a>
+      <a href="#USmartTableEditableCell-RebuildWidget">RebuildWidget</a>
+    </details>
+    <details class="s">
+      <summary><a href="#USmartTableEditableCell-private-function">Private functions</a><em>7</em></summary>
+      <a href="#USmartTableEditableCell-ShowModelValue">ShowModelValue</a>
+      <a href="#USmartTableEditableCell-ShowNothing">ShowNothing</a>
+      <a href="#USmartTableEditableCell-IsEditOpen">IsEditOpen</a>
+      <a href="#USmartTableEditableCell-EndOpenEdit">EndOpenEdit</a>
+      <a href="#USmartTableEditableCell-CommitText">CommitText</a>
+      <a href="#USmartTableEditableCell-IsCellChecked">IsCellChecked</a>
+      <a href="#USmartTableEditableCell-CommitToggle">CommitToggle</a>
+    </details>
+    <details class="s">
+      <summary><a href="#USmartTableEditableCell-private-variable">Private variables</a><em>5</em></summary>
+      <a href="#USmartTableEditableCell-Switcher">Switcher</a>
+      <a href="#USmartTableEditableCell-TextBox">TextBox</a>
+      <a href="#USmartTableEditableCell-CheckBox">CheckBox</a>
+      <a href="#USmartTableEditableCell-ReadOnlyText">ReadOnlyText</a>
+      <a href="#USmartTableEditableCell-Editor">Editor</a>
+    </details>
+  </details>
+  <details class="t" open>
+    <summary>USmartTableTextCell</summary>
+    <details class="s">
+      <summary><a href="#USmartTableTextCell-protected-function">Protected functions</a><em>2</em></summary>
+      <a href="#USmartTableTextCell-NativeOnCellAssigned">NativeOnCellAssigned</a>
+      <a href="#USmartTableTextCell-RebuildWidget">RebuildWidget</a>
+    </details>
+    <details class="s">
+      <summary><a href="#USmartTableTextCell-private-variable">Private variables</a><em>1</em></summary>
+      <a href="#USmartTableTextCell-TextBlock">TextBlock</a>
+    </details>
+  </details></aside>
+
+</div>
+
+<div id="z" hidden><img alt=""></div>
+
+</body>
+</html>

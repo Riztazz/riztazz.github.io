@@ -37,6 +37,16 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li>
+                <details class="nav-drop">
+                    <summary>Plugins</summary>
+                    <div class="nav-drop__menu">
+                        <div class="nav-drop__head">Smart Tables</div>
+                        <a href="smart-tables/index.html">Documentation<span>docs</span></a>
+                        <a href="support/">Support<span>help</span></a>
+                    </div>
+                </details>
+            </li>
         </ul>
     </nav>
 
@@ -47,11 +57,11 @@
                     <div class="section-label" style="margin-bottom:20px;">C++ Systems &amp; Game Developer</div>
                     <h1>Cezary Stanowski</h1>
                     <p class="hero-desc">
-                        Experience in <span class="hl-word" id="hl-networking">multiplayer games</span>,
-                        <span class="hl-word" id="hl-lowlevel">low-level systems</span>,
-                        <span class="hl-word" id="hl-gameplay">gameplay programming</span>,
+                        15+ years in C++, across <span class="hl-word" id="hl-gameplay">gameplay programming</span>,
+                        the <span class="hl-word" id="hl-servers">game servers</span> behind it,
+                        <span class="hl-word" id="hl-protocols">network protocols</span>,
                         and <span class="hl-word" id="hl-devtools">developer tools</span>.
-                        <br />Interested in modern game and engine architecture.
+                        <br />Happiest where gameplay meets the systems underneath it.
                     </p>
                     <div class="hero-tags">
                         <span class="tag">C++ / UE5</span>
@@ -89,7 +99,16 @@
                 <h2>Projects</h2>
                 <div class="section-line"></div>
             </div>
-            <div id="projects-container"></div>
+            <div class="project-columns">
+                <div class="project-column">
+                    <div class="column-head"><span class="column-head__n">01</span><span class="column-head__t">Games</span><span class="column-head__line"></span></div>
+                    <div id="column-games"></div>
+                </div>
+                <div class="project-column">
+                    <div class="column-head"><span class="column-head__n">02</span><span class="column-head__t">Tools</span><span class="column-head__line"></span></div>
+                    <div id="column-tools"></div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -147,8 +166,9 @@
     </section>
 
     <footer>
+        <p>2026 Cezary Stanowski - Systems &amp; Game Developer</p>
         <a href="https://github.com/Riztazz/riztazz.github.io" target="_blank" rel="noopener noreferrer" class="footer-link">
-            <p>2026 Cezary Stanowski - Systems &amp; Game Developer</p>
+            This site was built from scratch. No frameworks. Source on GitHub.
         </a>
     </footer>
 

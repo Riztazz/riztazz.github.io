@@ -1,0 +1,579 @@
+<!doctype html>
+<html lang="en" data-theme="">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SmartTableModel.h - Smart Tables</title>
+<link rel="icon" href="../img/smarttables_favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css?v=94b6e99e">
+<script src="../theme.js?v=94b6e99e"></script>
+<script defer src="../search.js?v=94b6e99e"></script>
+</head>
+<body>
+
+<button id="t" type="button" aria-label="Switch between light and dark">THEME</button>
+
+<div class="wrap">
+
+<nav aria-label="Pages">
+<a class="home" href="../index.html" aria-label="Smart Tables"><svg xmlns="http://www.w3.org/2000/svg" class="logo" viewBox="0 0 222.2 48" width="222.2" height="48" aria-hidden="true">
+  <g fill="none" stroke="currentColor" stroke-width="3.5">
+    <rect x="4" y="8" width="40" height="34" rx="4.5"/>
+    <path d="M4 20 H44 M24 20 V42"/>
+  </g>
+  <rect x="26.5" y="22.5" width="15" height="17" rx="1.5" fill="#4a86ff"/>
+  <path d="M72.2 30Q72.2 28.3 71 27.2Q69.7 26.2 66.4 25.3Q63.1 24.3 61.6 23.2Q59.4 21.7 59.4 19.2Q59.4 16.7 61.4 15.2Q63.5 13.7 66.6 13.7Q68.7 13.7 70.4 14.5Q72.1 15.3 73 16.8Q73.9 18.2 73.9 20H72.1Q72.1 17.8 70.6 16.5Q69.1 15.2 66.6 15.2Q64.1 15.2 62.7 16.3Q61.2 17.4 61.2 19.1Q61.2 20.8 62.5 21.8Q63.8 22.8 66.7 23.6Q69.6 24.4 71.1 25.2Q72.5 26.1 73.3 27.2Q74 28.4 74 30Q74 32.5 72 34Q70 35.6 66.7 35.6Q64.5 35.6 62.6 34.8Q60.7 34 59.7 32.5Q58.8 31.1 58.8 29.2H60.6Q60.6 31.4 62.2 32.7Q63.9 34 66.7 34Q69.2 34 70.7 32.9Q72.2 31.8 72.2 30ZM78.5 19.4 78.6 22Q79.4 20.6 80.8 19.8Q82.1 19.1 83.7 19.1Q87.4 19.1 88.5 22.2Q89.3 20.7 90.7 19.9Q92.1 19.1 93.9 19.1Q99 19.1 99.1 24.7V35.3H97.3V24.8Q97.3 22.7 96.4 21.7Q95.5 20.7 93.5 20.7Q91.6 20.7 90.3 21.9Q89 23.1 88.8 24.8V35.3H87.1V24.7Q87 22.7 86.1 21.7Q85.1 20.7 83.2 20.7Q81.5 20.7 80.3 21.6Q79.2 22.5 78.6 24.4V35.3H76.8V19.4ZM112.9 35.3Q112.6 34.5 112.6 33.1Q111.6 34.3 110.2 34.9Q108.8 35.6 107.2 35.6Q104.9 35.6 103.5 34.3Q102.1 33 102.1 31.1Q102.1 28.8 104 27.4Q105.9 26.1 109.4 26.1H112.6V24.3Q112.6 22.6 111.5 21.6Q110.5 20.6 108.5 20.6Q106.6 20.6 105.4 21.5Q104.2 22.5 104.2 23.8L102.5 23.8Q102.5 21.9 104.2 20.5Q106 19.1 108.5 19.1Q111.2 19.1 112.7 20.5Q114.3 21.8 114.3 24.2V31.7Q114.3 34 114.8 35.1V35.3ZM107.4 34Q109.2 34 110.5 33.2Q111.9 32.3 112.6 30.9V27.4H109.4Q106.8 27.4 105.3 28.4Q103.8 29.3 103.8 30.9Q103.8 32.3 104.8 33.1Q105.8 34 107.4 34ZM125.7 20.9Q125.1 20.8 124.5 20.8Q122.9 20.8 121.7 21.7Q120.6 22.6 120.1 24.4V35.3H118.4V19.4H120.1L120.1 21.9Q121.5 19.1 124.6 19.1Q125.3 19.1 125.7 19.3ZM130.6 15.4V19.4H133.9V20.9H130.6V31.4Q130.6 32.7 131.1 33.4Q131.5 34 132.7 34Q133.1 34 134.1 33.9L134.1 35.3Q133.5 35.6 132.3 35.6Q130.5 35.6 129.7 34.5Q128.8 33.5 128.8 31.4V20.9H125.9V19.4H128.8V15.4ZM151.4 17.2H145.4V35.3H141.1V17.2H135.1V13.9H151.4ZM162.2 35.3Q162 34.7 161.8 34.1Q161.6 33.5 161.6 32.9Q160.9 34.1 159.8 34.8Q158.7 35.6 157.2 35.6Q154.8 35.6 153.4 34.3Q152.1 33 152.1 30.8Q152.1 28.5 153.9 27.2Q155.7 25.9 159.1 25.9H161.5V24.7Q161.5 23.5 160.9 22.9Q160.3 22.2 159.1 22.2Q158.1 22.2 157.5 22.8Q156.9 23.3 156.9 24.1H152.8L152.8 24.1Q152.7 22 154.5 20.6Q156.4 19.1 159.4 19.1Q162.2 19.1 164 20.6Q165.8 22 165.8 24.7V31.2Q165.8 32.3 165.9 33.3Q166.1 34.3 166.5 35.3ZM158.3 32.4Q159.4 32.4 160.3 31.9Q161.2 31.3 161.5 30.6V28.3H159.1Q157.7 28.3 157 29Q156.3 29.7 156.3 30.7Q156.3 31.5 156.9 31.9Q157.4 32.4 158.3 32.4ZM182.7 27.8Q182.7 31.3 181.1 33.5Q179.5 35.6 176.5 35.6Q175.1 35.6 174.1 35Q173.1 34.4 172.4 33.3L172 35.3H168.4V12.4H172.6V21.1Q173.3 20.2 174.3 19.6Q175.3 19.1 176.5 19.1Q179.5 19.1 181.1 21.4Q182.7 23.7 182.7 27.5ZM178.4 27.5Q178.4 25.2 177.7 23.8Q177.1 22.5 175.4 22.5Q174.4 22.5 173.7 22.9Q173 23.3 172.6 24.1V30.8Q173 31.5 173.7 31.9Q174.4 32.3 175.4 32.3Q177.1 32.3 177.8 31.1Q178.4 29.9 178.4 27.8ZM189.2 35.3H184.9V12.4H189.2ZM199 35.6Q195.5 35.6 193.5 33.4Q191.5 31.2 191.5 27.8V27.2Q191.5 23.7 193.4 21.4Q195.3 19.1 198.7 19.1Q201.9 19.1 203.6 21.1Q205.3 23 205.3 26.4V28.6H195.9L195.8 28.7Q195.9 30.3 196.8 31.3Q197.7 32.3 199.5 32.3Q200.9 32.3 201.9 32Q202.9 31.7 204 31.1L205.1 33.7Q204.2 34.5 202.5 35.1Q200.9 35.6 199 35.6ZM198.7 22.4Q197.4 22.4 196.7 23.3Q196 24.2 195.9 25.7L195.9 25.7H201.1V25.4Q201.1 24 200.6 23.2Q200 22.4 198.7 22.4ZM215.8 30.9Q215.8 30.2 215.1 29.7Q214.4 29.2 212.6 28.8Q209.8 28.2 208.4 27.1Q206.9 26 206.9 24Q206.9 22 208.6 20.6Q210.4 19.1 213.2 19.1Q216.2 19.1 218.1 20.6Q219.9 22 219.8 24.1L219.8 24.2H215.6Q215.6 23.3 215 22.7Q214.4 22.1 213.2 22.1Q212.2 22.1 211.6 22.6Q211 23.1 211 23.8Q211 24.6 211.6 25Q212.3 25.5 214.2 25.9Q217.1 26.5 218.5 27.6Q219.9 28.7 219.9 30.7Q219.9 32.9 218.1 34.2Q216.3 35.6 213.3 35.6Q210.1 35.6 208.3 34Q206.4 32.4 206.5 30.3L206.5 30.2H210.5Q210.5 31.5 211.3 32.1Q212.1 32.6 213.4 32.6Q214.5 32.6 215.2 32.2Q215.8 31.7 215.8 30.9Z" fill="currentColor"/>
+</svg></a>
+  <b>Home</b>
+    <a href="../index.html">Home</a>
+    <a href="../pages/00_features.html">Every feature</a>
+  <b>Start here</b>
+    <a href="../pages/01_first_table.html">Your first table</a>
+    <a href="../pages/02_rows.html">Rows</a>
+    <a href="../pages/03_columns.html">Columns</a>
+    <a href="../pages/04_cells.html">Cells</a>
+    <a href="../pages/05_events.html">Events</a>
+  <b>Going further</b>
+    <a href="../pages/06_sorting.html">Sorting and filtering</a>
+    <a href="../pages/07_input.html">Selection and input</a>
+    <a href="../pages/08_reorder.html">Reordering rows</a>
+    <a href="../pages/09_layout_skin.html">Layout and skin</a>
+    <a href="../pages/13_debugging.html">When it draws nothing</a>
+  <b>When you need more</b>
+    <a href="../pages/10_blueprint_model.html">A model in Blueprint</a>
+    <a href="../pages/11_row_spaces.html">The two row spaces</a>
+    <a href="../pages/12_cpp.html">Dropping to C++</a>
+  <b>Demos</b>
+    <a href="../pages/20_demo_items.html">1. Items</a>
+    <a href="../pages/21_demo_datatable.html">2. DataTable</a>
+    <a href="../pages/22_demo_csv.html">3. CSV file</a>
+    <a href="../pages/23_demo_json.html">4. JSON file</a>
+    <a href="../pages/24_demo_million.html">5. One million rows</a>
+    <a href="../pages/25_demo_server.html">6. Server browser</a>
+    <a href="../pages/26_demo_pairs.html">7. Pairs</a>
+    <a href="../pages/27_demo_keys.html">8. Keys, no EI</a>
+    <a href="../pages/28_demo_items_mvvm.html">9. Items with MVVM</a>
+  <b>Reference</b>
+  <div class="scroller">
+    <a href="smarttable.html">SmartTable.h</a>
+    <a href="smarttabletypes.html">SmartTableTypes.h</a>
+    <a href="smarttablesorting.html">SmartTableSorting.h</a>
+    <a href="smarttabledeadsecondaries.html">SmartTableDeadSecondaries.h</a>
+    <a href="smarttablecolumnlayout.html">SmartTableColumnLayout.h</a>
+    <a href="smarttablebinding.html">SmartTableBinding.h</a>
+    <a href="smarttablecolumnschema.html">SmartTableColumnSchema.h</a>
+    <a href="smarttabledispatcher.html">SmartTableDispatcher.h</a>
+    <a href="smarttablecolour.html">SmartTableColour.h</a>
+    <a href="smarttablemodel.html" aria-current="page">SmartTableModel.h</a>
+    <a href="smarttableobjectmodel.html">SmartTableObjectModel.h</a>
+    <a href="smarttabledatatablemodel.html">SmartTableDataTableModel.h</a>
+    <a href="smarttablekeptrow.html">SmartTableKeptRow.h</a>
+    <a href="smarttablerowsetdiff.html">SmartTableRowSetDiff.h</a>
+    <a href="smarttablecell.html">SmartTableCell.h</a>
+    <a href="smarttablerowwidget.html">SmartTableRowWidget.h</a>
+    <a href="smarttablestyle.html">SmartTableStyle.h</a>
+    <a href="smarttablesettings.html">SmartTableSettings.h</a>
+    <a href="smarttablelayoutstore.html">SmartTableLayoutStore.h</a>
+    <a href="smarttablesortkey.html">SmartTableSortKey.h</a>
+    <a href="smarttablecelldragdropop.html">SmartTableCellDragDropOp.h</a>
+    <a href="smarttablecelldrag.html">SmartTableCellDrag.h</a>
+    <a href="smarttablecolumnselection.html">SmartTableColumnSelection.h</a>
+    <a href="smarttableresizegesture.html">SmartTableResizeGesture.h</a>
+    <a href="smarttablescrollmove.html">SmartTableScrollMove.h</a>
+    <a href="smarttablearrivals.html">SmartTableArrivals.h</a>
+    <a href="smarttableopenmenu.html">SmartTableOpenMenu.h</a>
+    <a href="smarttablelog.html">SmartTableLog.h</a>
+  </div>
+</nav>
+
+<main>
+  <h1>SmartTableModel.h</h1>
+  <p class="lede">Where the rows come from, and the one class to subclass when they come from you.</p>
+<div class="refhead">
+  <div class="path">Source/SmartTables/Public/SmartTableModel.h</div>
+<p>What a table draws.</p>
+<p>Most tables never name one. <a class="xref" href="smarttable.html#SetItems">USmartTable::SetItems</a> builds one inside itself. This is for data that is not a set of UObjects, or is too big to hold as one.</p>
+<p>There are two row spaces. Natural space is what a subclass sees: it never moves, so NotifyRowChanged( 7 ) still means row 7 after any amount of sorting. Presented space is what the table draws: natural space read through the permutation and the filter mask this base holds. A subclass can not override the readers for it.</p>
+<p>That split is why sorting gives no row a new number. A selection is held in natural rows and lives through a sort untouched.</p>
+<p>Three answers is a working model. Everything else has a default:</p>
+<pre>int32 UMyModel::GetNumRows_Implementation() { return Ships.Num(); }</pre>
+<pre>FText UMyModel::GetCellText_Implementation( int32 Row, FName Column )
+{
+    return Column == "Name" ? FText::FromString( Ships[ Row ].Name ) : FText::AsNumber( Ships[ Row ].Shield );
+}</pre>
+<pre>FName UMyModel::GetRowId_Implementation( int32 Row ) { return Ships[ Row ].Id; }</pre>
+<p>Sorting and filtering fall out of those three. Such a model overrides neither SortRows nor ApplyTextFilter.</p>
+  <dl>
+  <dt>Class</dt><dd>USmartTableModel</dd>
+  <dt>Extends</dt><dd>UObject</dd>
+  <dt>Members</dt><dd>58</dd>
+  <dt>Blueprint nodes</dt><dd>12</dd>
+  <dt>Panel fields</dt><dd>2</dd>
+  </dl>
+</div>
+<h2 id="public-function">Public functions <em>36</em></h2>
+<h3 class="cat" id="public-function-smart-tables-model">Model <em>25</em></h3>
+<div class="member" id="GetNumRows">
+  <div class="member-head"><b>Get Num Rows</b><span>GetNumRows</span><em class="badge role">override</em></div>
+  <div class="member-decl"><span class="macro">UFUNCTION( BlueprintNativeEvent, BlueprintPure, Category = "Smart Tables|Model" )</span>
+int32 GetNumRows()</div>
+  <p>How many rows this model holds, in natural space. The one count a subclass has to answer.</p>
+<p>Not const, and neither is any reader below it. A read may fill a cache, and both built-in models do. The items model resolves the binding of a column the first time it meets an item class. The DataTable model builds the stand-in for a row the first time a cell class asks.</p>
+<p>Neither cache can be filled up front. A Blueprint compile swaps the reflected item array to a freshly built UClass while a cache beside it still names the old one. The fill stays late and the const comes off the signature instead. BlueprintPure does not ask for const, so an override sees no difference.</p>
+</div>
+<div class="member" id="GetCellText">
+  <div class="member-head"><b>Get Cell Text</b><span>GetCellText</span><em class="badge role">override</em></div>
+  <div class="member-decl"><span class="macro">UFUNCTION( BlueprintNativeEvent, BlueprintPure, Category = "Smart Tables|Model" )</span>
+FText GetCellText( int32 NaturalRow, FName ColumnId )</div>
+  <p>What one cell draws. Empty text is a fine answer for a column this model has no value for.</p>
+</div>
+<div class="member" id="GetCellEditor">
+  <div class="member-head"><b>Get Cell Editor</b><span>GetCellEditor</span><em class="badge role">override</em></div>
+  <div class="member-decl"><span class="macro">UFUNCTION( BlueprintNativeEvent, BlueprintPure, Category = "Smart Tables|Model" )</span>
+<a class="xref" href="smarttabletypes.html#ESmartTableCellEditor">ESmartTableCellEditor</a> GetCellEditor( int32 NaturalRow, FName ColumnId )</div>
+  <p>Which editor the built-in editable cell offers for this value, if any.</p>
+<p>None by default. A table takes no edits until a model says otherwise, and a model that already exists can not start accepting them because the plugin moved on.</p>
+<p>Both built-in models answer from reflection. A table pointed at a row struct or at a UObject has a working editor per column with no editor named anywhere. Over data reflection can not read, rows out of a csv or a json file, Text is usually the only honest answer.</p>
+</div>
+<div class="member" id="SetCellText">
+  <div class="member-head"><b>Set Cell Text</b><span>SetCellText</span><em class="badge role">override</em></div>
+  <div class="member-decl"><span class="macro">UFUNCTION( BlueprintNativeEvent, Category = "Smart Tables|Model" )</span>
+bool SetCellText( int32 NaturalRow, FName ColumnId, const FText &amp; Value )</div>
+  <p>Writes an edited value back, and gives back false when the model will not take it.</p>
+<p>Text for every editor, the numeric and toggle ones too, because what comes back is what was typed or clicked. A model refusing it has to refuse that text, and never a number the plugin already read out of it.</p>
+<p>A model that takes a write has to say so. Nothing here calls NotifyRowChanged. Left out, it shows up as one cell drawing again while its neighbours in the same row do not.</p>
+</div>
+<div class="member" id="GetCellColor">
+  <div class="member-head"><b>Get Cell Color</b><span>GetCellColor</span><em class="badge role">override</em></div>
+  <div class="member-decl"><span class="macro">UFUNCTION( BlueprintNativeEvent, BlueprintPure, Category = "Smart Tables|Model" )</span>
+FLinearColor GetCellColor( int32 NaturalRow, FName ColumnId )</div>
+  <p>Alpha 0 hands the colour back to the table's own cell text style, so a model with nothing to say writes nothing.</p>
+</div>
+<div class="member" id="GetRowColor">
+  <div class="member-head"><b>Get Row Color</b><span>GetRowColor</span><em class="badge role">override</em></div>
+  <div class="member-decl"><span class="macro">UFUNCTION( BlueprintNativeEvent, BlueprintPure, Category = "Smart Tables|Model" )</span>
+FLinearColor GetRowColor( int32 NaturalRow )</div>
+  <p>A tint over the whole row: every other row drawn darker, a colour that says how bad something is, a row that has gone stale.</p>
+<p>Alpha 0 leaves the row style of the table to draw with no tint over it, the same as GetCellColor.</p>
+<p>It is here so the row widget does not have to be replaced to carry a tint. That widget takes cells from the pool and gives them back, which is what lets a table scroll a million rows.</p>
+</div>
+<div class="member" id="GetCellSortKey">
+  <div class="member-head"><b>Get Cell Sort Key</b><span>GetCellSortKey</span><em class="badge role">override</em></div>
+  <div class="member-decl"><span class="macro">UFUNCTION( BlueprintNativeEvent, BlueprintPure, Category = "Smart Tables|Model" )</span>
+<a class="xref" href="smarttablesortkey.html">FSmartTableSortKey</a> GetCellSortKey( int32 NaturalRow, FName ColumnId )</div>
+  <p>Falls back to the drawn text, so a model that writes only GetCellText still sorts. A numeric column overrides it. Text goes through CompareNatural, which reads a run of digits as one number. That still puts 1.25 after 1.5, because the run 25 is more than the run 5.</p>
+</div>
+<div class="member" id="GetRowId">
+  <div class="member-head"><b>Get Row Id</b><span>GetRowId</span><em class="badge role">override</em></div>
+  <div class="member-decl"><span class="macro">UFUNCTION( BlueprintNativeEvent, BlueprintPure, Category = "Smart Tables|Model" )</span>
+FName GetRowId( int32 NaturalRow )</div>
+  <p>A name for a row that lives through rows arriving and leaving. The selection is put back through it.</p>
+<p>It falls back to the row number, which is right only while the row set only ever grows. A model that adds or drops a row in the middle needs a name of its own here.</p>
+</div>
+<div class="member" id="GetRowItem">
+  <div class="member-head"><b>Get Row Item</b><span>GetRowItem</span><em class="badge role">override</em></div>
+  <div class="member-decl"><span class="macro">UFUNCTION( BlueprintNativeEvent, BlueprintPure, Category = "Smart Tables|Model" )</span>
+UObject * GetRowItem( int32 NaturalRow )</div>
+  <p>The item a cell class is given. Null means this model has none, and a CellClass column over it says so once at Verbose instead of drawing nothing, or as a Warning when that cell names an ItemSetter.</p>
+</div>
+<div class="member" id="NaturalRowOfItem">
+  <div class="member-head"><b>Natural Row Of Item</b><span>NaturalRowOfItem</span><em class="badge role">override</em></div>
+  <div class="member-decl"><span class="macro">UFUNCTION( BlueprintNativeEvent, BlueprintPure, Category = "Smart Tables|Model" )</span>
+int32 NaturalRowOfItem( UObject * Item )</div>
+  <p>Which row holds this object, or INDEX_NONE.</p>
+<p>The other direction of GetRowItem. The default answer is expensive in a way the call site can not see: the base walks the rows asking GetRowItem.</p>
+<p>A model that answers only that one still gets a working lookup out of the walk. A model whose GetRowItem BUILDS something pays for a whole set of them to answer no. The DataTable model does exactly that, so it overrides this and answers from the stand-ins it already gave out.</p>
+<p>Both built-in models override it, and any model with a lookup of its own can do the same.</p>
+</div>
+<div class="member" id="SortRows">
+  <div class="member-head"><b>Sort Rows</b><span>SortRows</span><em class="badge role">override</em></div>
+  <div class="member-decl"><span class="macro">UFUNCTION( BlueprintNativeEvent, Category = "Smart Tables|Model" )</span>
+bool SortRows( const <a class="xref" href="smarttabletypes.html#FSmartTableSortSpec">FSmartTableSortSpec</a> &amp; Spec )</div>
+  <p>Put the rows in this order. Gives back false when this model does not sort that column.</p>
+<p>The default pulls a key per row through GetCellSortKey and reorders. Every model sorts with no sort code of its own, a Blueprint subclass that wrote nothing but GetCellText included.</p>
+<p>An override orders somewhere else: a sort on a server sends its query from here, gives back true, and notifies once the answer arrives.</p>
+<p>False puts the header arrow back and logs. A header that flips while no row moves reads as a table that took the click and did nothing with it.</p>
+</div>
+<div class="member" id="ApplyTextFilter">
+  <div class="member-head"><b>Apply Text Filter</b><span>ApplyTextFilter</span><em class="badge role">override</em></div>
+  <div class="member-decl"><span class="macro">UFUNCTION( BlueprintNativeEvent, Category = "Smart Tables|Model" )</span>
+bool ApplyTextFilter( const FText &amp; FilterText, const TArray&lt; FName &gt; &amp; AllColumnIds )</div>
+  <p>Hide the rows that do not match. Empty text clears the filter.</p>
+<p>It searches every column, the hidden ones too. Over the visible set only, hiding a column would change which rows the same words find, with no log line anywhere.</p>
+</div>
+<div class="member" id="MoveRows">
+  <div class="member-head"><b>Move Rows</b><span>MoveRows</span><em class="badge role">override</em></div>
+  <div class="member-decl"><span class="macro">UFUNCTION( BlueprintNativeEvent, Category = "Smart Tables|Model" )</span>
+bool MoveRows( const TArray&lt; int32 &gt; &amp; NaturalRows, int32 InsertBeforeNaturalRow )</div>
+  <p>Put these rows in front of that one. False when this model does not reorder, which is the default.</p>
+<p>InsertBeforeNaturalRow is a GAP, not a row: 0 is in front of everything, GetNumRows is past the end. Rows are numbered as they were before the move. PlanRowMove works that out.</p>
+<p>An override moves data and nothing else. The table clears the sort and notifies around this call.</p>
+</div>
+<div class="member" id="NotifyRowChanged">
+  <div class="member-head"><b>Notify Row Changed</b><span>NotifyRowChanged</span><em class="badge role">node</em></div>
+  <div class="member-decl"><span class="macro">UFUNCTION( BlueprintCallable, Category = "Smart Tables|Model" )</span>
+void NotifyRowChanged( int32 NaturalRow )</div>
+  <p>The values of one row moved. That row reads again and nothing else does, unless a sort is already in flight. Then the whole presentation is rebuilt when it lands.</p>
+</div>
+<div class="member" id="NotifyCellChanged">
+  <div class="member-head"><b>Notify Cell Changed</b><span>NotifyCellChanged</span><em class="badge role">node</em></div>
+  <div class="member-decl"><span class="macro">UFUNCTION( BlueprintCallable, Category = "Smart Tables|Model" )</span>
+void NotifyCellChanged( int32 NaturalRow, FName ColumnId )</div>
+  <p>ONE value of one row moved, and only that cell reads again.</p>
+<p>It holds only while no column of this model reads another. A bound pure function in another column can read the property just written, a total off a price. This tells the table that column has nothing to read again, so it goes on drawing the old total.</p>
+<p>The built-in models say NotifyRowChanged for that reason. They resolve bindings by name and can not tell which column reads which. A model that can rule it out says this instead, and gets a value-changed animation on the one cell that moved.</p>
+</div>
+<div class="member" id="NotifyRowsChanged">
+  <div class="member-head"><b>Notify Rows Changed</b><span>NotifyRowsChanged</span><em class="badge role">node</em></div>
+  <div class="member-decl"><span class="macro">UFUNCTION( BlueprintCallable, Category = "Smart Tables|Model" )</span>
+void NotifyRowsChanged()</div>
+  <p>The values of many rows moved, and there are still the same number of rows.</p>
+</div>
+<div class="member" id="NotifyRowsAdded">
+  <div class="member-head"><b>Notify Rows Added</b><span>NotifyRowsAdded</span><em class="badge role">node</em></div>
+  <div class="member-decl"><span class="macro">UFUNCTION( BlueprintCallable, Category = "Smart Tables|Model" )</span>
+void NotifyRowsAdded( const TArray&lt; int32 &gt; &amp; NaturalRows )</div>
+  <p>These rows joined the set. Each plays the entrance of the table, and the table scrolls for them as its own settings say.</p>
+<p>The rows count as they stand now, after they went in.</p>
+</div>
+<div class="member" id="NotifyRowsRemoved">
+  <div class="member-head"><b>Notify Rows Removed</b><span>NotifyRowsRemoved</span><em class="badge role">node</em></div>
+  <div class="member-decl"><span class="macro">UFUNCTION( BlueprintCallable, Category = "Smart Tables|Model" )</span>
+void NotifyRowsRemoved( const TArray&lt; FName &gt; &amp; RowIds )</div>
+  <p>The rows with these ids left the set. A view scrolled into the rows keeps the rows it shows.</p>
+<p>Said after they went, so each id is read with GetRowId before its row goes.</p>
+</div>
+<div class="member" id="NotifyNumRowsChanged">
+  <div class="member-head"><b>Notify Num Rows Changed</b><span>NotifyNumRowsChanged</span><em class="badge role">node</em></div>
+  <div class="member-decl"><span class="macro">UFUNCTION( BlueprintCallable, Category = "Smart Tables|Model" )</span>
+void NotifyNumRowsChanged()</div>
+  <p>Rows arrived or left, and this model does not say which. The selection is matched back up by GetRowId.</p>
+<p>No row plays an entrance, and the view is neither followed nor held. NotifyRowsAdded and NotifyRowsRemoved say which rows.</p>
+</div>
+<div class="member" id="GetActiveSortSpec">
+  <div class="member-head"><b>Get Active Sort Spec</b><span>GetActiveSortSpec</span><em class="badge role">pure node</em></div>
+  <div class="member-decl"><span class="macro">UFUNCTION( BlueprintPure, Category = "Smart Tables|Model" )</span>
+<a class="xref" href="smarttabletypes.html#FSmartTableSortSpec">FSmartTableSortSpec</a> GetActiveSortSpec() const</div>
+  <p>The sort in force right now. Empty is unsorted.</p>
+</div>
+<div class="member" id="GetActiveFilterText">
+  <div class="member-head"><b>Get Active Filter Text</b><span>GetActiveFilterText</span><em class="badge role">pure node</em></div>
+  <div class="member-decl"><span class="macro">UFUNCTION( BlueprintPure, Category = "Smart Tables|Model" )</span>
+FText GetActiveFilterText() const</div>
+  <p>The filter text in force. Empty means every row is shown.</p>
+</div>
+<div class="member" id="IsBusy">
+  <div class="member-head"><b>Is Busy</b><span>IsBusy</span><em class="badge role">pure node</em></div>
+  <div class="member-decl"><span class="macro">UFUNCTION( BlueprintPure, Category = "Smart Tables|Model" )</span>
+bool IsBusy() const</div>
+  <p>True while a sort this model dispatched has not come back yet.</p>
+</div>
+<div class="member" id="GetNumPresentedRows">
+  <div class="member-head"><b>Get Num Presented Rows</b><span>GetNumPresentedRows</span><em class="badge role">pure node</em></div>
+  <div class="member-decl"><span class="macro">UFUNCTION( BlueprintPure, Category = "Smart Tables|Model" )</span>
+int32 GetNumPresentedRows() const</div>
+  <p>How many rows really draw: natural space less whatever the filter hides.</p>
+<p>Not virtual, on purpose, and neither are the two below it. Presented space is the answer of this base class. A subclass able to override it could differ from the rows it gave over a moment earlier.</p>
+<p>All three are BlueprintPure, because the two row spaces are the main idea here. With no pure node nothing outside C++ could ask how many rows draw, what draws at a place, or where a row ended up.</p>
+</div>
+<div class="member" id="PresentedToNaturalRow">
+  <div class="member-head"><b>Presented To Natural Row</b><span>PresentedToNaturalRow</span><em class="badge role">pure node</em></div>
+  <div class="member-decl"><span class="macro">UFUNCTION( BlueprintPure, Category = "Smart Tables|Model" )</span>
+int32 PresentedToNaturalRow( int32 PresentedRow ) const</div>
+  <p>The row number this model uses, for the row drawn at this place.</p>
+</div>
+<div class="member" id="NaturalToPresentedRow">
+  <div class="member-head"><b>Natural To Presented Row</b><span>NaturalToPresentedRow</span><em class="badge role">pure node</em></div>
+  <div class="member-decl"><span class="macro">UFUNCTION( BlueprintPure, Category = "Smart Tables|Model" )</span>
+int32 NaturalToPresentedRow( int32 NaturalRow ) const</div>
+  <p>Where a natural row draws right now, or INDEX_NONE while the filter hides it.</p>
+</div>
+<h3 class="cat" id="public-function-cpp-only">C++ only <em>11</em></h3>
+<div class="member" id="KeepRow">
+  <div class="member-head"><b class="cpp">KeepRow</b></div>
+  <div class="member-decl"><a class="xref" href="smarttablekeptrow.html">FSmartTableKeptRow</a> KeepRow( int32 NaturalRow )</div>
+  <p>This row by its number and its id, for something that acts on it in a later frame.</p>
+</div>
+<div class="member" id="FindKeptRow">
+  <div class="member-head"><b class="cpp">FindKeptRow</b></div>
+  <div class="member-decl">int32 FindKeptRow( const <a class="xref" href="smarttablekeptrow.html">FSmartTableKeptRow</a> &amp; Row )</div>
+  <p>Where a kept row is now, or INDEX_NONE once it left. See <code><a class="xref" href="smarttablekeptrow.html#FindNow">FSmartTableKeptRow::FindNow</a></code></p>
+</div>
+<div class="member" id="PlanRowMove">
+  <div class="member-head"><b class="cpp">PlanRowMove</b><em class="badge mod">static</em></div>
+  <div class="member-decl">static TArray&lt; int32 &gt; PlanRowMove( int32 NumRows, const TArray&lt; int32 &gt; &amp; NaturalRows, int32 InsertBeforeNaturalRow )</div>
+  <p>The order rows end up in, as a permutation: entry i held that number before the move.</p>
+<p>Not inside one model, because every model needs the same maths. An array, a cursor, a file, all the same.</p>
+<p>Two things here are easy to get wrong. Moved rows keep their order against each other. And the gap counts rows that are about to leave, so row 1 dropped after row 5 lands after 5, not 6.</p>
+<p>Empty means refused: out of range, a duplicate, or every row moving.</p>
+</div>
+<div class="member" id="NotifyValuesChanged">
+  <div class="member-head"><b class="cpp">NotifyValuesChanged</b></div>
+  <div class="member-decl">void NotifyValuesChanged( const <a class="xref" href="smarttabletypes.html#FSmartTablePresentationChange">FSmartTablePresentationChange</a> &amp; Change )</div>
+  <p>The one route out for a values-only change, so the rule about a rebuild in flight is written once and both public functions above cannot drift apart about it.</p>
+</div>
+<div class="member" id="NotifyRowSetChanged">
+  <div class="member-head"><b class="cpp">NotifyRowSetChanged</b></div>
+  <div class="member-decl">void NotifyRowSetChanged( const <a class="xref" href="smarttablerowsetdiff.html">FSmartTableRowSetDiff</a> &amp; Diff )</div>
+  <p>The one route for a change to the row set. The three above build a diff and come down here.</p>
+</div>
+<div class="member" id="ActiveSortSpecRef">
+  <div class="member-head"><b class="cpp">ActiveSortSpecRef</b></div>
+  <div class="member-decl">const <a class="xref" href="smarttabletypes.html#FSmartTableSortSpec">FSmartTableSortSpec</a> &amp; ActiveSortSpecRef() const</div>
+  <p>The same, without the copy. For C++ only.</p>
+<p>A spec holds a TArray, so the reflected reader above builds a new one on every call, and a header asks for the sort several times per column per draw. UHT refuses a reference return, so the two live side by side: a graph takes the copy, and anything drawing takes this.</p>
+</div>
+<div class="member" id="GetPresentedRows">
+  <div class="member-head"><b class="cpp">GetPresentedRows</b></div>
+  <div class="member-decl">TConstArrayView&lt; int32 &gt; GetPresentedRows() const</div>
+  <p>The drawn order itself. A view and not a copy, valid until the next sort or filter lands.</p>
+</div>
+<div class="member" id="OnPresentationChanged">
+  <div class="member-head"><b class="cpp">OnPresentationChanged</b></div>
+  <div class="member-decl">FOnSmartTablePresentationChanged &amp; OnPresentationChanged()</div>
+  <p>Fires when a rebuild lands and was not superseded, carrying what it says changed. Landing is the test, and not whether the order came out any different.</p>
+</div>
+<div class="member" id="OnBusyChanged">
+  <div class="member-head"><b class="cpp">OnBusyChanged</b></div>
+  <div class="member-decl">FOnSmartTableModelBusy &amp; OnBusyChanged()</div>
+  <p>Fires when this model starts and stops holding a sort it dispatched.</p>
+</div>
+<div class="member" id="SetWorkDispatcher">
+  <div class="member-head"><b class="cpp">SetWorkDispatcher</b></div>
+  <div class="member-decl">void SetWorkDispatcher( FSmartTableWorkDispatcher InDispatcher )</div>
+  <p>Where the ordering work runs. Unset runs it here and now, and that is the default on purpose.</p>
+<p>Only the sort moves. The keys are pulled here, on the game thread, as plain data, so what leaves is an array of numbers and text. A model is never called from a worker thread on this path.</p>
+</div>
+<div class="member" id="RebuildPresentation">
+  <div class="member-head"><b class="cpp">RebuildPresentation</b></div>
+  <div class="member-decl">void RebuildPresentation( const <a class="xref" href="smarttabletypes.html#FSmartTablePresentationChange">FSmartTablePresentationChange</a> &amp; WhenDone = <a class="xref" href="smarttabletypes.html#FSmartTablePresentationChange-Order">FSmartTablePresentationChange::Order</a>() )</div>
+  <p>Puts the sort and the filter in force back over the rows. This base calls it whenever the data moves, and a table calls it once more when a new model arrives.</p>
+<p>WhenDone goes out once the answer is in, and never now. A dispatched sort comes back from here having changed nothing, so a caller broadcasting its own change at once would be naming a presentation that does not exist yet at all.</p>
+</div>
+<h2 id="protected-function">Protected functions <em>2</em></h2>
+<div class="member" id="ApplySortSpecToPresentation">
+  <div class="member-head"><b class="cpp">ApplySortSpecToPresentation</b></div>
+  <div class="member-decl">void ApplySortSpecToPresentation( const <a class="xref" href="smarttabletypes.html#FSmartTableSortSpec">FSmartTableSortSpec</a> &amp; Spec )</div>
+  <p>One each and not one shared: the default SortRows works through ApplySortSpecToPresentation, and the default ApplyTextFilter through ApplyFilterToPresentation. An override of either still gets the ordering rules by calling back into its own.</p>
+</div>
+<div class="member" id="ApplyFilterToPresentation">
+  <div class="member-head"><b class="cpp">ApplyFilterToPresentation</b></div>
+  <div class="member-decl">void ApplyFilterToPresentation( const FText &amp; FilterText, const TArray&lt; FName &gt; &amp; AllColumnIds )</div>
+</div>
+<h2 id="private-function">Private functions <em>5</em></h2>
+<div class="member" id="BroadcastPresentationChanged">
+  <div class="member-head"><b class="cpp">BroadcastPresentationChanged</b></div>
+  <div class="member-decl">void BroadcastPresentationChanged( const <a class="xref" href="smarttabletypes.html#FSmartTablePresentationChange">FSmartTablePresentationChange</a> &amp; Change )</div>
+</div>
+<div class="member" id="CollectFilteredRows">
+  <div class="member-head"><b class="cpp">CollectFilteredRows</b></div>
+  <div class="member-decl">TArray&lt; int32 &gt; CollectFilteredRows()</div>
+  <p>The natural rows that live through the filter in force, in natural order. It reads the model, so it only ever runs on the game thread.</p>
+</div>
+<div class="member" id="ExtractSortKeys">
+  <div class="member-head"><b class="cpp">ExtractSortKeys</b></div>
+  <div class="member-decl">void ExtractSortKeys( TArray&lt; TArray&lt; <a class="xref" href="smarttablesortkey.html">FSmartTableSortKey</a> &gt; &gt; &amp; OutLevels, TArray&lt; <a class="xref" href="smarttabletypes.html#ESmartTableSortMode">ESmartTableSortMode</a> &gt; &amp; OutModes )</div>
+  <p>One array of keys per sort level, indexed by natural row. It reads the model, so it only ever runs on the game thread.</p>
+</div>
+<div class="member" id="ApplySortedRows">
+  <div class="member-head"><b class="cpp">ApplySortedRows</b></div>
+  <div class="member-decl">void ApplySortedRows( int32 Token, TArray&lt; int32 &gt; &amp;&amp; Rows, bool bWasDispatched )</div>
+  <p>Drops a result whose question has since moved, and uses the one still being asked.</p>
+<p>bWasDispatched is given and never worked out. SortsInFlight &gt; 0 asks a different question.</p>
+<p>A sort running here and now, whether from an empty spec or a model with no dispatcher, would take the hold a dispatched one still has on the counter and drop busy early. Only the caller knows which of the three routes it came in on.</p>
+</div>
+<div class="member" id="SetBusy">
+  <div class="member-head"><b class="cpp">SetBusy</b></div>
+  <div class="member-decl">void SetBusy( bool bInBusy )</div>
+</div>
+<h2 id="protected-variable">Protected variables <em>5</em></h2>
+<div class="member" id="PresentedToNatural">
+  <div class="member-head"><b class="cpp">PresentedToNatural</b></div>
+  <div class="member-decl">TArray&lt; int32 &gt; PresentedToNatural</div>
+  <p>The natural row for every presented row. It is the identity map while nothing is sorted and nothing is filtered, and no row ever gets a new number as a sort comes and goes.</p>
+</div>
+<div class="member" id="NaturalToPresented">
+  <div class="member-head"><b class="cpp">NaturalToPresented</b></div>
+  <div class="member-decl">TArray&lt; int32 &gt; NaturalToPresented</div>
+  <p>The other way round: natural row to where it draws, INDEX_NONE for a row the filter took away.</p>
+<p>Written only in ApplySortedRows, beside the array above, so the two can never disagree.</p>
+<p>It exists because the caret, a click, a menu and a scroll all ask it, and answering by walking the order costs the row count every time.</p>
+</div>
+<div class="member" id="ActiveSortSpec">
+  <div class="member-head"><b>Active Sort Spec</b><span>ActiveSortSpec</span></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( Transient )</span>
+<a class="xref" href="smarttabletypes.html#FSmartTableSortSpec">FSmartTableSortSpec</a> ActiveSortSpec</div>
+  <dl class="facts">
+    <dt>Transient</dt><dd>Never saved.</dd>
+  </dl>
+  <p>The sort in force. Transient, because an order is a session thing and the layout store keeps it.</p>
+</div>
+<div class="member" id="ActiveFilterText">
+  <div class="member-head"><b>Active Filter Text</b><span>ActiveFilterText</span></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( Transient )</span>
+FText ActiveFilterText</div>
+  <dl class="facts">
+    <dt>Transient</dt><dd>Never saved.</dd>
+  </dl>
+  <p>The filter text in force, kept so a rebuild can put it back.</p>
+</div>
+<div class="member" id="FilterColumnIds">
+  <div class="member-head"><b class="cpp">FilterColumnIds</b></div>
+  <div class="member-decl">TArray&lt; FName &gt; FilterColumnIds</div>
+  <p>Kept so RebuildPresentation can filter again without the table naming the columns a second time.</p>
+</div>
+<h2 id="private-variable">Private variables <em>8</em></h2>
+<div class="member" id="PresentationChanged">
+  <div class="member-head"><b class="cpp">PresentationChanged</b></div>
+  <div class="member-decl">FOnSmartTablePresentationChanged PresentationChanged</div>
+</div>
+<div class="member" id="BusyChanged">
+  <div class="member-head"><b class="cpp">BusyChanged</b></div>
+  <div class="member-decl">FOnSmartTableModelBusy BusyChanged</div>
+</div>
+<div class="member" id="WorkDispatcher">
+  <div class="member-head"><b class="cpp">WorkDispatcher</b></div>
+  <div class="member-decl">FSmartTableWorkDispatcher WorkDispatcher</div>
+</div>
+<div class="member" id="SortToken">
+  <div class="member-head"><b class="cpp">SortToken</b><em class="badge mod">pure virtual</em></div>
+  <div class="member-decl">int32 SortToken = 0</div>
+  <p>One question still out, and not a count of how many there have been.</p>
+<p>A result arriving after the spec moved on answers a question no longer being asked, and using it would put the table in an order the header does not show.</p>
+</div>
+<div class="member" id="PendingChange">
+  <div class="member-head"><b class="cpp">PendingChange</b></div>
+  <div class="member-decl"><a class="xref" href="smarttabletypes.html#FSmartTablePresentationChange">FSmartTablePresentationChange</a> PendingChange = <a class="xref" href="smarttabletypes.html#FSmartTablePresentationChange-Order">FSmartTablePresentationChange::Order</a>()</div>
+  <p>What the rebuild still out will say when it arrives.</p>
+<p>Folded in and never replaced. A row set that moved while a sort was still out is still a row set that moved, so the table has to map identity again when the rows arrive. Losing that to a later, narrower change would drop a selection with no log line.</p>
+<p>Add ORs the parts, so a later change can only ever add to what is waiting. A stale-cells tick and a row set change can arrive apart and still go out together.</p>
+</div>
+<div class="member" id="bBusy">
+  <div class="member-head"><b class="cpp">bBusy</b></div>
+  <div class="member-decl">bool bBusy = false</div>
+</div>
+<div class="member" id="SortsInFlight">
+  <div class="member-head"><b class="cpp">SortsInFlight</b><em class="badge mod">pure virtual</em></div>
+  <div class="member-decl">int32 SortsInFlight = 0</div>
+  <p>How many dispatched sorts have not come back yet.</p>
+<p>bBusy is worked out from this and never set beside it, so a dropped or superseded result can not leave the overlay up. Every dispatch takes a hold and every result gives one back, whether or not its rows were still needed.</p>
+</div>
+<div class="member" id="LastDispatchedToken">
+  <div class="member-head"><b class="cpp">LastDispatchedToken</b></div>
+  <div class="member-decl">int32 LastDispatchedToken = INDEX_NONE</div>
+  <p>The token of the newest dispatched sort, or INDEX_NONE when the newest sort ran here and now.</p>
+<p>It exists so NotifyRowChanged can ask the one question that matters to it: is a broadcast coming? SortsInFlight &gt; 0 is not that question. A superseded sort comes back early and broadcasts nothing, so a row tick folded into PendingChange while only superseded sorts were out would sit there with nothing left to carry it.</p>
+<p>When this equals SortToken the newest sort is dispatched and still out, so a broadcast is coming and a row tick folded into PendingChange goes out with it.</p>
+</div>
+<h2 id="type">Delegate types <em>2</em></h2>
+<div class="member" id="FOnSmartTablePresentationChanged">
+  <div class="member-head"><b class="cpp">FOnSmartTablePresentationChanged</b><em class="badge role">event</em></div>
+  <div class="member-decl">DECLARE_MULTICAST_DELEGATE_OneParam( FOnSmartTablePresentationChanged, const <a class="xref" href="smarttabletypes.html#FSmartTablePresentationChange">FSmartTablePresentationChange</a> &amp; )</div>
+</div>
+<div class="member" id="FOnSmartTableModelBusy">
+  <div class="member-head"><b class="cpp">FOnSmartTableModelBusy</b><em class="badge role">event</em></div>
+  <div class="member-decl">DECLARE_MULTICAST_DELEGATE_OneParam( FOnSmartTableModelBusy, bool )</div>
+</div>
+  <p class="next">Next: <a href="smarttableobjectmodel.html">SmartTableObjectModel.h</a></p>
+</main>
+
+<aside aria-label="On this page">
+<div id="s" data-root="../" data-here="reference/smarttablemodel.html">
+  <input id="q" type="search" autocomplete="off" spellcheck="false" placeholder="Search"
+         aria-label="Search the documentation">
+  <kbd aria-hidden="true">/</kbd>
+  <div id="r" hidden></div>
+</div>
+  <b>On this page</b>
+  <details class="t" open>
+    <summary>USmartTableModel</summary>
+    <details class="s">
+      <summary><a href="#public-function">Public functions</a><em>36</em></summary>
+      <details class="c">
+        <summary><a href="#public-function-smart-tables-model">Model</a><em>25</em></summary>
+        <a href="#GetNumRows">Get Num Rows</a>
+        <a href="#GetCellText">Get Cell Text</a>
+        <a href="#GetCellEditor">Get Cell Editor</a>
+        <a href="#SetCellText">Set Cell Text</a>
+        <a href="#GetCellColor">Get Cell Color</a>
+        <a href="#GetRowColor">Get Row Color</a>
+        <a href="#GetCellSortKey">Get Cell Sort Key</a>
+        <a href="#GetRowId">Get Row Id</a>
+        <a href="#GetRowItem">Get Row Item</a>
+        <a href="#NaturalRowOfItem">Natural Row Of Item</a>
+        <a href="#SortRows">Sort Rows</a>
+        <a href="#ApplyTextFilter">Apply Text Filter</a>
+        <a href="#MoveRows">Move Rows</a>
+        <a href="#NotifyRowChanged">Notify Row Changed</a>
+        <a href="#NotifyCellChanged">Notify Cell Changed</a>
+        <a href="#NotifyRowsChanged">Notify Rows Changed</a>
+        <a href="#NotifyRowsAdded">Notify Rows Added</a>
+        <a href="#NotifyRowsRemoved">Notify Rows Removed</a>
+        <a href="#NotifyNumRowsChanged">Notify Num Rows Changed</a>
+        <a href="#GetActiveSortSpec">Get Active Sort Spec</a>
+        <a href="#GetActiveFilterText">Get Active Filter Text</a>
+        <a href="#IsBusy">Is Busy</a>
+        <a href="#GetNumPresentedRows">Get Num Presented Rows</a>
+        <a href="#PresentedToNaturalRow">Presented To Natural Row</a>
+        <a href="#NaturalToPresentedRow">Natural To Presented Row</a>
+      </details>
+      <details class="c">
+        <summary><a href="#public-function-cpp-only">C++ only</a><em>11</em></summary>
+        <a href="#KeepRow">KeepRow</a>
+        <a href="#FindKeptRow">FindKeptRow</a>
+        <a href="#PlanRowMove">PlanRowMove</a>
+        <a href="#NotifyValuesChanged">NotifyValuesChanged</a>
+        <a href="#NotifyRowSetChanged">NotifyRowSetChanged</a>
+        <a href="#ActiveSortSpecRef">ActiveSortSpecRef</a>
+        <a href="#GetPresentedRows">GetPresentedRows</a>
+        <a href="#OnPresentationChanged">OnPresentationChanged</a>
+        <a href="#OnBusyChanged">OnBusyChanged</a>
+        <a href="#SetWorkDispatcher">SetWorkDispatcher</a>
+        <a href="#RebuildPresentation">RebuildPresentation</a>
+      </details>
+    </details>
+    <details class="s">
+      <summary><a href="#protected-function">Protected functions</a><em>2</em></summary>
+      <a href="#ApplySortSpecToPresentation">ApplySortSpecToPresentation</a>
+      <a href="#ApplyFilterToPresentation">ApplyFilterToPresentation</a>
+    </details>
+    <details class="s">
+      <summary><a href="#private-function">Private functions</a><em>5</em></summary>
+      <a href="#BroadcastPresentationChanged">BroadcastPresentationChanged</a>
+      <a href="#CollectFilteredRows">CollectFilteredRows</a>
+      <a href="#ExtractSortKeys">ExtractSortKeys</a>
+      <a href="#ApplySortedRows">ApplySortedRows</a>
+      <a href="#SetBusy">SetBusy</a>
+    </details>
+    <details class="s">
+      <summary><a href="#protected-variable">Protected variables</a><em>5</em></summary>
+      <a href="#PresentedToNatural">PresentedToNatural</a>
+      <a href="#NaturalToPresented">NaturalToPresented</a>
+      <a href="#ActiveSortSpec">Active Sort Spec</a>
+      <a href="#ActiveFilterText">Active Filter Text</a>
+      <a href="#FilterColumnIds">FilterColumnIds</a>
+    </details>
+    <details class="s">
+      <summary><a href="#private-variable">Private variables</a><em>8</em></summary>
+      <a href="#PresentationChanged">PresentationChanged</a>
+      <a href="#BusyChanged">BusyChanged</a>
+      <a href="#WorkDispatcher">WorkDispatcher</a>
+      <a href="#SortToken">SortToken</a>
+      <a href="#PendingChange">PendingChange</a>
+      <a href="#bBusy">bBusy</a>
+      <a href="#SortsInFlight">SortsInFlight</a>
+      <a href="#LastDispatchedToken">LastDispatchedToken</a>
+    </details>
+    <details class="s">
+      <summary><a href="#type">Delegate types</a><em>2</em></summary>
+      <a href="#FOnSmartTablePresentationChanged">FOnSmartTablePresentationChanged</a>
+      <a href="#FOnSmartTableModelBusy">FOnSmartTableModelBusy</a>
+    </details>
+  </details></aside>
+
+</div>
+
+<div id="z" hidden><img alt=""></div>
+
+</body>
+</html>

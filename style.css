@@ -106,9 +106,6 @@ strong {
   to   { transform: rotate(360deg); }
 }
 
-@keyframes dot-pulse {
-  0%,100% { opacity: 1; }
-  50%     { opacity: 0.3; }
 }
 
 @keyframes lb-in {
@@ -551,7 +548,6 @@ footer a.footer-link:focus {
   height:        6px;
   border-radius: 50%;
   background:    var(--accent4);
-  animation:     dot-pulse 1.5s ease infinite;
 }
 
 .project-card {
@@ -1149,3 +1145,297 @@ footer a.footer-link:focus {
   transition: none;
 }
 
+/* Projects as two columns of tiles that open in place. The eight cards used to run as one alternating
+   list four screens long, which put the last project below anything a visitor would scroll to. */
+.project-columns {
+  display:               grid;
+  grid-template-columns: 1fr 1fr;
+  gap:                   40px;
+  align-items:           start;
+}
+
+.column-head {
+  display:       flex;
+  align-items:   center;
+  gap:           14px;
+  margin-bottom: 18px;
+}
+
+.column-head__n {
+  font-family:    var(--font-mono);
+  font-size:      11px;
+  letter-spacing: 0.2em;
+  color:          var(--accent2);
+}
+
+.column-head__t {
+  font-family: var(--font-disp);
+  font-weight: 700;
+  font-size:   17px;
+  color:       var(--text);
+}
+
+.column-head__line {
+  flex:       1;
+  height:     1px;
+  background: var(--border);
+}
+
+/* <details> and not a click handler: it opens with no JavaScript, it is reachable from the keyboard,
+   and a browser's find-in-page can still see the text inside a closed one. */
+.tile {
+  border:        1px solid var(--border);
+  border-radius: 3px;
+  background:    var(--surface);
+  margin-bottom: 10px;
+}
+
+.tile[open] {
+  border-color: var(--accent2);
+}
+
+.tile__head {
+  display:     flex;
+  align-items: center;
+  gap:         12px;
+  padding:     14px 16px;
+  cursor:      pointer;
+  list-style:  none;
+}
+
+.tile__head::-webkit-details-marker { display: none; }
+
+/* The marker is drawn rather than taken from the browser, so it can turn with the tile. */
+.tile__head::after {
+  content:    '';
+  margin-left: auto;
+  width:      7px;
+  height:     7px;
+  border-right:  1px solid var(--muted);
+  border-bottom: 1px solid var(--muted);
+  transform:  rotate(45deg);
+  transition: transform .18s ease, border-color .18s ease;
+}
+
+.tile[open] .tile__head::after {
+  transform:     rotate(-135deg);
+  border-color:  var(--accent);
+}
+
+.tile__head:hover { background: rgba(80,160,255,0.04); }
+
+.tile__title {
+  display:     flex;
+  align-items: center;
+  flex-wrap:   wrap;
+  gap:         8px 10px;
+  font-family: var(--font-disp);
+  font-weight: 600;
+  font-size:   15px;
+  color:       var(--text);
+}
+
+.tile__sub {
+  font-family: var(--font-mono);
+  font-size:   11px;
+  color:       var(--muted);
+  margin-top:  4px;
+}
+
+.tile__body {
+  padding:    0 16px 16px;
+  border-top: 1px solid var(--border);
+  padding-top: 14px;
+}
+
+.tile__body .project-cover {
+  margin:        14px 0;
+  border-radius: 2px;
+  overflow:      hidden;
+}
+
+.tile__body .project-desc { margin-bottom: 0; }
+
+@media (max-width: 900px) {
+  .project-columns { grid-template-columns: 1fr; gap: 34px; }
+}
+
+/* The preview on a closed tile. Fixed size so the whole column lines up down its left edge, and 16:10
+   because that is what a YouTube thumbnail and a screenshot both crop to without losing the subject. */
+.tile__thumb {
+  flex:          0 0 auto;
+  width:         64px;
+  height:        40px;
+  border:        1px solid var(--border);
+  border-radius: 2px;
+  object-fit:    cover;
+  background:    var(--bg2);
+}
+
+.tile__thumb--repo {
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  color:           var(--muted);
+}
+
+.tile[open] .tile__thumb { border-color: var(--accent2); }
+
+@media (max-width: 520px) {
+  .tile__thumb { width: 48px; height: 30px; }
+}
+
+/* On hold reads as muted rather than as a warning. In development is orange because it is a promise;
+   this one is the absence of one. */
+.wip-badge--hold {
+  color:        var(--muted);
+  background:   rgba(90,106,138,0.08);
+  border-color: rgba(90,106,138,0.22);
+}
+
+.wip-badge--hold::before { background: var(--muted); }
+
+/* A fact about the project, next to the state badge. Quieter than IN DEVELOPMENT on purpose: that one is
+   a warning, these are labels, and giving them the same weight makes neither of them read. */
+.tile__tag {
+  font-family:    var(--font-mono);
+  font-size:      10px;
+  color:          var(--accent);
+  background:     rgba(58,240,200,0.07);
+  border:         1px solid rgba(58,240,200,0.2);
+  padding:        3px 9px;
+  border-radius:  2px;
+  letter-spacing: 0.1em;
+  white-space:    nowrap;
+}
+
+/* Beside the tags in the header, because that is where a reader looks for something to click. Sized to
+   match a tag so the row reads as one strip rather than a label and a button. */
+.tile__repo {
+  display:         inline-flex;
+  align-items:     center;
+  gap:             6px;
+  padding:         3px 9px;
+  border:          1px solid rgba(74,143,255,0.3);
+  border-radius:   2px;
+  background:      rgba(74,143,255,0.08);
+  color:           var(--accent2);
+  text-decoration: none;
+  font-family:     var(--font-mono);
+  font-size:       10px;
+  letter-spacing:  0.1em;
+  white-space:     nowrap;
+}
+
+.tile__repo:hover {
+  border-color: var(--accent2);
+  background:   rgba(74,143,255,0.18);
+}
+
+.tile__repo svg { width: 12px; height: 12px; }
+
+
+/* The status badge carries a 16px bottom margin from the old card layout, where it sat above the
+   category line. In the header row that margin is not spacing, it is a half-margin nudge upward against
+   align-items:center - which is why ON HOLD floated 8px above the GITHUB button beside it. */
+.tile__title .wip-badge {
+  margin-bottom: 0;
+}
+
+/* One dropdown in the nav. A <details> rather than a click handler on a div: it opens from the keyboard,
+   it needs no state of its own, and the only JS is the two things <details> genuinely cannot do - close
+   when you click elsewhere, and close on Escape. */
+.nav-drop {
+  position: relative;
+}
+
+.nav-drop > summary {
+  font-family:     var(--font-mono);
+  font-size:       12px;
+  color:           var(--muted);
+  letter-spacing:  0.1em;
+  text-transform:  uppercase;
+  cursor:          pointer;
+  list-style:      none;
+  display:         flex;
+  align-items:     center;
+  gap:             7px;
+  transition:      color 0.2s;
+}
+
+.nav-drop > summary::-webkit-details-marker { display: none; }
+
+.nav-drop > summary::after {
+  content:       '';
+  width:         5px;
+  height:        5px;
+  border-right:  1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  transform:     rotate(45deg) translate(-1px, -1px);
+  transition:    transform 0.18s ease;
+}
+
+.nav-drop[open] > summary::after { transform: rotate(-135deg) translate(-1px, -1px); }
+
+.nav-drop > summary:hover,
+.nav-drop[open] > summary { color: var(--accent); }
+
+.nav-drop__menu {
+  position:        absolute;
+  top:             calc(100% + 14px);
+  right:           0;
+  min-width:       190px;
+  padding:         6px;
+  border:          1px solid var(--border);
+  border-radius:   3px;
+  background:      rgba(11,15,26,0.97);
+  backdrop-filter: blur(12px);
+}
+
+.nav-drop__menu a {
+  display:         flex;
+  align-items:     baseline;
+  justify-content: space-between;
+  gap:             14px;
+  padding:         9px 11px;
+  border-radius:   2px;
+  color:           var(--text);
+  text-transform:  none;
+  font-size:       12.5px;
+  font-family:     var(--font-body);
+  letter-spacing:  0;
+}
+
+.nav-drop__menu a:hover { background: rgba(80,160,255,0.08); color: var(--accent); }
+
+.nav-drop__menu a span {
+  font-family:    var(--font-mono);
+  font-size:      10px;
+  color:          var(--muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.nav-drop__head {
+  padding:        8px 11px 4px;
+  font-family:    var(--font-mono);
+  font-size:      10px;
+  color:          var(--accent);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* The three plain links are inline, so their box is the glyphs; the Plugins summary is a flex box, so it
+   fills the whole line. That is a 7px difference in where each one starts, and no amount of padding fixes
+   it because the two are measured differently. Same display, same box, aligned by construction. */
+.nav-links > li {
+  display:     flex;
+  align-items: center;
+}
+
+.nav-links > li > a,
+.nav-drop > summary {
+  display:     flex;
+  align-items: center;
+  line-height: 1;
+}

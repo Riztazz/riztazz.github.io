@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - Smart Tables</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .support-intro {
+            font-size:   16px;
+            color:       #8a9bc0;
+            line-height: 1.8;
+            max-width:   620px;
+            margin-top:  20px;
+        }
+
+        .support-grid {
+            display:               grid;
+            grid-template-columns: 1fr 1fr;
+            gap:                   24px;
+        }
+
+        .support-card {
+            background:     var(--surface);
+            border:         1px solid var(--border);
+            border-radius:  4px;
+            padding:        32px;
+            display:        flex;
+            flex-direction: column;
+            gap:            18px;
+        }
+
+        .support-card h3 {
+            font-family:    var(--font-disp);
+            font-weight:    700;
+            font-size:      22px;
+            color:          #fff;
+            letter-spacing: -0.01em;
+        }
+
+        .support-card p,
+        .support-card li {
+            font-size:   15px;
+            color:       #8a9bc0;
+            line-height: 1.7;
+        }
+
+        .support-card ul {
+            list-style:     none;
+            display:        flex;
+            flex-direction: column;
+            gap:            6px;
+        }
+
+        .support-card li::before {
+            content:      '-';
+            color:        var(--accent);
+            margin-right: 10px;
+        }
+
+        .support-card code {
+            font-family: var(--font-mono);
+            font-size:   13px;
+            color:       var(--accent);
+        }
+
+        .support-card a.support-link {
+            color:           var(--accent2);
+            text-decoration: none;
+        }
+
+        .support-card a.support-link:hover {
+            color: var(--accent);
+        }
+
+        .support-actions {
+            margin-top: auto;
+            display:    flex;
+            gap:        12px;
+            flex-wrap:  wrap;
+        }
+
+        @media (max-width: 800px) {
+            .support-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a class="nav-logo" href="../">Back to the portfolio</a>
+        <ul class="nav-links">
+            <li><a href="../#projects">Projects</a></li>
+            <li><a href="../#about">About</a></li>
+            <li><a href="../#contact">Contact</a></li>
+            <li>
+                <details class="nav-drop">
+                    <summary>Plugins</summary>
+                    <div class="nav-drop__menu">
+                        <div class="nav-drop__head">Smart Tables</div>
+                        <a href="../smart-tables/index.html">Documentation<span>docs</span></a>
+                        <a href="./">Support<span>help</span></a>
+                    </div>
+                </details>
+            </li>
+        </ul>
+    </nav>
+
+    <section id="support">
+        <div class="wrapper">
+            <div class="section-label" style="margin-bottom:20px;">Plugin support</div>
+            <h1>Smart Tables</h1>
+            <p class="support-intro">
+                Help with Smart Tables, the table widget for UMG. Most answers are already in the documentation.
+                For anything it doesn't cover, write to me and I'll answer by email.
+            </p>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <section>
+        <div class="wrapper">
+            <div class="support-grid">
+                <div class="support-card">
+                    <h4>01 / Read first</h4>
+                    <h3>The documentation</h3>
+                    <p>
+                        Every Details panel field, every node and every demo is written down, with a reference
+                        page for each public header.
+                    </p>
+                    <p>
+                        A table that draws empty or wrong has a page of its own:
+                        <a class="support-link" href="../smart-tables/pages/13_debugging.html">When it draws nothing</a>.
+                    </p>
+                    <div class="support-actions">
+                        <a href="../smart-tables/index.html" class="btn-primary">Open the docs</a>
+                    </div>
+                </div>
+
+                <div class="support-card">
+                    <h4>02 / Still stuck</h4>
+                    <h3>Report a problem</h3>
+                    <p>Send an email with these, and I can usually answer without a second round:</p>
+                    <ul>
+                        <li>your engine version, and the plugin version from Edit, Plugins</li>
+                        <li>what you did, and what you expected to happen</li>
+                        <li>the log lines that name <code>LogSmartTables</code></li>
+                        <li>a screenshot of the table's Details panel, if the problem is in the editor</li>
+                    </ul>
+                    <div class="support-actions">
+                        <a href="mailto:felianther15@gmail.com?subject=Smart%20Tables%20support" class="btn-primary">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,12 2,6" /></svg>
+                            Email
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>2026 Cezary Stanowski - Systems &amp; Game Developer</p>
+    </footer>
+
+</body>
+</html>

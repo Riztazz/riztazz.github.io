@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en" data-theme="">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SmartTableObjectModel.h - Smart Tables</title>
+<link rel="icon" href="../img/smarttables_favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css?v=94b6e99e">
+<script src="../theme.js?v=94b6e99e"></script>
+<script defer src="../search.js?v=94b6e99e"></script>
+</head>
+<body>
+
+<button id="t" type="button" aria-label="Switch between light and dark">THEME</button>
+
+<div class="wrap">
+
+<nav aria-label="Pages">
+<a class="home" href="../index.html" aria-label="Smart Tables"><svg xmlns="http://www.w3.org/2000/svg" class="logo" viewBox="0 0 222.2 48" width="222.2" height="48" aria-hidden="true">
+  <g fill="none" stroke="currentColor" stroke-width="3.5">
+    <rect x="4" y="8" width="40" height="34" rx="4.5"/>
+    <path d="M4 20 H44 M24 20 V42"/>
+  </g>
+  <rect x="26.5" y="22.5" width="15" height="17" rx="1.5" fill="#4a86ff"/>
+  <path d="M72.2 30Q72.2 28.3 71 27.2Q69.7 26.2 66.4 25.3Q63.1 24.3 61.6 23.2Q59.4 21.7 59.4 19.2Q59.4 16.7 61.4 15.2Q63.5 13.7 66.6 13.7Q68.7 13.7 70.4 14.5Q72.1 15.3 73 16.8Q73.9 18.2 73.9 20H72.1Q72.1 17.8 70.6 16.5Q69.1 15.2 66.6 15.2Q64.1 15.2 62.7 16.3Q61.2 17.4 61.2 19.1Q61.2 20.8 62.5 21.8Q63.8 22.8 66.7 23.6Q69.6 24.4 71.1 25.2Q72.5 26.1 73.3 27.2Q74 28.4 74 30Q74 32.5 72 34Q70 35.6 66.7 35.6Q64.5 35.6 62.6 34.8Q60.7 34 59.7 32.5Q58.8 31.1 58.8 29.2H60.6Q60.6 31.4 62.2 32.7Q63.9 34 66.7 34Q69.2 34 70.7 32.9Q72.2 31.8 72.2 30ZM78.5 19.4 78.6 22Q79.4 20.6 80.8 19.8Q82.1 19.1 83.7 19.1Q87.4 19.1 88.5 22.2Q89.3 20.7 90.7 19.9Q92.1 19.1 93.9 19.1Q99 19.1 99.1 24.7V35.3H97.3V24.8Q97.3 22.7 96.4 21.7Q95.5 20.7 93.5 20.7Q91.6 20.7 90.3 21.9Q89 23.1 88.8 24.8V35.3H87.1V24.7Q87 22.7 86.1 21.7Q85.1 20.7 83.2 20.7Q81.5 20.7 80.3 21.6Q79.2 22.5 78.6 24.4V35.3H76.8V19.4ZM112.9 35.3Q112.6 34.5 112.6 33.1Q111.6 34.3 110.2 34.9Q108.8 35.6 107.2 35.6Q104.9 35.6 103.5 34.3Q102.1 33 102.1 31.1Q102.1 28.8 104 27.4Q105.9 26.1 109.4 26.1H112.6V24.3Q112.6 22.6 111.5 21.6Q110.5 20.6 108.5 20.6Q106.6 20.6 105.4 21.5Q104.2 22.5 104.2 23.8L102.5 23.8Q102.5 21.9 104.2 20.5Q106 19.1 108.5 19.1Q111.2 19.1 112.7 20.5Q114.3 21.8 114.3 24.2V31.7Q114.3 34 114.8 35.1V35.3ZM107.4 34Q109.2 34 110.5 33.2Q111.9 32.3 112.6 30.9V27.4H109.4Q106.8 27.4 105.3 28.4Q103.8 29.3 103.8 30.9Q103.8 32.3 104.8 33.1Q105.8 34 107.4 34ZM125.7 20.9Q125.1 20.8 124.5 20.8Q122.9 20.8 121.7 21.7Q120.6 22.6 120.1 24.4V35.3H118.4V19.4H120.1L120.1 21.9Q121.5 19.1 124.6 19.1Q125.3 19.1 125.7 19.3ZM130.6 15.4V19.4H133.9V20.9H130.6V31.4Q130.6 32.7 131.1 33.4Q131.5 34 132.7 34Q133.1 34 134.1 33.9L134.1 35.3Q133.5 35.6 132.3 35.6Q130.5 35.6 129.7 34.5Q128.8 33.5 128.8 31.4V20.9H125.9V19.4H128.8V15.4ZM151.4 17.2H145.4V35.3H141.1V17.2H135.1V13.9H151.4ZM162.2 35.3Q162 34.7 161.8 34.1Q161.6 33.5 161.6 32.9Q160.9 34.1 159.8 34.8Q158.7 35.6 157.2 35.6Q154.8 35.6 153.4 34.3Q152.1 33 152.1 30.8Q152.1 28.5 153.9 27.2Q155.7 25.9 159.1 25.9H161.5V24.7Q161.5 23.5 160.9 22.9Q160.3 22.2 159.1 22.2Q158.1 22.2 157.5 22.8Q156.9 23.3 156.9 24.1H152.8L152.8 24.1Q152.7 22 154.5 20.6Q156.4 19.1 159.4 19.1Q162.2 19.1 164 20.6Q165.8 22 165.8 24.7V31.2Q165.8 32.3 165.9 33.3Q166.1 34.3 166.5 35.3ZM158.3 32.4Q159.4 32.4 160.3 31.9Q161.2 31.3 161.5 30.6V28.3H159.1Q157.7 28.3 157 29Q156.3 29.7 156.3 30.7Q156.3 31.5 156.9 31.9Q157.4 32.4 158.3 32.4ZM182.7 27.8Q182.7 31.3 181.1 33.5Q179.5 35.6 176.5 35.6Q175.1 35.6 174.1 35Q173.1 34.4 172.4 33.3L172 35.3H168.4V12.4H172.6V21.1Q173.3 20.2 174.3 19.6Q175.3 19.1 176.5 19.1Q179.5 19.1 181.1 21.4Q182.7 23.7 182.7 27.5ZM178.4 27.5Q178.4 25.2 177.7 23.8Q177.1 22.5 175.4 22.5Q174.4 22.5 173.7 22.9Q173 23.3 172.6 24.1V30.8Q173 31.5 173.7 31.9Q174.4 32.3 175.4 32.3Q177.1 32.3 177.8 31.1Q178.4 29.9 178.4 27.8ZM189.2 35.3H184.9V12.4H189.2ZM199 35.6Q195.5 35.6 193.5 33.4Q191.5 31.2 191.5 27.8V27.2Q191.5 23.7 193.4 21.4Q195.3 19.1 198.7 19.1Q201.9 19.1 203.6 21.1Q205.3 23 205.3 26.4V28.6H195.9L195.8 28.7Q195.9 30.3 196.8 31.3Q197.7 32.3 199.5 32.3Q200.9 32.3 201.9 32Q202.9 31.7 204 31.1L205.1 33.7Q204.2 34.5 202.5 35.1Q200.9 35.6 199 35.6ZM198.7 22.4Q197.4 22.4 196.7 23.3Q196 24.2 195.9 25.7L195.9 25.7H201.1V25.4Q201.1 24 200.6 23.2Q200 22.4 198.7 22.4ZM215.8 30.9Q215.8 30.2 215.1 29.7Q214.4 29.2 212.6 28.8Q209.8 28.2 208.4 27.1Q206.9 26 206.9 24Q206.9 22 208.6 20.6Q210.4 19.1 213.2 19.1Q216.2 19.1 218.1 20.6Q219.9 22 219.8 24.1L219.8 24.2H215.6Q215.6 23.3 215 22.7Q214.4 22.1 213.2 22.1Q212.2 22.1 211.6 22.6Q211 23.1 211 23.8Q211 24.6 211.6 25Q212.3 25.5 214.2 25.9Q217.1 26.5 218.5 27.6Q219.9 28.7 219.9 30.7Q219.9 32.9 218.1 34.2Q216.3 35.6 213.3 35.6Q210.1 35.6 208.3 34Q206.4 32.4 206.5 30.3L206.5 30.2H210.5Q210.5 31.5 211.3 32.1Q212.1 32.6 213.4 32.6Q214.5 32.6 215.2 32.2Q215.8 31.7 215.8 30.9Z" fill="currentColor"/>
+</svg></a>
+  <b>Home</b>
+    <a href="../index.html">Home</a>
+    <a href="../pages/00_features.html">Every feature</a>
+  <b>Start here</b>
+    <a href="../pages/01_first_table.html">Your first table</a>
+    <a href="../pages/02_rows.html">Rows</a>
+    <a href="../pages/03_columns.html">Columns</a>
+    <a href="../pages/04_cells.html">Cells</a>
+    <a href="../pages/05_events.html">Events</a>
+  <b>Going further</b>
+    <a href="../pages/06_sorting.html">Sorting and filtering</a>
+    <a href="../pages/07_input.html">Selection and input</a>
+    <a href="../pages/08_reorder.html">Reordering rows</a>
+    <a href="../pages/09_layout_skin.html">Layout and skin</a>
+    <a href="../pages/13_debugging.html">When it draws nothing</a>
+  <b>When you need more</b>
+    <a href="../pages/10_blueprint_model.html">A model in Blueprint</a>
+    <a href="../pages/11_row_spaces.html">The two row spaces</a>
+    <a href="../pages/12_cpp.html">Dropping to C++</a>
+  <b>Demos</b>
+    <a href="../pages/20_demo_items.html">1. Items</a>
+    <a href="../pages/21_demo_datatable.html">2. DataTable</a>
+    <a href="../pages/22_demo_csv.html">3. CSV file</a>
+    <a href="../pages/23_demo_json.html">4. JSON file</a>
+    <a href="../pages/24_demo_million.html">5. One million rows</a>
+    <a href="../pages/25_demo_server.html">6. Server browser</a>
+    <a href="../pages/26_demo_pairs.html">7. Pairs</a>
+    <a href="../pages/27_demo_keys.html">8. Keys, no EI</a>
+    <a href="../pages/28_demo_items_mvvm.html">9. Items with MVVM</a>
+  <b>Reference</b>
+  <div class="scroller">
+    <a href="smarttable.html">SmartTable.h</a>
+    <a href="smarttabletypes.html">SmartTableTypes.h</a>
+    <a href="smarttablesorting.html">SmartTableSorting.h</a>
+    <a href="smarttabledeadsecondaries.html">SmartTableDeadSecondaries.h</a>
+    <a href="smarttablecolumnlayout.html">SmartTableColumnLayout.h</a>
+    <a href="smarttablebinding.html">SmartTableBinding.h</a>
+    <a href="smarttablecolumnschema.html">SmartTableColumnSchema.h</a>
+    <a href="smarttabledispatcher.html">SmartTableDispatcher.h</a>
+    <a href="smarttablecolour.html">SmartTableColour.h</a>
+    <a href="smarttablemodel.html">SmartTableModel.h</a>
+    <a href="smarttableobjectmodel.html" aria-current="page">SmartTableObjectModel.h</a>
+    <a href="smarttabledatatablemodel.html">SmartTableDataTableModel.h</a>
+    <a href="smarttablekeptrow.html">SmartTableKeptRow.h</a>
+    <a href="smarttablerowsetdiff.html">SmartTableRowSetDiff.h</a>
+    <a href="smarttablecell.html">SmartTableCell.h</a>
+    <a href="smarttablerowwidget.html">SmartTableRowWidget.h</a>
+    <a href="smarttablestyle.html">SmartTableStyle.h</a>
+    <a href="smarttablesettings.html">SmartTableSettings.h</a>
+    <a href="smarttablelayoutstore.html">SmartTableLayoutStore.h</a>
+    <a href="smarttablesortkey.html">SmartTableSortKey.h</a>
+    <a href="smarttablecelldragdropop.html">SmartTableCellDragDropOp.h</a>
+    <a href="smarttablecelldrag.html">SmartTableCellDrag.h</a>
+    <a href="smarttablecolumnselection.html">SmartTableColumnSelection.h</a>
+    <a href="smarttableresizegesture.html">SmartTableResizeGesture.h</a>
+    <a href="smarttablescrollmove.html">SmartTableScrollMove.h</a>
+    <a href="smarttablearrivals.html">SmartTableArrivals.h</a>
+    <a href="smarttableopenmenu.html">SmartTableOpenMenu.h</a>
+    <a href="smarttablelog.html">SmartTableLog.h</a>
+  </div>
+</nav>
+
+<main>
+  <h1>SmartTableObjectModel.h</h1>
+  <p class="lede">The model behind Set Items. It holds the objects and reads them by name.</p>
+<div class="refhead">
+  <div class="path">Source/SmartTables/Public/SmartTableObjectModel.h</div>
+<p>The model SetItems builds, and the one most tables never name.</p>
+<p>Rows are UObjects, and columns resolve by name to a property or to a pure function that needs no input, once per class. That is the whole path with no code behind it: text, sorting and filtering all fall out of the same resolved binding.</p>
+<p>It owns its items, the way UListView holds a strong array. Items are usually built in a Blueprint and held nowhere else, so a model that only pointed at them would empty itself at the next garbage collection, in no fixed order.</p>
+  <dl>
+  <dt>Class</dt><dd>USmartTableObjectModel</dd>
+  <dt>Extends</dt><dd>USmartTableModel</dd>
+  <dt>Members</dt><dd>29</dd>
+  <dt>Panel fields</dt><dd>2</dd>
+  </dl>
+</div>
+<h2 id="public-function">Public functions <em>8</em></h2>
+<div class="member" id="SetItems">
+  <div class="member-head"><b class="cpp">SetItems</b></div>
+  <div class="member-decl">void SetItems( const TArray&lt; UObject * &gt; &amp; InItems )</div>
+  <p>Replaces the whole set. Nulls are dropped and counted for one log line, never drawn as empty rows.</p>
+<p>The table hears which items arrived and which left, by comparing row ids with the set before. A set that shares no item with the one before is a new set.</p>
+</div>
+<div class="member" id="AddItem">
+  <div class="member-head"><b class="cpp">AddItem</b></div>
+  <div class="member-decl">void AddItem( UObject * Item )</div>
+  <p>Adds one item at the end, and the table hears that its row arrived.</p>
+</div>
+<div class="member" id="RemoveItem">
+  <div class="member-head"><b class="cpp">RemoveItem</b></div>
+  <div class="member-decl">void RemoveItem( UObject * Item )</div>
+  <p>Drops one item, every copy of it. Does nothing when it is not in the set.</p>
+</div>
+<div class="member" id="ClearItems">
+  <div class="member-head"><b class="cpp">ClearItems</b></div>
+  <div class="member-decl">void ClearItems()</div>
+  <p>Drops every item, which the table hears as a new set. The columns stay as they were.</p>
+</div>
+<div class="member" id="GetItems">
+  <div class="member-head"><b class="cpp">GetItems</b></div>
+  <div class="member-decl">const TArray&lt; TObjectPtr&lt; UObject &gt; &gt; &amp; GetItems() const</div>
+  <p>A view of the items as they are held. It points at the array, so nothing may keep it past a tick.</p>
+</div>
+<div class="member" id="IndexOfItem">
+  <div class="member-head"><b class="cpp">IndexOfItem</b></div>
+  <div class="member-decl">int32 IndexOfItem( const UObject * Item ) const</div>
+  <p>Natural row of this item, or INDEX_NONE when the set does not hold it.</p>
+</div>
+<div class="member" id="RowIdOf">
+  <div class="member-head"><b class="cpp">RowIdOf</b><em class="badge mod">static</em></div>
+  <div class="member-decl">static FName RowIdOf( const UObject * Item )</div>
+  <p>The row id of an item, which GetRowId answers and SetItems compares. None for a null item.</p>
+<p>One id per object for as long as it lives. An object name is unique only among the objects of one outer, and two rows with one id would trade their selection, their entrance and the row a view holds.</p>
+</div>
+<div class="member" id="SetColumns">
+  <div class="member-head"><b class="cpp">SetColumns</b></div>
+  <div class="member-decl">void SetColumns( const TArray&lt; <a class="xref" href="smarttabletypes.html#FSmartTableColumn">FSmartTableColumn</a> &gt; &amp; InColumns )</div>
+  <p>The columns this model resolves its bindings against.</p>
+<p>Given by the table and never asked for, because the table owns the column names and a model must not reach into the widget that owns it.</p>
+</div>
+<h2 id="protected-function">Protected functions <em>7</em></h2>
+<div class="member" id="GetNumRows_Implementation">
+  <div class="member-head"><b class="cpp">GetNumRows_Implementation</b><em class="badge mod">override</em></div>
+  <div class="member-decl">virtual int32 GetNumRows_Implementation() override</div>
+</div>
+<div class="member" id="GetCellText_Implementation">
+  <div class="member-head"><b class="cpp">GetCellText_Implementation</b><em class="badge mod">override</em></div>
+  <div class="member-decl">virtual FText GetCellText_Implementation( int32 NaturalRow, FName ColumnId ) override</div>
+</div>
+<div class="member" id="GetCellSortKey_Implementation">
+  <div class="member-head"><b class="cpp">GetCellSortKey_Implementation</b><em class="badge mod">override</em></div>
+  <div class="member-decl">virtual <a class="xref" href="smarttablesortkey.html">FSmartTableSortKey</a> GetCellSortKey_Implementation( int32 NaturalRow, FName ColumnId ) override</div>
+</div>
+<div class="member" id="GetRowId_Implementation">
+  <div class="member-head"><b class="cpp">GetRowId_Implementation</b><em class="badge mod">override</em></div>
+  <div class="member-decl">virtual FName GetRowId_Implementation( int32 NaturalRow ) override</div>
+</div>
+<div class="member" id="GetRowItem_Implementation">
+  <div class="member-head"><b class="cpp">GetRowItem_Implementation</b><em class="badge mod">override</em></div>
+  <div class="member-decl">virtual UObject * GetRowItem_Implementation( int32 NaturalRow ) override</div>
+</div>
+<div class="member" id="NaturalRowOfItem_Implementation">
+  <div class="member-head"><b class="cpp">NaturalRowOfItem_Implementation</b><em class="badge mod">override</em></div>
+  <div class="member-decl">virtual int32 NaturalRowOfItem_Implementation( UObject * Item ) override</div>
+</div>
+<div class="member" id="MoveRows_Implementation">
+  <div class="member-head"><b class="cpp">MoveRows_Implementation</b><em class="badge mod">override</em></div>
+  <div class="member-decl">virtual bool MoveRows_Implementation( const TArray&lt; int32 &gt; &amp; NaturalRows, int32 InsertBeforeNaturalRow ) override</div>
+</div>
+<h2 id="private-function">Private functions <em>6</em></h2>
+<div class="member" id="ResolveBindingsFor">
+  <div class="member-head"><b class="cpp">ResolveBindingsFor</b></div>
+  <div class="member-decl">void ResolveBindingsFor( UClass * Class )</div>
+  <p>Resolves every column against Class, warning for each column that resolves against nothing. Once per call and not once ever, so a table that resolves again says it again.</p>
+</div>
+<div class="member" id="RowIds">
+  <div class="member-head"><b class="cpp">RowIds</b></div>
+  <div class="member-decl">TArray&lt; FName &gt; RowIds() const</div>
+  <p>The row id of every item, in the order they are held.</p>
+</div>
+<div class="member" id="GetCellEditor_Implementation">
+  <div class="member-head"><b class="cpp">GetCellEditor_Implementation</b><em class="badge mod">override</em></div>
+  <div class="member-decl">virtual <a class="xref" href="smarttabletypes.html#ESmartTableCellEditor">ESmartTableCellEditor</a> GetCellEditor_Implementation( int32 NaturalRow, FName ColumnId ) override</div>
+</div>
+<div class="member" id="SetCellText_Implementation">
+  <div class="member-head"><b class="cpp">SetCellText_Implementation</b><em class="badge mod">override</em></div>
+  <div class="member-decl">virtual bool SetCellText_Implementation( int32 NaturalRow, FName ColumnId, const FText &amp; Value ) override</div>
+</div>
+<div class="member" id="FindBinding">
+  <div class="member-head"><b class="cpp">FindBinding</b></div>
+  <div class="member-decl">const <a class="xref" href="smarttableobjectmodel.html#FColumnBinding">FColumnBinding</a> * FindBinding( const UObject * Item, FName ColumnId )</div>
+  <p>Not const, because a miss resolves: the cache is filled here or nowhere. Every caller is one of the read events of this model, which are not const for exactly this reason.</p>
+</div>
+<div class="member" id="RebuildItemRows">
+  <div class="member-head"><b class="cpp">RebuildItemRows</b></div>
+  <div class="member-decl">void RebuildItemRows()</div>
+</div>
+<h2 id="private-variable">Private variables <em>5</em></h2>
+<div class="member" id="Items">
+  <div class="member-head"><b>Items</b><span>Items</span></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( Transient )</span>
+TArray&lt; TObjectPtr&lt; UObject &gt; &gt; Items</div>
+  <dl class="facts">
+    <dt>Transient</dt><dd>Never saved.</dd>
+  </dl>
+</div>
+<div class="member" id="Columns">
+  <div class="member-head"><b>Columns</b><span>Columns</span></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( Transient )</span>
+TArray&lt; <a class="xref" href="smarttabletypes.html#FSmartTableColumn">FSmartTableColumn</a> &gt; Columns</div>
+  <dl class="facts">
+    <dt>Transient</dt><dd>Never saved.</dd>
+  </dl>
+  <p>Reflected because a column carries a CellClass, and a UClass held only by a plain array is one the garbage collector can not see.</p>
+</div>
+<div class="member" id="BindingsByClass">
+  <div class="member-head"><b class="cpp">BindingsByClass</b></div>
+  <div class="member-decl">TMap&lt; TWeakObjectPtr&lt; UClass &gt;, TArray&lt; <a class="xref" href="smarttableobjectmodel.html#FColumnBinding">FColumnBinding</a> &gt; &gt; BindingsByClass</div>
+  <p>Keyed by item class, because a set holding several classes is fine. A column that resolves on some of them draws for those and stays empty for the rest, which is a fact about the data.</p>
+<p>Weak, and swept on a miss inside FindBinding. A Blueprint compile gives the same objects a freshly built UClass. The entry for the class it replaced can never be found again, since a weak key is matched by its number, and the two writers that clear this map are not on that path. Without the sweep every compile leaves one dead entry behind, for the life of the model.</p>
+</div>
+<div class="member" id="ColumnOrderById">
+  <div class="member-head"><b class="cpp">ColumnOrderById</b></div>
+  <div class="member-decl">TMap&lt; FName, int32 &gt; ColumnOrderById</div>
+  <p>Column id to its place in Columns. Filled in SetColumns, so it holds for every class at once: the binding arrays are all in the same order as Columns. A cell draw would otherwise walk the columns to find its own, once per cell per frame.</p>
+</div>
+<div class="member" id="RowByItem">
+  <div class="member-head"><b class="cpp">RowByItem</b></div>
+  <div class="member-decl">TMap&lt; TObjectKey&lt; UObject &gt;, int32 &gt; RowByItem</div>
+  <p>Item to its row, so IndexOfItem is a lookup and not a walk of every item.</p>
+<p>Every writer of Items writes this in the same call, and there are five. SetItems and MoveRows rebuild it. RemoveItem rebuilds it too, since taking one out moves every row after it. ClearItems empties it, and AddItem adds the one row it appended.</p>
+<p>A writer that forgets leaves the table scrolling to the wrong row and selecting nothing, and says nothing anywhere.</p>
+<p>The FIRST of a repeated item holds the row, which is what a walk of the items answered.</p>
+</div>
+<h2 class="type" id="FColumnBinding">FColumnBinding <em>struct</em></h2>
+<p>The bindings of one column against one item class. Resolved per class and never per cell, or a table of ten thousand rows would do ten thousand name lookups to draw one column.</p>
+<h2 id="FColumnBinding-public-variable">Public variables <em>3</em></h2>
+<div class="member" id="FColumnBinding-Column">
+  <div class="member-head"><b class="cpp">Column</b></div>
+  <div class="member-decl">int32 Column = INDEX_NONE</div>
+  <p>Where in Columns this one sits. Every array of these is filled in step with Columns, and SetColumns drops them all, so the two can not come apart.</p>
+</div>
+<div class="member" id="FColumnBinding-Value">
+  <div class="member-head"><b class="cpp">Value</b></div>
+  <div class="member-decl"><a class="xref" href="smarttablelayoutstore.html#SmartTable">SmartTable</a>::<a class="xref" href="smarttablebinding.html#FBinding">FBinding</a> Value</div>
+</div>
+<div class="member" id="FColumnBinding-Sort">
+  <div class="member-head"><b class="cpp">Sort</b></div>
+  <div class="member-decl"><a class="xref" href="smarttablelayoutstore.html#SmartTable">SmartTable</a>::<a class="xref" href="smarttablebinding.html#FBinding">FBinding</a> Sort</div>
+</div>
+  <p class="next">Next: <a href="smarttabledatatablemodel.html">SmartTableDataTableModel.h</a></p>
+</main>
+
+<aside aria-label="On this page">
+<div id="s" data-root="../" data-here="reference/smarttableobjectmodel.html">
+  <input id="q" type="search" autocomplete="off" spellcheck="false" placeholder="Search"
+         aria-label="Search the documentation">
+  <kbd aria-hidden="true">/</kbd>
+  <div id="r" hidden></div>
+</div>
+  <b>On this page</b>
+  <details class="t" open>
+    <summary>USmartTableObjectModel</summary>
+    <details class="s">
+      <summary><a href="#public-function">Public functions</a><em>8</em></summary>
+      <a href="#SetItems">SetItems</a>
+      <a href="#AddItem">AddItem</a>
+      <a href="#RemoveItem">RemoveItem</a>
+      <a href="#ClearItems">ClearItems</a>
+      <a href="#GetItems">GetItems</a>
+      <a href="#IndexOfItem">IndexOfItem</a>
+      <a href="#RowIdOf">RowIdOf</a>
+      <a href="#SetColumns">SetColumns</a>
+    </details>
+    <details class="s">
+      <summary><a href="#protected-function">Protected functions</a><em>7</em></summary>
+      <a href="#GetNumRows_Implementation">GetNumRows_Implementation</a>
+      <a href="#GetCellText_Implementation">GetCellText_Implementation</a>
+      <a href="#GetCellSortKey_Implementation">GetCellSortKey_Implementation</a>
+      <a href="#GetRowId_Implementation">GetRowId_Implementation</a>
+      <a href="#GetRowItem_Implementation">GetRowItem_Implementation</a>
+      <a href="#NaturalRowOfItem_Implementation">NaturalRowOfItem_Implementation</a>
+      <a href="#MoveRows_Implementation">MoveRows_Implementation</a>
+    </details>
+    <details class="s">
+      <summary><a href="#private-function">Private functions</a><em>6</em></summary>
+      <a href="#ResolveBindingsFor">ResolveBindingsFor</a>
+      <a href="#RowIds">RowIds</a>
+      <a href="#GetCellEditor_Implementation">GetCellEditor_Implementation</a>
+      <a href="#SetCellText_Implementation">SetCellText_Implementation</a>
+      <a href="#FindBinding">FindBinding</a>
+      <a href="#RebuildItemRows">RebuildItemRows</a>
+    </details>
+    <details class="s">
+      <summary><a href="#private-variable">Private variables</a><em>5</em></summary>
+      <a href="#Items">Items</a>
+      <a href="#Columns">Columns</a>
+      <a href="#BindingsByClass">BindingsByClass</a>
+      <a href="#ColumnOrderById">ColumnOrderById</a>
+      <a href="#RowByItem">RowByItem</a>
+    </details>
+  </details>
+  <details class="t" open>
+    <summary>FColumnBinding</summary>
+    <details class="s">
+      <summary><a href="#FColumnBinding-public-variable">Public variables</a><em>3</em></summary>
+      <a href="#FColumnBinding-Column">Column</a>
+      <a href="#FColumnBinding-Value">Value</a>
+      <a href="#FColumnBinding-Sort">Sort</a>
+    </details>
+  </details></aside>
+
+</div>
+
+<div id="z" hidden><img alt=""></div>
+
+</body>
+</html>

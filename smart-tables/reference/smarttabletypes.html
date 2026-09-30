@@ -1,0 +1,1052 @@
+<!doctype html>
+<html lang="en" data-theme="">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SmartTableTypes.h - Smart Tables</title>
+<link rel="icon" href="../img/smarttables_favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css?v=94b6e99e">
+<script src="../theme.js?v=94b6e99e"></script>
+<script defer src="../search.js?v=94b6e99e"></script>
+</head>
+<body>
+
+<button id="t" type="button" aria-label="Switch between light and dark">THEME</button>
+
+<div class="wrap">
+
+<nav aria-label="Pages">
+<a class="home" href="../index.html" aria-label="Smart Tables"><svg xmlns="http://www.w3.org/2000/svg" class="logo" viewBox="0 0 222.2 48" width="222.2" height="48" aria-hidden="true">
+  <g fill="none" stroke="currentColor" stroke-width="3.5">
+    <rect x="4" y="8" width="40" height="34" rx="4.5"/>
+    <path d="M4 20 H44 M24 20 V42"/>
+  </g>
+  <rect x="26.5" y="22.5" width="15" height="17" rx="1.5" fill="#4a86ff"/>
+  <path d="M72.2 30Q72.2 28.3 71 27.2Q69.7 26.2 66.4 25.3Q63.1 24.3 61.6 23.2Q59.4 21.7 59.4 19.2Q59.4 16.7 61.4 15.2Q63.5 13.7 66.6 13.7Q68.7 13.7 70.4 14.5Q72.1 15.3 73 16.8Q73.9 18.2 73.9 20H72.1Q72.1 17.8 70.6 16.5Q69.1 15.2 66.6 15.2Q64.1 15.2 62.7 16.3Q61.2 17.4 61.2 19.1Q61.2 20.8 62.5 21.8Q63.8 22.8 66.7 23.6Q69.6 24.4 71.1 25.2Q72.5 26.1 73.3 27.2Q74 28.4 74 30Q74 32.5 72 34Q70 35.6 66.7 35.6Q64.5 35.6 62.6 34.8Q60.7 34 59.7 32.5Q58.8 31.1 58.8 29.2H60.6Q60.6 31.4 62.2 32.7Q63.9 34 66.7 34Q69.2 34 70.7 32.9Q72.2 31.8 72.2 30ZM78.5 19.4 78.6 22Q79.4 20.6 80.8 19.8Q82.1 19.1 83.7 19.1Q87.4 19.1 88.5 22.2Q89.3 20.7 90.7 19.9Q92.1 19.1 93.9 19.1Q99 19.1 99.1 24.7V35.3H97.3V24.8Q97.3 22.7 96.4 21.7Q95.5 20.7 93.5 20.7Q91.6 20.7 90.3 21.9Q89 23.1 88.8 24.8V35.3H87.1V24.7Q87 22.7 86.1 21.7Q85.1 20.7 83.2 20.7Q81.5 20.7 80.3 21.6Q79.2 22.5 78.6 24.4V35.3H76.8V19.4ZM112.9 35.3Q112.6 34.5 112.6 33.1Q111.6 34.3 110.2 34.9Q108.8 35.6 107.2 35.6Q104.9 35.6 103.5 34.3Q102.1 33 102.1 31.1Q102.1 28.8 104 27.4Q105.9 26.1 109.4 26.1H112.6V24.3Q112.6 22.6 111.5 21.6Q110.5 20.6 108.5 20.6Q106.6 20.6 105.4 21.5Q104.2 22.5 104.2 23.8L102.5 23.8Q102.5 21.9 104.2 20.5Q106 19.1 108.5 19.1Q111.2 19.1 112.7 20.5Q114.3 21.8 114.3 24.2V31.7Q114.3 34 114.8 35.1V35.3ZM107.4 34Q109.2 34 110.5 33.2Q111.9 32.3 112.6 30.9V27.4H109.4Q106.8 27.4 105.3 28.4Q103.8 29.3 103.8 30.9Q103.8 32.3 104.8 33.1Q105.8 34 107.4 34ZM125.7 20.9Q125.1 20.8 124.5 20.8Q122.9 20.8 121.7 21.7Q120.6 22.6 120.1 24.4V35.3H118.4V19.4H120.1L120.1 21.9Q121.5 19.1 124.6 19.1Q125.3 19.1 125.7 19.3ZM130.6 15.4V19.4H133.9V20.9H130.6V31.4Q130.6 32.7 131.1 33.4Q131.5 34 132.7 34Q133.1 34 134.1 33.9L134.1 35.3Q133.5 35.6 132.3 35.6Q130.5 35.6 129.7 34.5Q128.8 33.5 128.8 31.4V20.9H125.9V19.4H128.8V15.4ZM151.4 17.2H145.4V35.3H141.1V17.2H135.1V13.9H151.4ZM162.2 35.3Q162 34.7 161.8 34.1Q161.6 33.5 161.6 32.9Q160.9 34.1 159.8 34.8Q158.7 35.6 157.2 35.6Q154.8 35.6 153.4 34.3Q152.1 33 152.1 30.8Q152.1 28.5 153.9 27.2Q155.7 25.9 159.1 25.9H161.5V24.7Q161.5 23.5 160.9 22.9Q160.3 22.2 159.1 22.2Q158.1 22.2 157.5 22.8Q156.9 23.3 156.9 24.1H152.8L152.8 24.1Q152.7 22 154.5 20.6Q156.4 19.1 159.4 19.1Q162.2 19.1 164 20.6Q165.8 22 165.8 24.7V31.2Q165.8 32.3 165.9 33.3Q166.1 34.3 166.5 35.3ZM158.3 32.4Q159.4 32.4 160.3 31.9Q161.2 31.3 161.5 30.6V28.3H159.1Q157.7 28.3 157 29Q156.3 29.7 156.3 30.7Q156.3 31.5 156.9 31.9Q157.4 32.4 158.3 32.4ZM182.7 27.8Q182.7 31.3 181.1 33.5Q179.5 35.6 176.5 35.6Q175.1 35.6 174.1 35Q173.1 34.4 172.4 33.3L172 35.3H168.4V12.4H172.6V21.1Q173.3 20.2 174.3 19.6Q175.3 19.1 176.5 19.1Q179.5 19.1 181.1 21.4Q182.7 23.7 182.7 27.5ZM178.4 27.5Q178.4 25.2 177.7 23.8Q177.1 22.5 175.4 22.5Q174.4 22.5 173.7 22.9Q173 23.3 172.6 24.1V30.8Q173 31.5 173.7 31.9Q174.4 32.3 175.4 32.3Q177.1 32.3 177.8 31.1Q178.4 29.9 178.4 27.8ZM189.2 35.3H184.9V12.4H189.2ZM199 35.6Q195.5 35.6 193.5 33.4Q191.5 31.2 191.5 27.8V27.2Q191.5 23.7 193.4 21.4Q195.3 19.1 198.7 19.1Q201.9 19.1 203.6 21.1Q205.3 23 205.3 26.4V28.6H195.9L195.8 28.7Q195.9 30.3 196.8 31.3Q197.7 32.3 199.5 32.3Q200.9 32.3 201.9 32Q202.9 31.7 204 31.1L205.1 33.7Q204.2 34.5 202.5 35.1Q200.9 35.6 199 35.6ZM198.7 22.4Q197.4 22.4 196.7 23.3Q196 24.2 195.9 25.7L195.9 25.7H201.1V25.4Q201.1 24 200.6 23.2Q200 22.4 198.7 22.4ZM215.8 30.9Q215.8 30.2 215.1 29.7Q214.4 29.2 212.6 28.8Q209.8 28.2 208.4 27.1Q206.9 26 206.9 24Q206.9 22 208.6 20.6Q210.4 19.1 213.2 19.1Q216.2 19.1 218.1 20.6Q219.9 22 219.8 24.1L219.8 24.2H215.6Q215.6 23.3 215 22.7Q214.4 22.1 213.2 22.1Q212.2 22.1 211.6 22.6Q211 23.1 211 23.8Q211 24.6 211.6 25Q212.3 25.5 214.2 25.9Q217.1 26.5 218.5 27.6Q219.9 28.7 219.9 30.7Q219.9 32.9 218.1 34.2Q216.3 35.6 213.3 35.6Q210.1 35.6 208.3 34Q206.4 32.4 206.5 30.3L206.5 30.2H210.5Q210.5 31.5 211.3 32.1Q212.1 32.6 213.4 32.6Q214.5 32.6 215.2 32.2Q215.8 31.7 215.8 30.9Z" fill="currentColor"/>
+</svg></a>
+  <b>Home</b>
+    <a href="../index.html">Home</a>
+    <a href="../pages/00_features.html">Every feature</a>
+  <b>Start here</b>
+    <a href="../pages/01_first_table.html">Your first table</a>
+    <a href="../pages/02_rows.html">Rows</a>
+    <a href="../pages/03_columns.html">Columns</a>
+    <a href="../pages/04_cells.html">Cells</a>
+    <a href="../pages/05_events.html">Events</a>
+  <b>Going further</b>
+    <a href="../pages/06_sorting.html">Sorting and filtering</a>
+    <a href="../pages/07_input.html">Selection and input</a>
+    <a href="../pages/08_reorder.html">Reordering rows</a>
+    <a href="../pages/09_layout_skin.html">Layout and skin</a>
+    <a href="../pages/13_debugging.html">When it draws nothing</a>
+  <b>When you need more</b>
+    <a href="../pages/10_blueprint_model.html">A model in Blueprint</a>
+    <a href="../pages/11_row_spaces.html">The two row spaces</a>
+    <a href="../pages/12_cpp.html">Dropping to C++</a>
+  <b>Demos</b>
+    <a href="../pages/20_demo_items.html">1. Items</a>
+    <a href="../pages/21_demo_datatable.html">2. DataTable</a>
+    <a href="../pages/22_demo_csv.html">3. CSV file</a>
+    <a href="../pages/23_demo_json.html">4. JSON file</a>
+    <a href="../pages/24_demo_million.html">5. One million rows</a>
+    <a href="../pages/25_demo_server.html">6. Server browser</a>
+    <a href="../pages/26_demo_pairs.html">7. Pairs</a>
+    <a href="../pages/27_demo_keys.html">8. Keys, no EI</a>
+    <a href="../pages/28_demo_items_mvvm.html">9. Items with MVVM</a>
+  <b>Reference</b>
+  <div class="scroller">
+    <a href="smarttable.html">SmartTable.h</a>
+    <a href="smarttabletypes.html" aria-current="page">SmartTableTypes.h</a>
+    <a href="smarttablesorting.html">SmartTableSorting.h</a>
+    <a href="smarttabledeadsecondaries.html">SmartTableDeadSecondaries.h</a>
+    <a href="smarttablecolumnlayout.html">SmartTableColumnLayout.h</a>
+    <a href="smarttablebinding.html">SmartTableBinding.h</a>
+    <a href="smarttablecolumnschema.html">SmartTableColumnSchema.h</a>
+    <a href="smarttabledispatcher.html">SmartTableDispatcher.h</a>
+    <a href="smarttablecolour.html">SmartTableColour.h</a>
+    <a href="smarttablemodel.html">SmartTableModel.h</a>
+    <a href="smarttableobjectmodel.html">SmartTableObjectModel.h</a>
+    <a href="smarttabledatatablemodel.html">SmartTableDataTableModel.h</a>
+    <a href="smarttablekeptrow.html">SmartTableKeptRow.h</a>
+    <a href="smarttablerowsetdiff.html">SmartTableRowSetDiff.h</a>
+    <a href="smarttablecell.html">SmartTableCell.h</a>
+    <a href="smarttablerowwidget.html">SmartTableRowWidget.h</a>
+    <a href="smarttablestyle.html">SmartTableStyle.h</a>
+    <a href="smarttablesettings.html">SmartTableSettings.h</a>
+    <a href="smarttablelayoutstore.html">SmartTableLayoutStore.h</a>
+    <a href="smarttablesortkey.html">SmartTableSortKey.h</a>
+    <a href="smarttablecelldragdropop.html">SmartTableCellDragDropOp.h</a>
+    <a href="smarttablecelldrag.html">SmartTableCellDrag.h</a>
+    <a href="smarttablecolumnselection.html">SmartTableColumnSelection.h</a>
+    <a href="smarttableresizegesture.html">SmartTableResizeGesture.h</a>
+    <a href="smarttablescrollmove.html">SmartTableScrollMove.h</a>
+    <a href="smarttablearrivals.html">SmartTableArrivals.h</a>
+    <a href="smarttableopenmenu.html">SmartTableOpenMenu.h</a>
+    <a href="smarttablelog.html">SmartTableLog.h</a>
+  </div>
+</nav>
+
+<main>
+  <h1>SmartTableTypes.h</h1>
+  <p class="lede">Every struct and enum the Details panel puts in front of you.</p>
+<div class="refhead">
+  <div class="path">Source/SmartTables/Public/SmartTableTypes.h</div>
+<p>Nothing here is a class you subclass. These are the shapes the panel shows you: what a column is, how it sizes, which way a sort runs, what a filter matches. Come here when a field name tells you less than its list of options would.</p>
+  <dl>
+  <dt>Types</dt><dd>18</dd>
+  <dt>Of which</dt><dd>9 enum, 9 struct</dd>
+  <dt>Members</dt><dd>100</dd>
+  <dt>Panel fields</dt><dd>47</dd>
+  </dl>
+</div>
+<h2 class="type" id="FSmartTableColumn">FSmartTableColumn <em>struct</em></h2>
+<p>One column, named once, so no row can differ from it.</p>
+<p>This struct is step two of three: drop the widget, add columns, call SetItems. Every field it holds has a default that leaves the common case empty.</p>
+<h2 id="FSmartTableColumn-public-function">Public functions <em>3</em></h2>
+<div class="member" id="FSmartTableColumn-GetLabel">
+  <div class="member-head"><b class="cpp">GetLabel</b></div>
+  <div class="member-decl">FText GetLabel() const</div>
+  <p>Header when it says something, otherwise the id read as text. Every place that draws a column's name asks this, so a column cannot be called one thing in the header and another in a menu.</p>
+</div>
+<div class="member" id="FSmartTableColumn-GetSortBinding">
+  <div class="member-head"><b class="cpp">GetSortBinding</b></div>
+  <div class="member-decl">FName GetSortBinding() const</div>
+  <p>The binding used for ordering: SortBindingName when set, and the value binding when it is not.</p>
+</div>
+<div class="member" id="FSmartTableColumn-GetValueBinding">
+  <div class="member-head"><b class="cpp">GetValueBinding</b></div>
+  <div class="member-decl">FName GetValueBinding() const</div>
+  <p>BindingName when set, otherwise ColumnId.</p>
+</div>
+<h2 id="FSmartTableColumn-public-variable">Public variables <em>21</em></h2>
+<h3 class="cat" id="FSmartTableColumn-public-variable-smart-tables">Smart Tables <em>15</em></h3>
+<div class="member" id="FSmartTableColumn-ColumnId">
+  <div class="member-head"><b>Column Id</b><span>ColumnId</span><em class="badge role">panel</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( EditAnywhere, BlueprintReadWrite, Category = "Smart Tables" )</span>
+FName ColumnId</div>
+  <p>The name of this column, and it must not move. Every model call is keyed by it, and a column number stops meaning anything as soon as a column is hidden or moved.</p>
+</div>
+<div class="member" id="FSmartTableColumn-Header">
+  <div class="member-head"><b>Header</b><span>Header</span><em class="badge role">panel</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( EditAnywhere, BlueprintReadWrite, Category = "Smart Tables", meta = ( ToolTip = "The label drawn in the header. Falls back to the column id." ) )</span>
+FText Header</div>
+  <p>The label drawn in the header. Falls back to the column id.</p>
+</div>
+<div class="member" id="FSmartTableColumn-BindingName">
+  <div class="member-head"><b>Binding Name</b><span>BindingName</span><em class="badge role">panel</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( EditAnywhere, BlueprintReadWrite, Category = "Smart Tables", meta = ( ToolTip = "What this column reads on the item: a property, or a pure function that takes no input. Falls back to the column id.", GetOptions = "GetBindableNames" ) )</span>
+FName BindingName</div>
+  <dl class="facts">
+    <dt>Options from</dt><dd>GetBindableNames</dd>
+  </dl>
+  <p>What this column reads on the item: a property, or a BlueprintPure function that needs no input. It falls back to ColumnId, so a column named DisplayName binds itself.</p>
+<p>A pure function is how a worked out column gets by with no model of its own. Distance is a property on nothing. GetDistance is a plain node on the item, and the type it gives back is a typed sort key.</p>
+<p>With ColumnSource on Item Class or Data Table, this field is a dropdown of what that source can bind. File mode fills no dropdown, since a csv or a json carries headings and not a struct.</p>
+</div>
+<div class="member" id="FSmartTableColumn-SortBindingName">
+  <div class="member-head"><b>Sort Binding Name</b><span>SortBindingName</span><em class="badge role">panel</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( EditAnywhere, BlueprintReadWrite, AdvancedDisplay, Category = "Smart Tables", meta = ( ToolTip = "For a column whose text and whose order come from different places, such as a cell reading unknown over a column that still sorts by number. Falls back to the value binding." ) )</span>
+FName SortBindingName</div>
+  <dl class="facts">
+    <dt>AdvancedDisplay</dt><dd>The panel hides it under the arrow.</dd>
+  </dl>
+  <p>For a column whose text and whose order come from different places, such as a cell reading unknown over a column that still sorts by number.</p>
+<p>Free text and no dropdown. The Details panel builds one dropdown per GetOptions property per column, and on a wide table that cost lands on the click that opens it. This field is rarely set, and it falls back to the value binding.</p>
+</div>
+<div class="member" id="FSmartTableColumn-Sizing">
+  <div class="member-head"><b>Sizing</b><span>Sizing</span><em class="badge role">panel</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( EditAnywhere, BlueprintReadWrite, Category = "Smart Tables" )</span>
+<a class="xref" href="smarttabletypes.html#ESmartTableColumnSizing">ESmartTableColumnSizing</a> Sizing = <a class="xref" href="smarttabletypes.html#ESmartTableColumnSizing-Fill">ESmartTableColumnSizing::Fill</a></div>
+  <p>Whether Width below is a share of the leftover space or a count of pixels.</p>
+</div>
+<div class="member" id="FSmartTableColumn-Width">
+  <div class="member-head"><b>Width</b><span>Width</span><em class="badge role">panel</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( EditAnywhere, BlueprintReadWrite, Category = "Smart Tables", meta = ( ClampMin = "0.0" ) )</span>
+float Width = 1.0f</div>
+  <dl class="facts">
+    <dt>Minimum</dt><dd>0.0</dd>
+  </dl>
+  <p>A weight in Fill, pixels in Fixed. A resize or a stored layout wins over it.</p>
+</div>
+<div class="member" id="FSmartTableColumn-HAlign">
+  <div class="member-head"><b>H Align</b><span>HAlign</span><em class="badge role">panel</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( EditAnywhere, BlueprintReadWrite, Category = "Smart Tables", meta = ( ToolTip = "Where the value sits in its cell. The header label has its own alignment field below." ) )</span>
+TEnumAsByte&lt; EHorizontalAlignment &gt; HAlign = HAlign_Left</div>
+  <p>Where the value sits in its cell. The header label has its own alignment field below.</p>
+</div>
+<div class="member" id="FSmartTableColumn-CellPadding">
+  <div class="member-head"><b>Cell Padding</b><span>CellPadding</span><em class="badge role">panel</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( EditAnywhere, BlueprintReadWrite, Category = "Smart Tables" )</span>
+FMargin CellPadding = FMargin( 8.0f, 2.0f )</div>
+  <p>Room around the value in every cell of this column, and in its header.</p>
+</div>
+<div class="member" id="FSmartTableColumn-MaxFractionalDigits">
+  <div class="member-head"><b>Max Fractional Digits</b><span>MaxFractionalDigits</span><em class="badge role">panel</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( EditAnywhere, BlueprintReadWrite, Category = "Smart Tables", meta = ( ToolTip = "The most digits after the point a number binding draws. Zero rounds to a whole number.", ClampMin = "0", ClampMax = "8" ) )</span>
+int32 MaxFractionalDigits = 2</div>
+  <dl class="facts">
+    <dt>Range</dt><dd>0 to 8</dd>
+  </dl>
+  <p>The most digits after the point a number binding draws.</p>
+<p>Per column, and not per table. A plain float draws as 1234.567890, and the only way round that without this is a whole function giving back FText for one field.</p>
+</div>
+<div class="member" id="FSmartTableColumn-bSortable">
+  <div class="member-head"><b>Sortable</b><span>bSortable</span><em class="badge role">panel</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( EditAnywhere, BlueprintReadWrite, Category = "Smart Tables" )</span>
+bool bSortable = true</div>
+  <p>Whether a header click and the header menu can sort by this column. Off, both go, and the Sort By Column node still works.</p>
+</div>
+<div class="member" id="FSmartTableColumn-bResizable">
+  <div class="member-head"><b>Resizable</b><span>bResizable</span><em class="badge role">panel</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( EditAnywhere, BlueprintReadWrite, Category = "Smart Tables" )</span>
+bool bResizable = true</div>
+  <p>Whether the right edge of this column is a drag grip. Off, no resize cursor shows there and a drag on the edge does nothing.</p>
+</div>
+<div class="member" id="FSmartTableColumn-bHideable">
+  <div class="member-head"><b>Hideable</b><span>bHideable</span><em class="badge role">panel</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( EditAnywhere, BlueprintReadWrite, Category = "Smart Tables" )</span>
+bool bHideable = true</div>
+  <p>Whether the header menu offers to hide this column. It gates the menu entries and nothing else, so Hidden By Default, a stored layout and Set Column Visible all still hide the column.</p>
+</div>
+<div class="member" id="FSmartTableColumn-bHiddenByDefault">
+  <div class="member-head"><b>Hidden By Default</b><span>bHiddenByDefault</span><em class="badge role">panel</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( EditAnywhere, BlueprintReadWrite, Category = "Smart Tables" )</span>
+bool bHiddenByDefault = false</div>
+  <p>Starts hidden, and the Show Columns menu brings it back. A stored layout wins over it.</p>
+</div>
+<div class="member" id="FSmartTableColumn-CellClass">
+  <div class="member-head"><b>Cell Class</b><span>CellClass</span><em class="badge role">panel</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( EditAnywhere, BlueprintReadWrite, Category = "Smart Tables" )</span>
+TSubclassOf&lt; <a class="xref" href="smarttablecell.html">USmartTableCell</a> &gt; CellClass</div>
+  <p>The widget every cell of this column is. Unset draws the built-in text cell, and a plain text column needs nothing else.</p>
+</div>
+<div class="member" id="FSmartTableColumn-DragVisualClass">
+  <div class="member-head"><b>Drag Visual Class</b><span>DragVisualClass</span><em class="badge role">panel</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( EditAnywhere, BlueprintReadWrite, AdvancedDisplay, Category = "Smart Tables", meta = ( ToolTip = "The cell class that follows the cursor while a cell in this column is dragged. Unset copies Cell Class." ) )</span>
+TSubclassOf&lt; <a class="xref" href="smarttablecell.html">USmartTableCell</a> &gt; DragVisualClass</div>
+  <dl class="facts">
+    <dt>AdvancedDisplay</dt><dd>The panel hides it under the arrow.</dd>
+  </dl>
+  <p>What follows the cursor when a cell in this column is dragged. Unset copies CellClass.</p>
+<p>A cell class and never a plain widget. What follows the pointer has to stand for a row. A cell is handed the same table, model, row and column the real one is, so it reads its own text and colour through the API it already has.</p>
+<p>Three routes, least work first. Unset, the drag draws the field it started on. Named here, it draws whatever this points at, with no code. An override of MakeCellDragVisual on the cell draws any widget at all, or none. All three want bAllowCellDragDrop on the table.</p>
+</div>
+<h3 class="cat" id="FSmartTableColumn-public-variable-smart-tables-header">Header <em>6</em></h3>
+<div class="member" id="FSmartTableColumn-bShowHeaderIcon">
+  <div class="member-head"><b>Show Header Icon</b><span>bShowHeaderIcon</span><em class="badge role">panel</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( EditAnywhere, BlueprintReadWrite, AdvancedDisplay, Category = "Smart Tables|Header", meta = ( ToolTip = "Draw an icon to the left of the header label. The icon itself is the field below." ) )</span>
+bool bShowHeaderIcon = false</div>
+  <dl class="facts">
+    <dt>AdvancedDisplay</dt><dd>The panel hides it under the arrow.</dd>
+  </dl>
+  <p>Draw an icon to the left of the label.</p>
+<p>A flag of its own, and not a test of whether HeaderIcon is set. A brush counts as set in several ways that all look right: a texture, a tint, a rounded box with neither of those.</p>
+</div>
+<div class="member" id="FSmartTableColumn-HeaderIcon">
+  <div class="member-head"><b>Header Icon</b><span>HeaderIcon</span><em class="badge role">panel</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( EditAnywhere, BlueprintReadWrite, AdvancedDisplay, Category = "Smart Tables|Header", meta = ( ToolTip = "The icon drawn to the left of the header label. It draws nothing at all while the switch above is off.", EditCondition = "bShowHeaderIcon" ) )</span>
+FSlateBrush HeaderIcon</div>
+  <dl class="facts">
+    <dt>Editable when</dt><dd>bShowHeaderIcon</dd>
+    <dt>AdvancedDisplay</dt><dd>The panel hides it under the arrow.</dd>
+  </dl>
+  <p>The icon drawn to the left of the label. The slot is collapsed while bShowHeaderIcon is off: an unset FSlateBrush asks for 32 by 32, and measuring one would push the label along.</p>
+</div>
+<div class="member" id="FSmartTableColumn-HeaderIconSpacing">
+  <div class="member-head"><b>Header Icon Spacing</b><span>HeaderIconSpacing</span><em class="badge role">panel</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( EditAnywhere, BlueprintReadWrite, AdvancedDisplay, Category = "Smart Tables|Header", meta = ( EditCondition = "bShowHeaderIcon", ClampMin = "0.0" ) )</span>
+float HeaderIconSpacing = 6.0f</div>
+  <dl class="facts">
+    <dt>Minimum</dt><dd>0.0</dd>
+    <dt>Editable when</dt><dd>bShowHeaderIcon</dd>
+    <dt>AdvancedDisplay</dt><dd>The panel hides it under the arrow.</dd>
+  </dl>
+  <p>Pixels between the icon and the header label. Zero puts them side by side, and the room is only taken while the icon is shown.</p>
+</div>
+<div class="member" id="FSmartTableColumn-bOverrideHeaderTextStyle">
+  <div class="member-head"><b>Override Header Text Style</b><span>bOverrideHeaderTextStyle</span><em class="badge role">panel</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( EditAnywhere, BlueprintReadWrite, AdvancedDisplay, Category = "Smart Tables|Header", meta = ( ToolTip = "Give this column its own header text style, in the field below. Without it the whole header uses the style set on the table." ) )</span>
+bool bOverrideHeaderTextStyle = false</div>
+  <dl class="facts">
+    <dt>AdvancedDisplay</dt><dd>The panel hides it under the arrow.</dd>
+  </dl>
+  <p>Give this column its own header text style, in the field below. Without it the whole header uses the style set on the table.</p>
+</div>
+<div class="member" id="FSmartTableColumn-HeaderTextStyle">
+  <div class="member-head"><b>Header Text Style</b><span>HeaderTextStyle</span><em class="badge role">panel</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( EditAnywhere, BlueprintReadWrite, AdvancedDisplay, Category = "Smart Tables|Header", meta = ( EditCondition = "bOverrideHeaderTextStyle" ) )</span>
+FTextBlockStyle HeaderTextStyle</div>
+  <dl class="facts">
+    <dt>Editable when</dt><dd>bOverrideHeaderTextStyle</dd>
+    <dt>AdvancedDisplay</dt><dd>The panel hides it under the arrow.</dd>
+  </dl>
+  <p>The header text style this column alone uses, while the switch above is on. The rest of the header keeps the style set on the table.</p>
+</div>
+<div class="member" id="FSmartTableColumn-HeaderHAlign">
+  <div class="member-head"><b>Header H Align</b><span>HeaderHAlign</span><em class="badge role">panel</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( EditAnywhere, BlueprintReadWrite, AdvancedDisplay, Category = "Smart Tables|Header" )</span>
+TEnumAsByte&lt; EHorizontalAlignment &gt; HeaderHAlign = HAlign_Left</div>
+  <dl class="facts">
+    <dt>AdvancedDisplay</dt><dd>The panel hides it under the arrow.</dd>
+  </dl>
+  <p>Where the header label sits, apart from where the values of the column sit. A number column aligned right usually wants its heading aligned right too.</p>
+</div>
+<h2 class="type" id="FSmartTablePresentationChange">FSmartTablePresentationChange <em>struct</em></h2>
+<p>What moved in the presentation of a model, as separate facts.</p>
+<p>Flags and not a scale. Every visible cell being stale and the row set having moved are two pieces of work, and Add ORs them so neither is ever dropped while a rebuild is out.</p>
+<p>A live data sweep arriving while a dispatched sort still holds an older presentation has to keep both halves. One number could carry only the wider of the two, and rows that did not move would go on drawing values that did.</p>
+<p>Not a USTRUCT: it goes through a plain C++ delegate, and nothing authors or saves it.</p>
+<h2 id="FSmartTablePresentationChange-public-function">Public functions <em>9</em></h2>
+<div class="member" id="FSmartTablePresentationChange-IsAnything">
+  <div class="member-head"><b class="cpp">IsAnything</b></div>
+  <div class="member-decl">bool IsAnything() const</div>
+  <p>Whether this says anything at all. Read by Scope and by Add, and no broadcast is gated on it.</p>
+</div>
+<div class="member" id="FSmartTablePresentationChange-Scope">
+  <div class="member-head"><b class="cpp">Scope</b></div>
+  <div class="member-decl"><a class="xref" href="smarttabletypes.html#ESmartTablePresentationScope">ESmartTablePresentationScope</a> Scope() const</div>
+  <p>How much this reaches, worked out from every field at once.</p>
+<p>The one place the fields become an answer. A row number or a column id beside a moved order counts for nothing, since the whole screen is stale either way.</p>
+</div>
+<div class="member" id="FSmartTablePresentationChange-Add">
+  <div class="member-head"><b class="cpp">Add</b></div>
+  <div class="member-decl">void Add( const <a class="xref" href="smarttabletypes.html#FSmartTablePresentationChange">FSmartTablePresentationChange</a> &amp; Other )</div>
+  <p>Folds Other in, losing nothing.</p>
+<p>Every flag either side set stays set. Changes add up while a rebuild is out, and they go out together no matter how many arrive.</p>
+<p>A row number lives on only while it is the only one in play. Two different rows, or a row beside anything wider, is no longer about one row, and saying otherwise would refresh one and skip the rest.</p>
+<p>The column is nested inside that rule and never folded beside it. One column in two rows is two rows, so the column goes wherever the row number goes.</p>
+</div>
+<div class="member" id="FSmartTablePresentationChange-OneRowsValues">
+  <div class="member-head"><b class="cpp">OneRowsValues</b><em class="badge mod">static</em></div>
+  <div class="member-decl">static <a class="xref" href="smarttabletypes.html#FSmartTablePresentationChange">FSmartTablePresentationChange</a> OneRowsValues( int32 InNaturalRow )</div>
+  <p>The values of one row moved. The cheap one, and what a live feed sends several times a second.</p>
+</div>
+<div class="member" id="FSmartTablePresentationChange-OneCellsValue">
+  <div class="member-head"><b class="cpp">OneCellsValue</b><em class="badge mod">static</em></div>
+  <div class="member-decl">static <a class="xref" href="smarttabletypes.html#FSmartTablePresentationChange">FSmartTablePresentationChange</a> OneCellsValue( int32 InNaturalRow, FName InColumnId )</div>
+  <p>One value of one row moved, and the table reads that cell alone.</p>
+<p>Narrower than OneRowsValues, and only for a model whose columns do not read each other. A bound pure function in another column can read the property just written, a total off a price being the usual case, and this change leaves that column drawing the old number.</p>
+</div>
+<div class="member" id="FSmartTablePresentationChange-EveryRowsValues">
+  <div class="member-head"><b class="cpp">EveryRowsValues</b><em class="badge mod">static</em></div>
+  <div class="member-decl">static <a class="xref" href="smarttabletypes.html#FSmartTablePresentationChange">FSmartTablePresentationChange</a> EveryRowsValues()</div>
+  <p>The values of every row moved, and the order in use was put back over them.</p>
+<p>Both parts, because RebuildPresentation sorts again: the rows may have moved and every cell is stale.</p>
+</div>
+<div class="member" id="FSmartTablePresentationChange-Order">
+  <div class="member-head"><b class="cpp">Order</b><em class="badge mod">static</em></div>
+  <div class="member-decl">static <a class="xref" href="smarttabletypes.html#FSmartTablePresentationChange">FSmartTablePresentationChange</a> Order()</div>
+  <p>A different order and nothing else. What RebuildPresentation lands on by default, and what a model resets its held change to as a sort lands.</p>
+<p>A text filter says this too, even one that drops rows, which is more than the name covers.</p>
+</div>
+<div class="member" id="FSmartTablePresentationChange-RowSet">
+  <div class="member-head"><b class="cpp">RowSet</b><em class="badge mod">static</em></div>
+  <div class="member-decl">static <a class="xref" href="smarttabletypes.html#FSmartTablePresentationChange">FSmartTablePresentationChange</a> RowSet( const <a class="xref" href="smarttablerowsetdiff.html">FSmartTableRowSetDiff</a> &amp; Diff = <a class="xref" href="smarttablerowsetdiff.html">FSmartTableRowSetDiff</a>() )</div>
+  <p>Rows arrived or left, which reorders whatever is still there. Diff says which ones they are, when the model knows them.</p>
+</div>
+<div class="member" id="FSmartTablePresentationChange-Everything">
+  <div class="member-head"><b class="cpp">Everything</b><em class="badge mod">static</em></div>
+  <div class="member-decl">static <a class="xref" href="smarttabletypes.html#FSmartTablePresentationChange">FSmartTablePresentationChange</a> Everything()</div>
+  <p>A different set of data: every row is a different row and every cell is stale.</p>
+<p>Answered the same way as a row set change. Identity is mapped again and the selection is matched back up by row id, so a row id that also exists in the new data keeps the selection it had.</p>
+</div>
+<h2 id="FSmartTablePresentationChange-public-variable">Public variables <em>6</em></h2>
+<div class="member" id="FSmartTablePresentationChange-bCellsStale">
+  <div class="member-head"><b class="cpp">bCellsStale</b></div>
+  <div class="member-decl">bool bCellsStale = false</div>
+  <p>Every visible cell has to read again. The values behind them moved, and where the rows sit may well not have moved at all.</p>
+</div>
+<div class="member" id="FSmartTablePresentationChange-bOrderMoved">
+  <div class="member-head"><b class="cpp">bOrderMoved</b></div>
+  <div class="member-decl">bool bOrderMoved = false</div>
+  <p>The presented to natural map moved, so the row handles have to be rebuilt. A sort, or a filter.</p>
+</div>
+<div class="member" id="FSmartTablePresentationChange-bRowSetMoved">
+  <div class="member-head"><b class="cpp">bRowSetMoved</b></div>
+  <div class="member-decl">bool bRowSetMoved = false</div>
+  <p>Rows arrived or left. Identity is mapped again and the selection is matched back up by row id.</p>
+</div>
+<div class="member" id="FSmartTablePresentationChange-RowSetDiff">
+  <div class="member-head"><b class="cpp">RowSetDiff</b></div>
+  <div class="member-decl"><a class="xref" href="smarttablerowsetdiff.html">FSmartTableRowSetDiff</a> RowSetDiff</div>
+  <p>Which rows arrived and left, when the model said. Only ever set beside bRowSetMoved.</p>
+</div>
+<div class="member" id="FSmartTablePresentationChange-NaturalRow">
+  <div class="member-head"><b class="cpp">NaturalRow</b></div>
+  <div class="member-decl">int32 NaturalRow = INDEX_NONE</div>
+  <p>The one row this is about, when it is about one row. INDEX_NONE for anything wider.</p>
+</div>
+<div class="member" id="FSmartTablePresentationChange-ColumnId">
+  <div class="member-head"><b class="cpp">ColumnId</b></div>
+  <div class="member-decl">FName ColumnId</div>
+  <p>The one column this is about, when it is about one cell of that row. NAME_None for anything wider, and only ever set beside a NaturalRow. A column with no row is a shape nothing here means.</p>
+</div>
+<h2 class="type" id="FSmartTableHeaderMenuOptions">FSmartTableHeaderMenuOptions <em>struct</em></h2>
+<p>Which entries the built-in header menu offers.</p>
+<p>All on by default. Every flag here cuts the menu down, and OnExtendHeaderMenu is what adds to it.</p>
+<h2 id="FSmartTableHeaderMenuOptions-public-variable">Public variables <em>6</em></h2>
+<div class="member" id="FSmartTableHeaderMenuOptions-bEnabled">
+  <div class="member-head"><b>Enabled</b><span>bEnabled</span><em class="badge role">panel</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( EditAnywhere, BlueprintReadWrite, Category = "Smart Tables", meta = ( ToolTip = "Open a menu on a right click anywhere on the header. It is the only way to bring back a hidden column without code." ) )</span>
+bool bEnabled = true</div>
+  <p>Off, and no right click menu opens anywhere on the header.</p>
+<p>With a pointer this menu is the only way back once every column is hidden. Move Left and Move Right are the only reorder a keyboard or a pad reaches with no code behind it.</p>
+<p>SetColumnVisible, MoveColumn and ResetLayout are all still there for a table that shuts the menu.</p>
+</div>
+<div class="member" id="FSmartTableHeaderMenuOptions-bOfferSort">
+  <div class="member-head"><b>Offer Sort</b><span>bOfferSort</span><em class="badge role">panel</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( EditAnywhere, BlueprintReadWrite, Category = "Smart Tables", meta = ( ToolTip = "Offer the sort entries in the header menu. Separate from the header click, which has its own switch on the table." ) )</span>
+bool bOfferSort = true</div>
+  <p>Offer the sort entries in the header menu. Separate from the header click, which has its own switch on the table.</p>
+</div>
+<div class="member" id="FSmartTableHeaderMenuOptions-bOfferSizeToContent">
+  <div class="member-head"><b>Offer Size To Content</b><span>bOfferSizeToContent</span><em class="badge role">panel</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( EditAnywhere, BlueprintReadWrite, Category = "Smart Tables" )</span>
+bool bOfferSizeToContent = true</div>
+  <p>Offer Size to Content in the header menu. It fits a column to its widest value and marks that width as chosen.</p>
+</div>
+<div class="member" id="FSmartTableHeaderMenuOptions-bOfferMove">
+  <div class="member-head"><b>Offer Move</b><span>bOfferMove</span><em class="badge role">panel</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( EditAnywhere, BlueprintReadWrite, Category = "Smart Tables", meta = ( ToolTip = "Offer Move Left and Move Right in the header menu. Separate from dragging a header, which has its own switch." ) )</span>
+bool bOfferMove = true</div>
+  <p>Move Left and Move Right. Apart from bAllowColumnReorder, which gates dragging a header: a gamepad reaches this route and never that one.</p>
+</div>
+<div class="member" id="FSmartTableHeaderMenuOptions-bOfferVisibility">
+  <div class="member-head"><b>Offer Visibility</b><span>bOfferVisibility</span><em class="badge role">panel</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( EditAnywhere, BlueprintReadWrite, Category = "Smart Tables" )</span>
+bool bOfferVisibility = true</div>
+  <p>Offer Hide This Column and the Show Columns submenu in the header menu. Both leave out a column with Hideable off.</p>
+</div>
+<div class="member" id="FSmartTableHeaderMenuOptions-bOfferResetLayout">
+  <div class="member-head"><b>Offer Reset Layout</b><span>bOfferResetLayout</span><em class="badge role">panel</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( EditAnywhere, BlueprintReadWrite, Category = "Smart Tables" )</span>
+bool bOfferResetLayout = true</div>
+  <p>Offer Reset Columns in the header menu. It puts widths, hidden columns and the sort back to how the table was authored.</p>
+</div>
+<h2 class="type" id="FSmartTableMenuEntry">FSmartTableMenuEntry <em>struct</em></h2>
+<p>One entry of the right click menu of a row.</p>
+<p>Authored in the Details panel, since a row menu belongs to the game. A table cannot know what a row means, so it has no entry of its own to offer here. The header menu is the other way round: its entries are built in, and its settings struct only cuts them down.</p>
+<p>Nothing here is acted on by the table. It draws the entries and says which Id was picked.</p>
+<h2 id="FSmartTableMenuEntry-public-variable">Public variables <em>6</em></h2>
+<div class="member" id="FSmartTableMenuEntry-Id">
+  <div class="member-head"><b>Id</b><span>Id</span><em class="badge role">panel</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( EditAnywhere, BlueprintReadWrite, Category = "Smart Tables", meta = ( ToolTip = "Sent back when this entry is picked. It names the action, and never the label a player reads." ) )</span>
+FName Id</div>
+  <p>Sent back when this entry is picked. It names the action and never the label: a label is text a player reads, and those words change.</p>
+</div>
+<div class="member" id="FSmartTableMenuEntry-Label">
+  <div class="member-head"><b>Label</b><span>Label</span><em class="badge role">panel</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( EditAnywhere, BlueprintReadWrite, Category = "Smart Tables" )</span>
+FText Label</div>
+  <p>The text drawn in the menu.</p>
+</div>
+<div class="member" id="FSmartTableMenuEntry-ToolTip">
+  <div class="member-head"><b>Tool Tip</b><span>ToolTip</span><em class="badge role">panel</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( EditAnywhere, BlueprintReadWrite, Category = "Smart Tables" )</span>
+FText ToolTip</div>
+  <p>Shown while the pointer rests on the entry. Empty for none.</p>
+</div>
+<div class="member" id="FSmartTableMenuEntry-bEnabled">
+  <div class="member-head"><b>Enabled</b><span>bEnabled</span><em class="badge role">panel</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( EditAnywhere, BlueprintReadWrite, Category = "Smart Tables", meta = ( ToolTip = "Whether this entry can be picked. Off, it draws greyed and stays in place, which keeps the menu the same shape on every row." ) )</span>
+bool bEnabled = true</div>
+  <p>Off, the entry draws greyed and not dropped, so the menu keeps its shape between rows.</p>
+<p>This one means not right now, such as a Remove on a locked row. bVisible means not on this kind of row at all, where a greyed entry only asks a question the menu cannot answer.</p>
+</div>
+<div class="member" id="FSmartTableMenuEntry-bVisible">
+  <div class="member-head"><b>Visible</b><span>bVisible</span><em class="badge role">panel</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( EditAnywhere, BlueprintReadWrite, Category = "Smart Tables" )</span>
+bool bVisible = true</div>
+  <p>Whether this entry is built at all. Off, it leaves no gap and no divider between its neighbours.</p>
+</div>
+<div class="member" id="FSmartTableMenuEntry-bSeparatorAbove">
+  <div class="member-head"><b>Separator Above</b><span>bSeparatorAbove</span><em class="badge role">panel</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( EditAnywhere, BlueprintReadWrite, Category = "Smart Tables" )</span>
+bool bSeparatorAbove = false</div>
+  <p>A divider above this entry. Ignored on the first, where it would draw a line against the border.</p>
+</div>
+<h2 class="type" id="FSmartTableSortSpec">FSmartTableSortSpec <em>struct</em></h2>
+<p>What order the rows should be in.</p>
+<p>One value carrying every level. A two level sort cannot be said as a column plus a mode, and two calls in a row would rest on the model remembering the first.</p>
+<h2 id="FSmartTableSortSpec-public-function">Public functions <em>4</em></h2>
+<div class="member" id="FSmartTableSortSpec-IsEmpty">
+  <div class="member-head"><b class="cpp">IsEmpty</b></div>
+  <div class="member-decl">bool IsEmpty() const</div>
+</div>
+<div class="member" id="FSmartTableSortSpec-GetModeFor">
+  <div class="member-head"><b class="cpp">GetModeFor</b></div>
+  <div class="member-decl"><a class="xref" href="smarttabletypes.html#ESmartTableSortMode">ESmartTableSortMode</a> GetModeFor( FName ColumnId ) const</div>
+  <p>Which way this column is sorted, or None. The header arrows read it.</p>
+</div>
+<div class="member" id="FSmartTableSortSpec-GetPriorityFor">
+  <div class="member-head"><b class="cpp">GetPriorityFor</b></div>
+  <div class="member-decl">int32 GetPriorityFor( FName ColumnId ) const</div>
+  <p>Zero for the primary sort column, one for the second level, INDEX_NONE when it is not sorted by.</p>
+</div>
+<div class="member" id="FSmartTableSortSpec-operator-eq-eq">
+  <div class="member-head"><b class="cpp">operator==</b></div>
+  <div class="member-decl">bool operator==( const <a class="xref" href="smarttabletypes.html#FSmartTableSortSpec">FSmartTableSortSpec</a> &amp; Other ) const</div>
+</div>
+<h2 id="FSmartTableSortSpec-public-variable">Public variables <em>1</em></h2>
+<div class="member" id="FSmartTableSortSpec-Columns">
+  <div class="member-head"><b>Columns</b><span>Columns</span><em class="badge role">panel</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( EditAnywhere, BlueprintReadWrite, SaveGame, Category = "Smart Tables" )</span>
+TArray&lt; <a class="xref" href="smarttabletypes.html#FSmartTableSortColumn">FSmartTableSortColumn</a> &gt; Columns</div>
+  <dl class="facts">
+    <dt>SaveGame</dt><dd>Carried by SaveGame serialisation.</dd>
+  </dl>
+  <p>Empty is unsorted. The header sends at most two, and the sort helpers take any number.</p>
+</div>
+<h2 class="type" id="FSmartTableLayout">FSmartTableLayout <em>struct</em></h2>
+<p>Everything about a table that a store keeps: widths, hidden columns and the sort.</p>
+<h2 id="FSmartTableLayout-public-variable">Public variables <em>5</em></h2>
+<div class="member" id="FSmartTableLayout-CurrentVersion">
+  <div class="member-head"><b class="cpp">CurrentVersion</b><em class="badge mod">static</em></div>
+  <div class="member-decl">static constexpr int32 CurrentVersion = 2</div>
+  <p>Raised when what a stored layout means changes, so a restore can spot an old file.</p>
+</div>
+<div class="member" id="FSmartTableLayout-Version">
+  <div class="member-head"><b>Version</b><span>Version</span><em class="badge role">panel</em><em class="badge mod">pure virtual</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( BlueprintReadWrite, SaveGame, Category = "Smart Tables" )</span>
+int32 Version = 0</div>
+  <dl class="facts">
+    <dt>SaveGame</dt><dd>Carried by SaveGame serialisation.</dd>
+  </dl>
+  <p>Zero on anything written before layouts had a version.</p>
+<p>See <code><a class="xref" href="smarttable.html#LoadStoredLayout">USmartTable::LoadStoredLayout</a></code></p>
+</div>
+<div class="member" id="FSmartTableLayout-Order">
+  <div class="member-head"><b>Order</b><span>Order</span><em class="badge role">panel</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( BlueprintReadWrite, SaveGame, Category = "Smart Tables" )</span>
+TArray&lt; FName &gt; Order</div>
+  <dl class="facts">
+    <dt>SaveGame</dt><dd>Carried by SaveGame serialisation.</dd>
+  </dl>
+  <p>The drawn order, left to right. Empty means the order the columns were named in.</p>
+<p>Apart from Columns, and neither array says anything about the other. An id here that names no column is dropped as this is read, and a column no id names goes back where it was named.</p>
+</div>
+<div class="member" id="FSmartTableLayout-Columns">
+  <div class="member-head"><b>Columns</b><span>Columns</span><em class="badge role">panel</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( BlueprintReadWrite, SaveGame, Category = "Smart Tables" )</span>
+TArray&lt; <a class="xref" href="smarttabletypes.html#FSmartTableColumnLayout">FSmartTableColumnLayout</a> &gt; Columns</div>
+  <dl class="facts">
+    <dt>SaveGame</dt><dd>Carried by SaveGame serialisation.</dd>
+  </dl>
+  <p>What a column holds that is not its place: the width, whether it is hidden, and whether the width was chosen. The order of this array carries no meaning.</p>
+</div>
+<div class="member" id="FSmartTableLayout-SortSpec">
+  <div class="member-head"><b>Sort Spec</b><span>SortSpec</span><em class="badge role">panel</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( BlueprintReadWrite, SaveGame, Category = "Smart Tables" )</span>
+<a class="xref" href="smarttabletypes.html#FSmartTableSortSpec">FSmartTableSortSpec</a> SortSpec</div>
+  <dl class="facts">
+    <dt>SaveGame</dt><dd>Carried by SaveGame serialisation.</dd>
+  </dl>
+  <p>The sort in force when this was saved. Empty is unsorted, which a restore puts back too.</p>
+</div>
+<h2 class="type" id="ESmartTableColumnSource">ESmartTableColumnSource <em>enum</em></h2>
+<p>What shape the columns of a table were written against.</p>
+<p>One field and never three half answers. It picks which of ExpectedItemClass, SourceTable and SourceFile the panel shows. It also picks the struct behind the binding dropdown, the struct the compile checks against, and the source the column builder reads.</p>
+<p>None of these loads a row. Data arrives at runtime through SetModel, SetItems or SetDataTable, so this is the author time shape and nothing more. A table pointed at a json file draws nothing until a model arrives.</p>
+<h2 id="ESmartTableColumnSource-enumerator">Values <em>4</em></h2>
+<div class="member" id="ESmartTableColumnSource-None">
+  <div class="member-head"><b>None</b><span>None</span></div>
+  <div class="member-decl">None</div>
+  <p>Columns are written out one by one, and nothing is checked against anything.</p>
+</div>
+<div class="member" id="ESmartTableColumnSource-ItemClass">
+  <div class="member-head"><b>Item Class</b><span>ItemClass</span></div>
+  <div class="member-decl">ItemClass</div>
+  <p>A UObject class, whose properties and pure functions are the shape.</p>
+</div>
+<div class="member" id="ESmartTableColumnSource-DataTable">
+  <div class="member-head"><b>Data Table</b><span>DataTable</span></div>
+  <div class="member-decl">DataTable</div>
+  <p>A DataTable asset, whose row struct is the shape.</p>
+</div>
+<div class="member" id="ESmartTableColumnSource-File">
+  <div class="member-head"><b>File</b><span>File</span></div>
+  <div class="member-decl">File</div>
+  <p>A .csv or .json on disk, read for its headings only.</p>
+<p>See <code><a class="xref" href="smarttable.html#SourceFile">USmartTable::SourceFile</a></code></p>
+</div>
+<h2 class="type" id="ESmartTableCellEditor">ESmartTableCellEditor <em>enum</em></h2>
+<p>Which built-in editor a cell offers. None draws the value and takes no input.</p>
+<h2 id="ESmartTableCellEditor-enumerator">Values <em>4</em></h2>
+<div class="member" id="ESmartTableCellEditor-None">
+  <div class="member-head"><b>None</b><span>None</span></div>
+  <div class="member-decl">None</div>
+</div>
+<div class="member" id="ESmartTableCellEditor-Text">
+  <div class="member-head"><b>Text</b><span>Text</span></div>
+  <div class="member-decl">Text</div>
+</div>
+<div class="member" id="ESmartTableCellEditor-Number">
+  <div class="member-head"><b>Number</b><span>Number</span></div>
+  <div class="member-decl">Number</div>
+</div>
+<div class="member" id="ESmartTableCellEditor-Toggle">
+  <div class="member-head"><b>Toggle</b><span>Toggle</span></div>
+  <div class="member-decl">Toggle</div>
+</div>
+<h2 class="type" id="ESmartTableAssignReason">ESmartTableAssignReason <em>enum</em></h2>
+<p>Why a cell or a row wrapper was just given a row.</p>
+<p>This is what an entrance animation reads. All four arrive as the same call with the same arguments, and only the reason tells them apart. A table scrolling a million rows reassigns constantly, and an entrance played on every one of those flashes instead of animating.</p>
+<p>Only Added is a row that has not been on screen yet.</p>
+<h2 id="ESmartTableAssignReason-enumerator">Values <em>4</em></h2>
+<div class="member" id="ESmartTableAssignReason-Scrolled">
+  <div class="member-head"><b>Scrolled</b><span>Scrolled</span></div>
+  <div class="member-decl">Scrolled</div>
+  <p>A recycled widget now draws a different row. The common case by far, and the one that has to stay quiet while it happens.</p>
+</div>
+<div class="member" id="ESmartTableAssignReason-Refreshed">
+  <div class="member-head"><b>Refreshed</b><span>Refreshed</span></div>
+  <div class="member-decl">Refreshed</div>
+  <p>The same row as before, read again for a reason that is not its data: a skin change, a column resized, a refresh of everything. Nothing about what the row says has changed.</p>
+</div>
+<div class="member" id="ESmartTableAssignReason-Added">
+  <div class="member-head"><b>Added</b><span>Added</span></div>
+  <div class="member-decl">Added</div>
+  <p>A row that was not in the table the last time it drew.</p>
+</div>
+<div class="member" id="ESmartTableAssignReason-ValueChanged">
+  <div class="member-head"><b>Value Changed</b><span>ValueChanged</span></div>
+  <div class="member-decl">ValueChanged</div>
+  <p>The values of this row moved, and it is the only row that did.</p>
+<p>The live data case, and the one a cell flashes for. A refresh of everything stays Refreshed, since every cell on screen flashing at once says nothing.</p>
+</div>
+<h2 class="type" id="ESmartTablePresentationScope">ESmartTablePresentationScope <em>enum</em></h2>
+<p>How much of the table a presentation change reaches.</p>
+<p>Worked out from every field of the change at once, and never field by field at a call site. A change that moved the order or the row set reaches the whole screen, whatever row or column it also names.</p>
+<h2 id="ESmartTablePresentationScope-enumerator">Values <em>4</em></h2>
+<div class="member" id="ESmartTablePresentationScope-Nothing">
+  <div class="member-head"><b>Nothing</b><span>Nothing</span></div>
+  <div class="member-decl">Nothing</div>
+  <p>Says nothing, so there is nothing to do.</p>
+</div>
+<div class="member" id="ESmartTablePresentationScope-Cell">
+  <div class="member-head"><b>Cell</b><span>Cell</span></div>
+  <div class="member-decl">Cell</div>
+  <p>One named column of one named row.</p>
+</div>
+<div class="member" id="ESmartTablePresentationScope-Row">
+  <div class="member-head"><b>Row</b><span>Row</span></div>
+  <div class="member-decl">Row</div>
+  <p>Every column of one named row.</p>
+</div>
+<div class="member" id="ESmartTablePresentationScope-Screen">
+  <div class="member-head"><b>Screen</b><span>Screen</span></div>
+  <div class="member-decl">Screen</div>
+  <p>Every row the list has built. The order or the row set moved, or the values did and nothing names a single row.</p>
+</div>
+<h2 class="type" id="FSmartTableColumnLayout">FSmartTableColumnLayout <em>struct</em></h2>
+<p>What a resize or a hide left on one column, and the part of a table a store keeps past the session.</p>
+<h2 id="FSmartTableColumnLayout-public-variable">Public variables <em>4</em></h2>
+<div class="member" id="FSmartTableColumnLayout-ColumnId">
+  <div class="member-head"><b>Column Id</b><span>ColumnId</span><em class="badge role">panel</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( BlueprintReadWrite, SaveGame, Category = "Smart Tables" )</span>
+FName ColumnId</div>
+  <dl class="facts">
+    <dt>SaveGame</dt><dd>Carried by SaveGame serialisation.</dd>
+  </dl>
+  <p>Which column this entry is about.</p>
+</div>
+<div class="member" id="FSmartTableColumnLayout-Width">
+  <div class="member-head"><b>Width</b><span>Width</span><em class="badge role">panel</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( BlueprintReadWrite, SaveGame, Category = "Smart Tables" )</span>
+float Width = 0.0f</div>
+  <dl class="facts">
+    <dt>SaveGame</dt><dd>Carried by SaveGame serialisation.</dd>
+  </dl>
+  <p>Pixels, and it means something only while bUserWidth is set. Zero and skipped otherwise.</p>
+<p>An entry also exists for hiding a column, so an entry with no chosen width is normal.</p>
+<p>Only a width set on purpose goes in here. Every other width is worked out again from the named sizing whenever the space changes. A worked out number filed as a choice is wrong at every window size but the one it was saved at.</p>
+</div>
+<div class="member" id="FSmartTableColumnLayout-bUserWidth">
+  <div class="member-head"><b>User Width</b><span>bUserWidth</span><em class="badge role">panel</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( BlueprintReadWrite, SaveGame, Category = "Smart Tables" )</span>
+bool bUserWidth = false</div>
+  <dl class="facts">
+    <dt>SaveGame</dt><dd>Carried by SaveGame serialisation.</dd>
+  </dl>
+  <p>Set by a drag and by SetColumnWidth, which size to content also goes through. Cleared by ResetColumnWidth and by ResetLayout, and no width pass may take a set width back while it holds.</p>
+</div>
+<div class="member" id="FSmartTableColumnLayout-bHidden">
+  <div class="member-head"><b>Hidden</b><span>bHidden</span><em class="badge role">panel</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( BlueprintReadWrite, SaveGame, Category = "Smart Tables" )</span>
+bool bHidden = false</div>
+  <dl class="facts">
+    <dt>SaveGame</dt><dd>Carried by SaveGame serialisation.</dd>
+  </dl>
+  <p>Whether this column is hidden right now.</p>
+</div>
+<h2 class="type" id="ESmartTableSortMode">ESmartTableSortMode <em>enum</em></h2>
+<p>The order a column is sorted in. None is unsorted, which is a third answer and not an error.</p>
+<h2 id="ESmartTableSortMode-enumerator">Values <em>3</em></h2>
+<div class="member" id="ESmartTableSortMode-None">
+  <div class="member-head"><b>None</b><span>None</span></div>
+  <div class="member-decl">None</div>
+</div>
+<div class="member" id="ESmartTableSortMode-Ascending">
+  <div class="member-head"><b>Ascending</b><span>Ascending</span></div>
+  <div class="member-decl">Ascending</div>
+</div>
+<div class="member" id="ESmartTableSortMode-Descending">
+  <div class="member-head"><b>Descending</b><span>Descending</span></div>
+  <div class="member-decl">Descending</div>
+</div>
+<h2 class="type" id="ESmartTableSelectionMode">ESmartTableSelectionMode <em>enum</em></h2>
+<p>What a click on a row does. None also stops the caret, so no key selects anything either.</p>
+<h2 id="ESmartTableSelectionMode-enumerator">Values <em>3</em></h2>
+<div class="member" id="ESmartTableSelectionMode-None">
+  <div class="member-head"><b>None</b><span>None</span></div>
+  <div class="member-decl">None</div>
+  <p>Clicking a row does nothing to it. Right for a table of fields being edited, where the row mark is noise behind the field and there is nothing to pick.</p>
+</div>
+<div class="member" id="ESmartTableSelectionMode-Single">
+  <div class="member-head"><b>Single</b><span>Single</span></div>
+  <div class="member-decl">Single</div>
+  <p>One row at a time. The default, and what most tables mean by selection.</p>
+</div>
+<div class="member" id="ESmartTableSelectionMode-Multi">
+  <div class="member-head"><b>Multi</b><span>Multi</span></div>
+  <div class="member-decl">Multi</div>
+  <p>Control and Shift do what they do everywhere else.</p>
+</div>
+<h2 class="type" id="FSmartTableSortColumn">FSmartTableSortColumn <em>struct</em></h2>
+<p>One level of a sort: which column, and which way.</p>
+<h2 id="FSmartTableSortColumn-public-function">Public functions <em>1</em></h2>
+<div class="member" id="FSmartTableSortColumn-operator-eq-eq">
+  <div class="member-head"><b class="cpp">operator==</b></div>
+  <div class="member-decl">bool operator==( const <a class="xref" href="smarttabletypes.html#FSmartTableSortColumn">FSmartTableSortColumn</a> &amp; Other ) const</div>
+</div>
+<h2 id="FSmartTableSortColumn-public-variable">Public variables <em>2</em></h2>
+<div class="member" id="FSmartTableSortColumn-ColumnId">
+  <div class="member-head"><b>Column Id</b><span>ColumnId</span><em class="badge role">panel</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( EditAnywhere, BlueprintReadWrite, SaveGame, Category = "Smart Tables" )</span>
+FName ColumnId</div>
+  <dl class="facts">
+    <dt>SaveGame</dt><dd>Carried by SaveGame serialisation.</dd>
+  </dl>
+  <p>The column this level orders by.</p>
+</div>
+<div class="member" id="FSmartTableSortColumn-Mode">
+  <div class="member-head"><b>Mode</b><span>Mode</span><em class="badge role">panel</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( EditAnywhere, BlueprintReadWrite, SaveGame, Category = "Smart Tables" )</span>
+<a class="xref" href="smarttabletypes.html#ESmartTableSortMode">ESmartTableSortMode</a> Mode = <a class="xref" href="smarttabletypes.html#ESmartTableSortMode-Ascending">ESmartTableSortMode::Ascending</a></div>
+  <dl class="facts">
+    <dt>SaveGame</dt><dd>Carried by SaveGame serialisation.</dd>
+  </dl>
+  <p>Which way this level orders. The built-in sort reads anything that is not Descending as Ascending.</p>
+</div>
+<h2 class="type" id="ESmartTableCellDragRole">ESmartTableCellDragRole <em>enum</em></h2>
+<p>What a cell is to a drag going on right now.</p>
+<p>Three states and no more. A drag has one source, and at most one cell under the pointer. The table works the role out, the cell holds on to it, and the row draws the brush for it.</p>
+<h2 id="ESmartTableCellDragRole-enumerator">Values <em>3</em></h2>
+<div class="member" id="ESmartTableCellDragRole-None">
+  <div class="member-head"><b>None</b><span>None</span></div>
+  <div class="member-decl">None</div>
+  <p>Not part of the drag, or there is no drag.</p>
+</div>
+<div class="member" id="ESmartTableCellDragRole-Source">
+  <div class="member-head"><b>Source</b><span>Source</span></div>
+  <div class="member-decl">Source</div>
+  <p>The drag started on this cell. Drawn dimmer by default, since what it holds is on the move.</p>
+</div>
+<div class="member" id="ESmartTableCellDragRole-Target">
+  <div class="member-head"><b>Target</b><span>Target</span></div>
+  <div class="member-decl">Target</div>
+  <p>The pointer is over this cell right now, so this is where a release would drop it.</p>
+</div>
+<h2 class="type" id="FSmartTableRowMenuOptions">FSmartTableRowMenuOptions <em>struct</em></h2>
+<p>Whether rows have a right click menu at all, and what it is called.</p>
+<p>Off by default, unlike the header one. A table whose rows nothing can change has no entry to offer. Opening one with no RowMenuEntries and no OnExtendRowMenu handler warns once and draws nothing.</p>
+<h2 id="FSmartTableRowMenuOptions-public-variable">Public variables <em>3</em></h2>
+<div class="member" id="FSmartTableRowMenuOptions-bEnabled">
+  <div class="member-head"><b>Enabled</b><span>bEnabled</span><em class="badge role">panel</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( EditAnywhere, BlueprintReadWrite, Category = "Smart Tables", meta = ( ToolTip = "Open a menu on a right click on a row. Off, the Open Row Menu node still opens one." ) )</span>
+bool bEnabled = false</div>
+  <p>Off, and a right click on a row opens nothing. OpenRowMenu still works.</p>
+</div>
+<div class="member" id="FSmartTableRowMenuOptions-Heading">
+  <div class="member-head"><b>Heading</b><span>Heading</span><em class="badge role">panel</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( EditAnywhere, BlueprintReadWrite, Category = "Smart Tables" )</span>
+FText Heading</div>
+  <p>The heading drawn above the entries. Empty for none, which is right for two or three.</p>
+</div>
+<div class="member" id="FSmartTableRowMenuOptions-bSelectRowFirst">
+  <div class="member-head"><b>Select Row First</b><span>bSelectRowFirst</span><em class="badge role">panel</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( EditAnywhere, BlueprintReadWrite, Category = "Smart Tables", meta = ( ToolTip = "Select the row a menu opens on, before the menu is built. Off, a right click opens the menu and changes nothing." ) )</span>
+bool bSelectRowFirst = false</div>
+  <p>Selects the row a menu opens on, before the menu is built.</p>
+<p>Off, since selection belongs to the left button. On a Multi table a right click would add the row under it to the set and never replace the set. On is for a table whose menu works on a row that nothing else marks out.</p>
+</div>
+<h2 class="type" id="ESmartTableColumnSizing">ESmartTableColumnSizing <em>enum</em></h2>
+<p>How a column works out its width. Both use Width: Fill as a weight, Fixed as a count of pixels.</p>
+<h2 id="ESmartTableColumnSizing-enumerator">Values <em>2</em></h2>
+<div class="member" id="ESmartTableColumnSizing-Fill">
+  <div class="member-head"><b>Fill</b><span>Fill</span></div>
+  <div class="member-decl">Fill</div>
+  <p>A share of the space left over, weighted by Width.</p>
+</div>
+<div class="member" id="ESmartTableColumnSizing-Fixed">
+  <div class="member-head"><b>Fixed</b><span>Fixed</span></div>
+  <div class="member-decl">Fixed</div>
+  <p>Exactly Width pixels, whatever size the table is.</p>
+</div>
+<h2 class="type" id="ESmartTableHeight">ESmartTableHeight <em>enum</em></h2>
+<p>How tall the table asks to be. Not how tall it is: a parent that gives it less always wins.</p>
+<h2 id="ESmartTableHeight-enumerator">Values <em>2</em></h2>
+<div class="member" id="ESmartTableHeight-Fill">
+  <div class="member-head"><b>Fill</b><span>Fill</span></div>
+  <div class="member-decl">Fill</div>
+  <p>Takes whatever height it is given and scrolls the rows that do not fit.</p>
+</div>
+<div class="member" id="ESmartTableHeight-FitRows">
+  <div class="member-head"><b>Fit Rows</b><span>FitRows</span></div>
+  <div class="member-decl">FitRows</div>
+  <p>Asks for every row it has, so a parent that can grow shows all of them and no scrollbar shows up.</p>
+</div>
+  <p class="next">Next: <a href="smarttablesorting.html">SmartTableSorting.h</a></p>
+</main>
+
+<aside aria-label="On this page">
+<div id="s" data-root="../" data-here="reference/smarttabletypes.html">
+  <input id="q" type="search" autocomplete="off" spellcheck="false" placeholder="Search"
+         aria-label="Search the documentation">
+  <kbd aria-hidden="true">/</kbd>
+  <div id="r" hidden></div>
+</div>
+  <b>On this page</b>
+  <details class="t" open>
+    <summary>FSmartTableColumn</summary>
+    <details class="s">
+      <summary><a href="#FSmartTableColumn-public-function">Public functions</a><em>3</em></summary>
+      <a href="#FSmartTableColumn-GetLabel">GetLabel</a>
+      <a href="#FSmartTableColumn-GetSortBinding">GetSortBinding</a>
+      <a href="#FSmartTableColumn-GetValueBinding">GetValueBinding</a>
+    </details>
+    <details class="s">
+      <summary><a href="#FSmartTableColumn-public-variable">Public variables</a><em>21</em></summary>
+      <details class="c">
+        <summary><a href="#FSmartTableColumn-public-variable-smart-tables">Smart Tables</a><em>15</em></summary>
+        <a href="#FSmartTableColumn-ColumnId">Column Id</a>
+        <a href="#FSmartTableColumn-Header">Header</a>
+        <a href="#FSmartTableColumn-BindingName">Binding Name</a>
+        <a href="#FSmartTableColumn-SortBindingName">Sort Binding Name</a>
+        <a href="#FSmartTableColumn-Sizing">Sizing</a>
+        <a href="#FSmartTableColumn-Width">Width</a>
+        <a href="#FSmartTableColumn-HAlign">H Align</a>
+        <a href="#FSmartTableColumn-CellPadding">Cell Padding</a>
+        <a href="#FSmartTableColumn-MaxFractionalDigits">Max Fractional Digits</a>
+        <a href="#FSmartTableColumn-bSortable">Sortable</a>
+        <a href="#FSmartTableColumn-bResizable">Resizable</a>
+        <a href="#FSmartTableColumn-bHideable">Hideable</a>
+        <a href="#FSmartTableColumn-bHiddenByDefault">Hidden By Default</a>
+        <a href="#FSmartTableColumn-CellClass">Cell Class</a>
+        <a href="#FSmartTableColumn-DragVisualClass">Drag Visual Class</a>
+      </details>
+      <details class="c">
+        <summary><a href="#FSmartTableColumn-public-variable-smart-tables-header">Header</a><em>6</em></summary>
+        <a href="#FSmartTableColumn-bShowHeaderIcon">Show Header Icon</a>
+        <a href="#FSmartTableColumn-HeaderIcon">Header Icon</a>
+        <a href="#FSmartTableColumn-HeaderIconSpacing">Header Icon Spacing</a>
+        <a href="#FSmartTableColumn-bOverrideHeaderTextStyle">Override Header Text Style</a>
+        <a href="#FSmartTableColumn-HeaderTextStyle">Header Text Style</a>
+        <a href="#FSmartTableColumn-HeaderHAlign">Header H Align</a>
+      </details>
+    </details>
+  </details>
+  <details class="t" open>
+    <summary>FSmartTablePresentationChange</summary>
+    <details class="s">
+      <summary><a href="#FSmartTablePresentationChange-public-function">Public functions</a><em>9</em></summary>
+      <a href="#FSmartTablePresentationChange-IsAnything">IsAnything</a>
+      <a href="#FSmartTablePresentationChange-Scope">Scope</a>
+      <a href="#FSmartTablePresentationChange-Add">Add</a>
+      <a href="#FSmartTablePresentationChange-OneRowsValues">OneRowsValues</a>
+      <a href="#FSmartTablePresentationChange-OneCellsValue">OneCellsValue</a>
+      <a href="#FSmartTablePresentationChange-EveryRowsValues">EveryRowsValues</a>
+      <a href="#FSmartTablePresentationChange-Order">Order</a>
+      <a href="#FSmartTablePresentationChange-RowSet">RowSet</a>
+      <a href="#FSmartTablePresentationChange-Everything">Everything</a>
+    </details>
+    <details class="s">
+      <summary><a href="#FSmartTablePresentationChange-public-variable">Public variables</a><em>6</em></summary>
+      <a href="#FSmartTablePresentationChange-bCellsStale">bCellsStale</a>
+      <a href="#FSmartTablePresentationChange-bOrderMoved">bOrderMoved</a>
+      <a href="#FSmartTablePresentationChange-bRowSetMoved">bRowSetMoved</a>
+      <a href="#FSmartTablePresentationChange-RowSetDiff">RowSetDiff</a>
+      <a href="#FSmartTablePresentationChange-NaturalRow">NaturalRow</a>
+      <a href="#FSmartTablePresentationChange-ColumnId">ColumnId</a>
+    </details>
+  </details>
+  <details class="t" open>
+    <summary>FSmartTableHeaderMenuOptions</summary>
+    <details class="s">
+      <summary><a href="#FSmartTableHeaderMenuOptions-public-variable">Public variables</a><em>6</em></summary>
+      <a href="#FSmartTableHeaderMenuOptions-bEnabled">Enabled</a>
+      <a href="#FSmartTableHeaderMenuOptions-bOfferSort">Offer Sort</a>
+      <a href="#FSmartTableHeaderMenuOptions-bOfferSizeToContent">Offer Size To Content</a>
+      <a href="#FSmartTableHeaderMenuOptions-bOfferMove">Offer Move</a>
+      <a href="#FSmartTableHeaderMenuOptions-bOfferVisibility">Offer Visibility</a>
+      <a href="#FSmartTableHeaderMenuOptions-bOfferResetLayout">Offer Reset Layout</a>
+    </details>
+  </details>
+  <details class="t" open>
+    <summary>FSmartTableMenuEntry</summary>
+    <details class="s">
+      <summary><a href="#FSmartTableMenuEntry-public-variable">Public variables</a><em>6</em></summary>
+      <a href="#FSmartTableMenuEntry-Id">Id</a>
+      <a href="#FSmartTableMenuEntry-Label">Label</a>
+      <a href="#FSmartTableMenuEntry-ToolTip">Tool Tip</a>
+      <a href="#FSmartTableMenuEntry-bEnabled">Enabled</a>
+      <a href="#FSmartTableMenuEntry-bVisible">Visible</a>
+      <a href="#FSmartTableMenuEntry-bSeparatorAbove">Separator Above</a>
+    </details>
+  </details>
+  <details class="t" open>
+    <summary>FSmartTableSortSpec</summary>
+    <details class="s">
+      <summary><a href="#FSmartTableSortSpec-public-function">Public functions</a><em>4</em></summary>
+      <a href="#FSmartTableSortSpec-IsEmpty">IsEmpty</a>
+      <a href="#FSmartTableSortSpec-GetModeFor">GetModeFor</a>
+      <a href="#FSmartTableSortSpec-GetPriorityFor">GetPriorityFor</a>
+      <a href="#FSmartTableSortSpec-operator-eq-eq">operator==</a>
+    </details>
+    <details class="s">
+      <summary><a href="#FSmartTableSortSpec-public-variable">Public variables</a><em>1</em></summary>
+      <a href="#FSmartTableSortSpec-Columns">Columns</a>
+    </details>
+  </details>
+  <details class="t" open>
+    <summary>FSmartTableLayout</summary>
+    <details class="s">
+      <summary><a href="#FSmartTableLayout-public-variable">Public variables</a><em>5</em></summary>
+      <a href="#FSmartTableLayout-CurrentVersion">CurrentVersion</a>
+      <a href="#FSmartTableLayout-Version">Version</a>
+      <a href="#FSmartTableLayout-Order">Order</a>
+      <a href="#FSmartTableLayout-Columns">Columns</a>
+      <a href="#FSmartTableLayout-SortSpec">Sort Spec</a>
+    </details>
+  </details>
+  <details class="t" open>
+    <summary>ESmartTableColumnSource</summary>
+    <details class="s">
+      <summary><a href="#ESmartTableColumnSource-enumerator">Values</a><em>4</em></summary>
+      <a href="#ESmartTableColumnSource-None">None</a>
+      <a href="#ESmartTableColumnSource-ItemClass">Item Class</a>
+      <a href="#ESmartTableColumnSource-DataTable">Data Table</a>
+      <a href="#ESmartTableColumnSource-File">File</a>
+    </details>
+  </details>
+  <details class="t" open>
+    <summary>ESmartTableCellEditor</summary>
+    <details class="s">
+      <summary><a href="#ESmartTableCellEditor-enumerator">Values</a><em>4</em></summary>
+      <a href="#ESmartTableCellEditor-None">None</a>
+      <a href="#ESmartTableCellEditor-Text">Text</a>
+      <a href="#ESmartTableCellEditor-Number">Number</a>
+      <a href="#ESmartTableCellEditor-Toggle">Toggle</a>
+    </details>
+  </details>
+  <details class="t" open>
+    <summary>ESmartTableAssignReason</summary>
+    <details class="s">
+      <summary><a href="#ESmartTableAssignReason-enumerator">Values</a><em>4</em></summary>
+      <a href="#ESmartTableAssignReason-Scrolled">Scrolled</a>
+      <a href="#ESmartTableAssignReason-Refreshed">Refreshed</a>
+      <a href="#ESmartTableAssignReason-Added">Added</a>
+      <a href="#ESmartTableAssignReason-ValueChanged">Value Changed</a>
+    </details>
+  </details>
+  <details class="t" open>
+    <summary>ESmartTablePresentationScope</summary>
+    <details class="s">
+      <summary><a href="#ESmartTablePresentationScope-enumerator">Values</a><em>4</em></summary>
+      <a href="#ESmartTablePresentationScope-Nothing">Nothing</a>
+      <a href="#ESmartTablePresentationScope-Cell">Cell</a>
+      <a href="#ESmartTablePresentationScope-Row">Row</a>
+      <a href="#ESmartTablePresentationScope-Screen">Screen</a>
+    </details>
+  </details>
+  <details class="t" open>
+    <summary>FSmartTableColumnLayout</summary>
+    <details class="s">
+      <summary><a href="#FSmartTableColumnLayout-public-variable">Public variables</a><em>4</em></summary>
+      <a href="#FSmartTableColumnLayout-ColumnId">Column Id</a>
+      <a href="#FSmartTableColumnLayout-Width">Width</a>
+      <a href="#FSmartTableColumnLayout-bUserWidth">User Width</a>
+      <a href="#FSmartTableColumnLayout-bHidden">Hidden</a>
+    </details>
+  </details>
+  <details class="t" open>
+    <summary>ESmartTableSortMode</summary>
+    <details class="s">
+      <summary><a href="#ESmartTableSortMode-enumerator">Values</a><em>3</em></summary>
+      <a href="#ESmartTableSortMode-None">None</a>
+      <a href="#ESmartTableSortMode-Ascending">Ascending</a>
+      <a href="#ESmartTableSortMode-Descending">Descending</a>
+    </details>
+  </details>
+  <details class="t" open>
+    <summary>ESmartTableSelectionMode</summary>
+    <details class="s">
+      <summary><a href="#ESmartTableSelectionMode-enumerator">Values</a><em>3</em></summary>
+      <a href="#ESmartTableSelectionMode-None">None</a>
+      <a href="#ESmartTableSelectionMode-Single">Single</a>
+      <a href="#ESmartTableSelectionMode-Multi">Multi</a>
+    </details>
+  </details>
+  <details class="t" open>
+    <summary>FSmartTableSortColumn</summary>
+    <details class="s">
+      <summary><a href="#FSmartTableSortColumn-public-function">Public functions</a><em>1</em></summary>
+      <a href="#FSmartTableSortColumn-operator-eq-eq">operator==</a>
+    </details>
+    <details class="s">
+      <summary><a href="#FSmartTableSortColumn-public-variable">Public variables</a><em>2</em></summary>
+      <a href="#FSmartTableSortColumn-ColumnId">Column Id</a>
+      <a href="#FSmartTableSortColumn-Mode">Mode</a>
+    </details>
+  </details>
+  <details class="t" open>
+    <summary>ESmartTableCellDragRole</summary>
+    <details class="s">
+      <summary><a href="#ESmartTableCellDragRole-enumerator">Values</a><em>3</em></summary>
+      <a href="#ESmartTableCellDragRole-None">None</a>
+      <a href="#ESmartTableCellDragRole-Source">Source</a>
+      <a href="#ESmartTableCellDragRole-Target">Target</a>
+    </details>
+  </details>
+  <details class="t" open>
+    <summary>FSmartTableRowMenuOptions</summary>
+    <details class="s">
+      <summary><a href="#FSmartTableRowMenuOptions-public-variable">Public variables</a><em>3</em></summary>
+      <a href="#FSmartTableRowMenuOptions-bEnabled">Enabled</a>
+      <a href="#FSmartTableRowMenuOptions-Heading">Heading</a>
+      <a href="#FSmartTableRowMenuOptions-bSelectRowFirst">Select Row First</a>
+    </details>
+  </details>
+  <details class="t" open>
+    <summary>ESmartTableColumnSizing</summary>
+    <details class="s">
+      <summary><a href="#ESmartTableColumnSizing-enumerator">Values</a><em>2</em></summary>
+      <a href="#ESmartTableColumnSizing-Fill">Fill</a>
+      <a href="#ESmartTableColumnSizing-Fixed">Fixed</a>
+    </details>
+  </details>
+  <details class="t" open>
+    <summary>ESmartTableHeight</summary>
+    <details class="s">
+      <summary><a href="#ESmartTableHeight-enumerator">Values</a><em>2</em></summary>
+      <a href="#ESmartTableHeight-Fill">Fill</a>
+      <a href="#ESmartTableHeight-FitRows">Fit Rows</a>
+    </details>
+  </details></aside>
+
+</div>
+
+<div id="z" hidden><img alt=""></div>
+
+</body>
+</html>

@@ -38,12 +38,61 @@ function buildItemList(project) {
 }
 
 // This is beginning to feel like.. silliness, but it keeps everything so simple, so.. here we are :P
-function buildCard(project, index) {
+var GH_MARK = '<svg viewBox="0 0 98 96" width="18" height="18" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z"/></svg>';
+
+/* A YouTube id gives a thumbnail, an image gives itself, and a repo-only project gives the mark. Every
+   tile gets one: a column of titles over a blank left edge reads as a list, not as a body of work. */
+/* One badge, driven by one field. A project that is neither in development nor on hold says nothing,
+   which is the state most of them are in. */
+/* Facts about the project, beside the state badge rather than instead of it - a plugin can be in
+   development and have its code up at the same time. */
+function tileRepo(project) {
+    if (!project.repo) {
+        return '';
+    }
+
+    return '<a class="' + DOM_CLASSES.TILE_REPO + '" href="' + project.repo.url + '" target="_blank" rel="noopener noreferrer">'
+        + GH_MARK + '<span>GITHUB</span></a>';
+}
+
+function tileTags(project) {
+    if (!project.tags) {
+        return '';
+    }
+
+    return project.tags.map(function (t)
+    {
+        return '<span class="' + DOM_CLASSES.TILE_TAG + '">' + t + '</span>';
+    }).join('');
+}
+
+function statusBadge(project) {
+    if (project.status === 'hold') {
+        return '<span class="' + DOM_CLASSES.WIP_BADGE + ' ' + DOM_CLASSES.WIP_BADGE_HOLD + '">ON HOLD</span>';
+    }
+    if (project.status === 'wip') {
+        return '<span class="' + DOM_CLASSES.WIP_BADGE + '">IN DEVELOPMENT</span>';
+    }
+    return '';
+}
+
+function tileThumb(project) {
+    var first = buildItemList(project)[0];
+    var src = first && first.type !== 'gist' ? coverSrc(first) : null;
+
+    if (src) {
+        return '<img class="' + DOM_CLASSES.TILE_THUMB + '" src="' + src + '" alt="" loading="lazy">';
+    }
+
+    return '<span class="' + DOM_CLASSES.TILE_THUMB + ' ' + DOM_CLASSES.TILE_THUMB_REPO + '">' + GH_MARK + '</span>';
+}
+
+/* Shared by both renderers. Written once because the About tiles lost their repo link the first time
+   this was two functions, and "view the source on github" then pointed at nothing. */
+function tileCover(project) {
     var items = buildItemList(project);
     var first = items[0];
     var count = items.length;
-    var reverse = index % 2 === 1 ? ' ' + DOM_CLASSES.PROJECT_CARD_REVERSE : '';
-    var wip = project.wip ? '<div class="' + DOM_CLASSES.WIP_BADGE + '">IN DEVELOPMENT</div>' : '';
     var badge = count > 1 ? '<div class="' + DOM_CLASSES.PROJECT_COVER_COUNT + '">' + count + ' MEDIA</div>' : '';
     var imgSrc = first && first.type !== 'gist' ? coverSrc(first) : null;
     var lbl = count > 1
@@ -52,18 +101,21 @@ function buildCard(project, index) {
             ? 'PLAY VIDEO'
             : (first && first.type === 'gist' ? 'READ MORE' : 'VIEW IMAGE'));
 
-    var GH_SVG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 98 96" width="44" height="44"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z"/></svg>';
-    var cover = first
-        ? '<div class="' + DOM_CLASSES.PROJECT_COVER + '" data-project="' + project.id + '">'
-        + (imgSrc ? '<img class="' + DOM_CLASSES.PROJECT_COVER_IMG + '" src="' + imgSrc + '" alt="' + project.title + '" loading="lazy">' : '')
-        + '<div class="' + DOM_CLASSES.PROJECT_COVER_OVERLAY + '">'
-        + '<div class="' + DOM_CLASSES.PROJECT_COVER_PLAY + '"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>'
-        + '<div class="' + DOM_CLASSES.PROJECT_COVER_LABEL + '">' + lbl + '</div>'
-        + '</div>' + badge + '</div>'
-        : (project.repo
-            ? '<a class="' + DOM_CLASSES.PROJECT_COVER + ' ' + DOM_CLASSES.PROJECT_COVER_REPO + '" href="' + project.repo.url + '" target="_blank" rel="noopener noreferrer">'
-            + GH_SVG + '<span>VIEW on GitHub</span></a>'
-            : '<div class="' + DOM_CLASSES.PROJECT_COVER + ' ' + DOM_CLASSES.PROJECT_COVER_EMPTY + '">NO MEDIA</div>');
+    if (first) {
+        return '<div class="' + DOM_CLASSES.PROJECT_COVER + '" data-project="' + project.id + '">'
+            + (imgSrc ? '<img class="' + DOM_CLASSES.PROJECT_COVER_IMG + '" src="' + imgSrc + '" alt="' + project.title + '" loading="lazy">' : '')
+            + '<div class="' + DOM_CLASSES.PROJECT_COVER_OVERLAY + '">'
+            + '<div class="' + DOM_CLASSES.PROJECT_COVER_PLAY + '"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>'
+            + '<div class="' + DOM_CLASSES.PROJECT_COVER_LABEL + '">' + lbl + '</div>'
+            + '</div>' + badge + '</div>';
+    }
+
+    return '';
+}
+
+function buildTile(project) {
+    var wip = statusBadge(project) + tileTags(project) + tileRepo(project);
+    var cover = tileCover(project);
 
     var stack = project.stack.map(function (s)
     {
@@ -75,28 +127,35 @@ function buildCard(project, index) {
         return '<li>' + b + '</li>';
     }).join('');
 
-    return '<div class="' + DOM_CLASSES.PROJECT_CARD + reverse + ' ' + DOM_CLASSES.FADE_IN + '" id="project-' + project.id + '">'
-        + cover
-        + '<div class="' + DOM_CLASSES.PROJECT_INFO + '">'
-        + wip
+    return '<details class="' + DOM_CLASSES.TILE + ' ' + DOM_CLASSES.FADE_IN + '" id="project-' + project.id + '">'
+        + '<summary class="' + DOM_CLASSES.TILE_HEAD + '">'
+        + tileThumb(project)
+        + '<div><div class="' + DOM_CLASSES.TILE_TITLE + '">' + project.title + wip + '</div>'
+        + '<div class="' + DOM_CLASSES.TILE_SUB + '">' + project.subtitle + '</div></div>'
+        + '</summary>'
+        + '<div class="' + DOM_CLASSES.TILE_BODY + '">'
         + '<div class="' + DOM_CLASSES.PROJECT_CATEGORY + '">' + project.category + '</div>'
-        + '<div class="' + DOM_CLASSES.PROJECT_TITLE + '">' + project.title + '</div>'
-        + '<div class="' + DOM_CLASSES.PROJECT_SUBTITLE + '">' + project.subtitle + '</div>'
         + '<p class="' + DOM_CLASSES.PROJECT_DESC + '">' + project.desc + '</p>'
+        + cover
         + '<ul class="' + DOM_CLASSES.PROJECT_BULLETS + '">' + bullets + '</ul>'
         + '<div class="' + DOM_CLASSES.PROJECT_STACK + '">' + stack + '</div>'
-        + '</div></div>';
+        + '</div></details>';
+}
+
+function inGroup(name) {
+    return PROJECTS.filter(function (p) { return p.group === name && !p.hidden; });
 }
 
 function renderProjects() {
-    var el = document.getElementById(DOM_IDS.PROJECTS_CONTAINER);
-    if (!el) {
-        return;
+    var games = document.getElementById(DOM_IDS.COLUMN_GAMES);
+    var tools = document.getElementById(DOM_IDS.COLUMN_TOOLS);
+
+    if (games) {
+        games.innerHTML = inGroup('game').map(buildTile).join('');
     }
-    el.innerHTML = PROJECTS.map(function (p, i)
-    {
-        return buildCard(p, i);
-    }).join('');
+    if (tools) {
+        tools.innerHTML = inGroup('tool').map(buildTile).join('');
+    }
 }
 
 renderProjects();
@@ -241,7 +300,7 @@ lbThumbs.addEventListener('click', function (e) {
     }
 });
 
-document.getElementById(DOM_IDS.PROJECTS_CONTAINER).addEventListener('click', function (e) {
+document.addEventListener('click', function (e) {
     var cover = e.target.closest(DOM_CLASSES.PROJECT_COVER_DATA);
     if (cover) {
         lbOpen(cover.dataset.project, 0);
@@ -429,3 +488,25 @@ document.addEventListener('keydown', function (e) {
     setTimeout(transition, SNAKE_HL.delayMs);
 }());
 
+// A <details> in the nav stays open once you click away from it, which reads as broken. Nothing else on
+// the page has an open/close that outlives the pointer, so this closes with the next click anywhere else.
+document.addEventListener('click', function (e) {
+    document.querySelectorAll('.nav-drop[open]').forEach(function (d)
+    {
+        if (!d.contains(e.target)) {
+            d.open = false;
+        }
+    });
+});
+
+document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+        document.querySelectorAll('.nav-drop[open]').forEach(function (d) { d.open = false; });
+    }
+});
+
+document.addEventListener('click', function (e) {
+    if (e.target.closest('.' + DOM_CLASSES.TILE_REPO)) {
+        e.stopPropagation();
+    }
+}, true);

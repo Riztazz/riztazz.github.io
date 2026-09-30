@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en" data-theme="">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SmartTableRowWidget.h - Smart Tables</title>
+<link rel="icon" href="../img/smarttables_favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css?v=94b6e99e">
+<script src="../theme.js?v=94b6e99e"></script>
+<script defer src="../search.js?v=94b6e99e"></script>
+</head>
+<body>
+
+<button id="t" type="button" aria-label="Switch between light and dark">THEME</button>
+
+<div class="wrap">
+
+<nav aria-label="Pages">
+<a class="home" href="../index.html" aria-label="Smart Tables"><svg xmlns="http://www.w3.org/2000/svg" class="logo" viewBox="0 0 222.2 48" width="222.2" height="48" aria-hidden="true">
+  <g fill="none" stroke="currentColor" stroke-width="3.5">
+    <rect x="4" y="8" width="40" height="34" rx="4.5"/>
+    <path d="M4 20 H44 M24 20 V42"/>
+  </g>
+  <rect x="26.5" y="22.5" width="15" height="17" rx="1.5" fill="#4a86ff"/>
+  <path d="M72.2 30Q72.2 28.3 71 27.2Q69.7 26.2 66.4 25.3Q63.1 24.3 61.6 23.2Q59.4 21.7 59.4 19.2Q59.4 16.7 61.4 15.2Q63.5 13.7 66.6 13.7Q68.7 13.7 70.4 14.5Q72.1 15.3 73 16.8Q73.9 18.2 73.9 20H72.1Q72.1 17.8 70.6 16.5Q69.1 15.2 66.6 15.2Q64.1 15.2 62.7 16.3Q61.2 17.4 61.2 19.1Q61.2 20.8 62.5 21.8Q63.8 22.8 66.7 23.6Q69.6 24.4 71.1 25.2Q72.5 26.1 73.3 27.2Q74 28.4 74 30Q74 32.5 72 34Q70 35.6 66.7 35.6Q64.5 35.6 62.6 34.8Q60.7 34 59.7 32.5Q58.8 31.1 58.8 29.2H60.6Q60.6 31.4 62.2 32.7Q63.9 34 66.7 34Q69.2 34 70.7 32.9Q72.2 31.8 72.2 30ZM78.5 19.4 78.6 22Q79.4 20.6 80.8 19.8Q82.1 19.1 83.7 19.1Q87.4 19.1 88.5 22.2Q89.3 20.7 90.7 19.9Q92.1 19.1 93.9 19.1Q99 19.1 99.1 24.7V35.3H97.3V24.8Q97.3 22.7 96.4 21.7Q95.5 20.7 93.5 20.7Q91.6 20.7 90.3 21.9Q89 23.1 88.8 24.8V35.3H87.1V24.7Q87 22.7 86.1 21.7Q85.1 20.7 83.2 20.7Q81.5 20.7 80.3 21.6Q79.2 22.5 78.6 24.4V35.3H76.8V19.4ZM112.9 35.3Q112.6 34.5 112.6 33.1Q111.6 34.3 110.2 34.9Q108.8 35.6 107.2 35.6Q104.9 35.6 103.5 34.3Q102.1 33 102.1 31.1Q102.1 28.8 104 27.4Q105.9 26.1 109.4 26.1H112.6V24.3Q112.6 22.6 111.5 21.6Q110.5 20.6 108.5 20.6Q106.6 20.6 105.4 21.5Q104.2 22.5 104.2 23.8L102.5 23.8Q102.5 21.9 104.2 20.5Q106 19.1 108.5 19.1Q111.2 19.1 112.7 20.5Q114.3 21.8 114.3 24.2V31.7Q114.3 34 114.8 35.1V35.3ZM107.4 34Q109.2 34 110.5 33.2Q111.9 32.3 112.6 30.9V27.4H109.4Q106.8 27.4 105.3 28.4Q103.8 29.3 103.8 30.9Q103.8 32.3 104.8 33.1Q105.8 34 107.4 34ZM125.7 20.9Q125.1 20.8 124.5 20.8Q122.9 20.8 121.7 21.7Q120.6 22.6 120.1 24.4V35.3H118.4V19.4H120.1L120.1 21.9Q121.5 19.1 124.6 19.1Q125.3 19.1 125.7 19.3ZM130.6 15.4V19.4H133.9V20.9H130.6V31.4Q130.6 32.7 131.1 33.4Q131.5 34 132.7 34Q133.1 34 134.1 33.9L134.1 35.3Q133.5 35.6 132.3 35.6Q130.5 35.6 129.7 34.5Q128.8 33.5 128.8 31.4V20.9H125.9V19.4H128.8V15.4ZM151.4 17.2H145.4V35.3H141.1V17.2H135.1V13.9H151.4ZM162.2 35.3Q162 34.7 161.8 34.1Q161.6 33.5 161.6 32.9Q160.9 34.1 159.8 34.8Q158.7 35.6 157.2 35.6Q154.8 35.6 153.4 34.3Q152.1 33 152.1 30.8Q152.1 28.5 153.9 27.2Q155.7 25.9 159.1 25.9H161.5V24.7Q161.5 23.5 160.9 22.9Q160.3 22.2 159.1 22.2Q158.1 22.2 157.5 22.8Q156.9 23.3 156.9 24.1H152.8L152.8 24.1Q152.7 22 154.5 20.6Q156.4 19.1 159.4 19.1Q162.2 19.1 164 20.6Q165.8 22 165.8 24.7V31.2Q165.8 32.3 165.9 33.3Q166.1 34.3 166.5 35.3ZM158.3 32.4Q159.4 32.4 160.3 31.9Q161.2 31.3 161.5 30.6V28.3H159.1Q157.7 28.3 157 29Q156.3 29.7 156.3 30.7Q156.3 31.5 156.9 31.9Q157.4 32.4 158.3 32.4ZM182.7 27.8Q182.7 31.3 181.1 33.5Q179.5 35.6 176.5 35.6Q175.1 35.6 174.1 35Q173.1 34.4 172.4 33.3L172 35.3H168.4V12.4H172.6V21.1Q173.3 20.2 174.3 19.6Q175.3 19.1 176.5 19.1Q179.5 19.1 181.1 21.4Q182.7 23.7 182.7 27.5ZM178.4 27.5Q178.4 25.2 177.7 23.8Q177.1 22.5 175.4 22.5Q174.4 22.5 173.7 22.9Q173 23.3 172.6 24.1V30.8Q173 31.5 173.7 31.9Q174.4 32.3 175.4 32.3Q177.1 32.3 177.8 31.1Q178.4 29.9 178.4 27.8ZM189.2 35.3H184.9V12.4H189.2ZM199 35.6Q195.5 35.6 193.5 33.4Q191.5 31.2 191.5 27.8V27.2Q191.5 23.7 193.4 21.4Q195.3 19.1 198.7 19.1Q201.9 19.1 203.6 21.1Q205.3 23 205.3 26.4V28.6H195.9L195.8 28.7Q195.9 30.3 196.8 31.3Q197.7 32.3 199.5 32.3Q200.9 32.3 201.9 32Q202.9 31.7 204 31.1L205.1 33.7Q204.2 34.5 202.5 35.1Q200.9 35.6 199 35.6ZM198.7 22.4Q197.4 22.4 196.7 23.3Q196 24.2 195.9 25.7L195.9 25.7H201.1V25.4Q201.1 24 200.6 23.2Q200 22.4 198.7 22.4ZM215.8 30.9Q215.8 30.2 215.1 29.7Q214.4 29.2 212.6 28.8Q209.8 28.2 208.4 27.1Q206.9 26 206.9 24Q206.9 22 208.6 20.6Q210.4 19.1 213.2 19.1Q216.2 19.1 218.1 20.6Q219.9 22 219.8 24.1L219.8 24.2H215.6Q215.6 23.3 215 22.7Q214.4 22.1 213.2 22.1Q212.2 22.1 211.6 22.6Q211 23.1 211 23.8Q211 24.6 211.6 25Q212.3 25.5 214.2 25.9Q217.1 26.5 218.5 27.6Q219.9 28.7 219.9 30.7Q219.9 32.9 218.1 34.2Q216.3 35.6 213.3 35.6Q210.1 35.6 208.3 34Q206.4 32.4 206.5 30.3L206.5 30.2H210.5Q210.5 31.5 211.3 32.1Q212.1 32.6 213.4 32.6Q214.5 32.6 215.2 32.2Q215.8 31.7 215.8 30.9Z" fill="currentColor"/>
+</svg></a>
+  <b>Home</b>
+    <a href="../index.html">Home</a>
+    <a href="../pages/00_features.html">Every feature</a>
+  <b>Start here</b>
+    <a href="../pages/01_first_table.html">Your first table</a>
+    <a href="../pages/02_rows.html">Rows</a>
+    <a href="../pages/03_columns.html">Columns</a>
+    <a href="../pages/04_cells.html">Cells</a>
+    <a href="../pages/05_events.html">Events</a>
+  <b>Going further</b>
+    <a href="../pages/06_sorting.html">Sorting and filtering</a>
+    <a href="../pages/07_input.html">Selection and input</a>
+    <a href="../pages/08_reorder.html">Reordering rows</a>
+    <a href="../pages/09_layout_skin.html">Layout and skin</a>
+    <a href="../pages/13_debugging.html">When it draws nothing</a>
+  <b>When you need more</b>
+    <a href="../pages/10_blueprint_model.html">A model in Blueprint</a>
+    <a href="../pages/11_row_spaces.html">The two row spaces</a>
+    <a href="../pages/12_cpp.html">Dropping to C++</a>
+  <b>Demos</b>
+    <a href="../pages/20_demo_items.html">1. Items</a>
+    <a href="../pages/21_demo_datatable.html">2. DataTable</a>
+    <a href="../pages/22_demo_csv.html">3. CSV file</a>
+    <a href="../pages/23_demo_json.html">4. JSON file</a>
+    <a href="../pages/24_demo_million.html">5. One million rows</a>
+    <a href="../pages/25_demo_server.html">6. Server browser</a>
+    <a href="../pages/26_demo_pairs.html">7. Pairs</a>
+    <a href="../pages/27_demo_keys.html">8. Keys, no EI</a>
+    <a href="../pages/28_demo_items_mvvm.html">9. Items with MVVM</a>
+  <b>Reference</b>
+  <div class="scroller">
+    <a href="smarttable.html">SmartTable.h</a>
+    <a href="smarttabletypes.html">SmartTableTypes.h</a>
+    <a href="smarttablesorting.html">SmartTableSorting.h</a>
+    <a href="smarttabledeadsecondaries.html">SmartTableDeadSecondaries.h</a>
+    <a href="smarttablecolumnlayout.html">SmartTableColumnLayout.h</a>
+    <a href="smarttablebinding.html">SmartTableBinding.h</a>
+    <a href="smarttablecolumnschema.html">SmartTableColumnSchema.h</a>
+    <a href="smarttabledispatcher.html">SmartTableDispatcher.h</a>
+    <a href="smarttablecolour.html">SmartTableColour.h</a>
+    <a href="smarttablemodel.html">SmartTableModel.h</a>
+    <a href="smarttableobjectmodel.html">SmartTableObjectModel.h</a>
+    <a href="smarttabledatatablemodel.html">SmartTableDataTableModel.h</a>
+    <a href="smarttablekeptrow.html">SmartTableKeptRow.h</a>
+    <a href="smarttablerowsetdiff.html">SmartTableRowSetDiff.h</a>
+    <a href="smarttablecell.html">SmartTableCell.h</a>
+    <a href="smarttablerowwidget.html" aria-current="page">SmartTableRowWidget.h</a>
+    <a href="smarttablestyle.html">SmartTableStyle.h</a>
+    <a href="smarttablesettings.html">SmartTableSettings.h</a>
+    <a href="smarttablelayoutstore.html">SmartTableLayoutStore.h</a>
+    <a href="smarttablesortkey.html">SmartTableSortKey.h</a>
+    <a href="smarttablecelldragdropop.html">SmartTableCellDragDropOp.h</a>
+    <a href="smarttablecelldrag.html">SmartTableCellDrag.h</a>
+    <a href="smarttablecolumnselection.html">SmartTableColumnSelection.h</a>
+    <a href="smarttableresizegesture.html">SmartTableResizeGesture.h</a>
+    <a href="smarttablescrollmove.html">SmartTableScrollMove.h</a>
+    <a href="smarttablearrivals.html">SmartTableArrivals.h</a>
+    <a href="smarttableopenmenu.html">SmartTableOpenMenu.h</a>
+    <a href="smarttablelog.html">SmartTableLog.h</a>
+  </div>
+</nav>
+
+<main>
+  <h1>SmartTableRowWidget.h</h1>
+  <p class="lede">A widget wrapped around a whole row, for a background or an entrance.</p>
+<div class="refhead">
+  <div class="path">Source/SmartTables/Public/SmartTableRowWidget.h</div>
+<p>A widget wrapped around the cells of one row, so a row can be animated. Empty is the default.</p>
+<p>Without one a row is plain Slate. SMultiColumnTableRow is no UObject and carries no animation list, so no UWidgetAnimation can bind to it and Sequencer has nothing to see. A cell needs none of this.</p>
+<p>The cells go into a named slot of this wrapper, and HostColumns says which one. A wrapper with no named slot is dropped and its row draws unwrapped, with one warning per wrapper class.</p>
+<p>ArrivalAnimation names an entrance and no code goes with it. Recycled like cells, so OnRowAssigned runs many times on one object and sets again everything it set last time.</p>
+  <dl>
+  <dt>Class</dt><dd>USmartTableRowWidget</dd>
+  <dt>Extends</dt><dd>UUserWidget</dd>
+  <dt>Members</dt><dd>27</dd>
+  <dt>Blueprint nodes</dt><dd>4</dd>
+  <dt>Panel fields</dt><dd>3</dd>
+  </dl>
+</div>
+<h2 id="public-function">Public functions <em>10</em></h2>
+<h3 class="cat" id="public-function-smart-tables-row">Row <em>4</em></h3>
+<div class="member" id="FindRowAnimation">
+  <div class="member-head"><b>Find Row Animation</b><span>FindRowAnimation</span><em class="badge role">pure node</em></div>
+  <div class="member-decl"><span class="macro">UFUNCTION( BlueprintPure, Category = "Smart Tables|Row" )</span>
+UWidgetAnimation * FindRowAnimation( FName AnimationName ) const</div>
+  <p>One animation of this Widget Blueprint, by name.</p>
+<p>UMG has no such function of its own. An animation is a reflected property of the class UMG builds, which is also why the Details panel can not offer them as a dropdown.</p>
+</div>
+<div class="member" id="GetAssignReason">
+  <div class="member-head"><b>Get Assign Reason</b><span>GetAssignReason</span><em class="badge role">pure node</em></div>
+  <div class="member-decl"><span class="macro">UFUNCTION( BlueprintPure, Category = "Smart Tables|Row" )</span>
+<a class="xref" href="smarttabletypes.html#ESmartTableAssignReason">ESmartTableAssignReason</a> GetAssignReason() const</div>
+  <p>Why this wrapper was last given a row. The same answer OnRowAssigned gets, kept here so a C++ subclass can read it from NativeOnRowAssigned, which takes no arguments.</p>
+</div>
+<div class="member" id="GetTable">
+  <div class="member-head"><b>Get Table</b><span>GetTable</span><em class="badge role">pure node</em></div>
+  <div class="member-decl"><span class="macro">UFUNCTION( BlueprintPure, Category = "Smart Tables|Row" )</span>
+<a class="xref" href="smarttable.html">USmartTable</a> * GetTable() const</div>
+  <p>The table this wrapper is drawing in.</p>
+</div>
+<div class="member" id="GetRowIndex">
+  <div class="member-head"><b>Get Row Index</b><span>GetRowIndex</span><em class="badge role">pure node</em></div>
+  <div class="member-decl"><span class="macro">UFUNCTION( BlueprintPure, Category = "Smart Tables|Row" )</span>
+int32 GetRowIndex() const</div>
+  <p>The row this wrapper draws right now, in natural space.</p>
+</div>
+<h3 class="cat" id="public-function-cpp-only">C++ only <em>6</em></h3>
+<div class="member" id="HostColumns">
+  <div class="member-head"><b class="cpp">HostColumns</b></div>
+  <div class="member-decl">bool HostColumns( const TSharedRef&lt; SWidget &gt; &amp; Columns )</div>
+  <p>Puts the cells of the row into the named slot of this wrapper.</p>
+<p>A slot called Columns wins. Failing that, the only named slot is used whatever it is called, since a wrapper with one slot can mean nothing else by it.</p>
+<p>False when there is no named slot, or several and none called Columns. It says so with a return and not a log, because the answer is the same once per table while this runs once per row.</p>
+</div>
+<div class="member" id="AssignRow">
+  <div class="member-head"><b class="cpp">AssignRow</b></div>
+  <div class="member-decl">void AssignRow( <a class="xref" href="smarttable.html">USmartTable</a> * InTable, int32 InNaturalRow, <a class="xref" href="smarttabletypes.html#ESmartTableAssignReason">ESmartTableAssignReason</a> InReason )</div>
+  <p>Points this wrapper at a row. Recycled, so it runs many times on one object.</p>
+</div>
+<div class="member" id="ArmArrival">
+  <div class="member-head"><b class="cpp">ArmArrival</b></div>
+  <div class="member-decl">void ArmArrival()</div>
+  <p>Hidden and held: this row has arrived and nothing has seen it yet. A wrapper naming no animation is left alone.</p>
+<p>Armed here and played later. A list that virtualises builds the widgets of a row the moment any part of it crosses the view. While the table is still scrolling toward a new row that is two pixels at the bottom edge, and an entrance started there is over before the row can be seen.</p>
+</div>
+<div class="member" id="PlayArrivalNow">
+  <div class="member-head"><b class="cpp">PlayArrivalNow</b></div>
+  <div class="member-decl">bool PlayArrivalNow()</div>
+  <p>The row is on screen, so the entrance plays from its first frame. False when nothing was armed, which is how a caller knows not to mark the entrance as used.</p>
+</div>
+<div class="member" id="CancelArrival">
+  <div class="member-head"><b class="cpp">CancelArrival</b></div>
+  <div class="member-decl">void CancelArrival()</div>
+  <p>The entrance is not going to happen. The wrapper stops waiting and shows.</p>
+</div>
+<div class="member" id="ReleaseRow">
+  <div class="member-head"><b class="cpp">ReleaseRow</b></div>
+  <div class="member-decl">void ReleaseRow()</div>
+  <p>Given back to the pool. The wrapper goes on existing and will draw another row.</p>
+<p>It also runs during teardown, once the table is already gone, so nothing here may read back to it.</p>
+</div>
+<h2 id="protected-function">Protected functions <em>4</em></h2>
+<div class="member" id="NativeOnRowAssigned">
+  <div class="member-head"><b class="cpp">NativeOnRowAssigned</b><em class="badge mod">virtual</em></div>
+  <div class="member-decl">virtual void NativeOnRowAssigned()</div>
+</div>
+<div class="member" id="NativeOnRowReleased">
+  <div class="member-head"><b class="cpp">NativeOnRowReleased</b><em class="badge mod">virtual</em></div>
+  <div class="member-decl">virtual void NativeOnRowReleased()</div>
+</div>
+<div class="member" id="OnRowAssigned">
+  <div class="member-head"><b>On Row Assigned</b><span>OnRowAssigned</span><em class="badge role">bp event</em></div>
+  <div class="member-decl"><span class="macro">UFUNCTION( BlueprintImplementableEvent, Category = "Smart Tables|Row", meta = ( DisplayName = "On Row Assigned" ) )</span>
+void OnRowAssigned( <a class="xref" href="smarttabletypes.html#ESmartTableAssignReason">ESmartTableAssignReason</a> Reason )</div>
+  <p>Fires every time this wrapper is given a row, one it has drawn before too.</p>
+<p>Reason is what sets the cases apart. A wrapper that plays its entrance whatever the reason plays it on every scroll, since scrolling is what hands a pooled wrapper its next row.</p>
+<p>An entrance played from here needs a FlushAnimations straight after PlayAnimation. A row is built while the list draws, so this widget's tick for that frame has gone. Without the flush the wrapper draws once at rest and the animation reads only on the next tick, which draws as a row that shows, jumps, and then slides in.</p>
+</div>
+<div class="member" id="OnRowReleased">
+  <div class="member-head"><b>On Row Released</b><span>OnRowReleased</span><em class="badge role">bp event</em></div>
+  <div class="member-decl"><span class="macro">UFUNCTION( BlueprintImplementableEvent, Category = "Smart Tables|Row", meta = ( DisplayName = "On Row Released" ) )</span>
+void OnRowReleased()</div>
+  <p>Fires as the wrapper goes back to the pool, while the row it drew can still be read. Anything held is dropped here.</p>
+</div>
+<h2 id="private-function">Private functions <em>2</em></h2>
+<div class="member" id="ResolveColumnsSlot">
+  <div class="member-head"><b class="cpp">ResolveColumnsSlot</b></div>
+  <div class="member-decl">FName ResolveColumnsSlot()</div>
+  <p>Which named slot the cells go in, worked out once, since the widget tree of a wrapper never moves.</p>
+</div>
+<div class="member" id="ResolveArrival">
+  <div class="member-head"><b class="cpp">ResolveArrival</b></div>
+  <div class="member-decl">UWidgetAnimation * ResolveArrival()</div>
+  <p>The held pair above, brought up to date. Both callers need it, and neither is const.</p>
+</div>
+<h2 id="public-variable">Public variables <em>2</em></h2>
+<div class="member" id="ColumnsSlotName">
+  <div class="member-head"><b class="cpp">ColumnsSlotName</b><em class="badge mod">static</em></div>
+  <div class="member-decl">static const FName ColumnsSlotName</div>
+  <p>The slot name that wins when a wrapper has more than one. A wrapper with a single named slot does not need it.</p>
+<p>See <code><a class="xref" href="smarttablerowwidget.html#HostColumns">HostColumns</a></code></p>
+</div>
+<div class="member" id="ArrivalAnimation">
+  <div class="member-head"><b>Arrival Animation</b><span>ArrivalAnimation</span><em class="badge role">panel</em></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( EditAnywhere, BlueprintReadWrite, Category = "Smart Tables|Row", meta = ( ToolTip = "A Sequencer animation played once when this wrapper is given a row that is new. Empty for a wrapper that is only layout." ) )</span>
+FName ArrivalAnimation = TEXT( "  " )</div>
+  <p>An animation played when this wrapper is given a row that is new, and at no other time.</p>
+<p>Built in Sequencer and named here, with no code beside it. Empty for a wrapper that is only layout.</p>
+<p>PlayArrivalNow flushes the first frame before anything draws, so an entrance never shows the row at rest for a frame and then jumps into its first key.</p>
+</div>
+<h2 id="private-variable">Private variables <em>9</em></h2>
+<div class="member" id="Table">
+  <div class="member-head"><b class="cpp">Table</b></div>
+  <div class="member-decl">TWeakObjectPtr&lt; <a class="xref" href="smarttable.html">USmartTable</a> &gt; Table</div>
+  <p>Weak, like the one on a cell. The table owns the pool that owns this wrapper, so a strong pointer back would be a ring.</p>
+</div>
+<div class="member" id="ColumnsHost">
+  <div class="member-head"><b>Columns Host</b><span>ColumnsHost</span></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( Transient )</span>
+TObjectPtr&lt; UNativeWidgetHost &gt; ColumnsHost</div>
+  <dl class="facts">
+    <dt>Transient</dt><dd>Never saved.</dd>
+  </dl>
+  <p>Built once and pointed somewhere new on every reuse. UNativeWidgetHost::SetContent writes straight through to the live SBox, so a scrolling table builds none of these after the first screenful.</p>
+</div>
+<div class="member" id="NaturalRow">
+  <div class="member-head"><b class="cpp">NaturalRow</b></div>
+  <div class="member-decl">int32 NaturalRow = INDEX_NONE</div>
+</div>
+<div class="member" id="AssignReason">
+  <div class="member-head"><b class="cpp">AssignReason</b></div>
+  <div class="member-decl"><a class="xref" href="smarttabletypes.html#ESmartTableAssignReason">ESmartTableAssignReason</a> AssignReason = <a class="xref" href="smarttabletypes.html#ESmartTableAssignReason-Scrolled">ESmartTableAssignReason::Scrolled</a></div>
+  <p>Starts at the case that has to stay quiet, so a wrapper read before it drew is not taken for new.</p>
+</div>
+<div class="member" id="ColumnsSlot">
+  <div class="member-head"><b class="cpp">ColumnsSlot</b></div>
+  <div class="member-decl">FName ColumnsSlot</div>
+  <p>Worked out on first use and kept. NAME_None both before that and for a wrapper with no slot at all, which is why the flag below is what says whether it has been worked out.</p>
+</div>
+<div class="member" id="bColumnsSlotResolved">
+  <div class="member-head"><b class="cpp">bColumnsSlotResolved</b></div>
+  <div class="member-decl">bool bColumnsSlotResolved = false</div>
+</div>
+<div class="member" id="bArrivalArmed">
+  <div class="member-head"><b class="cpp">bArrivalArmed</b></div>
+  <div class="member-decl">bool bArrivalArmed = false</div>
+  <p>Set while the wrapper is hidden, waiting for the table to say the row can be seen.</p>
+</div>
+<div class="member" id="ResolvedArrival">
+  <div class="member-head"><b>Resolved Arrival</b><span>ResolvedArrival</span></div>
+  <div class="member-decl"><span class="macro">UPROPERTY( Transient )</span>
+TObjectPtr&lt; UWidgetAnimation &gt; ResolvedArrival</div>
+  <dl class="facts">
+    <dt>Transient</dt><dd>Never saved.</dd>
+  </dl>
+  <p>The animation named above, found once and held.</p>
+<p>FindWidgetAnimation walks the class's property chain, and arming asks for this one on every row the table still owes an entrance.</p>
+<p>The name is the whole key. A widget's class never changes under it, and a graph built again in the editor gives new widgets instead of changing these.</p>
+<p>NAME_None in the pair here means the name has never been asked. That is also the answer for a widget naming no animation, and both want the same nothing back.</p>
+</div>
+<div class="member" id="ResolvedArrivalFor">
+  <div class="member-head"><b class="cpp">ResolvedArrivalFor</b></div>
+  <div class="member-decl">FName ResolvedArrivalFor</div>
+</div>
+  <p class="next">Next: <a href="smarttablestyle.html">SmartTableStyle.h</a></p>
+</main>
+
+<aside aria-label="On this page">
+<div id="s" data-root="../" data-here="reference/smarttablerowwidget.html">
+  <input id="q" type="search" autocomplete="off" spellcheck="false" placeholder="Search"
+         aria-label="Search the documentation">
+  <kbd aria-hidden="true">/</kbd>
+  <div id="r" hidden></div>
+</div>
+  <b>On this page</b>
+  <details class="t" open>
+    <summary>USmartTableRowWidget</summary>
+    <details class="s">
+      <summary><a href="#public-function">Public functions</a><em>10</em></summary>
+      <details class="c">
+        <summary><a href="#public-function-smart-tables-row">Row</a><em>4</em></summary>
+        <a href="#FindRowAnimation">Find Row Animation</a>
+        <a href="#GetAssignReason">Get Assign Reason</a>
+        <a href="#GetTable">Get Table</a>
+        <a href="#GetRowIndex">Get Row Index</a>
+      </details>
+      <details class="c">
+        <summary><a href="#public-function-cpp-only">C++ only</a><em>6</em></summary>
+        <a href="#HostColumns">HostColumns</a>
+        <a href="#AssignRow">AssignRow</a>
+        <a href="#ArmArrival">ArmArrival</a>
+        <a href="#PlayArrivalNow">PlayArrivalNow</a>
+        <a href="#CancelArrival">CancelArrival</a>
+        <a href="#ReleaseRow">ReleaseRow</a>
+      </details>
+    </details>
+    <details class="s">
+      <summary><a href="#protected-function">Protected functions</a><em>4</em></summary>
+      <a href="#NativeOnRowAssigned">NativeOnRowAssigned</a>
+      <a href="#NativeOnRowReleased">NativeOnRowReleased</a>
+      <a href="#OnRowAssigned">On Row Assigned</a>
+      <a href="#OnRowReleased">On Row Released</a>
+    </details>
+    <details class="s">
+      <summary><a href="#private-function">Private functions</a><em>2</em></summary>
+      <a href="#ResolveColumnsSlot">ResolveColumnsSlot</a>
+      <a href="#ResolveArrival">ResolveArrival</a>
+    </details>
+    <details class="s">
+      <summary><a href="#public-variable">Public variables</a><em>2</em></summary>
+      <a href="#ColumnsSlotName">ColumnsSlotName</a>
+      <a href="#ArrivalAnimation">Arrival Animation</a>
+    </details>
+    <details class="s">
+      <summary><a href="#private-variable">Private variables</a><em>9</em></summary>
+      <a href="#Table">Table</a>
+      <a href="#ColumnsHost">Columns Host</a>
+      <a href="#NaturalRow">NaturalRow</a>
+      <a href="#AssignReason">AssignReason</a>
+      <a href="#ColumnsSlot">ColumnsSlot</a>
+      <a href="#bColumnsSlotResolved">bColumnsSlotResolved</a>
+      <a href="#bArrivalArmed">bArrivalArmed</a>
+      <a href="#ResolvedArrival">Resolved Arrival</a>
+      <a href="#ResolvedArrivalFor">ResolvedArrivalFor</a>
+    </details>
+  </details></aside>
+
+</div>
+
+<div id="z" hidden><img alt=""></div>
+
+</body>
+</html>
