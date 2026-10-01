@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SmartTableCell.h - Smart Tables</title>
 <link rel="icon" href="../img/smarttables_favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="../style.css?v=94b6e99e">
-<script src="../theme.js?v=94b6e99e"></script>
-<script defer src="../search.js?v=94b6e99e"></script>
+<link rel="stylesheet" href="../style.css?v=46c52ba6">
+<script src="../theme.js?v=46c52ba6"></script>
+<script defer src="../search.js?v=46c52ba6"></script>
 </head>
 <body>
 
@@ -99,7 +99,7 @@
   <dt>Extends</dt><dd>UUserWidget</dd>
   <dt>Members</dt><dd>62</dd>
   <dt>Blueprint nodes</dt><dd>8</dd>
-  <dt>Panel fields</dt><dd>5</dd>
+  <dt>Panel fields</dt><dd>2</dd>
   </dl>
 </div>
 <h2 id="public-function">Public functions <em>15</em></h2>
@@ -288,7 +288,7 @@ TArray&lt; FName &gt; GetItemSetterOptions() const</div>
 <div class="member" id="ValueChangedAnimation">
   <div class="member-head"><b>Value Changed Animation</b><span>ValueChangedAnimation</span><em class="badge role">panel</em></div>
   <div class="member-decl"><span class="macro">UPROPERTY( EditAnywhere, BlueprintReadWrite, Category = "Smart Tables|Cell", meta = ( ToolTip = "A Sequencer animation played when this row's values move, named Pulse by default. A refresh of everything never fires it." ) )</span>
-FName ValueChangedAnimation = TEXT( "     " )</div>
+FName ValueChangedAnimation = TEXT( "Pulse" )</div>
   <p>An animation played when the values of this row move, and at no other time.</p>
 <p>A flash, or a quick change of colour. It starts from where the cell already sits, and nothing pins frame zero in front of it, so an animation whose first key is somewhere else jumps for one frame.</p>
 <p>A refresh of everything arrives as Refreshed and plays nothing. Empty for a cell that holds still.</p>

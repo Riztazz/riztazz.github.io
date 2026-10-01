@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SmartTableColumnSelection.h - Smart Tables</title>
 <link rel="icon" href="../img/smarttables_favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="../style.css?v=94b6e99e">
-<script src="../theme.js?v=94b6e99e"></script>
-<script defer src="../search.js?v=94b6e99e"></script>
+<link rel="stylesheet" href="../style.css?v=46c52ba6">
+<script src="../theme.js?v=46c52ba6"></script>
+<script defer src="../search.js?v=46c52ba6"></script>
 </head>
 <body>
 
@@ -105,7 +105,7 @@
   <div class="member-decl">bool Select( FName ColumnId, TArrayView&lt; const FName &gt; ShownIds )</div>
   <p>Aims at one column, or clears the aim when given NAME_None.</p>
 <p>A column that is not in ShownIds is refused and never stored. Storing one would leave every later intent given no column of its own working on a column nothing can see.</p>
-<p>true only where the aim really moved, which is what tells a caller it owes an event. Aiming again at the column already aimed at brings LastIndex up to date and gives back false.</p>
+<p>Returns true only where the aim really moved, which is what tells a caller it owes an event. Aiming again at the column already aimed at brings LastIndex up to date and gives back false.</p>
 </div>
 <div class="member" id="Move">
   <div class="member-head"><b class="cpp">Move</b></div>

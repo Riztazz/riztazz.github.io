@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>When it draws nothing - Smart Tables</title>
 <link rel="icon" href="../img/smarttables_favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="../style.css?v=94b6e99e">
-<script src="../theme.js?v=94b6e99e"></script>
-<script defer src="../search.js?v=94b6e99e"></script>
+<link rel="stylesheet" href="../style.css?v=46c52ba6">
+<script src="../theme.js?v=46c52ba6"></script>
+<script defer src="../search.js?v=46c52ba6"></script>
 </head>
 <body>
 
@@ -103,8 +103,9 @@ and the error names the column.</p>
     hides. Give it its own <b>Column Id</b>, or delete it.</dd>
 <dt>A binding that matches nothing</dt><dd>The error lists what the class does offer, so the fix is on
     screen next to the mistake.</dd>
-<dt>A source that can't be read</dt><dd>An <b>Expected Item Class</b>, <b>Source Table</b> or
-    <b>Source File</b> that no longer resolves.</dd>
+<dt>A source that can't be read</dt><dd>An <b>Expected Item Class</b> or <b>Source Table</b> that no longer
+    resolves. A missing <b>Source File</b> isn't checked at compile: <b>Copy Columns From Source</b> warns
+    in the log when you press it.</dd>
 </dl>
 
 <p>You find these out on compile, not from a blank column at runtime.</p>
@@ -115,9 +116,10 @@ and the error names the column.</p>
 change:</p>
 
 <pre><code>Column 'Shield' draws nothing: it binds 'Shielding',
-which is no property and no pure function on BP_Ship
+which is no property and no pure function on BP_Ship_C
 that takes no parameters. Set the BindingName of the
-column to one of these.
+column to one of these, or set the ExpectedItemClass of
+the table to get a dropdown of them.
 Available: Callsign, Shield, Mass, Speed</code></pre>
 
 <p>A warning here means a real mistake in the setup, and you will not see many. Nothing warns about a
@@ -163,7 +165,9 @@ four answers you never asked for. The console takes one name per command anyway.
     level.</dd>
 <dt>A gesture that did nothing</dt><dd><b>Input</b>. Selection, focus, scrolling, drags. It carries the
     function and the gesture alike, so a pad logs what a mouse logs.</dd>
-<dt>Anything else</dt><dd><b>LogSmartTables</b>. Being built, model swaps, style assets, menus.</dd>
+<dt>Anything else</dt><dd><b>LogSmartTables</b>. Style assets and the palette, the row wrapper class, the
+    busy state. Building the widget and swapping the model log under <b>Data</b>, and menus under
+    <b>Input</b>.</dd>
 </dl>
 
 <p>Use <code>VeryVerbose</code> instead for anything that runs per row or per cell. At a million rows

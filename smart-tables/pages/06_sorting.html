@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sorting and filtering - Smart Tables</title>
 <link rel="icon" href="../img/smarttables_favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="../style.css?v=94b6e99e">
-<script src="../theme.js?v=94b6e99e"></script>
-<script defer src="../search.js?v=94b6e99e"></script>
+<link rel="stylesheet" href="../style.css?v=46c52ba6">
+<script src="../theme.js?v=46c52ba6"></script>
+<script defer src="../search.js?v=46c52ba6"></script>
 </head>
 <body>
 
@@ -106,7 +106,7 @@ ties.</p>
 
 <figure class="shot" data-shot="two_level" data-want="PIE, a table sorted by one column with shift held on a second, both header arrows visible."><img src="../img/small/two_level.png" data-full="../img/two_level.png" alt="Two levels of sort, the second held under the first." loading="lazy"><figcaption>Two levels of sort, the second held under the first.</figcaption></figure>
 
-<p>A column that breaks no tie gets refused, and the header greys it out. Turn on
+<p>A column that breaks no tie gets refused, and while you hold Shift the header greys it out. Turn on
 <b>Allow Dead Secondary Sort</b> if you would rather the click went through.</p>
 
 <h2 id="filter">Filtering</h2>
@@ -129,7 +129,8 @@ it.</p>
 <p>Sort a very large set and it is slow enough to see. Give the model a work dispatcher and the sort
 runs off the game thread instead, with the busy overlay up while it works.</p>
 
-<p><b>Set Work Dispatcher</b> is C++ only, so the model has to be a C++ one as well. That is over on
+<p><b>Set Work Dispatcher</b> is C++ only, so the call has to come from C++. Any model takes one, the
+built-in ones included. That is over on
 <a href="12_cpp.html">Dropping to C++</a>. Without a dispatcher, every sort runs on the game thread.</p>
   <p class="next">Next: <a href="07_input.html">Selection and input</a></p>
 </main>

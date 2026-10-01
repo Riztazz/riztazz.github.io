@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SmartTableScrollMove.h - Smart Tables</title>
 <link rel="icon" href="../img/smarttables_favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="../style.css?v=94b6e99e">
-<script src="../theme.js?v=94b6e99e"></script>
-<script defer src="../search.js?v=94b6e99e"></script>
+<link rel="stylesheet" href="../style.css?v=46c52ba6">
+<script src="../theme.js?v=46c52ba6"></script>
+<script defer src="../search.js?v=46c52ba6"></script>
 </head>
 <body>
 
@@ -107,7 +107,7 @@
   <p>Works out the move to a row and stores it.</p>
 <p>False on three counts: Seconds asks for a jump, the view is already there, or the row is the last one and the view sits at or past the target. All three leave the view to be placed on the row outright.</p>
 <p>PresentedRow and Row are the same row in the two spaces, and both are known at the call site.</p>
-<p>RowsOnScreen the viewport height over the named row height. It counts too many the moment a row draws taller, which the last-row refusal above covers. Seconds how long the whole move may take. Zero or less asks for a jump.</p>
+<p><code>RowsOnScreen</code>: the viewport height over the named row height. It counts too many the moment a row draws taller, which the last-row refusal above covers. <code>Seconds</code>: how long the whole move may take. Zero or less asks for a jump.</p>
 </div>
 <div class="member" id="FSmartTableScrollMove-Step">
   <div class="member-head"><b class="cpp">Step</b></div>
@@ -142,8 +142,8 @@
   <div class="member-head"><b class="cpp">ScrollAfterRowSet</b><em class="badge mod">static</em></div>
   <div class="member-decl">static <a class="xref" href="smarttablescrollmove.html#FSmartTableRowSetScroll">FSmartTableRowSetScroll</a> ScrollAfterRowSet( const <a class="xref" href="smarttablescrollmove.html#FSmartTableRowSetFacts">FSmartTableRowSetFacts</a> &amp; Facts, const <a class="xref" href="smarttablerowsetdiff.html">FSmartTableRowSetDiff</a> &amp; Diff, TFunctionRef&lt; int32() &gt; LastDrawnArrival )</div>
   <p>What the view does after rows arrived or left, whichever route they took.</p>
-<p>- A replaced set scrolls nothing, and neither does a table that drew no row before. Their rows did not arrive one by one. - With bScrollToAddedRow on and rows arrived, bStickToEnd moves a view that sat at the end to the new last row, when the list grew. With bStickToEnd off the view moves to the arrived row drawn last. - Otherwise a view off the top and off the end holds its top row, when the diff names rows and no move is going. At the top the new rows above show, and at the end the list keeps its own bottom.</p>
-<p>LastDrawnArrival the drawn place of the arrived row drawn last, or INDEX_NONE when none is drawn. Asked only when the answer depends on it, since finding the rows can cost a walk.</p>
+<ul><li>A replaced set scrolls nothing, and neither does a table that drew no row before. Their rows did not arrive one by one.</li><li>With bScrollToAddedRow on and rows arrived, bStickToEnd moves a view that sat at the end to the new last row, when the list grew. With bStickToEnd off the view moves to the arrived row drawn last.</li><li>Otherwise a view off the top and off the end holds its top row, when the diff names rows and no move is going. At the top the new rows above show, and at the end the list keeps its own bottom.</li></ul>
+<p><code>LastDrawnArrival</code>: the drawn place of the arrived row drawn last, or INDEX_NONE when none is drawn. Asked only when the answer depends on it, since finding the rows can cost a walk.</p>
 </div>
 <h2 id="FSmartTableScrollMove-public-variable">Public variables <em>5</em></h2>
 <div class="member" id="FSmartTableScrollMove-Move">

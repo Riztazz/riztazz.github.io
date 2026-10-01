@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SmartTableCellDrag.h - Smart Tables</title>
 <link rel="icon" href="../img/smarttables_favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="../style.css?v=94b6e99e">
-<script src="../theme.js?v=94b6e99e"></script>
-<script defer src="../search.js?v=94b6e99e"></script>
+<link rel="stylesheet" href="../style.css?v=46c52ba6">
+<script src="../theme.js?v=46c52ba6"></script>
+<script defer src="../search.js?v=46c52ba6"></script>
 </head>
 <body>
 
@@ -121,19 +121,19 @@
   <div class="member-head"><b class="cpp">SetTarget</b></div>
   <div class="member-decl">bool SetTarget( FName RowId, FName ColumnId )</div>
   <p>Puts the target on this cell.</p>
-<p>false while no drag is out, and when the target is this cell already. Neither of those changes the marking of any cell.</p>
+<p>Returns false while no drag is out, and when the target is this cell already. Neither of those changes the marking of any cell.</p>
 </div>
 <div class="member" id="ClearTarget">
   <div class="member-head"><b class="cpp">ClearTarget</b></div>
   <div class="member-decl">bool ClearTarget( FName RowId, FName ColumnId )</div>
   <p>Takes the target off this cell, and off no other.</p>
 <p>Slate raises the enter of the new cell before the leave of the old one. A clear with no check would drop the target the pointer has just moved onto.</p>
-<p>false unless the target is this cell.</p>
+<p>Returns false unless the target is this cell.</p>
 </div>
 <div class="member" id="End">
   <div class="member-head"><b class="cpp">End</b></div>
   <div class="member-decl">bool End()</div>
-  <p>Ends the drag. false when nothing was marked.</p>
+  <p>Ends the drag. Returns false when nothing was marked.</p>
 </div>
 <div class="member" id="Reset">
   <div class="member-head"><b class="cpp">Reset</b></div>

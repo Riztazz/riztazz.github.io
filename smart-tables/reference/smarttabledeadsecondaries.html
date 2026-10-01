@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SmartTableDeadSecondaries.h - Smart Tables</title>
 <link rel="icon" href="../img/smarttables_favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="../style.css?v=94b6e99e">
-<script src="../theme.js?v=94b6e99e"></script>
-<script defer src="../search.js?v=94b6e99e"></script>
+<link rel="stylesheet" href="../style.css?v=46c52ba6">
+<script src="../theme.js?v=46c52ba6"></script>
+<script defer src="../search.js?v=46c52ba6"></script>
 </head>
 <body>
 
@@ -103,7 +103,7 @@
   <div class="member-head"><b class="cpp">MarkStale</b></div>
   <div class="member-decl">void MarkStale()</div>
   <p>Says the answer may no longer fit the rows. Every input it depends on, and where the table marks it:</p>
-<p>- the presented order and the row set, ties being groups in it. HandlePresentationChanged. - the values, which decide what ties. The same place, through bCellsStale. - the declared columns, the candidates. SetColumns. - bAllowDeadSecondarySort, which decides if it is worked out at all. Its setter. - the model, whose swap arrives as a presentation change.</p>
+<ul><li>the presented order and the row set, ties being groups in it. HandlePresentationChanged.</li><li>the values, which decide what ties. The same place, through bCellsStale.</li><li>the declared columns, the candidates. SetColumns.</li><li>bAllowDeadSecondarySort, which decides if it is worked out at all. Its setter.</li><li>the model, whose swap arrives as a presentation change.</li></ul>
 <p>One row changing is left out. It can move the answer, but marking on it left a live feed paying a whole-table pass per tick. The gated readers only draw, and SortBySecondaryColumn works it out again.</p>
 </div>
 <div class="member" id="IsStale">

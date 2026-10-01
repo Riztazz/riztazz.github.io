@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SmartTableLayoutStore.h - Smart Tables</title>
 <link rel="icon" href="../img/smarttables_favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="../style.css?v=94b6e99e">
-<script src="../theme.js?v=94b6e99e"></script>
-<script defer src="../search.js?v=94b6e99e"></script>
+<link rel="stylesheet" href="../style.css?v=46c52ba6">
+<script src="../theme.js?v=46c52ba6"></script>
+<script defer src="../search.js?v=46c52ba6"></script>
 </head>
 <body>
 
@@ -88,7 +88,7 @@
 
 <main>
   <h1>SmartTableLayoutStore.h</h1>
-  <p class="lede">Where a rearranged header goes when the game closes, and how it comes back.</p>
+  <p class="lede">Where a rearranged header is kept between sessions, and how it comes back.</p>
 <div class="refhead">
   <div class="path">Source/SmartTables/Public/SmartTableLayoutStore.h</div>
 <p>The one line way in: layouts in the config file, keyed by table id.</p>
@@ -137,7 +137,7 @@
 <div class="member" id="ConfigSection">
   <div class="member-head"><b>Config Section</b><span>ConfigSection</span><em class="badge role">panel</em></div>
   <div class="member-decl"><span class="macro">UPROPERTY( EditAnywhere, BlueprintReadWrite, Category = "Smart Tables" )</span>
-FString ConfigSection = TEXT( "                   " )</div>
+FString ConfigSection = TEXT( "SmartTables.Layouts" )</div>
   <p>The heading in the ini file that stored layouts sit under. One line per table id, and two stores pointed at two headings keep two sets of layouts apart.</p>
 </div>
 <div class="member" id="ConfigFileName">

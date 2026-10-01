@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SmartTableRowWidget.h - Smart Tables</title>
 <link rel="icon" href="../img/smarttables_favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="../style.css?v=94b6e99e">
-<script src="../theme.js?v=94b6e99e"></script>
-<script defer src="../search.js?v=94b6e99e"></script>
+<link rel="stylesheet" href="../style.css?v=46c52ba6">
+<script src="../theme.js?v=46c52ba6"></script>
+<script defer src="../search.js?v=46c52ba6"></script>
 </head>
 <body>
 
@@ -88,7 +88,7 @@
 
 <main>
   <h1>SmartTableRowWidget.h</h1>
-  <p class="lede">A widget wrapped around a whole row, for a background or an entrance.</p>
+  <p class="lede">A widget wrapped around a whole row, so the row can animate in Sequencer.</p>
 <div class="refhead">
   <div class="path">Source/SmartTables/Public/SmartTableRowWidget.h</div>
 <p>A widget wrapped around the cells of one row, so a row can be animated. Empty is the default.</p>
@@ -100,7 +100,7 @@
   <dt>Extends</dt><dd>UUserWidget</dd>
   <dt>Members</dt><dd>27</dd>
   <dt>Blueprint nodes</dt><dd>4</dd>
-  <dt>Panel fields</dt><dd>3</dd>
+  <dt>Panel fields</dt><dd>1</dd>
   </dl>
 </div>
 <h2 id="public-function">Public functions <em>10</em></h2>
@@ -209,7 +209,7 @@ void OnRowReleased()</div>
 <div class="member" id="ArrivalAnimation">
   <div class="member-head"><b>Arrival Animation</b><span>ArrivalAnimation</span><em class="badge role">panel</em></div>
   <div class="member-decl"><span class="macro">UPROPERTY( EditAnywhere, BlueprintReadWrite, Category = "Smart Tables|Row", meta = ( ToolTip = "A Sequencer animation played once when this wrapper is given a row that is new. Empty for a wrapper that is only layout." ) )</span>
-FName ArrivalAnimation = TEXT( "  " )</div>
+FName ArrivalAnimation = TEXT( "In" )</div>
   <p>An animation played when this wrapper is given a row that is new, and at no other time.</p>
 <p>Built in Sequencer and named here, with no code beside it. Empty for a wrapper that is only layout.</p>
 <p>PlayArrivalNow flushes the first frame before anything draws, so an entrance never shows the row at rest for a frame and then jumps into its first key.</p>

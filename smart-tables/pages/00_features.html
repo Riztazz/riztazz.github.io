@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Every feature - Smart Tables</title>
 <link rel="icon" href="../img/smarttables_favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="../style.css?v=94b6e99e">
-<script src="../theme.js?v=94b6e99e"></script>
-<script defer src="../search.js?v=94b6e99e"></script>
+<link rel="stylesheet" href="../style.css?v=46c52ba6">
+<script src="../theme.js?v=46c52ba6"></script>
+<script defer src="../search.js?v=46c52ba6"></script>
 </head>
 <body>
 
@@ -92,9 +92,13 @@
 <p>On the left is the thing you want. On the right is where it lives, which is either a field in the
 Details panel or a node in a graph.</p>
 
-<p>A switch only ever takes the gesture away. Turn <b>Allow Column Resize</b> off and the header stops
-dragging, but <b>Set Column Width</b> carries on working. A screen driven by a pad loses nothing. The
-header menu is the one exception: switched off, it opens from nowhere, its nodes included.</p>
+<p>A table-wide switch takes the gesture away and leaves the node. Turn <b>Allow Column Resize</b> off
+and the header stops dragging, but <b>Set Column Width</b> carries on working. The header menu is the
+exception: switched off, it opens from nowhere, its nodes included.</p>
+
+<p>A column's own tick boxes go further. With <b>Sortable</b> off, <b>Cycle Column Sort</b> skips that
+column too, and with <b>Resizable</b> off, so does <b>Begin Column Resize</b>. <b>Sort By Column</b>
+and <b>Set Column Width</b> still work on it.</p>
 
 <p>Every default named here is the one it ships with. Anything that is off out of the box says so.</p>
 
@@ -124,10 +128,10 @@ header menu is the one exception: switched off, it opens from nowhere, its nodes
 <dt>Decimal places</dt><dd><b>Max Fractional Digits</b>. 2 by default.</dd>
 <dt>Per-column switches</dt><dd><b>Sortable</b>, <b>Resizable</b>, <b>Hideable</b>, <b>Hidden By
     Default</b>.</dd>
-<dt>An icon in the header</dt><dd><b>Show Header Icon</b>, then <b>Header Icon</b> and <b>Header Icon
-    Spacing</b>.</dd>
-<dt>One header styled differently</dt><dd><b>Override Header Text Style</b>, then <b>Header Text
-    Style</b>.</dd>
+<dt>An icon in the header</dt><dd><b>Show Header Icon</b>, off by default, then <b>Header Icon</b> and
+    <b>Header Icon Spacing</b>.</dd>
+<dt>One header styled differently</dt><dd><b>Override Header Text Style</b>, off by default, then
+    <b>Header Text Style</b>.</dd>
 <dt>A widget instead of text</dt><dd><b>Cell Class</b>.</dd>
 <dt>Duplicate ids caught at compile</dt><dd>Automatic. It's an error, so the compile stops.</dd>
 <dt>Bindings checked at compile</dt><dd>Automatic once <b>Column Source</b> names a schema.</dd>
@@ -187,8 +191,9 @@ header menu is the one exception: switched off, it opens from nowhere, its nodes
 <dt>Take keyboard focus</dt><dd><b>Focus Table</b>.</dd>
 <dt>Focus follows a click</dt><dd>On. Switch: <b>Focus On Pointer Interaction</b>.</dd>
 <dt>Aim at a column with a pad</dt><dd><b>Select Column</b>, <b>Move Column Selection</b>. Held apart from
-    the row selection, so a sort that reorders the header can't move the aim.</dd>
-<dt>Selection survives a sort</dt><dd>Automatic, given a model that answers <b>Get Row Id</b>.</dd>
+    the row selection and named by column, so moving a column can't move the aim.</dd>
+<dt>Selection survives a sort</dt><dd>Automatic. A sort moves no row number. <b>Get Row Id</b> is what keeps
+    it when rows arrive or leave.</dd>
 </dl>
 
 <h2 id="reorder">Reordering, dragging</h2>
@@ -261,10 +266,11 @@ header menu is the one exception: switched off, it opens from nowhere, its nodes
 <dt>Chat window behaviour</dt><dd><b>Stick To End</b> and <b>Scroll To Added Row</b>, both on. The view
     stays at the bottom while the reader is there. Scrolled up, it keeps the rows it shows while new ones
     come in and old ones go.</dd>
-<dt>Open at the bottom</dt><dd><b>Start At End</b>.</dd>
+<dt>Open at the bottom</dt><dd><b>Start At End</b>. Off by default.</dd>
 <dt>30 columns</dt><dd><b>Allow Horizontal Scroll</b>. Off by default. With it off, widening one column
     takes width from its neighbours. With it on, the columns scroll sideways instead.</dd>
-<dt>Reach a far column with a pad</dt><dd><b>Scroll Columns By</b>.</dd>
+<dt>Reach a far column with a pad</dt><dd><b>Scroll Columns By</b>, while <b>Allow Horizontal Scroll</b>
+    is on.</dd>
 <dt>Right-drag to pan</dt><dd>On. Switch: <b>Allow Right Click Drag Scroll</b>.</dd>
 </dl>
 
@@ -273,8 +279,9 @@ header menu is the one exception: switched off, it opens from nowhere, its nodes
 <dl class="features">
 <dt>One asset for the whole look</dt><dd><b>Style Asset</b>. It wins over the table's own values, and
     those grey out while it's set.</dd>
-<dt>Every surface</dt><dd>Background, rows, header, scrollbar, menu, and the marks a drag draws. All in
-    the panel under <b>Style</b>.</dd>
+<dt>Every surface</dt><dd>Background, rows, header, scrollbar, menu, and the marks a drag draws. Most sit
+    in the panel under <b>Style</b>, and six under <b>Row Numbers</b>, <b>Empty State</b>, <b>Drag and
+    Drop</b> and <b>Busy</b>.</dd>
 <dt>A project-wide palette</dt><dd>Project Settings, Plugins, Smart Tables. 11 colours and 4
     column metrics that every table starts from.</dd>
 <dt>Edits land at once</dt><dd>Automatic in the editor. Open tables, style assets and templates all
@@ -282,14 +289,15 @@ header menu is the one exception: switched off, it opens from nowhere, its nodes
 <dt>Wrap a row in your own widget</dt><dd><b>Row Widget Class</b>, with the cells going into a named slot.
     That is what lets a row animate in Sequencer.</dd>
 <dt>An entrance</dt><dd><b>Arrival Animation</b> on that wrapper. Named <code>In</code> by default.</dd>
-<dt>No art ships</dt><dd>Nothing to enable. Every stock surface is drawn from maths, so it stays crisp at
-    any DPI and tints with whatever style the table wears.</dd>
+<dt>No art ships</dt><dd>Nothing to enable. The plugin adds no image to your project. Its brushes take
+    the style's colours, and the sort arrows and the menu tick are the engine's own.</dd>
 </dl>
 
 <h2 id="big">Large sets</h2>
 
 <dl class="features">
-<dt>A million rows</dt><dd>Nothing to enable. Rows virtualise, so the cost is roughly one screen.</dd>
+<dt>A million rows</dt><dd>Nothing to enable. Only the rows on screen get widgets. The table keeps a few
+    numbers for every row, and a sort reads a key from each.</dd>
 <dt>Sort off the game thread</dt><dd><b>Set Work Dispatcher</b> on the model, with one of the two shipped
     dispatchers. <b>C++ only</b>, and nothing installs one by default, so the shipped behaviour is an
     inline sort.</dd>
@@ -309,7 +317,6 @@ header menu is the one exception: switched off, it opens from nowhere, its nodes
     after a new field brings that one in and leaves your edits alone.</dd>
 <dt>A guard on switching source</dt><dd>Automatic. Changing <b>Column Source</b> asks first, because it
     clears the others.</dd>
-<dt>Open the style asset</dt><dd>A button beside <b>Style Asset</b>.</dd>
 <dt>5 log categories</dt><dd>Console: <code>Log LogSmartTablesSort Verbose</code> and 4 more. One at
     a time, so the answer to one question isn't buried under the others.</dd>
 </dl>
@@ -326,7 +333,8 @@ header menu is the one exception: switched off, it opens from nowhere, its nodes
 <dt>On Column Selection Changed</dt><dd>The column a pad is aiming at moved.</dd>
 <dt>On Cell Value Changed</dt><dd>A control inside a cell moved.</dd>
 <dt>On Cell Dropped</dt><dd>A drag ended on a cell.</dd>
-<dt>On Rows Dropped</dt><dd>A row drag ended.</dd>
+<dt>On Rows Dropped</dt><dd>Rows were moved: a row drag ended, or <b>Move Rows To</b> or <b>Move Selected
+    Rows</b> ran.</dd>
 <dt>On Row Menu Opening</dt><dd>Before the row menu reads its entries.</dd>
 <dt>On Row Menu Entry Chosen</dt><dd>One of your entries was picked.</dd>
 </dl>

@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pairs - Smart Tables</title>
 <link rel="icon" href="../img/smarttables_favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="../style.css?v=94b6e99e">
-<script src="../theme.js?v=94b6e99e"></script>
-<script defer src="../search.js?v=94b6e99e"></script>
+<link rel="stylesheet" href="../style.css?v=46c52ba6">
+<script src="../theme.js?v=46c52ba6"></script>
+<script defer src="../search.js?v=46c52ba6"></script>
 </head>
 <body>
 
@@ -97,15 +97,16 @@ cards, and the grid falls out of the same widget.</p>
 <h2 id="cells">Animating a card from its own cell</h2>
 
 <p>Each card animates itself in Sequencer. The table hands it a row and a column, and the cell runs the
-flip, the match and the settle.</p>
+flip, the match and the miss.</p>
 
-<p>Cells get reused, so the card you just flipped can come back as a different card. Each one resets its
-animation in <b>On Cell Released</b>. Miss that and the board fills up with cards stuck mid-flip.</p>
+<p>Cells get reused, so the card you just flipped can come back as a different card. The table stops a
+released cell's animations and resets its opacity and transform, and <b>On Cell Assigned</b> puts the
+face and the back of the new card in place.</p>
 
 <h2 id="wiring">How it's wired</h2>
 
-<p>The model builds a bag of pairs at whatever width and height you give it. Selection is off, so a
-click reaches the cell and not the row.</p>
+<p>The model deals a shuffled deck of pairs across any board with an even number of cards, up to 16
+pairs. The cells take the clicks, and with selection off no row marks itself.</p>
   <p class="next">Next: <a href="27_demo_keys.html">Keys without Enhanced Input</a></p>
 </main>
 

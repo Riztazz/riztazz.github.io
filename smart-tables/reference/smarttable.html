@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SmartTable.h - Smart Tables</title>
 <link rel="icon" href="../img/smarttables_favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="../style.css?v=94b6e99e">
-<script src="../theme.js?v=94b6e99e"></script>
-<script defer src="../search.js?v=94b6e99e"></script>
+<link rel="stylesheet" href="../style.css?v=46c52ba6">
+<script src="../theme.js?v=46c52ba6"></script>
+<script defer src="../search.js?v=46c52ba6"></script>
 </head>
 <body>
 
@@ -104,9 +104,9 @@ Shield.CellClass   = UMyBarCell::StaticClass();</pre>
   <dl>
   <dt>Class</dt><dd>USmartTable</dd>
   <dt>Extends</dt><dd>UWidget</dd>
-  <dt>Members</dt><dd>400</dd>
+  <dt>Members</dt><dd>399</dd>
   <dt>Blueprint nodes</dt><dd>99</dd>
-  <dt>Panel fields</dt><dd>88</dd>
+  <dt>Panel fields</dt><dd>68</dd>
   </dl>
 </div>
 <h2 id="ctor">Constructor <em>1</em></h2>
@@ -957,7 +957,7 @@ bool IsRowMenuEnabled() const</div>
   <div class="member-decl">void ReapplyAfterPaletteChange( const TSet&lt; const UObject * &gt; &amp; Refreshed )</div>
   <p>Runs again after a palette edit moved something under this table.</p>
 <p>Refreshed holds every object the sweep really changed. Only a table can say whether any of them matters to it, because StyleAsset and the live widget are both out of reach from outside. That is why the check sits here and not in the sweep, and why a table nothing moved goes no further.</p>
-<p><a class="xref" href="smarttablelayoutstore.html#SmartTable">SmartTable</a>::StyleRefresh::FromSettings calls it, and nothing else does.</p>
+<p>SmartTable::StyleRefresh::FromSettings calls it, and nothing else does.</p>
 </div>
 <div class="member" id="MakeRowNumberWidget">
   <div class="member-head"><b class="cpp">MakeRowNumberWidget</b></div>
@@ -1296,7 +1296,7 @@ TArray&lt; FName &gt; GetBindableNames() const</div>
 </div>
 <div class="member" id="ColumnView">
   <div class="member-head"><b class="cpp">ColumnView</b></div>
-  <div class="member-decl"><a class="xref" href="smarttable.html#SmartTable-FColumnView">SmartTable::FColumnView</a> ColumnView() const</div>
+  <div class="member-decl">SmartTable::FColumnView ColumnView() const</div>
   <p>What the columns are right now, read off Columns, ActiveLayout and ResolvedWidths. It lives for one call. Every read of the columns goes through it.</p>
 </div>
 <div class="member" id="LayoutFor">
@@ -2605,12 +2605,12 @@ TObjectPtr&lt; <a class="xref" href="smarttablestyle.html">USmartTableStyle</a> 
 <p>EntryIndex is the place in RowMenuEntries as named, so it holds still when an entry hides itself. A handler keyed on the drawn place works on the wrong entry the moment a row hides one.</p>
 </div>
 <div class="member" id="FOnSmartTableExtendHeaderMenu">
-  <div class="member-head"><b class="cpp">FOnSmartTableExtendHeaderMenu</b><em class="badge role">event</em></div>
+  <div class="member-head"><b class="cpp">FOnSmartTableExtendHeaderMenu</b></div>
   <div class="member-decl">DECLARE_DELEGATE_TwoParams( FOnSmartTableExtendHeaderMenu, FName, FMenuBuilder &amp; )</div>
   <p>The column the menu was opened on, and the builder to add entries to.</p>
 </div>
 <div class="member" id="FOnSmartTableExtendRowMenu">
-  <div class="member-head"><b class="cpp">FOnSmartTableExtendRowMenu</b><em class="badge role">event</em></div>
+  <div class="member-head"><b class="cpp">FOnSmartTableExtendRowMenu</b></div>
   <div class="member-decl">DECLARE_DELEGATE_TwoParams( FOnSmartTableExtendRowMenu, const <a class="xref" href="smarttablekeptrow.html">FSmartTableKeptRow</a> &amp;, FMenuBuilder &amp; )</div>
   <p>The C++ way out for a row menu that needs more than a list of entries: submenus, icons, checks.</p>
 <p>The row comes kept. Its NaturalRow is right while the menu is built, and an entry picked later finds the row again with FindKeptRow on the model.</p>
@@ -2645,12 +2645,6 @@ TObjectPtr&lt; <a class="xref" href="smarttablestyle.html">USmartTableStyle</a> 
 <div class="member" id="FCellWalkScope-bPrevious">
   <div class="member-head"><b class="cpp">bPrevious</b></div>
   <div class="member-decl">bool bPrevious = false</div>
-</div>
-<h2 class="type" id="SmartTable">SmartTable <em>namespace</em></h2>
-<h2 id="SmartTable-public-variable">Public variables <em>1</em></h2>
-<div class="member" id="SmartTable-FColumnView">
-  <div class="member-head"><b class="cpp">FColumnView</b></div>
-  <div class="member-decl">class FColumnView</div>
 </div>
   <p class="next">Next: <a href="smarttabletypes.html">SmartTableTypes.h</a></p>
 </main>
@@ -3183,13 +3177,6 @@ TObjectPtr&lt; <a class="xref" href="smarttablestyle.html">USmartTableStyle</a> 
       <summary><a href="#FCellWalkScope-private-variable">Private variables</a><em>2</em></summary>
       <a href="#FCellWalkScope-Table">Table</a>
       <a href="#FCellWalkScope-bPrevious">bPrevious</a>
-    </details>
-  </details>
-  <details class="t" open>
-    <summary>SmartTable</summary>
-    <details class="s">
-      <summary><a href="#SmartTable-public-variable">Public variables</a><em>1</em></summary>
-      <a href="#SmartTable-FColumnView">FColumnView</a>
     </details>
   </details></aside>
 

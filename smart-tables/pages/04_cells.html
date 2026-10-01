@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cells are Widget Blueprints - Smart Tables</title>
 <link rel="icon" href="../img/smarttables_favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="../style.css?v=94b6e99e">
-<script src="../theme.js?v=94b6e99e"></script>
-<script defer src="../search.js?v=94b6e99e"></script>
+<link rel="stylesheet" href="../style.css?v=46c52ba6">
+<script src="../theme.js?v=46c52ba6"></script>
+<script defer src="../search.js?v=46c52ba6"></script>
 </head>
 <body>
 
@@ -88,7 +88,7 @@
 
 <main>
   <h1>Cells are Widget Blueprints</h1>
-  <p class="lede">Any widget you build in UMG can be a column.</p>
+  <p class="lede">Any Widget Blueprint you parent to Smart Table Cell can be a column.</p>
 <p>A column with nothing set draws text, and for most columns that is the answer you want.</p>
 
 <p>Point one at a <b>Widget Blueprint</b> instead and that widget becomes the cell. A progress bar. A
@@ -109,9 +109,10 @@ draw.</p>
 
 <figure class="shot" data-shot="cell_graph" data-want="The same cell's graph, with On Cell Assigned wired into Get Item, a Cast, and something being set."><img src="../img/small/cell_graph.png" data-full="../img/cell_graph.png" alt="On Cell Assigned reads the model and fills the widget." loading="lazy"><figcaption>On Cell Assigned reads the model and fills the widget.</figcaption></figure>
 
-<p>There are 4 nodes for reading the context. <b>Get Item</b> is the object for this row.
-<b>Get Column Id</b> tells you which column you are in, so one cell class can serve several of them.
-<b>Get Row Index</b> is the row number. <b>Get Table</b> is the table itself.</p>
+<p>These nodes read the context. <b>Get Item</b> is the object for this row. <b>Get Column Id</b> tells
+you which column you are in, so one cell class can serve several of them. <b>Get Row Index</b> is the
+row number. <b>Get Table</b> is the table itself, and <b>Get Model</b> is its model. <b>Get Assign
+Reason</b> says why the cell was filled, and <b>Get Cell Drag Role</b> says what a drag makes of it.</p>
 
 <p>What you get back out of <b>Get Item</b> depends on how you filled the table. After
 <b>Set Items</b> it is your own object, so cast it and read it. Over a DataTable you get a

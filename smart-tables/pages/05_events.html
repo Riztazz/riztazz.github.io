@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Events - Smart Tables</title>
 <link rel="icon" href="../img/smarttables_favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="../style.css?v=94b6e99e">
-<script src="../theme.js?v=94b6e99e"></script>
-<script defer src="../search.js?v=94b6e99e"></script>
+<link rel="stylesheet" href="../style.css?v=46c52ba6">
+<script src="../theme.js?v=46c52ba6"></script>
+<script defer src="../search.js?v=46c52ba6"></script>
 </head>
 <body>
 
@@ -118,8 +118,9 @@ That one row reads itself again. No other row does, and the order stays where it
 
 <h2 id="menus">Menus</h2>
 
-<p>Fill in <b>Row Menu Entries</b> on the table, each with an id and a label, then bind <b>On Row Menu
-Entry Chosen</b> and switch on the id.</p>
+<p>Switch on <b>Enabled</b> under <b>Row Menu Options</b>, which is off by default. Fill in <b>Row Menu
+Entries</b> on the table, each with an id and a label, then bind <b>On Row Menu Entry Chosen</b> and
+switch on the id.</p>
 
 <p>Bind <b>On Row Menu Opening</b> when the entries are different from row to row. It fires before the
 entries are read, so if you change the list there you change the menu that opens.</p>
@@ -144,9 +145,9 @@ because they've already written the value.</p>
 
 <p>The table writes none of your data. It says what happened and leaves the write to you.</p>
 
-<p>The model is the exception, on two paths. A reorder and a cell edit both go through it, because the
-model is the only thing that knows where the rows are. By the time either event reaches your graph, the
-data has already moved.</p>
+<p>The model is the exception, on two paths. A reorder goes through it, because the model is the only
+thing that knows where the rows are, so by the time <b>On Rows Dropped</b> reaches your graph the rows
+have already moved. A built-in cell edit goes through the model too, and raises no event.</p>
   <p class="next">Next: <a href="06_sorting.html">Sorting and filtering</a></p>
 </main>
 

@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Selection and input - Smart Tables</title>
 <link rel="icon" href="../img/smarttables_favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="../style.css?v=94b6e99e">
-<script src="../theme.js?v=94b6e99e"></script>
-<script defer src="../search.js?v=94b6e99e"></script>
+<link rel="stylesheet" href="../style.css?v=46c52ba6">
+<script src="../theme.js?v=46c52ba6"></script>
+<script defer src="../search.js?v=46c52ba6"></script>
 </head>
 <body>
 
@@ -100,18 +100,19 @@ objects.</p>
 
 <h2 id="nomouse">Nothing needs a mouse</h2>
 
-<p>Whatever a click does, there is a node that does it too. <b>Move Selection</b> up or down.
+<p>Most of what a click does has a node too. <b>Move Selection</b> up or down.
 <b>Move Selection By Page</b>, <b>Select First Row</b>, <b>Select Last Row</b>,
 <b>Activate Selected Row</b> and <b>Focus Table</b>.</p>
 
 <p>Columns get the same treatment: <b>Cycle Column Sort</b>, <b>Set Column Width</b>,
 <b>Set Column Visible</b>.</p>
 
-<p>All of this was laid out for a console pad. That is why every gate switches off a built-in binding and
-never the ability behind it.</p>
+<p>All of this was laid out for a console pad. A table-wide switch takes away a built-in binding and
+leaves the node. Two things need care: with <b>Selection Mode</b> at None the selection nodes do nothing,
+and dragging a cell has no node at all.</p>
 
 <p>Nothing here asks you to use the built-in bindings. Point your own Input Actions at these nodes, or
-handle the keys yourself, and a pad reaches everything a mouse does.</p>
+handle the keys yourself, and a pad reaches all of it.</p>
 
 <h2 id="ei">No Enhanced Input</h2>
 
