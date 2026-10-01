@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SmartTableModel.h - Smart Tables</title>
 <link rel="icon" href="../img/smarttables_favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="../style.css?v=46c52ba6">
-<script src="../theme.js?v=46c52ba6"></script>
-<script defer src="../search.js?v=46c52ba6"></script>
+<link rel="stylesheet" href="../style.css?v=9e37db2c">
+<script src="../theme.js?v=9e37db2c"></script>
+<script defer src="../search.js?v=9e37db2c"></script>
 </head>
 <body>
 
@@ -107,13 +107,13 @@
   <dt>Class</dt><dd>USmartTableModel</dd>
   <dt>Extends</dt><dd>UObject</dd>
   <dt>Members</dt><dd>58</dd>
-  <dt>Blueprint nodes</dt><dd>12</dd>
+  <dt>Blueprint nodes</dt><dd>21</dd>
   </dl>
 </div>
 <h2 id="public-function">Public functions <em>36</em></h2>
 <h3 class="cat" id="public-function-smart-tables-model">Model <em>25</em></h3>
 <div class="member" id="GetNumRows">
-  <div class="member-head"><b>Get Num Rows</b><span>GetNumRows</span><em class="badge role">override</em></div>
+  <div class="member-head"><b>Get Num Rows</b><span>GetNumRows</span><em class="badge role">override</em><em class="badge role">pure node</em></div>
   <div class="member-decl"><span class="macro">UFUNCTION( BlueprintNativeEvent, BlueprintPure, Category = "Smart Tables|Model" )</span>
 int32 GetNumRows()</div>
   <p>How many rows this model holds, in natural space. The one count a subclass has to answer.</p>
@@ -121,13 +121,13 @@ int32 GetNumRows()</div>
 <p>Neither cache can be filled up front. A Blueprint compile swaps the reflected item array to a freshly built UClass while a cache beside it still names the old one. The fill stays late and the const comes off the signature instead. BlueprintPure does not ask for const, so an override sees no difference.</p>
 </div>
 <div class="member" id="GetCellText">
-  <div class="member-head"><b>Get Cell Text</b><span>GetCellText</span><em class="badge role">override</em></div>
+  <div class="member-head"><b>Get Cell Text</b><span>GetCellText</span><em class="badge role">override</em><em class="badge role">pure node</em></div>
   <div class="member-decl"><span class="macro">UFUNCTION( BlueprintNativeEvent, BlueprintPure, Category = "Smart Tables|Model" )</span>
 FText GetCellText( int32 NaturalRow, FName ColumnId )</div>
   <p>What one cell draws. Empty text is a fine answer for a column this model has no value for.</p>
 </div>
 <div class="member" id="GetCellEditor">
-  <div class="member-head"><b>Get Cell Editor</b><span>GetCellEditor</span><em class="badge role">override</em></div>
+  <div class="member-head"><b>Get Cell Editor</b><span>GetCellEditor</span><em class="badge role">override</em><em class="badge role">pure node</em></div>
   <div class="member-decl"><span class="macro">UFUNCTION( BlueprintNativeEvent, BlueprintPure, Category = "Smart Tables|Model" )</span>
 <a class="xref" href="smarttabletypes.html#ESmartTableCellEditor">ESmartTableCellEditor</a> GetCellEditor( int32 NaturalRow, FName ColumnId )</div>
   <p>Which editor the built-in editable cell offers for this value, if any.</p>
@@ -143,13 +143,13 @@ bool SetCellText( int32 NaturalRow, FName ColumnId, const FText &amp; Value )</d
 <p>A model that takes a write has to say so. Nothing here calls NotifyRowChanged. Left out, it shows up as one cell drawing again while its neighbours in the same row do not.</p>
 </div>
 <div class="member" id="GetCellColor">
-  <div class="member-head"><b>Get Cell Color</b><span>GetCellColor</span><em class="badge role">override</em></div>
+  <div class="member-head"><b>Get Cell Color</b><span>GetCellColor</span><em class="badge role">override</em><em class="badge role">pure node</em></div>
   <div class="member-decl"><span class="macro">UFUNCTION( BlueprintNativeEvent, BlueprintPure, Category = "Smart Tables|Model" )</span>
 FLinearColor GetCellColor( int32 NaturalRow, FName ColumnId )</div>
   <p>Alpha 0 hands the colour back to the table's own cell text style, so a model with nothing to say writes nothing.</p>
 </div>
 <div class="member" id="GetRowColor">
-  <div class="member-head"><b>Get Row Color</b><span>GetRowColor</span><em class="badge role">override</em></div>
+  <div class="member-head"><b>Get Row Color</b><span>GetRowColor</span><em class="badge role">override</em><em class="badge role">pure node</em></div>
   <div class="member-decl"><span class="macro">UFUNCTION( BlueprintNativeEvent, BlueprintPure, Category = "Smart Tables|Model" )</span>
 FLinearColor GetRowColor( int32 NaturalRow )</div>
   <p>A tint over the whole row: every other row drawn darker, a colour that says how bad something is, a row that has gone stale.</p>
@@ -157,26 +157,26 @@ FLinearColor GetRowColor( int32 NaturalRow )</div>
 <p>It is here so the row widget does not have to be replaced to carry a tint. That widget takes cells from the pool and gives them back, which is what lets a table scroll a million rows.</p>
 </div>
 <div class="member" id="GetCellSortKey">
-  <div class="member-head"><b>Get Cell Sort Key</b><span>GetCellSortKey</span><em class="badge role">override</em></div>
+  <div class="member-head"><b>Get Cell Sort Key</b><span>GetCellSortKey</span><em class="badge role">override</em><em class="badge role">pure node</em></div>
   <div class="member-decl"><span class="macro">UFUNCTION( BlueprintNativeEvent, BlueprintPure, Category = "Smart Tables|Model" )</span>
 <a class="xref" href="smarttablesortkey.html">FSmartTableSortKey</a> GetCellSortKey( int32 NaturalRow, FName ColumnId )</div>
   <p>Falls back to the drawn text, so a model that writes only GetCellText still sorts. A numeric column overrides it. Text goes through CompareNatural, which reads a run of digits as one number. That still puts 1.25 after 1.5, because the run 25 is more than the run 5.</p>
 </div>
 <div class="member" id="GetRowId">
-  <div class="member-head"><b>Get Row Id</b><span>GetRowId</span><em class="badge role">override</em></div>
+  <div class="member-head"><b>Get Row Id</b><span>GetRowId</span><em class="badge role">override</em><em class="badge role">pure node</em></div>
   <div class="member-decl"><span class="macro">UFUNCTION( BlueprintNativeEvent, BlueprintPure, Category = "Smart Tables|Model" )</span>
 FName GetRowId( int32 NaturalRow )</div>
   <p>A name for a row that lives through rows arriving and leaving. The selection is put back through it.</p>
 <p>It falls back to the row number, which is right only while the row set only ever grows. A model that adds or drops a row in the middle needs a name of its own here.</p>
 </div>
 <div class="member" id="GetRowItem">
-  <div class="member-head"><b>Get Row Item</b><span>GetRowItem</span><em class="badge role">override</em></div>
+  <div class="member-head"><b>Get Row Item</b><span>GetRowItem</span><em class="badge role">override</em><em class="badge role">pure node</em></div>
   <div class="member-decl"><span class="macro">UFUNCTION( BlueprintNativeEvent, BlueprintPure, Category = "Smart Tables|Model" )</span>
 UObject * GetRowItem( int32 NaturalRow )</div>
   <p>The item a cell class is given. Null means this model has none, and a CellClass column over it says so once at Verbose instead of drawing nothing, or as a Warning when that cell names an ItemSetter.</p>
 </div>
 <div class="member" id="NaturalRowOfItem">
-  <div class="member-head"><b>Natural Row Of Item</b><span>NaturalRowOfItem</span><em class="badge role">override</em></div>
+  <div class="member-head"><b>Natural Row Of Item</b><span>NaturalRowOfItem</span><em class="badge role">override</em><em class="badge role">pure node</em></div>
   <div class="member-decl"><span class="macro">UFUNCTION( BlueprintNativeEvent, BlueprintPure, Category = "Smart Tables|Model" )</span>
 int32 NaturalRowOfItem( UObject * Item )</div>
   <p>Which row holds this object, or INDEX_NONE.</p>

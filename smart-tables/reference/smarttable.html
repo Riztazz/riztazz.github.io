@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SmartTable.h - Smart Tables</title>
 <link rel="icon" href="../img/smarttables_favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="../style.css?v=46c52ba6">
-<script src="../theme.js?v=46c52ba6"></script>
-<script defer src="../search.js?v=46c52ba6"></script>
+<link rel="stylesheet" href="../style.css?v=9e37db2c">
+<script src="../theme.js?v=9e37db2c"></script>
+<script defer src="../search.js?v=9e37db2c"></script>
 </head>
 <body>
 
@@ -841,35 +841,35 @@ bool IsRowMenuEnabled() const</div>
   <p>Runs when the drag ends, no matter how it ended.</p>
 </div>
 <div class="member" id="ColumnsPropertyName">
-  <div class="member-head"><b class="cpp">ColumnsPropertyName</b><em class="badge mod">static</em></div>
+  <div class="member-head"><b class="cpp">ColumnsPropertyName</b><em class="badge mod">static</em><em class="badge mod">editor only</em></div>
   <div class="member-decl">static FName ColumnsPropertyName()</div>
   <p>The names SmartTablesEditor needs to reach these properties.</p>
 <p>Here and not as text over there, because GET_MEMBER_NAME_CHECKED can not see a protected member from outside the class. A plain TEXT( "Columns" ) in another module is a rename waiting to fail with no log line at runtime, instead of failing loudly at build time.</p>
 </div>
 <div class="member" id="ColumnSourcePropertyName">
-  <div class="member-head"><b class="cpp">ColumnSourcePropertyName</b><em class="badge mod">static</em></div>
+  <div class="member-head"><b class="cpp">ColumnSourcePropertyName</b><em class="badge mod">static</em><em class="badge mod">editor only</em></div>
   <div class="member-decl">static FName ColumnSourcePropertyName()</div>
 </div>
 <div class="member" id="ExpectedItemClassPropertyName">
-  <div class="member-head"><b class="cpp">ExpectedItemClassPropertyName</b><em class="badge mod">static</em></div>
+  <div class="member-head"><b class="cpp">ExpectedItemClassPropertyName</b><em class="badge mod">static</em><em class="badge mod">editor only</em></div>
   <div class="member-decl">static FName ExpectedItemClassPropertyName()</div>
 </div>
 <div class="member" id="SourceTablePropertyName">
-  <div class="member-head"><b class="cpp">SourceTablePropertyName</b><em class="badge mod">static</em></div>
+  <div class="member-head"><b class="cpp">SourceTablePropertyName</b><em class="badge mod">static</em><em class="badge mod">editor only</em></div>
   <div class="member-decl">static FName SourceTablePropertyName()</div>
 </div>
 <div class="member" id="SourceFilePropertyName">
-  <div class="member-head"><b class="cpp">SourceFilePropertyName</b><em class="badge mod">static</em></div>
+  <div class="member-head"><b class="cpp">SourceFilePropertyName</b><em class="badge mod">static</em><em class="badge mod">editor only</em></div>
   <div class="member-decl">static FName SourceFilePropertyName()</div>
 </div>
 <div class="member" id="MergedColumnsFromSource">
-  <div class="member-head"><b class="cpp">MergedColumnsFromSource</b></div>
+  <div class="member-head"><b class="cpp">MergedColumnsFromSource</b><em class="badge mod">editor only</em></div>
   <div class="member-decl">TArray&lt; <a class="xref" href="smarttabletypes.html#FSmartTableColumn">FSmartTableColumn</a> &gt; MergedColumnsFromSource() const</div>
   <p>What this table's columns would be after copying from the named source. Named ones stay, missing ones are added, and nothing is dropped.</p>
 <p>It gives an answer back instead of writing one. The Details panel of a UWidget edits a preview copy, and the engine only moves a notified property edit onto the template the asset saves. A function writing straight to Columns reaches the one object thrown out on the next compile. SmartTablesEditor writes this through an IPropertyHandle, which is what the engine listens to.</p>
 </div>
 <div class="member" id="DescribeSourcesLostBySwitchingTo">
-  <div class="member-head"><b class="cpp">DescribeSourcesLostBySwitchingTo</b></div>
+  <div class="member-head"><b class="cpp">DescribeSourcesLostBySwitchingTo</b><em class="badge mod">editor only</em></div>
   <div class="member-decl">FText DescribeSourcesLostBySwitchingTo( <a class="xref" href="smarttabletypes.html#ESmartTableColumnSource">ESmartTableColumnSource</a> NewSource ) const</div>
   <p>Names the sources a move to NewSource would clear. Empty text when there is nothing to lose.</p>
 </div>
@@ -953,7 +953,7 @@ bool IsRowMenuEnabled() const</div>
   <p>The style members taken from the style class defaults, which is the end of the constructor. Public because rebuilding those defaults after a palette edit has to run exactly this. That sweep is not a table's own behaviour, so it lives in SmartTableStyleRefresh.</p>
 </div>
 <div class="member" id="ReapplyAfterPaletteChange">
-  <div class="member-head"><b class="cpp">ReapplyAfterPaletteChange</b></div>
+  <div class="member-head"><b class="cpp">ReapplyAfterPaletteChange</b><em class="badge mod">editor only</em></div>
   <div class="member-decl">void ReapplyAfterPaletteChange( const TSet&lt; const UObject * &gt; &amp; Refreshed )</div>
   <p>Runs again after a palette edit moved something under this table.</p>
 <p>Refreshed holds every object the sweep really changed. Only a table can say whether any of them matters to it, because StyleAsset and the live widget are both out of reach from outside. That is why the check sits here and not in the sweep, and why a table nothing moved goes no further.</p>
@@ -1086,15 +1086,15 @@ bool IsRowMenuEnabled() const</div>
   <div class="member-decl">virtual void SynchronizeProperties() override</div>
 </div>
 <div class="member" id="GetPaletteCategory">
-  <div class="member-head"><b class="cpp">GetPaletteCategory</b><em class="badge mod">override</em></div>
+  <div class="member-head"><b class="cpp">GetPaletteCategory</b><em class="badge mod">override</em><em class="badge mod">editor only</em></div>
   <div class="member-decl">virtual const FText GetPaletteCategory() override</div>
 </div>
 <div class="member" id="PostEditChangeProperty">
-  <div class="member-head"><b class="cpp">PostEditChangeProperty</b><em class="badge mod">override</em></div>
+  <div class="member-head"><b class="cpp">PostEditChangeProperty</b><em class="badge mod">override</em><em class="badge mod">editor only</em></div>
   <div class="member-decl">virtual void PostEditChangeProperty( FPropertyChangedEvent &amp; PropertyChangedEvent ) override</div>
 </div>
 <div class="member" id="ValidateCompiledDefaults">
-  <div class="member-head"><b class="cpp">ValidateCompiledDefaults</b><em class="badge mod">override</em></div>
+  <div class="member-head"><b class="cpp">ValidateCompiledDefaults</b><em class="badge mod">override</em><em class="badge mod">editor only</em></div>
   <div class="member-decl">virtual void ValidateCompiledDefaults( class IWidgetCompilerLog &amp; CompileLog ) const override</div>
   <p>Fails the Widget Blueprint compile when a column names something that is not there.</p>
 <p>A binding is a name, resolved against a struct nothing compiles against. Rename a field and every column that named it goes blank. The first sign is a table of empty cells in a running game: the C++ still builds, the asset still loads, and the column is still well formed.</p>
@@ -1688,13 +1688,14 @@ TSoftObjectPtr&lt; class UDataTable &gt; SourceTable</div>
 </div>
 <div class="member" id="SourceFile">
   <div class="member-head"><b>Source File</b><span>SourceFile</span><em class="badge role">panel</em></div>
-  <div class="member-decl"><span class="macro">UPROPERTY( EditAnywhere, BlueprintReadOnly, Category = "Smart Table", meta = ( ToolTip = "A csv or json whose shape the columns are written against, for data that is not an asset. Read only when the button below is pressed.", EditCondition = "ColumnSource == ESmartTableColumnSource::File", EditConditionHides, FilePathFilter = "Data files (*.csv; *.json)|*.csv;*.json" ) )</span>
+  <div class="member-decl"><span class="macro">UPROPERTY( EditAnywhere, BlueprintReadOnly, Category = "Smart Table", meta = ( ToolTip = "A csv or json whose shape the columns are written against, for data that is not an asset. Read only when the button below is pressed.", EditCondition = "ColumnSource == ESmartTableColumnSource::File", EditConditionHides, FilePathFilter = "Data files (*.csv; *.json)|*.csv;*.json", RelativeToGameDir ) )</span>
 FFilePath SourceFile</div>
   <dl class="facts">
     <dt>Editable when</dt><dd>ColumnSource == ESmartTableColumnSource::File</dd>
   </dl>
   <p>A .csv or .json whose shape the columns were written against, for data that is not an asset.</p>
 <p>Read only when the button below is pressed. A packaged game never opens this path, so moving the file breaks nothing at runtime.</p>
+<p>The picker stores a file inside the project relative to the project folder, and the button reads it from there. The same path then names the same file in every copy of the project.</p>
 <p>Only the header row of a CSV and the first object of a JSON get read. Neither is a model, and the plugin ships no model for them.</p>
 </div>
 <div class="member" id="SelectionMode">

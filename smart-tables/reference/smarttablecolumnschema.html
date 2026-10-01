@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SmartTableColumnSchema.h - Smart Tables</title>
 <link rel="icon" href="../img/smarttables_favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="../style.css?v=46c52ba6">
-<script src="../theme.js?v=46c52ba6"></script>
-<script defer src="../search.js?v=46c52ba6"></script>
+<link rel="stylesheet" href="../style.css?v=9e37db2c">
+<script src="../theme.js?v=9e37db2c"></script>
+<script defer src="../search.js?v=9e37db2c"></script>
 </head>
 <body>
 
@@ -96,10 +96,10 @@
 <p>No value from the data reaches a column. Names are what a column is built from, with the types as well where the source is a struct.</p>
   <dl>
   <dt>Namespace</dt><dd>SmartTable</dd>
-  <dt>Members</dt><dd>10</dd>
+  <dt>Members</dt><dd>11</dd>
   </dl>
 </div>
-<h2 id="public-function">Public functions <em>8</em></h2>
+<h2 id="public-function">Public functions <em>9</em></h2>
 <div class="member" id="ResolveColumnSchema">
   <div class="member-head"><b class="cpp">ResolveColumnSchema</b></div>
   <div class="member-decl">SMARTTABLES_API const UStruct * ResolveColumnSchema( <a class="xref" href="smarttabletypes.html#ESmartTableColumnSource">ESmartTableColumnSource</a> Source, const TSubclassOf&lt; UObject &gt; &amp; ItemClass, const TSoftObjectPtr&lt; UDataTable &gt; &amp; Table, FText &amp; OutSchemaName, FText &amp; OutProblem )</div>
@@ -142,26 +142,32 @@
 <p>A doubled id hides the later column outright. Every lookup here takes the first match, so nothing draws, sorts, sizes or hides the later one, while the Details panel goes on showing it being edited. A column with no id is never a duplicate of another with no id.</p>
 </div>
 <div class="member" id="DescribeSourcesLost">
-  <div class="member-head"><b class="cpp">DescribeSourcesLost</b></div>
+  <div class="member-head"><b class="cpp">DescribeSourcesLost</b><em class="badge mod">editor only</em></div>
   <div class="member-decl">SMARTTABLES_API FText DescribeSourcesLost( <a class="xref" href="smarttabletypes.html#ESmartTableColumnSource">ESmartTableColumnSource</a> NewSource, const TSubclassOf&lt; UObject &gt; &amp; ItemClass, const TSoftObjectPtr&lt; UDataTable &gt; &amp; SourceTable, const FFilePath &amp; SourceFile )</div>
   <p>What switching a table to NewSource would clear: each source field that is set and belongs to another source, named in one line. Empty when nothing would be lost.</p>
 <p>The Data Table is named by its soft path, not the loaded name. A soft reference still names an asset that is gone, which is when the name matters most.</p>
 </div>
+<div class="member" id="ResolveSourceFile">
+  <div class="member-head"><b class="cpp">ResolveSourceFile</b><em class="badge mod">editor only</em></div>
+  <div class="member-decl">SMARTTABLES_API FString ResolveSourceFile( const FFilePath &amp; SourceFile )</div>
+  <p>The full path SourceFile names. A relative path is read from the project folder, and an absolute one as it is. Empty when no file is set.</p>
+<p>The project folder and not the working folder, because the editor runs from a folder of the engine's. A path relative to that reads another file, or none, once the engine or the project moves.</p>
+</div>
 <div class="member" id="FindUnresolvedBindings">
-  <div class="member-head"><b class="cpp">FindUnresolvedBindings</b></div>
+  <div class="member-head"><b class="cpp">FindUnresolvedBindings</b><em class="badge mod">editor only</em></div>
   <div class="member-decl">SMARTTABLES_API TArray&lt; <a class="xref" href="smarttablecolumnschema.html#FUnresolvedBinding">FUnresolvedBinding</a> &gt; FindUnresolvedBindings( const UStruct * Schema, TArrayView&lt; const <a class="xref" href="smarttabletypes.html#FSmartTableColumn">FSmartTableColumn</a> &gt; Columns )</div>
   <p>Every binding in Columns that is neither a property nor a pure function taking no arguments on Schema, in column order.</p>
 <p>Both bindings of a column are checked, because a column that draws fine while sorting by nothing is the harder of the two to spot. A sort binding left unset falls back to the value binding, and one typo is then reported once, not twice.</p>
 </div>
-<h2 class="type" id="FUnresolvedBinding">FUnresolvedBinding <em>struct</em></h2>
+<h2 class="type" id="FUnresolvedBinding">FUnresolvedBinding <em>struct, editor only</em></h2>
 <p>A binding a column names that the schema does not have.</p>
 <h2 id="FUnresolvedBinding-public-variable">Public variables <em>2</em></h2>
 <div class="member" id="FUnresolvedBinding-ColumnId">
-  <div class="member-head"><b class="cpp">ColumnId</b></div>
+  <div class="member-head"><b class="cpp">ColumnId</b><em class="badge mod">editor only</em></div>
   <div class="member-decl">FName ColumnId</div>
 </div>
 <div class="member" id="FUnresolvedBinding-Binding">
-  <div class="member-head"><b class="cpp">Binding</b></div>
+  <div class="member-head"><b class="cpp">Binding</b><em class="badge mod">editor only</em></div>
   <div class="member-decl">FName Binding</div>
 </div>
   <p class="next">Next: <a href="smarttabledispatcher.html">SmartTableDispatcher.h</a></p>
@@ -178,7 +184,7 @@
   <details class="t" open>
     <summary>SmartTable</summary>
     <details class="s">
-      <summary><a href="#public-function">Public functions</a><em>8</em></summary>
+      <summary><a href="#public-function">Public functions</a><em>9</em></summary>
       <a href="#ResolveColumnSchema">ResolveColumnSchema</a>
       <a href="#ColumnsFromStruct">ColumnsFromStruct</a>
       <a href="#ColumnsFromCsv">ColumnsFromCsv</a>
@@ -186,6 +192,7 @@
       <a href="#AppendMissingColumns">AppendMissingColumns</a>
       <a href="#DuplicatedColumnIds">DuplicatedColumnIds</a>
       <a href="#DescribeSourcesLost">DescribeSourcesLost</a>
+      <a href="#ResolveSourceFile">ResolveSourceFile</a>
       <a href="#FindUnresolvedBindings">FindUnresolvedBindings</a>
     </details>
   </details>

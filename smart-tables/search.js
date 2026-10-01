@@ -717,6 +717,7 @@ window.DOCS=[
 ["AppendMissingColumns","reference/smarttablecolumnschema.html#AppendMissingColumns","SmartTableColumnSchema.h"],
 ["DuplicatedColumnIds","reference/smarttablecolumnschema.html#DuplicatedColumnIds","SmartTableColumnSchema.h"],
 ["DescribeSourcesLost","reference/smarttablecolumnschema.html#DescribeSourcesLost","SmartTableColumnSchema.h"],
+["ResolveSourceFile","reference/smarttablecolumnschema.html#ResolveSourceFile","SmartTableColumnSchema.h"],
 ["FindUnresolvedBindings","reference/smarttablecolumnschema.html#FindUnresolvedBindings","SmartTableColumnSchema.h"],
 ["Public variables","reference/smarttablecolumnschema.html#FUnresolvedBinding-public-variable","SmartTableColumnSchema.h"],
 ["ColumnId","reference/smarttablecolumnschema.html#FUnresolvedBinding-ColumnId","SmartTableColumnSchema.h"],
