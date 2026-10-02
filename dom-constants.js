@@ -4,62 +4,57 @@ var PROJECTS = [
         id: 'market-game',
         group: 'game',
         status: 'wip',
-        category: 'Run-Based Clicker / Market and Hacking Sim',
+        category: 'Clicker / Trading and Hacking',
         title: 'Market Game',
-        subtitle: 'C++ / Unreal Engine 5 / MVVM / Gameplay Tags',
-        desc: 'Run-based clicker built around three pillars - net sphere raids, mining, and a candlestick market. I am the only programmer on it, so all of the below is mine. I tend to make everything data-driven and build the tools first, and this is the clearest example of that.',
-        bullets: [
-            'Wrote an agent-based price engine - fundamentalists, trend followers, noise traders - with Almgren-Chriss and Kyle lambda impact',
-            'Built the firewall and the raid on one route solver, so both are priced the same way',
-            'Built an interaction system where every prompt is a world-space widget that grows and brightens when you look at it, and the verb, icon, trigger and hold time all come from a data table',
-            'Wrote a carry component that knows nothing about what it holds - each item answers for its own hold pose through an interface, so it carries a GPU card today and anything else tomorrow',
-            'Bench assembly in the world: pull a card apart, swap modules in from a drawer or the bench top, and what the rig can do changes with it',
-            'Mining grid with Heat and Breach tension, AoE shapes and weighted block spawns',
-            'Authored coins, contracts, daemons and items as data assets, so tuning needs no rebuild',
-            'Wrote ~22 domains of dev commands to reach any game state',
-            'MVVM across 114 widgets and 31 viewmodels, and my own modifier stack instead of GAS',
+        subtitle: 'Gameplay, systems, UI and effects / Only programmer',
+        desc: "A clicker that turns the internet into a small universe. Players explore a net sphere, mine, trade and build their computer. I am the only programmer, responsible for the gameplay, game systems, tools and UI.",
+        paragraphs: [
+            "The market moves because simulated traders buy and sell. Players can also pick up computer parts and swap them on a workbench. I built these systems and the desktop UI that brings them together.",
+            "I created the black holes, lightning and other effects using Niagara, HLSL and C++. I keep clear performance limits, use scripts to check each layer, and profile often. I also build tools that let designers adjust the game without changing code."
         ],
         stack: [
-            { label: 'C++20' }, { label: 'Unreal Engine 5' }, { label: 'MVVM', color: 'blue' },
-            { label: 'Gameplay Tags', color: 'blue' }, { label: 'CommonUI' },
-            { label: 'Market Simulation', color: 'green' }, { label: 'Procedural Mesh' },
+            { label: 'C++20' }, { label: 'Unreal Engine 5' }, { label: 'Gameplay', color: 'blue' },
+            { label: 'UI', color: 'blue' }, { label: 'Niagara' }, { label: 'HLSL' },
+            { label: 'Designer Tools', color: 'green' }
         ],
         media: [
-            { type: 'image', src: 'MarketGame/os-desktop.png', label: 'The OS', caption: 'Every panel is a window in an in-game desktop, with its own window manager' },
-            { type: 'image', src: 'MarketGame/market.png', label: 'Market', caption: 'Candlesticks off an agent-based price engine' },
-            { type: 'image', src: 'MarketGame/interaction.png', label: 'The rig', caption: 'Prompts appear on what you are looking at, and the card in hand is carried' },
-            { type: 'image', src: 'MarketGame/gpu_parts_changing.png', label: 'Assembly', caption: 'Swapping modules on a GPU card, on the bench rather than in a menu' },
-            { type: 'image', src: 'MarketGame/mining.png', label: 'Mining', caption: 'The grid, with Heat and Breach running' },
+            { type: 'video', src: 'MarketGame/market-game-demo.mp4', poster: 'MarketGame/black-hole.webp', label: 'Gameplay and effects', caption: 'A short look at the net sphere, lightning and black hole effects. I built the gameplay, systems, UI and effects shown here.' },
+            { type: 'image', src: 'MarketGame/black-hole.webp', label: 'Black hole', caption: 'The black hole effect I created with Niagara, HLSL and C++.' },
+            { type: 'image', src: 'MarketGame/net-sphere.webp', label: 'Net sphere', caption: "The internet shown as a small universe, viewed from the player's room." },
+            { type: 'image', src: 'MarketGame/desktop-ui.webp', label: 'Game UI', caption: 'Inventory, trading and item processing in the desktop UI I built.' },
+            { type: 'image', src: 'MarketGame/market.webp', label: 'Trading', caption: 'Prices change as simulated traders buy and sell.' },
+            { type: 'image', src: 'MarketGame/interaction.webp', label: 'Picking up parts', caption: 'Players can pick up computer parts and use them at the workbench.' },
+            { type: 'image', src: 'MarketGame/gpu_parts_changing.webp', label: 'Building a computer', caption: 'Swapping parts changes what the computer can do.' },
+            { type: 'image', src: 'MarketGame/mining.webp', label: 'Mining', caption: 'The mining screen, where players manage heat and the risk of a breach.' }
         ],
     },
     {
         id: 'orbital-drift',
         group: 'game',
-        category: 'Single-Player Space Game',
+        category: 'Space Game / Team of 8',
         title: 'Orbital Drift',
-        subtitle: 'Unreal Engine 5 / Mover 2.0 / Team of 8',
+        subtitle: 'Gameplay, movement, UI and tools / C++ and Unreal Engine 5',
         status: 'wip',
-        desc: 'Space game with an advanced movement system - zero gravity, magnetic boots, dynamic gravity wells. Digital Dragons GoGlobal3 finalist.',
-        bullets: [
-            'Custom ZeroG and MagBoots movement on Mover 2.0',
-            'Dynamic gravity wells via Custom Gravity well system',
-            'Helmet visor curvature shader (Brown-Conrady distortion)',
-            'MVVM UI, async save system, data-driven gameplay',
-            'Based movement (dynamic transprots) + resolving UE tick order issues',
-            'Digital Dragons Finalist!',
+        tags: [ 'GOGLOBAL3 FINALIST' ],
+        desc: "A space game made by a team of 8. I built the gameplay prototype with zero-gravity movement, magnetic boots and gravity wells. That prototype helped us become a finalist in the Digital Dragons GoGlobal3 Accelerator.",
+        paragraphs: [
+            "I built most of the game systems, including interactions, movement, UI, tools and visual effects. The player and orbiting objects use Mover. I fixed their update order so the player moves smoothly with the ship, even when universe time speeds up.",
+            "I also built a custom renderer for the navigation terminal to keep its screen sharp, with control over when it is drawn and how often it updates. The orbital maths and art assets are the work of other team members."
         ],
         stack: [
             { label: 'C++' }, { label: 'Unreal Engine 5' }, { label: 'Mover 2.0' },
-            { label: 'Gameplay Tags', color: 'blue' }, { label: 'MVVM', color: 'blue' },
+            { label: 'Gameplay', color: 'blue' }, { label: 'UI', color: 'blue' },
+            { label: 'Designer Tools', color: 'green' }
         ],
         media: [
-            { type: 'youtube', id: '1aQFQzFnGWk', label: 'Gameplay', caption: 'Orbital Drift Floating' },
-            { type: 'image', src: 'OD/UnderstandableAbstractions.png', label: 'Abstractions', caption: 'Designer-ready abstractions, automatically discovered' },
-            { type: 'youtube', id: 'lJbMBvuwJXM', label: 'Trailer', caption: 'Game Teaser' },
+            { type: 'video', src: 'OD/orbital-drift-demo.mp4', poster: 'OD/navigation.webp', label: 'Movement and terminal demo', caption: 'Terminal interactions and movement on an orbiting ship. The captions explain my work on the UI, rendering and movement.' },
+            { type: 'image', src: 'OD/navigation.webp', label: 'Navigation terminal', caption: 'The navigation screen uses my custom widget renderer. I built the UI; another team member built the orbital maths.' },
+            { type: 'image', src: 'OD/moving-ship.webp', label: 'Moving with the ship', caption: 'The player stays with the moving ship as universe time speeds up. Both the player and orbiting objects use Mover.' },
+            { type: 'image', src: 'OD/UnderstandableAbstractions.png', label: 'Designer tools', caption: 'Tools that let designers set up game behaviour in the editor.' }
         ],
         gist: {
-            header: { url: 'https://gist.github.com/Riztazz/5c7236a445078d211a31f24d23ce2f30.js', label: 'Some code by me(header)' },
-            implementation: { url: 'https://gist.github.com/Riztazz/c020d60a77f0906c079bf4756be6caa4.js', label: 'and implementation' },
+            header: { url: 'https://gist.github.com/Riztazz/5c7236a445078d211a31f24d23ce2f30.js', label: 'Code sample: header' },
+            implementation: { url: 'https://gist.github.com/Riztazz/c020d60a77f0906c079bf4756be6caa4.js', label: 'Code sample: implementation' }
         },
     },
     {

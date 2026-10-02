@@ -9,7 +9,7 @@ function ytThumb(id)
 }
 function coverSrc(item)
 {
-    return item.type === 'youtube' ? ytThumb(item.id) : item.src;
+    return item.type === 'youtube' ? ytThumb(item.id) : (item.poster || item.src);
 }
 
 function normaliseGist(entry, fallbackLabel) {
@@ -93,21 +93,21 @@ function tileCover(project) {
     var items = buildItemList(project);
     var first = items[0];
     var count = items.length;
-    var badge = count > 1 ? '<div class="' + DOM_CLASSES.PROJECT_COVER_COUNT + '">' + count + ' MEDIA</div>' : '';
+    var badge = count > 1 ? '<span class="' + DOM_CLASSES.PROJECT_COVER_COUNT + '">' + count + ' MEDIA</span>' : '';
     var imgSrc = first && first.type !== 'gist' ? coverSrc(first) : null;
-    var lbl = count > 1
+    var lbl = first && first.type === 'video' ? 'PLAY DEMO / VIEW GALLERY' : count > 1
         ? 'VIEW GALLERY'
-        : (first && first.type === 'youtube'
+        : (first && (first.type === 'youtube' || first.type === 'video')
             ? 'PLAY VIDEO'
             : (first && first.type === 'gist' ? 'READ MORE' : 'VIEW IMAGE'));
 
     if (first) {
-        return '<div class="' + DOM_CLASSES.PROJECT_COVER + '" data-project="' + project.id + '">'
+        return '<button type="button" class="' + DOM_CLASSES.PROJECT_COVER + (first.type === 'video' ? ' project-cover--video' : '') + '" data-project="' + project.id + '" aria-label="Open ' + project.title + ' gallery">'
             + (imgSrc ? '<img class="' + DOM_CLASSES.PROJECT_COVER_IMG + '" src="' + imgSrc + '" alt="' + project.title + '" loading="lazy">' : '')
-            + '<div class="' + DOM_CLASSES.PROJECT_COVER_OVERLAY + '">'
-            + '<div class="' + DOM_CLASSES.PROJECT_COVER_PLAY + '"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>'
-            + '<div class="' + DOM_CLASSES.PROJECT_COVER_LABEL + '">' + lbl + '</div>'
-            + '</div>' + badge + '</div>';
+            + '<span class="' + DOM_CLASSES.PROJECT_COVER_OVERLAY + '">'
+            + '<span class="' + DOM_CLASSES.PROJECT_COVER_PLAY + '"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></span>'
+            + '<span class="' + DOM_CLASSES.PROJECT_COVER_LABEL + '">' + lbl + '</span>'
+            + '</span>' + badge + '</button>';
     }
 
     return '';
@@ -122,7 +122,11 @@ function buildTile(project) {
         return '<span class="' + chipClass(s.color) + '">' + s.label + '</span>';
     }).join('');
 
-    var bullets = project.bullets.map(function (b)
+    var paragraphs = [project.desc].concat(project.paragraphs || []).map(function (text) {
+        return '<p class="' + DOM_CLASSES.PROJECT_DESC + '">' + text + '</p>';
+    }).join('');
+
+    var bullets = (project.bullets || []).map(function (b)
     {
         return '<li>' + b + '</li>';
     }).join('');
@@ -135,9 +139,9 @@ function buildTile(project) {
         + '</summary>'
         + '<div class="' + DOM_CLASSES.TILE_BODY + '">'
         + '<div class="' + DOM_CLASSES.PROJECT_CATEGORY + '">' + project.category + '</div>'
-        + '<p class="' + DOM_CLASSES.PROJECT_DESC + '">' + project.desc + '</p>'
+        + paragraphs
         + cover
-        + '<ul class="' + DOM_CLASSES.PROJECT_BULLETS + '">' + bullets + '</ul>'
+        + (bullets ? '<ul class="' + DOM_CLASSES.PROJECT_BULLETS + '">' + bullets + '</ul>' : '')
         + '<div class="' + DOM_CLASSES.PROJECT_STACK + '">' + stack + '</div>'
         + '</div></details>';
 }
@@ -171,12 +175,13 @@ var lbNext = document.getElementById(DOM_IDS.LB_NEXT);
 var lbItems = [];
 var lbIndex = 0;
 var lbActive = null;
+var lbReturnFocus = null;
 
 function lbThumbHtml(item, i) {
     if (item.type === 'gist') {
         return '<div class="' + DOM_CLASSES.LB_THUMB + ' ' + DOM_CLASSES.LB_THUMB_GIST + '" data-index="' + i + '"><span>' + item.label + '</span></div>';
     }
-    var cls = DOM_CLASSES.LB_THUMB + (item.type === 'youtube' ? ' ' + DOM_CLASSES.LB_THUMB_VIDEO : '');
+    var cls = DOM_CLASSES.LB_THUMB + ((item.type === 'youtube' || item.type === 'video') ? ' ' + DOM_CLASSES.LB_THUMB_VIDEO : '');
     return '<div class="' + cls + '" data-index="' + i + '"><img src="' + coverSrc(item) + '" alt="' + item.label + '" loading="lazy"></div>';
 }
 
@@ -198,6 +203,11 @@ function lbShowItem(index) {
     var isGist = item.type === 'gist';
 
     if (lbActive) {
+        if (lbActive.tagName === 'VIDEO') {
+            lbActive.pause();
+            lbActive.removeAttribute('src');
+            lbActive.load();
+        }
         lbActive.remove();
         lbActive = null;
     }
@@ -212,6 +222,21 @@ function lbShowItem(index) {
         lbViewer.appendChild(makeGistFrame(item.src));
         lbActive = lbViewer.querySelector('.' + DOM_CLASSES.LB_GIST_FRAME);
         lbCaption.textContent = '';
+    }
+    else if (item.type === 'video') {
+        var video = document.createElement('video');
+        video.className = DOM_CLASSES.LB_MEDIA_FRAME;
+        video.controls = true;
+        video.playsInline = true;
+        video.muted = true;
+        video.preload = 'none';
+        video.poster = item.poster || '';
+        video.src = item.src;
+        video.setAttribute('aria-label', item.label);
+        video.textContent = 'Your browser does not support video playback.';
+        lbViewer.appendChild(video);
+        lbActive = video;
+        lbCaption.textContent = item.caption || item.label || '';
     }
     else if (item.type === 'youtube') {
         var iframe = document.createElement('iframe');
@@ -254,10 +279,12 @@ function lbOpen(projectId, startIndex) {
         return;
     }
     lbTitle.textContent = project.title;
+    lbReturnFocus = document.activeElement;
     lbThumbs.innerHTML = lbItems.map(lbThumbHtml).join('');
     lb.classList.add(DOM_CLASSES.LB_OPEN);
     document.body.style.overflow = 'hidden';
     lbShowItem(startIndex || 0);
+    document.getElementById(DOM_IDS.LB_CLOSE).focus({ preventScroll: true });
 }
 
 function lbClose() {
@@ -265,12 +292,21 @@ function lbClose() {
     lb.classList.remove(DOM_CLASSES.LB_GIST);
     document.body.style.overflow = '';
     if (lbActive) {
+        if (lbActive.tagName === 'VIDEO') {
+            lbActive.pause();
+            lbActive.removeAttribute('src');
+            lbActive.load();
+        }
         lbActive.remove();
         lbActive = null;
     }
     lbViewer.classList.remove(DOM_CLASSES.LB_VIEWER_GIST);
     lbItems = [];
     lbIndex = 0;
+    if (lbReturnFocus) {
+        lbReturnFocus.focus({ preventScroll: true });
+        lbReturnFocus = null;
+    }
 }
 
 document.getElementById(DOM_IDS.LB_CLOSE).addEventListener('click', lbClose);
@@ -315,7 +351,7 @@ document.addEventListener('keydown', function (e) {
         lbClose();
     }
     var cur = lbItems[lbIndex];
-    if (cur && cur.type === 'gist') {
+    if ((cur && cur.type === 'gist') || e.target.tagName === 'VIDEO') {
         return;
     }
     if (e.key === 'ArrowLeft' && lbIndex > 0) {

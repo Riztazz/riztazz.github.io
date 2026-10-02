@@ -403,16 +403,19 @@ footer {
   display:         flex;
   justify-content: center;
   align-items:     center;
+  flex-wrap:       wrap;
+  gap:            10px 24px;
+  text-align:      center;
+  font-family:    var(--font-mono);
+  font-size:      11px;
+  color:          var(--muted);
+  letter-spacing: 0.06em;
   position:        relative;
   z-index:         2;
 }
 
 footer p {
-  font-family:    var(--font-mono);
-  font-size:      11px;
-  color:          var(--muted);
-  letter-spacing: 0.06em;
-  margin:         0;
+  margin: 0;
 }
 
 footer a.footer-link,
@@ -428,6 +431,11 @@ footer a.footer-link:focus {
     box-shadow: none;
     cursor: pointer;
     display: block;
+}
+
+footer a.footer-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
 }
 
 .btn-primary {
@@ -829,6 +837,7 @@ footer a.footer-link:focus {
 }
 
 .lightbox__viewer img,
+.lightbox__viewer video.lb-media-frame,
 .lightbox__viewer iframe.lb-media-frame {
   width:      100%;
   height:     100%;
@@ -1438,4 +1447,71 @@ footer a.footer-link:focus {
   display:     flex;
   align-items: center;
   line-height: 1;
+}
+
+/* Local videos use lightweight posters until the visitor presses play. */
+.project-column,
+.tile__head > div {
+  min-width: 0;
+}
+
+.tile__head::after {
+  flex-shrink: 0;
+}
+
+button.project-cover {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  padding: 0;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+}
+
+.project-cover--video .project-cover__overlay {
+  opacity: 1;
+  background: linear-gradient(transparent 50%, rgba(6,8,16,0.85));
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 16px;
+}
+
+.project-cover--video .project-cover__play {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  background: rgba(6,8,16,0.75);
+}
+
+.project-cover--video .project-cover__label {
+  padding-bottom: 11px;
+  letter-spacing: 0.06em;
+}
+
+button.project-cover:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.tile__body .project-desc + .project-desc {
+  margin-top: 14px;
+}
+
+.tile__body .project-desc {
+  color: #a5b1c9;
+}
+
+.lightbox__viewer video.lb-media-frame {
+  background: #000;
+}
+
+.lightbox__caption {
+  font-family: var(--font-body);
+  font-size: 13px;
+  line-height: 1.6;
+  letter-spacing: normal;
 }
