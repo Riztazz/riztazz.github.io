@@ -1,6 +1,32 @@
 
 var PROJECTS = [
     {
+        id: 'orbital-drift',
+        group: 'game',
+        category: 'Space Game / Team of 8',
+        title: 'Orbital Drift',
+        subtitle: 'Gameplay, movement, UI and tools / C++ and Unreal Engine 5',
+        status: 'wip',
+        tags: [ 'GOGLOBAL3 FINALIST', 'RELEASE 2027' ],
+        store: { url: 'https://store.steampowered.com/app/4669550/Orbital_Drift/', label: 'Orbital Drift on Steam' },
+        desc: "A space game made by a team of 8. I built the gameplay prototype with zero-gravity movement, magnetic boots and gravity wells. That prototype helped us become a finalist in the Digital Dragons GoGlobal3 Accelerator.",
+        paragraphs: [
+            "I built most of the game systems, including interactions, movement, UI, tools and visual effects. The player and orbiting objects use Mover. I fixed their update order so the player moves smoothly with the ship, even when universe time speeds up.",
+            "I also built a custom renderer for the navigation terminal to keep its screen sharp, with control over when it is drawn and how often it updates. The orbital maths and art assets are the work of other team members."
+        ],
+        stack: [
+            { label: 'C++' }, { label: 'Unreal Engine 5' }, { label: 'Mover 2.0' },
+            { label: 'Gameplay', color: 'blue' }, { label: 'UI', color: 'blue' },
+            { label: 'Designer Tools', color: 'green' }
+        ],
+        media: [
+            { type: 'video', src: 'OD/orbital-drift-demo-v5.mp4', poster: 'OD/orbital-drift-demo-v5-poster.webp', label: 'Movement and terminal demo', caption: 'Zero-gravity flight to the ship, the airlock, and a route set at the navigation terminal, then the ship travelling at speed seen through the bridge windows. I built the movement, interactions and UI shown here.' },
+            { type: 'image', src: 'OD/field-lab.webp', label: 'Field Lab', caption: 'The Field Lab asteroid against the nebula, with the station and the docked ship on top.' },
+            { type: 'image', src: 'OD/cave-opening.webp', label: 'Cave opening', caption: 'Looking out at the nebula from the cave under the Field Lab station.' },
+            { type: 'image', src: 'OD/ship-exterior.webp', label: 'The ship', caption: "The ship docked in front of the planet's lit edge." }
+        ],
+    },
+    {
         id: 'market-game',
         group: 'game',
         status: 'wip',
@@ -27,35 +53,6 @@ var PROJECTS = [
             { type: 'image', src: 'MarketGame/gpu_parts_changing.webp', label: 'Building a computer', caption: 'Swapping parts changes what the computer can do.' },
             { type: 'image', src: 'MarketGame/mining.webp', label: 'Mining', caption: 'The mining screen, where players manage heat and the risk of a breach.' }
         ],
-    },
-    {
-        id: 'orbital-drift',
-        group: 'game',
-        category: 'Space Game / Team of 8',
-        title: 'Orbital Drift',
-        subtitle: 'Gameplay, movement, UI and tools / C++ and Unreal Engine 5',
-        status: 'wip',
-        tags: [ 'GOGLOBAL3 FINALIST' ],
-        desc: "A space game made by a team of 8. I built the gameplay prototype with zero-gravity movement, magnetic boots and gravity wells. That prototype helped us become a finalist in the Digital Dragons GoGlobal3 Accelerator.",
-        paragraphs: [
-            "I built most of the game systems, including interactions, movement, UI, tools and visual effects. The player and orbiting objects use Mover. I fixed their update order so the player moves smoothly with the ship, even when universe time speeds up.",
-            "I also built a custom renderer for the navigation terminal to keep its screen sharp, with control over when it is drawn and how often it updates. The orbital maths and art assets are the work of other team members."
-        ],
-        stack: [
-            { label: 'C++' }, { label: 'Unreal Engine 5' }, { label: 'Mover 2.0' },
-            { label: 'Gameplay', color: 'blue' }, { label: 'UI', color: 'blue' },
-            { label: 'Designer Tools', color: 'green' }
-        ],
-        media: [
-            { type: 'video', src: 'OD/orbital-drift-demo.mp4', poster: 'OD/navigation.webp', label: 'Movement and terminal demo', caption: 'Terminal interactions and movement on an orbiting ship. The captions explain my work on the UI, rendering and movement.' },
-            { type: 'image', src: 'OD/navigation.webp', label: 'Navigation terminal', caption: 'The navigation screen uses my custom widget renderer. I built the UI; another team member built the orbital maths.' },
-            { type: 'image', src: 'OD/moving-ship.webp', label: 'Moving with the ship', caption: 'The player stays with the moving ship as universe time speeds up. Both the player and orbiting objects use Mover.' },
-            { type: 'image', src: 'OD/UnderstandableAbstractions.png', label: 'Designer tools', caption: 'Tools that let designers set up game behaviour in the editor.' }
-        ],
-        gist: {
-            header: { url: 'https://gist.github.com/Riztazz/5c7236a445078d211a31f24d23ce2f30.js', label: 'Code sample: header' },
-            implementation: { url: 'https://gist.github.com/Riztazz/c020d60a77f0906c079bf4756be6caa4.js', label: 'Code sample: implementation' }
-        },
     },
     {
         id: 'smart-tables',
@@ -212,6 +209,7 @@ var PROJECTS = [
         category: 'Live MMORPG / Gameplay Programming',
         title: 'Battlegrounds, Bosses and Behaviours',
         subtitle: 'C++ / Lua / MySQL / Linux / Networking',
+        repo: { url: 'https://github.com/Riztazz/event-driven-battlegrounds', label: 'Event-driven battlegrounds on GitHub' },
         desc: 'Years of gameplay programming on a live MMORPG, with the work in front of real players every day. This is where I learned state machines, encounter design, and what a game actually does under load - and where most of what I reach for now came from.',
         bullets: [
             'Battlegrounds end to end: objectives, scoring, queues and team logic',

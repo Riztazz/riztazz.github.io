@@ -55,6 +55,15 @@ function tileRepo(project) {
         + GH_MARK + '<span>GITHUB</span></a>';
 }
 
+function tileStore(project) {
+    if (!project.store) {
+        return '';
+    }
+
+    return '<a class="' + DOM_CLASSES.TILE_REPO + '" href="' + project.store.url + '" target="_blank" rel="noopener noreferrer">'
+        + '<span>STEAM</span></a>';
+}
+
 function tileTags(project) {
     if (!project.tags) {
         return '';
@@ -71,7 +80,7 @@ function statusBadge(project) {
         return '<span class="' + DOM_CLASSES.WIP_BADGE + ' ' + DOM_CLASSES.WIP_BADGE_HOLD + '">ON HOLD</span>';
     }
     if (project.status === 'wip') {
-        return '<span class="' + DOM_CLASSES.WIP_BADGE + '">IN DEVELOPMENT</span>';
+        return '<span class="' + DOM_CLASSES.WIP_BADGE + '">DEV</span>';
     }
     return '';
 }
@@ -114,7 +123,7 @@ function tileCover(project) {
 }
 
 function buildTile(project) {
-    var wip = statusBadge(project) + tileTags(project) + tileRepo(project);
+    var wip = tileTags(project) + tileStore(project) + tileRepo(project) + statusBadge(project);
     var cover = tileCover(project);
 
     var stack = project.stack.map(function (s)
